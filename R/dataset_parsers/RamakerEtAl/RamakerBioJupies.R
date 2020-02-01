@@ -130,50 +130,66 @@ cortical_summary %<>% left_join(Ramaker_cortical) %>% select(-AnCg_DLPFC_directi
 #Save full cortical meta-analysis results 
 cortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma.csv"))
 
-###########################################################
-###### SEX-INTERACTION ANALYSIS (FULL AND CORTICAL) ######
-###########################################################
-#### Full meta-analysis
-
+#############################################
+###### SEX-INTERACTION FULL ANALYSIS ######
+############################################
+#### Full meta-analysis on flipped male expression data
 #Read in the post-model female data 
-full_female_summary_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))
+full_female_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))
 #add sex for unique identifier 
-full_female_summary_results %<>% mutate(sex = "female")
+full_female_results %<>% mutate(sex = "female")
 
-#Read in the post-model female data 
-full_male_summary_results <- read_csv(here("ProcessedData", "RamakerEtAl", "CompleteMaleRamakerTableMagma.csv"))
-full_male_summary_results_flip <- male_summary_results %>% mutate(t = t*-1)
+#Read in the post-model male data 
+full_male_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTableMagma.csv"))
+#flip the expression levels of each gene in each brain region 
+full_male_results_flip <- full_male_summary_results %>% mutate(t = t*-1)
 #add sex for unique identifier
-male_summary_results_flip %<>% mutate(sex = "male")
+full_male_results_flip %<>% mutate(sex = "male")
 #merge male summary results with female summary results into one table to perform calculations
-full_flipped <- rbind(male_summary_results_flip, female_summary_results)
+full_flipped <- rbind(full_male_results_flip, full_female_results)
 
-#Perform the meta-analysis on the female and flipped male data 
+#Perform the meta-analysis on the female and flipped male data across all brain regions
 full_flipped %<>% RamakerMetaAnalysis(regions)
-#flips the directions of the male gene expressions back to original
-full_flipped %<>% flipDirections("male")
 
-#Calculate the new male data flipped (to get the )
-male_summary_results_flip %<>% RamakerMetaAnalysis(regions)
-male_summary_results_flip %<>% flipDirections("male") #flip the male directions 
-male_summary_results_flip %<>% rename(AnCg_nAcc_DLPFC_Male_directions = AnCg_nAcc_DLPFC_directions)
+#Read in to get the original directions data from the full meta-analysis
+Ramaker_directions <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma.csv")) %>% select(1:2)
 
-#Read in Female meta-analysis results to get the directions of gene expression across all brain regions
-full_female_results <- read_csv(here("ProcessedData", "RamakerEtAl", "FemaleRamakerTableMagma.csv"))
-#combine male directions and female directions 
-full_flipped_summary <- left_join(full_female_results %>% select(gene_symbol, AnCg_nAcc_DLPFC_Female_directions), male_summary_results_flip %>% select(gene_symbol, AnCg_nAcc_DLPFC_Male_directions))
-#concatenate the two directions columns
-full_flipped_summary %<>% unite("AnCg.F_nAcc.F_DLPFC.F_AnCg.M_nAcc.M_DLPFC.M",AnCg_nAcc_DLPFC_Female_directions, AnCg_nAcc_DLPFC_Male_directions, sep = "")
-#Combine directions with meta values calculated 
+#Keep flipped meta-analysis results 
 full_flipped %<>% select(-sex, -AnCg_nAcc_DLPFC_directions)
-#join calculations for each gene
-full_flipped_summary %<>% left_join(full_flipped) %>% distinct()
+#join the direction data with the meta-analysis results on the flipped male expression data across all brain regions
+full_flipped_summary <- Ramaker_directions %>% left_join(full_flipped) %>% distinct()
+full_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma_flipped.csv"))
 
-full_flipped_summary%>%write_csv(here("ProcessedData", "RamakerEtAl", "fullRamakerTableMagma_flipped.csv"))
+########################################################
+###### SEX-INTERACTION CORTICAL ANALYSIS ######
+########################################################
+#get female post model differential expression data for cortical regions
+cortical_female_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))
+cortical_female_results %<>% filter(target_region != "nAcc")
+#add sex for unique identifier 
+cortical_female_results %<>% mutate(sex = "female")
 
+#get male post model differential expression data for cortical regions
+cortical_male_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTableMagma.csv"))
+cortical_male_results %<>% filter(target_region != "nAcc")
+#flip the expression levels of each gene in each brain region 
+cortical_male_results_flip <- cortical_male_results %>% mutate(t = t*-1)
+#add sex for unique identifier
+cortical_male_results_flip %<>% mutate(sex = "male")
+#merge male cortical results with female cortical results into one table to perform meta-analysis calculations
+cortical_flipped <- rbind(cortical_male_results_flip, cortical_female_results)
 
+#Perform the meta-analysis on the female and flipped male data across all cortical brain regions
+cortical_flipped %<>% RamakerMetaAnalysis(cortical_regions)
 
+#Read in to get the original directions data from the cortical meta-analysis
+Ramaker_cortical_directions <- read_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma.csv")) %>% select(1:2)
 
+#Keep flipped meta-analysis results 
+cortical_flipped %<>% select(-sex, -AnCg_DLPFC_directions)
+#join the direction data with the meta-analysis results on the flipped male expression data across all cortical brain regions
+cortical_flipped_summary <- Ramaker_cortical_directions %>% left_join(full_flipped) %>% distinct()
+cortical_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma_flipped.csv"))
 
 
 
