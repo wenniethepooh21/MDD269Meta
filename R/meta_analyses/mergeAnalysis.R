@@ -1,0 +1,318 @@
+library(metap)
+library(readr)
+library(magrittr)
+library(dplyr)
+library(tidyr)
+library(here)
+
+mergeMeta <- function (H, L, Ldir, D, Ddir, R, Rdir) {
+  if(is.na(L) || is.na(Ldir)) {
+    #no Labonte data
+    unusedDingGenes <- read_csv(here::here("data","DingEtAl","MDD-metaA_unused_genes.csv"), col_names = FALSE)
+    names(unusedDingGenes) <- c("gene_symbol")
+    merged_directions <- left_join(H, R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker.Gene' = 'gene_symbol'))
+    merged_directions <- left_join(merged_directions, D%>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding.Gene' = 'gene_symbol'))
+    
+    findUnused <- which(is.na(merged_directions$DingDir))
+    index <- which(merged_directions$gene_symbol[findUnused] %in% unusedDingGenes$gene_symbol)
+    unusedGene <- which(merged_directions$gene_symbol %in% merged_directions$gene_symbol[findUnused][index])
+    
+    merged_directions$DingDir[unusedGene] <- "Unused_Gene"
+    
+    #update Ding data to make gene_symbols match to Howard gene symbols
+    index<- which(H$gene_symbol != H$Ding.Gene & H$Ding.Gene != "UNUSED" & H$Ding.Gene != "NA")
+    oldGeneName <- H$Ding.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      D$gene_symbol[which(D$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    
+    #update Ramaker data to make gene_symbols match to Howard gene symbols
+    R$gene_symbol <- gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", R$gene_symbol)
+    index<- which(H$gene_symbol != H$Ramaker.Gene & H$Ramaker.Gene != "UNUSED" & H$Ramaker.Gene != "NA")
+    oldGeneName <- H$Ramaker.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      R$gene_symbol[which(R$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    merged_p <- bind_rows(D,R)	
+    
+  } else if(is.na(D) || is.na(Ddir)) {
+    #no Ding data
+    
+    merged_directions <- left_join(H, R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker.Gene' = 'gene_symbol'))
+    merged_directions <- left_join(merged_directions,L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte.Gene' = 'gene_symbol'))
+    #update Labonte data to make gene_symbols match to Howard gene symbols
+    index<- which(H$gene_symbol != H$Labonte.Gene & H$Labonte.Gene != "UNUSED" & H$Labonte.Gene != "NA")
+    
+    oldGeneName <- H$Labonte.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      L$gene_symbol[which(L$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    #update Ramaker data to make gene_symbols match to Howard gene symbols
+    R$gene_symbol <- gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", R$gene_symbol)
+    index<- which(H$gene_symbol != H$Ramaker.Gene & H$Ramaker.Gene != "UNUSED" & H$Ramaker.Gene != "NA")
+    oldGeneName <- H$Ramaker.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      R$gene_symbol[which(R$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    merged_p <- bind_rows(L,R)	
+  } else if(is.na(R) || is.na(Rdir)) {
+    #no Ramaker data
+    unusedDingGenes <- read_csv(here::here("data","DingEtAl","MDD-metaA_unused_genes.csv"), col_names = FALSE)
+    names(unusedDingGenes) <- c("gene_symbol")
+    merged_directions <- left_join(H,L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte.Gene' = 'gene_symbol'))
+    merged_directions <- left_join(merged_directions, D%>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding.Gene' = 'gene_symbol'))
+    
+    findUnused <- which(is.na(merged_directions$DingDir))
+    index <- which(merged_directions$gene_symbol[findUnused] %in% unusedDingGenes$gene_symbol)
+    unusedGene <- which(merged_directions$gene_symbol %in% merged_directions$gene_symbol[findUnused][index])
+    
+    merged_directions$DingDir[unusedGene] <- "Unused_Gene"
+    #update Labonte data to make gene_symbols match to Howard gene symbols
+    index<- which(H$gene_symbol != H$Labonte.Gene & H$Labonte.Gene != "UNUSED" & H$Labonte.Gene != "NA")
+    
+    oldGeneName <- H$Labonte.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      L$gene_symbol[which(L$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    #update Ding data to make gene_symbols match to Howard gene symbols
+    
+    index<- which(H$gene_symbol != H$Ding.Gene & H$Ding.Gene != "UNUSED" & H$Ding.Gene != "NA")
+    oldGeneName <- H$Ding.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      D$gene_symbol[which(D$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    merged_p <- bind_rows(L,D)		
+  } else {
+    #All studies were used
+    merged_directions <- left_join(H, R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker.Gene' = 'gene_symbol'))
+    merged_directions <- left_join(merged_directions,L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte.Gene' = 'gene_symbol'))
+    merged_directions <- left_join(merged_directions, D%>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding.Gene' = 'gene_symbol'))
+    
+    #Label which genes Ding filtered out due to low expression and variance
+    merged_directions %<>% mutate(DingDir = ifelse(Ding.Gene == "unused", "Filtered_Out", DingDir))
+    #Label which genes that we filtered out due to missing p values
+    merged_directions %<>% mutate(LabonteDir = ifelse(Labonte.Gene == "UNUSED", "Missing_P_Values", LabonteDir))
+    
+    
+    #to remove the ' characters
+    #merged_directions %<>% mutate_all(funs(gsub("'", "",.)))
+    
+    #update Labonte data to make gene_symbols match to Howard gene symbols
+    index<- which(H$gene_symbol != H$Labonte.Gene & H$Labonte.Gene != "UNUSED" & H$Labonte.Gene != "NA"& H$gene_symbol != "DCDC5")
+    oldGeneName <- H$Labonte.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      L$gene_symbol[which(L$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    
+    #update Ding data to make gene_symbols match to Howard gene symbols
+    index<- which(H$gene_symbol != H$Ding.Gene & H$Ding.Gene != "UNUSED" & H$Ding.Gene != "NA")
+    oldGeneName <- H$Ding.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      D$gene_symbol[which(D$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    
+    #update Ramaker data to make gene_symbols match to Howard gene symbols
+    R$gene_symbol <- gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", R$gene_symbol)
+    index<- which(H$gene_symbol != H$Ramaker.Gene & H$Ramaker.Gene != "UNUSED" & H$Ramaker.Gene != "NA"& H$gene_symbol != "DCDC5")
+    oldGeneName <- H$Ramaker.Gene[index]
+    newGeneName <- H$gene_symbol[index]
+    for(i in 1:length(index)) {
+      R$gene_symbol[which(R$gene_symbol == oldGeneName[i])] <- newGeneName[i]
+    }
+    
+    
+    merged_p <- bind_rows(L, D, R)
+   
+    
+  }
+  #merge two datasets together
+  merged_directions %<>% select(-Updated_Gene_Names, -`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
+  
+  merged_p %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
+  
+  merged_table <- left_join(merged_directions, merged_p)
+  return(merged_table)
+}
+
+
+
+MetaAnalysis <- function(merged_table){
+  
+  #get just minp and the two one-sided meta p-values for each row
+  merged_p <- merged_table %>% dplyr::select(gene_symbol, min_p_across_regions, meta_lower_in_MDD_pvalue, meta_higher_in_MDD_pvalue)
+  merged_directions <- merged_table %>% dplyr:: select(gene_symbol, Howard.pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
+  
+  meta_merged_p <- merged_p %>% group_by(gene_symbol) %>% summarize(list_of_meta_higher_in_MDD_pvalue = list(meta_higher_in_MDD_pvalue), 
+                                                                    list_of_meta_lower_in_MDD_pvalue = list(meta_lower_in_MDD_pvalue), count_of_pvalues=n())
+  min_p <- merged_p %>% group_by(gene_symbol) %>% summarize(minp = min(min_p_across_regions))
+  
+  #had trouble doing this with if_else
+  twoOrMore <- meta_merged_p %>% filter(count_of_pvalues > 1) %>% rowwise() %>% 
+    mutate(meta_meta_higher_in_MDD_pvalue = sumlog(c(list_of_meta_higher_in_MDD_pvalue))$p,
+           meta_meta_lower_in_MDD_pvalue=  sumlog(c(list_of_meta_lower_in_MDD_pvalue))$p
+    ) %>% dplyr::select(gene_symbol, meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue)
+  
+  singles <- meta_merged_p %>% filter(count_of_pvalues == 1) %>% 
+    mutate(meta_meta_higher_in_MDD_pvalue = unlist(list_of_meta_higher_in_MDD_pvalue),
+           meta_meta_lower_in_MDD_pvalue =  unlist(list_of_meta_lower_in_MDD_pvalue)
+    ) %>% dplyr::select(gene_symbol, meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue)
+  meta_merged_p <- bind_rows(twoOrMore, singles)
+  
+  #the doubling causes some meta_p values be above 1, check
+  meta_merged_p %<>% rowwise() %>% mutate(meta_direction = if_else(meta_meta_higher_in_MDD_pvalue < meta_meta_lower_in_MDD_pvalue, '+', '-'), meta_p = if_else(2 * min(meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue) > 1, 1, 2 * min(meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue)))
+  
+  full_table <- inner_join(meta_merged_p,min_p)
+  full_table <- left_join(merged_directions,full_table) 
+  
+  #copy the values from DCDC1 to DCDC5 (same gene.. but have different p values for Howard)
+  keep <- full_table %>% filter(gene_symbol == "DCDC1")
+  keep_index <- keep[-c(1:6)]
+  full_table[which(full_table$gene_symbol == "DCDC5"),c(7:ncol(full_table))]<- keep_index
+  
+  #why is there extra rows
+  full_table %<>% mutate(Corrected_p = meta_p*269)
+  # 
+  full_table %<>%distinct() #fix the 666 rows 
+  full_table %<>% mutate(Bonferroni_Correction = p.adjust(meta_p, method = "bonferroni") ) 
+  full_table %<>% arrange(Corrected_p)
+  
+  if(length(is.na(full_table$Howard.pvalue)) == 0){
+    full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
+    full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
+  }
+  return(full_table)
+}
+
+#merge analysis on the full genome rather than the howard 269 genes
+mergeMetaMagma<- function(m, L, Ldir, D, Ddir, R, Rdir){
+  
+  #All studies were used
+  merged_directions <- left_join(m, R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker_genes' = 'gene_symbol'))
+  merged_directions %<>% left_join(L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte_genes' = 'gene_symbol'))
+  merged_directions %<>% left_join(D %>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding_genes' = 'gene_symbol')) %>% select(-Previous_Symbol, - Updated_Symbol, - Labonte_genes, - Ding_genes, -Ramaker_genes) %>% distinct()
+  
+  Labonte <- left_join(m %>% select(gene_symbol,Labonte_genes) %>% na.omit() , L, by = c('Labonte_genes' = 'gene_symbol')) %>% select(-Labonte_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Ding <- left_join(m %>% select(gene_symbol,Ding_genes), D, by = c('Ding_genes' = 'gene_symbol')) %>% select(-Ding_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Ramaker <- left_join(m %>% select(gene_symbol,Ramaker_genes), R, by = c('Ramaker_genes' = 'gene_symbol')) %>% select(-Ramaker_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  
+  merged_p <- bind_rows(Labonte, Ding, Ramaker)
+  
+  # merged_p %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
+  
+  merged_table <- left_join(merged_directions, merged_p) %>% distinct()
+  merged_table %<>% mutate(Howard.pvalue = NA, gene_name = NA)
+  
+  merged_table %<>% MetaAnalysis() %>% select(-Howard.pvalue, -gene_name)
+  
+
+return(merged_table)
+  
+}
+
+mergeMetaMagmaRank<- function(m, L, Ldir, D, Ddir, R, Rdir){
+  
+  #All studies were used
+  merged_directions <- left_join(m, R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker_genes' = 'gene_symbol'))
+  merged_directions %<>% left_join(L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte_genes' = 'gene_symbol'))
+  merged_directions %<>% left_join(D %>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding_genes' = 'gene_symbol')) %>% select(-Previous_Symbol, - Updated_Symbol, - Labonte_genes, - Ding_genes, -Ramaker_genes) %>% distinct()
+  
+  Labonte <- left_join(m %>% select(gene_symbol,Labonte_genes) %>% na.omit() , L, by = c('Labonte_genes' = 'gene_symbol')) %>% select(-Labonte_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Ding <- left_join(m %>% select(gene_symbol,Ding_genes), D, by = c('Ding_genes' = 'gene_symbol')) %>% select(-Ding_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Ramaker <- left_join(m %>% select(gene_symbol,Ramaker_genes), R, by = c('Ramaker_genes' = 'gene_symbol')) %>% select(-Ramaker_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  
+  merged_p <- bind_rows(Labonte, Ding, Ramaker)
+  
+  # merged_p %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
+  
+  merged_table <- left_join(merged_directions, merged_p) %>% distinct()
+  merged_table %<>% mutate(Howard.pvalue = NA, gene_name = NA)
+  
+  merged_table %<>% GenomeRank() %>% select(-Howard.pvalue, -gene_name)
+  
+  
+  return(merged_table)
+  
+}
+GenomeRank <- function(merged_table) {
+  
+  merged_p <- merged_table %>% dplyr::select(gene_symbol, min_p_across_regions, meta_Down, meta_Up)
+  merged_directions <- merged_table %>% dplyr:: select(gene_symbol, Howard.pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
+  
+  #get just minp and the two one-sided meta p-values for each row
+  meta_merged_p <- merged_p %>% group_by(gene_symbol) %>% summarize(list_of_meta_higher_in_MDD_genome_percentile_rank = list(meta_Up), 
+                                                                    list_of_meta_lower_in_MDD_genome_percentile_rank = list(meta_Down), count_of_pvalues=n())
+  min_p <- merged_p %>% group_by(gene_symbol) %>% summarize(minp = min(min_p_across_regions))
+  
+  #had trouble doing this with if_else
+  twoOrMore <- meta_merged_p %>% filter(count_of_pvalues > 1) %>% rowwise() %>% 
+    mutate(meta_meta_higher_in_MDD_genome_percentile_rank = sumlog(c(list_of_meta_higher_in_MDD_genome_percentile_rank))$p,
+           meta_meta_lower_in_MDD_genome_percentile_rank=  sumlog(c(list_of_meta_lower_in_MDD_genome_percentile_rank))$p
+    ) %>% dplyr::select(gene_symbol, meta_meta_higher_in_MDD_genome_percentile_rank, meta_meta_lower_in_MDD_genome_percentile_rank)
+  
+  singles <- meta_merged_p %>% filter(count_of_pvalues == 1) %>% 
+    mutate(meta_meta_higher_in_MDD_genome_percentile_rank = unlist(list_of_meta_higher_in_MDD_genome_percentile_rank),
+           meta_meta_lower_in_MDD_genome_percentile_rank =  unlist(list_of_meta_lower_in_MDD_genome_percentile_rank)
+    ) %>% dplyr::select(gene_symbol, meta_meta_higher_in_MDD_genome_percentile_rank, meta_meta_lower_in_MDD_genome_percentile_rank)
+  meta_merged_p <- bind_rows(twoOrMore, singles)
+  
+  #the doubling causes some meta_p values be above 1, check
+  meta_merged_p %<>% rowwise() %>% mutate(meta_direction = if_else(meta_meta_higher_in_MDD_genome_percentile_rank < meta_meta_lower_in_MDD_genome_percentile_rank, '+', '-'), genome_percentile_rank_p = if_else(2 * min(meta_meta_higher_in_MDD_genome_percentile_rank, meta_meta_lower_in_MDD_genome_percentile_rank) > 1, 1, 2 * min(meta_meta_higher_in_MDD_genome_percentile_rank, meta_meta_lower_in_MDD_genome_percentile_rank)))
+  
+  
+  full_table <- inner_join(meta_merged_p,min_p)
+  full_table <- left_join(merged_directions,full_table) %>% distinct()
+  
+  #copy the values from DCDC1 to DCDC5 (same gene.. but have different p values for Howard)
+  keep <- full_table %>% filter(gene_symbol == "DCDC1")
+  keep_index <- keep[-c(1:6)]
+  full_table[which(full_table$gene_symbol == "DCDC5"),c(7:ncol(full_table))]<- keep_index
+  
+  if(length(is.na(full_table$Howard.pvalue)) == 0){
+    full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$genome_percentile_rank_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
+    full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$genome_percentile_rank_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
+  }  
+  full_table %<>% mutate(Corrected_Percentile_Rank = genome_percentile_rank_p*269) #Bonferroni correction
+  full_table %<>% mutate(Corrected_Percentile_Rank_2 = p.adjust(genome_percentile_rank_p, method = "bonferroni"))
+  
+  full_table %<>% arrange(Corrected_Percentile_Rank)
+  return(full_table)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
