@@ -15,8 +15,6 @@ library(here)
 #"Raw RNA-seq data for GEO dataset GSE80655 was downloaded from the SRA database (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE80655) and quantified to gene-level counts using the ARCHS4 pipeline (Lachmann et al., 2017). Gene counts were downloaded from the ARCHS4 gene expression matrix v6. For more information about ARCHS4, as well as free access to the quantified gene expression matrix, visit the project home page at the following URL: http://amp.pharm.mssm.edu/archs4/download.html."
 #(Biojupies)
 
-source(here("R/transcriptomic_meta/RamakerFullMetaAnalysis.R"))
-
 gds <- getGEO("GSE80655")
 metadata_for_pH <- phenoData(gds$GSE80655_series_matrix.txt.gz) 
 metadata_for_pH <- as_tibble(as(metadata_for_pH, "data.frame"))
@@ -52,21 +50,23 @@ regions <- unique(metadata$`brain region`)
 #create empty tibble for data to be populated 
 full_results <- tibble()
 
+source(here("R/transcriptomic_meta/Ramaker_Meta_Analysis.R"))
+
 #Perform Ramaker meta-analysis functions in RamakerMetaAnalysis.R
-summary_results <- RamakerMeta(fullmetadata, read_counts, rawcount_dataframe, regions, full_results)
-write_csv(summary_results, path = here("ProcessedData", "RamakerEtAl", "CompleteRamakerTable.csv"))
-summary_results %<>% RamakerAnalysis(regions)
+R_summary_results <- RamakerDEModel(fullmetadata, read_counts, rawcount_dataframe, regions, full_results)
+R_summary_results %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "CompleteRamakerTable.csv"))
+R_summary_results %<>% RamakerMetaAnalysis(regions)
 
 #full female Ramaker data results
-female_summary_results <- RamakerMeta(female_metadata, read_counts, rawcount_dataframe, regions, full_results)
-write_csv(female_summary_results, path = here("ProcessedData", "RamakerEtAl", "CompleteFemaleRamakerTable.csv"))
-female_summary_results %<>% RamakerAnalysis(regions)
-female_summary_results %<>% rename(AnCg_nAcc_DLPFC_Female_directions = AnCg_nAcc_DLPFC_directions)
+R_female_summary_results <- RamakerDEModel(female_metadata, read_counts, rawcount_dataframe, regions, full_results)
+R_female_summary_result %>% write_csv( path = here("ProcessedData", "RamakerEtAl", "CompleteFemaleRamakerTable.csv"))
+R_female_summary_results %<>% RamakerMetaAnalysis(regions)
+R_female_summary_results %<>% rename(AnCg_nAcc_DLPFC_Female_directions = AnCg_nAcc_DLPFC_directions)
 
 #full male Ramaker data results
-male_summary_results <- RamakerMeta(male_metadata, read_counts, rawcount_dataframe, regions, full_results)
+male_summary_results <- RamakerDEModel(male_metadata, read_counts, rawcount_dataframe, regions, full_results)
 write_csv(male_summary_results, path = here("ProcessedData", "RamakerEtAl", "CompleteMaleRamakerTable.csv"))
-male_summary_results %<>% RamakerAnalysis(regions)
+male_summary_results %<>% RamakerMetaAnalysis(regions)
 male_summary_results %<>% rename(AnCg_nAcc_DLPFC_Male_directions = AnCg_nAcc_DLPFC_directions)
 
 
@@ -88,19 +88,19 @@ magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
 full_Ramaker <- read_csv( here("ProcessedData", "RamakerEtAl","CompleteRamakerTable.csv"))
 full_Ramaker %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol)) #change from upper case to lower case 
 full_Ramaker %<>% right_join(magma %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit() %>% write_csv(here("ProcessedData","RamakerEtAl", "CompleteRamakerTableMagma.csv"))
-full_Ramaker %<>% RamakerAnalysis(regions)
+full_Ramaker %<>% RamakerMetaAnalysis(regions)
 
 
 female_Ramaker_magma <- read_csv(here("ProcessedData", "RamakerEtAl", "CompleteFemaleRamakerTable.csv"))
 female_Ramaker_magma %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
 female_Ramaker_magma  %<>% right_join(magma %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit() %>% write_csv(here("ProcessedData", "RamakerEtAl","CompleteFemaleRamakerTableMagma.csv"))
-female_Ramaker_magma %<>% RamakerAnalysis(regions)
+female_Ramaker_magma %<>% RamakerMetaAnalysis(regions)
 female_Ramaker_magma %<>% rename(AnCg_nAcc_DLPFC_Female_directions = AnCg_nAcc_DLPFC_directions)
 
 male_Ramaker_magma <- read_csv(here("ProcessedData", "RamakerEtAl", "CompleteMaleRamakerTable.csv"))
 male_Ramaker_magma %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
 male_Ramaker_magma  %<>% right_join(magma %>% select(Ramaker_genes) %>% distinct(), by = c( 'gene_symbol' = 'Ramaker_genes')) %>% na.omit() %>% write_csv(here("ProcessedData","RamakerEtAl", "CompleteMaleRamakerTableMagma.csv"))
-male_Ramaker_magma %<>% RamakerAnalysis(regions)
+male_Ramaker_magma %<>% RamakerMetaAnalysis(regions)
 male_Ramaker_magma %<>% rename(AnCg_nAcc_DLPFC_Male_directions = AnCg_nAcc_DLPFC_directions)
 
 summary_magma <- left_join(female_Ramaker_magma %>% select(gene_symbol,AnCg_nAcc_DLPFC_Female_directions), male_Ramaker_magma %>% select(gene_symbol,AnCg_nAcc_DLPFC_Male_directions ))
