@@ -1,0 +1,282 @@
+Sample_geo_accession	Sample Title	age at death	brain region	clinical diagnosis	ethnicity	gender	post-mortem interval	tissue
+GSM2132201	X1834_AnCg_C_SL31501	40	AnCg	Control	Caucasian	M	12.25	brain
+GSM2132202	X2315_AnCg_M_SL31502	58	AnCg	Major Depression	Caucasian	M	24.0	brain
+GSM2132203	X2566_AnCg_B_SL31503	56	AnCg	Bipolar Disorder	Caucasian	F	29.0	brain
+GSM2132204	X3031_AnCg_M_SL31504	49	AnCg	Major Depression	Caucasian	M	27.0	brain
+GSM2132205	X2353_nAcc_S_SL31505	31	nAcc	Schizophrenia	Caucasian	F	22.0	brain
+GSM2132206	X2664_nAcc_C_SL31506	43	nAcc	Control	Asian	M	26.0	brain
+GSM2132207	X2805_nAcc_C_SL31507	45	nAcc	Control	Caucasian	M	21.0	brain
+GSM2132208	X2976_nAcc_S_SL31508	53	nAcc	Schizophrenia	Caucasian	F	34.0	brain
+GSM2132209	X3196_AnCg_C_SL32225	44	AnCg	Control	Caucasian	M	23.0	brain
+GSM2132210	X3516_AnCg_C_SL32226	41	AnCg	Control	Caucasian	M	22.5	brain
+GSM2132211	X3519_AnCg_C_SL32227	65	AnCg	Control	African American	M	13.5	brain
+GSM2132212	X3588_AnCg_C_SL32228	56	AnCg	Control	Caucasian	M	24.5	brain
+GSM2132213	X1881_DLPFC_B_SL32229	69	DLPFC	Bipolar Disorder	Caucasian	M	11.25	brain
+GSM2132214	X3004_DLPFC_M_SL32230	48	DLPFC	Major Depression	Caucasian	F	37.0	brain
+GSM2132215	X3064_DLPFC_M_SL32231	46	DLPFC	Major Depression	Caucasian	M	27.0	brain
+GSM2132216	X3079_DLPFC_B_SL32232	32	DLPFC	Bipolar Disorder	Caucasian	M	23.75	brain
+GSM2132217	X3618_AnCg_B_SL32233	36	AnCg	Bipolar Disorder	Caucasian	F	25.5	brain
+GSM2132218	X3634_AnCg_M_SL32234	19	AnCg	Major Depression	Caucasian	M	30.0	brain
+GSM2132219	X3982_AnCg_M_SL32235	40	AnCg	Major Depression	Caucasian	M	24.0	brain
+GSM2132220	X4213_AnCg_S_SL32236	35	AnCg	Schizophrenia	Asian	M	26.5	brain
+GSM2132221	X4284_AnCg_S_SL32237	39	AnCg	Schizophrenia	African American	M	19.0	brain
+GSM2132222	X4296_AnCg_S_SL32238	36	AnCg	Schizophrenia	Caucasian	M	11.2	brain
+GSM2132223	X4301_AnCg_S_SL32239	26	AnCg	Schizophrenia	Caucasian	M	21.1	brain
+GSM2132224	X4366_AnCg_B_SL32240	51	AnCg	Bipolar Disorder	Caucasian	M	14.6	brain
+GSM2132225	X4383_AnCg_B_SL32241	40	AnCg	Bipolar Disorder	Caucasian	M	26.3	brain
+GSM2132226	X3186_DLPFC_C_SL32242	32	DLPFC	Control	Caucasian	M	26.0	brain
+GSM2132227	X3196_DLPFC_C_SL32243	44	DLPFC	Control	Caucasian	M	23.0	brain
+GSM2132228	X3275_DLPFC_C_SL32244	35	DLPFC	Control	Caucasian	M	32.0	brain
+GSM2132229	X3481_DLPFC_M_SL32245	66	DLPFC	Major Depression	Caucasian	M	32.0	brain
+GSM2132230	X3671_DLPFC_M_SL32246	44	DLPFC	Major Depression	Caucasian	F	25.0	brain
+GSM2132231	X3710_DLPFC_M_SL32247	56	DLPFC	Major Depression	Caucasian	M	13.0	brain
+GSM2132232	X3982_DLPFC_M_SL32248	40	DLPFC	Major Depression	Caucasian	M	24.0	brain
+GSM2132233	X4063_DLPFC_C_SL32249	32	DLPFC	Control	Caucasian	M	10.0	brain
+GSM2132234	X4213_DLPFC_S_SL32250	35	DLPFC	Schizophrenia	Asian	M	26.5	brain
+GSM2132235	X3018_nAcc_C_SL32251	70	nAcc	Control	Caucasian	M	28.0	brain
+GSM2132236	X3275_nAcc_C_SL32252	35	nAcc	Control	Caucasian	M	32.0	brain
+GSM2132237	X3433_nAcc_C_SL32253	39	nAcc	Control	Caucasian	M	30.0	brain
+GSM2132238	X3516_nAcc_C_SL32254	41	nAcc	Control	Caucasian	M	22.5	brain
+GSM2132239	X3519_nAcc_C_SL32255	65	nAcc	Control	African American	M	13.5	brain
+GSM2132240	X3634_nAcc_M_SL32256	19	nAcc	Major Depression	Caucasian	M	30.0	brain
+GSM2132241	X4262_DLPFC_B_SL32257	52	DLPFC	Bipolar Disorder	Caucasian	M	36.0	brain
+GSM2132242	X4357_DLPFC_S_SL32258	52	DLPFC	Schizophrenia	Caucasian	M	23.5	brain
+GSM2132243	X4359_DLPFC_B_SL32259	53	DLPFC	Bipolar Disorder	Caucasian	M	25.0	brain
+GSM2132244	X4413_DLPFC_S_SL32260	55	DLPFC	Schizophrenia	Caucasian	M	12.0	brain
+GSM2132245	X1881_nAcc_B_SL32261	69	nAcc	Bipolar Disorder	Caucasian	M	11.25	brain
+GSM2132246	X2267_nAcc_M_SL32262	19	nAcc	Major Depression	Caucasian	M	18.0	brain
+GSM2132247	X3684_nAcc_S_SL32263	63	nAcc	Schizophrenia	Caucasian	M	30.0	brain
+GSM2132248	X3710_nAcc_M_SL32264	56	nAcc	Major Depression	Caucasian	M	13.0	brain
+GSM2132249	X3927_nAcc_B_SL32265	36	nAcc	Bipolar Disorder	Caucasian	M	25.5	brain
+GSM2132250	X3994_nAcc_M_SL32266	50	nAcc	Major Depression	Caucasian	M	30.8	brain
+GSM2132251	X4046_nAcc_M_SL32267	24	nAcc	Major Depression	Caucasian	M	25.3	brain
+GSM2132252	X4114_nAcc_S_SL32268	58	nAcc	Schizophrenia	Caucasian	F	27.3	brain
+GSM2132253	X4301_nAcc_S_SL32269	26	nAcc	Schizophrenia	Caucasian	M	21.1	brain
+GSM2132254	X4366_nAcc_B_SL32270	51	nAcc	Bipolar Disorder	Caucasian	M	14.6	brain
+GSM2132255	X4419_nAcc_B_SL32271	51	nAcc	Bipolar Disorder	Caucasian	F	9.2	brain
+GSM2132256	X4619_nAcc_S_SL32272	34	nAcc	Schizophrenia	Caucasian	M	17.2	brain
+GSM2132257	X4639_nAcc_B_SL32273	52	nAcc	Bipolar Disorder	Caucasian	M	22.2	brain
+GSM2132258	X3186_nAcc_C_SL5881	32	nAcc	Control	Caucasian	M	26.0	brain
+GSM2132259	X3711_nAcc_B_SL5882	59	nAcc	Bipolar Disorder	Caucasian	F	27.0	brain
+GSM2132260	X3281_AnCg_C_SL5883	70	AnCg	Control	Caucasian	F	20.5	brain
+GSM2132261	X2956_nAcc_S_SL5884	44	nAcc	Schizophrenia	Caucasian	M	24.0	brain
+GSM2132262	X2311_DLPFC_B_SL5885	23	DLPFC	Bipolar Disorder	Caucasian	M	9.0	brain
+GSM2132263	X3519_DLPFC_C_SL5886	65	DLPFC	Control	African American	M	13.5	brain
+GSM2132264	X4383_DLPFC_B_SL5887	40	DLPFC	Bipolar Disorder	Caucasian	M	26.3	brain
+GSM2132265	X2950_DLPFC_S_SL5888	45	DLPFC	Schizophrenia	Caucasian	M	20.0	brain
+GSM2132266	X3168_AnCg_M_SL5890	39	AnCg	Major Depression	Caucasian	M	27.5	brain
+GSM2132267	X3671_AnCg_M_SL5891	44	AnCg	Major Depression	Caucasian	F	25.0	brain
+GSM2132268	X3079_AnCg_B_SL5892	32	AnCg	Bipolar Disorder	Caucasian	M	23.75	brain
+GSM2132269	X3686_nAcc_C_SL5993	66	nAcc	Control	Caucasian	M	18.0	brain
+GSM2132270	X3572_nAcc_C_SL5995	49	nAcc	Control	Caucasian	M	27.5	brain
+GSM2132271	X4284_nAcc_S_SL5996	39	nAcc	Schizophrenia	African American	M	19.0	brain
+GSM2132272	X3168_DLPFC_M_SL5997	39	DLPFC	Major Depression	Caucasian	M	27.5	brain
+GSM2132273	X2944_DLPFC_M_SL5998	52	DLPFC	Major Depression	Caucasian	M	16.0	brain
+GSM2132274	X2316_DLPFC_C_SL5999	58	DLPFC	Control	Caucasian	M	26.0	brain
+GSM2132275	X2619_DLPFC_C_SL6000	48	DLPFC	Control	Caucasian	M	20.2	brain
+GSM2132276	X3993_AnCg_S_SL6001	50	AnCg	Schizophrenia	Caucasian	M	17.8	brain
+GSM2132277	X4359_AnCg_B_SL6002	53	AnCg	Bipolar Disorder	Caucasian	M	25.0	brain
+GSM2132278	X4063_AnCg_C_SL6003	32	AnCg	Control	Caucasian	M	10.0	brain
+GSM2132279	X3525_AnCg_S_SL6004	42	AnCg	Schizophrenia	Caucasian	M	8.5	brain
+GSM2132280	X3671_nAcc_M_SL6124	44	nAcc	Major Depression	Caucasian	F	25.0	brain
+GSM2132281	X3974_nAcc_M_SL6125	46	nAcc	Major Depression	Caucasian	F	7.6	brain
+GSM2132282	X3004_nAcc_M_SL6126	48	nAcc	Major Depression	Caucasian	F	37.0	brain
+GSM2132283	X3168_nAcc_M_SL6127	39	nAcc	Major Depression	Caucasian	M	27.5	brain
+GSM2132284	X3686_DLPFC_C_SL6128	66	DLPFC	Control	Caucasian	M	18.0	brain
+GSM2132285	X3588_DLPFC_C_SL6129	56	DLPFC	Control	Caucasian	M	24.5	brain
+GSM2132286	X3974_DLPFC_M_SL6130	46	DLPFC	Major Depression	Caucasian	F	7.6	brain
+GSM2132287	X3451_DLPFC_B_SL6131	49	DLPFC	Bipolar Disorder	Other	M	29.5	brain
+GSM2132288	X3433_AnCg_C_SL6132	39	AnCg	Control	Caucasian	M	30.0	brain
+GSM2132289	X3710_AnCg_M_SL6133	56	AnCg	Major Depression	Caucasian	M	13.0	brain
+GSM2132290	X2805_AnCg_C_SL6134	45	AnCg	Control	Caucasian	M	21.0	brain
+GSM2132291	X3365_AnCg_M_SL6135	47	AnCg	Major Depression	Caucasian	M	29.0	brain
+GSM2132292	X3071_nAcc_M_SL6335	49	nAcc	Major Depression	Caucasian	M	31.0	brain
+GSM2132293	X3772_nAcc_B_SL6336	70	nAcc	Bipolar Disorder	Caucasian	M	27.5	brain
+GSM2132294	X3426_nAcc_M_SL6337	63	nAcc	Major Depression	Caucasian	M	28.5	brain
+GSM2132295	X4087_nAcc_B_SL6338	51	nAcc	Bipolar Disorder	Caucasian	F	16.8	brain
+GSM2132296	X4296_DLPFC_S_SL6339	36	DLPFC	Schizophrenia	Caucasian	M	11.2	brain
+GSM2132297	X2805_DLPFC_C_SL6340	45	DLPFC	Control	Caucasian	M	21.0	brain
+GSM2132298	X3426_DLPFC_M_SL6341	63	DLPFC	Major Depression	Caucasian	M	28.5	brain
+GSM2132299	X4405_DLPFC_B_SL6342	42	DLPFC	Bipolar Disorder	Caucasian	M	17.2	brain
+GSM2132300	X3064_AnCg_M_SL6343	46	AnCg	Major Depression	Caucasian	M	27.0	brain
+GSM2132301	X3241_AnCg_B_SL6344	59	AnCg	Bipolar Disorder	Caucasian	M	15.5	brain
+GSM2132302	X3186_AnCg_C_SL6345	32	AnCg	Control	Caucasian	M	26.0	brain
+GSM2132303	X4385_AnCg_S_SL6346	24	AnCg	Schizophrenia	Caucasian	M	33.5	brain
+GSM2132304	X3038_nAcc_B_SL6406	52	nAcc	Bipolar Disorder	Caucasian	M	28.0	brain
+GSM2132305	X3452_nAcc_B_SL6407	69	nAcc	Bipolar Disorder	Caucasian	F	28.25	brain
+GSM2132306	X3667_nAcc_M_SL6408	28	nAcc	Major Depression	Caucasian	M	26.5	brain
+GSM2132307	X4345_nAcc_B_SL6409	25	nAcc	Bipolar Disorder	Caucasian	F	13.8	brain
+GSM2132308	X4301_DLPFC_S_SL6410	26	DLPFC	Schizophrenia	Caucasian	M	21.1	brain
+GSM2132309	X4366_DLPFC_B_SL6411	51	DLPFC	Bipolar Disorder	Caucasian	M	14.6	brain
+GSM2132310	X3572_DLPFC_C_SL6412	49	DLPFC	Control	Caucasian	M	27.5	brain
+GSM2132311	X3516_DLPFC_C_SL6413	41	DLPFC	Control	Caucasian	M	22.5	brain
+GSM2132312	X3452_AnCg_B_SL6414	69	AnCg	Bipolar Disorder	Caucasian	F	28.25	brain
+GSM2132313	X4114_AnCg_S_SL6415	58	AnCg	Schizophrenia	Caucasian	F	27.3	brain
+GSM2132314	X3481_AnCg_M_SL6416	66	AnCg	Major Depression	Caucasian	M	32.0	brain
+GSM2132315	X4001_AnCg_M_SL6417	39	AnCg	Major Depression	Caucasian	M	29.0	brain
+GSM2132316	X1834_nAcc_C_SL6605	40	nAcc	Control	Caucasian	M	12.25	brain
+GSM2132317	X2292_nAcc_C_SL6606	55	nAcc	Control	Caucasian	M	15.0	brain
+GSM2132318	X4359_nAcc_B_SL6607	53	nAcc	Bipolar Disorder	Caucasian	M	25.0	brain
+GSM2132319	X4656_nAcc_S_SL6608	43	nAcc	Schizophrenia	Caucasian	M	14.7	brain
+GSM2132320	X1834_DLPFC_C_SL6609	40	DLPFC	Control	Caucasian	M	12.25	brain
+GSM2132321	X2941_DLPFC_S_SL6610	48	DLPFC	Schizophrenia	Other	M	27.0	brain
+GSM2132322	X3241_DLPFC_B_SL6611	59	DLPFC	Bipolar Disorder	Caucasian	M	15.5	brain
+GSM2132323	X4001_DLPFC_M_SL6612	39	DLPFC	Major Depression	Caucasian	M	29.0	brain
+GSM2132324	X2941_AnCg_S_SL6613	48	AnCg	Schizophrenia	Other	M	27.0	brain
+GSM2132325	X4619_AnCg_S_SL6614	34	AnCg	Schizophrenia	Caucasian	M	17.2	brain
+GSM2132326	X3667_AnCg_M_SL6615	28	AnCg	Major Depression	Caucasian	M	26.5	brain
+GSM2132327	X4463_AnCg_S_SL6616	31	AnCg	Schizophrenia	Caucasian	M	23.5	brain
+GSM2132328	X2466_nAcc_B_SL6638	26	nAcc	Bipolar Disorder	Caucasian	M	19.0	brain
+GSM2132329	X3031_nAcc_M_SL6639	49	nAcc	Major Depression	Caucasian	M	27.0	brain
+GSM2132330	X4405_nAcc_B_SL6640	42	nAcc	Bipolar Disorder	Caucasian	M	17.2	brain
+GSM2132331	X2208_nAcc_M_SL6641	72	nAcc	Major Depression	Caucasian	F	21.0	brain
+GSM2132332	X2466_DLPFC_B_SL6642	26	DLPFC	Bipolar Disorder	Caucasian	M	19.0	brain
+GSM2132333	X3523_DLPFC_C_SL6643	40	DLPFC	Control	Caucasian	M	36.5	brain
+GSM2132334	X4419_DLPFC_B_SL6644	51	DLPFC	Bipolar Disorder	Caucasian	F	9.2	brain
+GSM2132335	X4046_DLPFC_M_SL6645	24	DLPFC	Major Depression	Caucasian	M	25.3	brain
+GSM2132336	X4262_AnCg_B_SL6646	52	AnCg	Bipolar Disorder	Caucasian	M	36.0	brain
+GSM2132337	X2466_AnCg_B_SL6647	26	AnCg	Bipolar Disorder	Caucasian	M	19.0	brain
+GSM2132338	X3711_AnCg_B_SL6648	59	AnCg	Bipolar Disorder	Caucasian	F	27.0	brain
+GSM2132339	X3572_AnCg_C_SL6649	49	AnCg	Control	Caucasian	M	27.5	brain
+GSM2132340	X3410_nAcc_S_SL6650	36	nAcc	Schizophrenia	Caucasian	M	44.25	brain
+GSM2132341	X4385_nAcc_S_SL6652	24	nAcc	Schizophrenia	Caucasian	M	33.5	brain
+GSM2132342	X3651_nAcc_S_SL6653	40	nAcc	Schizophrenia	Caucasian	M	14.5	brain
+GSM2132343	X2384_DLPFC_S_SL6654	50	DLPFC	Schizophrenia	Caucasian	M	6.25	brain
+GSM2132344	X2353_DLPFC_S_SL6655	31	DLPFC	Schizophrenia	Caucasian	F	22.0	brain
+GSM2132345	X4619_DLPFC_S_SL6657	34	DLPFC	Schizophrenia	Caucasian	M	17.2	brain
+GSM2132346	X3836_AnCg_M_SL6658	46	AnCg	Major Depression	Caucasian	F	28.0	brain
+GSM2132347	X2505_AnCg_S_SL6659	39	AnCg	Schizophrenia	Caucasian	M	7.5	brain
+GSM2132348	X2292_AnCg_C_SL6660	55	AnCg	Control	Caucasian	M	15.0	brain
+GSM2132349	X2944_AnCg_M_SL6661	52	AnCg	Major Depression	Caucasian	M	16.0	brain
+GSM2132350	X3709_nAcc_M_SL6662	53	nAcc	Major Depression	Caucasian	F	19.5	brain
+GSM2132351	X3618_nAcc_B_SL6663	36	nAcc	Bipolar Disorder	Caucasian	F	25.5	brain
+GSM2132352	X3451_nAcc_B_SL6664	49	nAcc	Bipolar Disorder	Other	M	29.5	brain
+GSM2132353	X3085_nAcc_B_SL6665	63	nAcc	Bipolar Disorder	Caucasian	M	40.0	brain
+GSM2132354	X3994_DLPFC_M_SL6666	50	DLPFC	Major Depression	Caucasian	M	30.8	brain
+GSM2132355	X2956_DLPFC_S_SL6667	44	DLPFC	Schizophrenia	Caucasian	M	24.0	brain
+GSM2132356	X2315_DLPFC_M_SL6668	58	DLPFC	Major Depression	Caucasian	M	24.0	brain
+GSM2132357	X2208_DLPFC_M_SL6669	72	DLPFC	Major Depression	Caucasian	F	21.0	brain
+GSM2132358	X3281_nAcc_C_SL6670	70	nAcc	Control	Caucasian	F	20.5	brain
+GSM2132359	X3018_AnCg_C_SL6671	70	AnCg	Control	Caucasian	M	28.0	brain
+GSM2132360	X2384_AnCg_S_SL6672	50	AnCg	Schizophrenia	Caucasian	M	6.25	brain
+GSM2132361	X4656_AnCg_S_SL6673	43	AnCg	Schizophrenia	Caucasian	M	14.7	brain
+GSM2132362	X3365_nAcc_M_SL7136	47	nAcc	Major Depression	Caucasian	M	29.0	brain
+GSM2132363	X3755_nAcc_M_SL7137	34	nAcc	Major Depression	Caucasian	M	27.5	brain
+GSM2132364	X3228_nAcc_C_SL7138	39	nAcc	Control	Pacific Islander	M	18.15	brain
+GSM2132365	X4213_nAcc_S_SL7139	35	nAcc	Schizophrenia	Asian	M	26.5	brain
+GSM2132366	X3684_DLPFC_S_SL7140	63	DLPFC	Schizophrenia	Caucasian	M	30.0	brain
+GSM2132367	X3018_DLPFC_C_SL7141	70	DLPFC	Control	Caucasian	M	28.0	brain
+GSM2132368	X3038_DLPFC_B_SL7142	52	DLPFC	Bipolar Disorder	Caucasian	M	28.0	brain
+GSM2132369	X4656_DLPFC_S_SL7143	43	DLPFC	Schizophrenia	Caucasian	M	14.7	brain
+GSM2132370	X3085_AnCg_B_SL7144	63	AnCg	Bipolar Disorder	Caucasian	M	40.0	brain
+GSM2132371	X4046_AnCg_M_SL7145	24	AnCg	Major Depression	Caucasian	M	25.3	brain
+GSM2132372	X1881_AnCg_B_SL7146	69	AnCg	Bipolar Disorder	Caucasian	M	11.25	brain
+GSM2132373	X2956_AnCg_S_SL7147	44	AnCg	Schizophrenia	Caucasian	M	24.0	brain
+GSM2132374	X3196_nAcc_C_SL7148	44	nAcc	Control	Caucasian	M	23.0	brain
+GSM2132375	X2950_nAcc_S_SL7149	45	nAcc	Schizophrenia	Caucasian	M	20.0	brain
+GSM2132376	X3965_nAcc_C_SL7150	67	nAcc	Control	Caucasian	M	15.0	brain
+GSM2132377	X3241_nAcc_B_SL7151	59	nAcc	Bipolar Disorder	Caucasian	M	15.5	brain
+GSM2132378	X2664_DLPFC_C_SL7152	43	DLPFC	Control	Asian	M	26.0	brain
+GSM2132379	X3772_DLPFC_B_SL7153	70	DLPFC	Bipolar Disorder	Caucasian	M	27.5	brain
+GSM2132380	X2267_DLPFC_M_SL7154	19	DLPFC	Major Depression	Caucasian	M	18.0	brain
+GSM2132381	X3031_DLPFC_M_SL7155	49	DLPFC	Major Depression	Caucasian	M	27.0	brain
+GSM2132382	X3228_AnCg_C_SL7156	39	AnCg	Control	Pacific Islander	M	18.15	brain
+GSM2132383	X3426_AnCg_M_SL7157	63	AnCg	Major Depression	Caucasian	M	28.5	brain
+GSM2132384	X3974_AnCg_M_SL7158	46	AnCg	Major Depression	Caucasian	F	7.6	brain
+GSM2132385	X3451_AnCg_B_SL7159	49	AnCg	Bipolar Disorder	Other	M	29.5	brain
+GSM2132386	X4063_nAcc_C_SL7377	32	nAcc	Control	Caucasian	M	10.0	brain
+GSM2132387	X3706_nAcc_C_SL7378	63	nAcc	Control	Caucasian	M	24.5	brain
+GSM2132388	X2311_nAcc_B_SL7379	23	nAcc	Bipolar Disorder	Caucasian	M	9.0	brain
+GSM2132389	X3774_nAcc_C_SL7380	45	nAcc	Control	Caucasian	F	16.0	brain
+GSM2132390	X3706_DLPFC_C_SL7381	63	DLPFC	Control	Caucasian	M	24.5	brain
+GSM2132391	X4087_DLPFC_B_SL7382	51	DLPFC	Bipolar Disorder	Caucasian	F	16.8	brain
+GSM2132392	X3965_DLPFC_C_SL7383	67	DLPFC	Control	Caucasian	M	15.0	brain
+GSM2132393	X3071_DLPFC_M_SL7384	49	DLPFC	Major Depression	Caucasian	M	31.0	brain
+GSM2132394	X2950_AnCg_S_SL7385	45	AnCg	Schizophrenia	Caucasian	M	20.0	brain
+GSM2132395	X3709_AnCg_M_SL7386	53	AnCg	Major Depression	Caucasian	F	19.5	brain
+GSM2132396	X3410_AnCg_S_SL7387	36	AnCg	Schizophrenia	Caucasian	M	44.25	brain
+GSM2132397	X2267_AnCg_M_SL7388	19	AnCg	Major Depression	Caucasian	M	18.0	brain
+GSM2132398	X2941_nAcc_S_SL7389	48	nAcc	Schizophrenia	Other	M	27.0	brain
+GSM2132399	X4463_nAcc_S_SL7390	31	nAcc	Schizophrenia	Caucasian	M	23.5	brain
+GSM2132400	X2315_nAcc_M_SL7391	58	nAcc	Major Depression	Caucasian	M	24.0	brain
+GSM2132401	X3079_nAcc_B_SL7392	32	nAcc	Bipolar Disorder	Caucasian	M	23.75	brain
+GSM2132402	X2248_DLPFC_C_SL7393	64	DLPFC	Control	Caucasian	F	19.25	brain
+GSM2132403	X4385_DLPFC_S_SL7394	24	DLPFC	Schizophrenia	Caucasian	M	33.5	brain
+GSM2132404	X2566_DLPFC_B_SL7395	56	DLPFC	Bipolar Disorder	Caucasian	F	29.0	brain
+GSM2132405	X4114_DLPFC_S_SL7396	58	DLPFC	Schizophrenia	Caucasian	F	27.3	brain
+GSM2132406	X3275_AnCg_C_SL7397	35	AnCg	Control	Caucasian	M	32.0	brain
+GSM2132407	X4413_AnCg_S_SL7398	55	AnCg	Schizophrenia	Caucasian	M	12.0	brain
+GSM2132408	X2353_AnCg_S_SL7399	31	AnCg	Schizophrenia	Caucasian	F	22.0	brain
+GSM2132409	X3684_AnCg_S_SL7400	63	AnCg	Schizophrenia	Caucasian	M	30.0	brain
+GSM2132410	X3836_nAcc_M_SL7401	46	nAcc	Major Depression	Caucasian	F	28.0	brain
+GSM2132411	X4383_nAcc_B_SL7402	40	nAcc	Bipolar Disorder	Caucasian	M	26.3	brain
+GSM2132412	X3836_DLPFC_M_SL7403	46	DLPFC	Major Depression	Caucasian	F	28.0	brain
+GSM2132413	X3709_DLPFC_M_SL7404	53	DLPFC	Major Depression	Caucasian	F	19.5	brain
+GSM2132414	X3651_DLPFC_S_SL7405	40	DLPFC	Schizophrenia	Caucasian	M	14.5	brain
+GSM2132415	X3071_AnCg_M_SL7406	49	AnCg	Major Depression	Caucasian	M	31.0	brain
+GSM2132416	X3994_AnCg_M_SL7407	50	AnCg	Major Depression	Caucasian	M	30.8	brain
+GSM2132417	X3038_AnCg_B_SL7408	52	AnCg	Bipolar Disorder	Caucasian	M	28.0	brain
+GSM2132418	X2208_AnCg_M_SL7409	72	AnCg	Major Depression	Caucasian	F	21.0	brain
+GSM2132419	X4001_nAcc_M_SL7611	39	nAcc	Major Depression	Caucasian	M	29.0	brain
+GSM2132420	X3525_nAcc_S_SL7612	42	nAcc	Schizophrenia	Caucasian	M	8.5	brain
+GSM2132421	X3993_nAcc_S_SL7613	50	nAcc	Schizophrenia	Caucasian	M	17.8	brain
+GSM2132422	X2292_DLPFC_C_SL7614	55	DLPFC	Control	Caucasian	M	15.0	brain
+GSM2132423	X3965_AnCg_C_SL7615	67	AnCg	Control	Caucasian	M	15.0	brain
+GSM2132424	X4242_DLPFC_B_SL7616	49	DLPFC	Bipolar Disorder	Caucasian	F	15.9	brain
+GSM2132425	X4345_DLPFC_B_SL7617	25	DLPFC	Bipolar Disorder	Caucasian	F	13.8	brain
+GSM2132426	X3711_DLPFC_B_SL7618	59	DLPFC	Bipolar Disorder	Caucasian	F	27.0	brain
+GSM2132427	X3755_AnCg_M_SL7619	34	AnCg	Major Depression	Caucasian	M	27.5	brain
+GSM2132428	X2316_AnCg_C_SL7620	58	AnCg	Control	Caucasian	M	26.0	brain
+GSM2132429	X3706_AnCg_C_SL7621	63	AnCg	Control	Caucasian	M	24.5	brain
+GSM2132430	X2566_nAcc_B_SL7622	56	nAcc	Bipolar Disorder	Caucasian	F	29.0	brain
+GSM2132431	X2316_nAcc_C_SL7623	58	nAcc	Control	Caucasian	M	26.0	brain
+GSM2132432	X4404_AnCg_S_SL7624	50	AnCg	Schizophrenia	Caucasian	M	25.7	brain
+GSM2132433	X3774_DLPFC_C_SL7625	45	DLPFC	Control	Caucasian	F	16.0	brain
+GSM2132434	X4284_DLPFC_S_SL7626	39	DLPFC	Schizophrenia	African American	M	19.0	brain
+GSM2132435	X2619_nAcc_C_SL7627	48	nAcc	Control	Caucasian	M	20.2	brain
+GSM2132436	X3993_DLPFC_S_SL7628	50	DLPFC	Schizophrenia	Caucasian	M	17.8	brain
+GSM2132437	X3774_AnCg_C_SL7629	45	AnCg	Control	Caucasian	F	16.0	brain
+GSM2132438	X3686_AnCg_C_SL7630	66	AnCg	Control	Caucasian	M	18.0	brain
+GSM2132439	X2619_AnCg_C_SL7631	48	AnCg	Control	Caucasian	M	20.2	brain
+GSM2132440	X3281_DLPFC_C_SL7632	70	DLPFC	Control	Caucasian	F	20.5	brain
+GSM2132441	X3651_AnCg_S_SL7633	40	AnCg	Schizophrenia	Caucasian	M	14.5	brain
+GSM2132442	X3481_nAcc_M_SL7694	66	nAcc	Major Depression	Caucasian	M	32.0	brain
+GSM2132443	X4357_AnCg_S_SL7695	52	AnCg	Schizophrenia	Caucasian	M	23.5	brain
+GSM2132444	X4242_AnCg_B_SL7696	49	AnCg	Bipolar Disorder	Caucasian	F	15.9	brain
+GSM2132445	X4639_DLPFC_B_SL7697	52	DLPFC	Bipolar Disorder	Caucasian	M	22.2	brain
+GSM2132446	X3365_DLPFC_M_SL7698	47	DLPFC	Major Depression	Caucasian	M	29.0	brain
+GSM2132447	X3772_AnCg_B_SL7699	70	AnCg	Bipolar Disorder	Caucasian	M	27.5	brain
+GSM2132448	X4262_nAcc_B_SL7700	52	nAcc	Bipolar Disorder	Caucasian	M	36.0	brain
+GSM2132449	X3452_DLPFC_B_SL7701	69	DLPFC	Bipolar Disorder	Caucasian	F	28.25	brain
+GSM2132450	X4639_AnCg_B_SL7702	52	AnCg	Bipolar Disorder	Caucasian	M	22.2	brain
+GSM2132451	X4419_AnCg_B_SL7703	51	AnCg	Bipolar Disorder	Caucasian	F	9.2	brain
+GSM2132452	X4404_DLPFC_S_SL7704	50	DLPFC	Schizophrenia	Caucasian	M	25.7	brain
+GSM2132453	X3004_AnCg_M_SL7798	48	AnCg	Major Depression	Caucasian	F	37.0	brain
+GSM2132454	X4345_AnCg_B_SL7799	25	AnCg	Bipolar Disorder	Caucasian	F	13.8	brain
+GSM2132455	X3523_AnCg_C_SL7800	40	AnCg	Control	Caucasian	M	36.5	brain
+GSM2132456	X3667_DLPFC_M_SL7801	28	DLPFC	Major Depression	Caucasian	M	26.5	brain
+GSM2132457	X4463_DLPFC_S_SL7802	31	DLPFC	Schizophrenia	Caucasian	M	23.5	brain
+GSM2132458	X3525_DLPFC_S_SL7803	42	DLPFC	Schizophrenia	Caucasian	M	8.5	brain
+GSM2132459	X3228_DLPFC_C_SL7804	39	DLPFC	Control	Pacific Islander	M	18.15	brain
+GSM2132460	X2976_DLPFC_S_SL7805	53	DLPFC	Schizophrenia	Caucasian	F	34.0	brain
+GSM2132461	X3634_DLPFC_M_SL7806	19	DLPFC	Major Depression	Caucasian	M	30.0	brain
+GSM2132462	X3433_DLPFC_C_SL7807	39	DLPFC	Control	Caucasian	M	30.0	brain
+GSM2132463	X4405_AnCg_B_SL7808	42	AnCg	Bipolar Disorder	Caucasian	M	17.2	brain
+GSM2132464	X2248_AnCg_C_SL7809	64	AnCg	Control	Caucasian	F	19.25	brain
+GSM2132465	X2311_AnCg_B_SL7842	23	AnCg	Bipolar Disorder	Caucasian	M	9.0	brain
+GSM2132466	X2384_nAcc_S_SL7843	50	nAcc	Schizophrenia	Caucasian	M	6.25	brain
+GSM2132467	X2505_DLPFC_S_SL7844	39	DLPFC	Schizophrenia	Caucasian	M	7.5	brain
+GSM2132468	X2664_AnCg_C_SL7845	43	AnCg	Control	Asian	M	26.0	brain
+GSM2132469	X2976_AnCg_S_SL7846	53	AnCg	Schizophrenia	Caucasian	F	34.0	brain
+GSM2132470	X3085_DLPFC_B_SL7847	63	DLPFC	Bipolar Disorder	Caucasian	M	40.0	brain
+GSM2132471	X3410_DLPFC_S_SL7848	36	DLPFC	Schizophrenia	Caucasian	M	44.25	brain
+GSM2132472	X3588_nAcc_C_SL7849	56	nAcc	Control	Caucasian	M	24.5	brain
+GSM2132473	X3927_AnCg_B_SL7851	36	AnCg	Bipolar Disorder	Caucasian	M	25.5	brain
+GSM2132474	X3982_nAcc_M_SL7852	40	nAcc	Major Depression	Caucasian	M	24.0	brain
+GSM2132475	X4087_AnCg_B_SL7853	51	AnCg	Bipolar Disorder	Caucasian	F	16.8	brain
+GSM2132476	X4242_nAcc_B_SL7854	49	nAcc	Bipolar Disorder	Caucasian	F	15.9	brain
+GSM2132477	X4296_nAcc_S_SL7855	36	nAcc	Schizophrenia	Caucasian	M	11.2	brain
+GSM2132478	X4357_nAcc_S_SL7856	52	nAcc	Schizophrenia	Caucasian	M	23.5	brain
+GSM2132479	X4404_nAcc_S_SL7857	50	nAcc	Schizophrenia	Caucasian	M	25.7	brain
+GSM2132480	X4413_nAcc_S_SL7858	55	nAcc	Schizophrenia	Caucasian	M	12.0	brain
+GSM2132481	X3618_DLPFC_B_SL8435	36	DLPFC	Bipolar Disorder	Caucasian	F	25.5	brain
