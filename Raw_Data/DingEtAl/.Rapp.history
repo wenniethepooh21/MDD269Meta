@@ -1,0 +1,304 @@
+a <- 1
+a
+b <- 1.73
+a +b
+d <- a - b
+d
+mystring <- paste(e,g)
+e <- 'hello'
+mystring <- paste(e,g)
+g <- "world"
+mystring <- paste(e,g)
+mystring
+cat(e,g)
+cat(e,g, '\n')
+cat(e,g)
+a
+rm(a)
+a
+name.list <-list(value = 5,)
+name.list <-list(value = 5,
+word = 'text', number = 5.6)
+name.list
+str(name.list)
+str(trees)
+b<- c("Hello", "World", "From", )
+b<- c("Hello", "World", "From",
+"A", "Vector")
+b
+for (i in b) {}
+for (i in b) {
+print i}
+for (i in b) {
+print(i) }
+for (j in list('cow', 1, F)) { print (j)}
+c("hi", 1, 4)
+typeof(c)
+typeof(c[[1]])
+for (j in list('cow', 1, F)) { print (j)}
+for (j in list('cow', 1, F)) { print (j)
+typeof(j) }
+for (j in list('cow', 1, F)) { print (j)
+print(typeof(j)) }
+list("hi", 1, 4)
+b <- list("hi", 1, 4)
+str(b)
+myFunc <- function() { }
+myFunc <- function() {
+cat("Hellow adoring fans!\n")
+}
+myFunc
+myFunc()
+function() {   }
+function() { +    cat("Hello adoring fans!")  }
+function() {    cat("Hello adoring fans!")  }
+function() { cat("Hello adoring fans!") }
+install.packages('dplyr')
+install.packages('tidyr')
+getwd()
+setwd("./Documents/Thesis/Datas/MDD44Characterize/)
+getwd()
+sessionInfo()
+setwd('./Documents/Thesis/Datas/MDD44Characterize/data/DingEtAl/')
+library(tabulizer)#
+library(dplyr)#
+library(magrittr)#
+library(tidyverse)
+out <- extract_tables('./mnp-0001-0001-s05.pdf')#
+final <- do.call(rbind, out[-length(out)])
+out <- extract_tables('./mnp-0001-0001-s05.pdf')
+final <- do.call(rbind, out[-length(out)])
+final <- as.data.frame(final[2:nrow(final), ])#
+#
+#re-name headers #
+headers <- c('HU #', 'Subject Group', 'DSM-IV Diagnoses', 'MOD', 'COD', 'Sex', 'Age', 'Race', 'PMI', 'pH', 'RNA ratio', 'RIN', 'Hand Preference', 'Meds ATOD', 'Tob ATOD', 'MD1-ACC-M', 'MD2-ACC-M', 'MD2-ACC-F', 'MD3-ACC-F', 'MD1-AMY-M', 'MD3-AMY-F','DLPFC-M', 'DLPFC-F')#
+names(final) <- headers#
+#
+#this pdf has 2 pages of tables, but the library only takes the first page it see's split the table into 2 pdf files#
+#re-do the same process for the new table in the file #
+#
+out2 <- extract_tables('./mnp-0001-0001-s052.pdf')#
+final2 <- do.call(rbind, out2[-length(out2)])#
+final2 %<>% as.data.frame()#
+names(final2) <- headers#
+#
+#combine the two tables together into a single table#
+combined <- bind_rows(final, final2)#
+#
+#remove columns that begin with V#
+combined %<>% select(-starts_with("V"))
+head(final2)
+out2 <- extract_tables('./mnp-0001-0001-s052.pdf')#
+final2 <- do.call(rbind, out2[-length(out2)])#
+final2 %<>% as.data.frame()
+head(final2)
+out2 <- extract_tables('./mnp-0001-0001-s052.pdf')
+head(out2)
+final2 %<>% as.data.frame()
+out2 %<>% as.data.frame()
+head(out2)
+names(final2) <- headers
+names(out2) <- headers
+head(out2)
+combined <- bind_rows(final, out2)
+head(final)
+warnings()
+#remove columns that begin with V#
+combined %<>% select(-starts_with("V"))#
+#
+combined %<>% write_csv(path = './DingPostMortemData.csv')
+library(here)#
+library(tidyr)#
+library(magrittr)#
+library(dplyr)
+metadata <- read_tsv(here("data", "RamakerEtAl", "GSE80655 from biojupies", "GSE80655-metadata.txt.txt"))#
+regions <- unique(metadata$`brain region`)#
+full_results <- as_tibble()#
+#
+#counts from Biojupies#
+rawcount_dataframe <- read.csv(here("data", "RamakerEtAl", "GSE80655 from biojupies", "GSE80655-expression.txt.txt"),sep="\t", row.names = 1)#
+#
+gds <- getGEO("GSE80655")#
+metadata_for_pH <- phenoData(gds$GSE80655_series_matrix.txt.gz)#
+metadata_for_pH <- as_tibble(as(metadata_for_pH, "data.frame"))#
+metadata_for_pH %<>% select(Sample_geo_accession = geo_accession, brain_ph = 'brain ph:ch1')#
+metadata_for_pH %<>% mutate(brain_ph = as.numeric(brain_ph))#
+print(paste("NA pH values:" , nrow(metadata_for_pH %>% filter(is.na(brain_ph)))))#
+#replacing 3 missing values with mean brain ph#
+metadata_for_pH %<>% mutate(brain_ph = if_else(is.na(brain_ph), mean(brain_ph, na.rm=T), brain_ph))#
+#
+#read count data#
+read_counts <- as.data.frame(colSums(rawcount_dataframe))#
+read_counts$Sample_geo_accession = rownames(read_counts)#
+read_counts <- as_tibble(read_counts) %>% select(Sample_geo_accession , read_counts = `colSums(rawcount_dataframe)`)#
+#
+metadata %<>% rename(clinical_diagnosis = `clinical diagnosis`)#
+metadata %<>% mutate(clinical_diagnosis = gsub(" ", "_", clinical_diagnosis))#
+metadata <- inner_join(metadata, metadata_for_pH)#
+metadata <- inner_join(metadata, read_counts)#
+#
+female_metadata <- metadata[which(metadata$gender == "F"),]#
+male_metadata <- metadata[which(metadata$gender == "M"),]
+install.packages("GEOquery")
+library(GEOquery)
+gds <- getGEO("GSE80655")#
+metadata_for_pH <- phenoData(gds$GSE80655_series_matrix.txt.gz)#
+metadata_for_pH <- as_tibble(as(metadata_for_pH, "data.frame"))#
+metadata_for_pH %<>% select(Sample_geo_accession = geo_accession, brain_ph = 'brain ph:ch1')#
+metadata_for_pH %<>% mutate(brain_ph = as.numeric(brain_ph))#
+print(paste("NA pH values:" , nrow(metadata_for_pH %>% filter(is.na(brain_ph)))))#
+#replacing 3 missing values with mean brain ph#
+metadata_for_pH %<>% mutate(brain_ph = if_else(is.na(brain_ph), mean(brain_ph, na.rm=T), brain_ph))#
+#
+#read count data#
+read_counts <- as.data.frame(colSums(rawcount_dataframe))#
+read_counts$Sample_geo_accession = rownames(read_counts)#
+read_counts <- as_tibble(read_counts) %>% select(Sample_geo_accession , read_counts = `colSums(rawcount_dataframe)`)#
+#
+metadata %<>% rename(clinical_diagnosis = `clinical diagnosis`)#
+metadata %<>% mutate(clinical_diagnosis = gsub(" ", "_", clinical_diagnosis))#
+metadata <- inner_join(metadata, metadata_for_pH)#
+metadata <- inner_join(metadata, read_counts)#
+#
+female_metadata <- metadata[which(metadata$gender == "F"),]#
+male_metadata <- metadata[which(metadata$gender == "M"),]
+head(metadata)
+for(target_region in regions) {#
+	  print(target_region)#
+#
+	  metadatacp <- metadata#
+#
+	  #filter for brain region and diagnosis#
+	  metadatacp %<>% filter(clinical_diagnosis %in% c("Major_Depression", "Control"), `brain region` == target_region)#
+#
+	  #filter expression data the same way#
+	  rawcount_dataframecp <- rawcount_dataframe[,metadatacp$Sample_geo_accession]
+}
+head(rawcount_dataframecp)
+head(metadatacp)
+metadatacp %<>% write_csv("../RamakerEtAl/RamakerPostmortemData.csv")
+metadatacp %<>% arrange(clinical_diagnosis)
+metadatacp %<>% write_csv("../RamakerEtAl/RamakerPostmortemData.csv")
+regions
+target_region <- "AnCg"
+metadatacp <- metadata#
++ #
++ 	  #filter for brain region and diagnosis#
++ 	  metadatacp %<>% filter(clinical_diagnosis %in% c("Major_Depression", "Control"), `brain region` == target_region)#
++ #
++ 	  #filter expression data the same way#
++ 	  rawcount_dataframecp <- rawcount_dataframe[,metadatacp$Sample_geo_accession]
+metadatacp <- metadata#
+#
+	  #filter for brain region and diagnosis#
+	  metadatacp %<>% filter(clinical_diagnosis %in% c("Major_Depression", "Control"), `brain region` == target_region)#
+	  #filter expression data the same way#
+  rawcount_dataframecp <- rawcount_dataframe[,metadatacp$Sample_geo_accession]
+head(metadatacp)
+metadatacp %<>% write_csv("../RamakerEtAl/RamakerPostmortemDataAnCg.csv")
+target_region <- "nAcc"
+metadatacp <- metadata#
+#
+	  #filter for brain region and diagnosis#
+	  metadatacp %<>% filter(clinical_diagnosis %in% c("Major_Depression", "Control"), `brain region` == target_region)#
+	  #filter expression data the same way#
+  rawcount_dataframecp <- rawcount_dataframe[,metadatacp$Sample_geo_accession]
+head(metadatacp)
+metadatacp %<>% write_csv("../RamakerEtAl/RamakerPostmortemDatanAcc.csv")
+design <- model.matrix(~ clinical_diagnosis + `age at death` + `post-mortem interval` + brain_ph + read_counts, metadatacp)#
+	  # Create DGEList object#
+	  dge <- DGEList(counts=rawcount_dataframecp)#
+	  # Calculate normalization factors#
+	  dge <- calcNormFactors(dge)#
+	  # Run VOOM#
+	  v <- voom(dge, plot=FALSE)#
+	  # Fit linear model#
+	  fit <- lmFit(v, design)#
+	  # Run DE#
+	  fit <- eBayes(fit)#
+	  # Get results#
+	  limma_dataframe <- topTable(fit, coef= "clinical_diagnosisMajor_Depression", adjust="fdr", number=nrow(rawcount_dataframecp))#
+	  limma_dataframe$gene_symbol <- rownames(limma_dataframe)#
+	  #t-value is relative to control - postive means increased expression in depression#
+	  limma_dataframe <- as_tibble(limma_dataframe) %>% select(gene_symbol, everything())#
+	  limma_dataframe %<>% select(gene_symbol, t, P.Value) %>% mutate(target_region = target_region)#
+	  full_results <- bind_rows(full_results, limma_dataframe)
+library(limma)#
+library(edgeR)
+design <- model.matrix(~ clinical_diagnosis + `age at death` + `post-mortem interval` + brain_ph + read_counts, metadatacp)#
+	  # Create DGEList object#
+	  dge <- DGEList(counts=rawcount_dataframecp)#
+	  # Calculate normalization factors#
+	  dge <- calcNormFactors(dge)#
+	  # Run VOOM#
+	  v <- voom(dge, plot=FALSE)#
+	  # Fit linear model#
+	  fit <- lmFit(v, design)#
+	  # Run DE#
+	  fit <- eBayes(fit)#
+	  # Get results#
+	  limma_dataframe <- topTable(fit, coef= "clinical_diagnosisMajor_Depression", adjust="fdr", number=nrow(rawcount_dataframecp))#
+	  limma_dataframe$gene_symbol <- rownames(limma_dataframe)#
+	  #t-value is relative to control - postive means increased expression in depression#
+	  limma_dataframe <- as_tibble(limma_dataframe) %>% select(gene_symbol, everything())#
+	  limma_dataframe %<>% select(gene_symbol, t, P.Value) %>% mutate(target_region = target_region)#
+	  full_results <- bind_rows(full_results, limma_dataframe)
+full_results %<>% arrange(P.Value)#
+	#create six one-sided pvalues per gene#
+	full_results %<>% mutate(higher_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(-1*t)))#
+	full_results %<>% mutate(lower_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(1*t)))#
+	if(length(regions) > 1) {#
+		summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), #
+	                                                      meta_higher_in_MDD_pvalue = sumlog(c(higher_in_MDD_pvalue))$p,#
+	                                                      meta_lower_in_MDD_pvalue = sumlog(c(lower_in_MDD_pvalue))$p)#
+		} else {#
+			summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), #
+	                                                      meta_higher_in_MDD_pvalue = higher_in_MDD_pvalue,#
+	                                                      meta_lower_in_MDD_pvalue = lower_in_MDD_pvalue)#
+		}#
+	#convert from two one-sided meta pvalues to one#
+	summary_results %<>% rowwise() %>% mutate(meta_direction = if_else(meta_higher_in_MDD_pvalue < meta_lower_in_MDD_pvalue, 1, -1), meta_p = 2 * min(meta_higher_in_MDD_pvalue, meta_lower_in_MDD_pvalue))#
+	#summary_results %<>% select(-meta_higher_in_MDD_pvalue, -meta_lower_in_MDD_pvalue)#
+#
+	#add in individual directions for visualization#
+	directions <- full_results %>% select(gene_symbol, target_region, t)
+library(tidyr)
+full_results %<>% mutate(higher_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(-1*t)))
+full_results %<>% mutate(higher_in_MDD_pvalue = dplyr::two2one(P.Value, invert=1 == sign(-1*t)))
+library(metap)
+full_results %<>% mutate(higher_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(-1*t)))
+full_results %<>% mutate(lower_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(1*t)))#
+	if(length(regions) > 1) {#
+		summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), #
+	                                                      meta_higher_in_MDD_pvalue = sumlog(c(higher_in_MDD_pvalue))$p,#
+	                                                      meta_lower_in_MDD_pvalue = sumlog(c(lower_in_MDD_pvalue))$p)#
+		} else {#
+			summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), #
+	                                                      meta_higher_in_MDD_pvalue = higher_in_MDD_pvalue,#
+	                                                      meta_lower_in_MDD_pvalue = lower_in_MDD_pvalue)#
+		}#
+	#convert from two one-sided meta pvalues to one#
+	summary_results %<>% rowwise() %>% mutate(meta_direction = if_else(meta_higher_in_MDD_pvalue < meta_lower_in_MDD_pvalue, 1, -1), meta_p = 2 * min(meta_higher_in_MDD_pvalue, meta_lower_in_MDD_pvalue))#
+	#summary_results %<>% select(-meta_higher_in_MDD_pvalue, -meta_lower_in_MDD_pvalue)#
+#
+	#add in individual directions for visualization#
+	directions <- full_results %>% select(gene_symbol, target_region, t)
+directions
+directions %<>% spread(target_region, t)
+directions
+which(directions$gene_symbol == 'TNNI2')
+directions[which(directions$gene_symbol == 'TNNI2')]
+directions[which(directions$gene_symbol == 'TNNI2'),]
+rawcount_dataframecp
+head(rawcount_dataframecp)
+length(rawcount_dataframecp)
+install.packages('biomaRt')
+if (!requireNamespace("BiocManager", quietly = TRUE))#
+    install.packages("BiocManager")#
+#
+BiocManager::install("biomaRt")
+library(biomaRt)
+library(readxl)
+library(tidyverse)
+snps <- read_excel("../HowardEtAl/41593_2018_326_MOESM11_ESM.xlsx", sheet = "Sheet1")
+snps <- readxl::read_excel("../HowardEtAl/41593_2018_326_MOESM11_ESM.xlsx", sheet = "Sheet1")

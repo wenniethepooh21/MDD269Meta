@@ -1,0 +1,456 @@
+a <- 1
+a
+b <- 1.73
+a +b
+d <- a - b
+d
+mystring <- paste(e,g)
+e <- 'hello'
+mystring <- paste(e,g)
+g <- "world"
+mystring <- paste(e,g)
+mystring
+cat(e,g)
+cat(e,g, '\n')
+cat(e,g)
+a
+rm(a)
+a
+name.list <-list(value = 5,)
+name.list <-list(value = 5,
+word = 'text', number = 5.6)
+name.list
+str(name.list)
+str(trees)
+b<- c("Hello", "World", "From", )
+b<- c("Hello", "World", "From",
+"A", "Vector")
+b
+for (i in b) {}
+for (i in b) {
+print i}
+for (i in b) {
+print(i) }
+for (j in list('cow', 1, F)) { print (j)}
+c("hi", 1, 4)
+typeof(c)
+typeof(c[[1]])
+for (j in list('cow', 1, F)) { print (j)}
+for (j in list('cow', 1, F)) { print (j)
+typeof(j) }
+for (j in list('cow', 1, F)) { print (j)
+print(typeof(j)) }
+list("hi", 1, 4)
+b <- list("hi", 1, 4)
+str(b)
+myFunc <- function() { }
+myFunc <- function() {
+cat("Hellow adoring fans!\n")
+}
+myFunc
+myFunc()
+function() {   }
+function() { +    cat("Hello adoring fans!")  }
+function() {    cat("Hello adoring fans!")  }
+function() { cat("Hello adoring fans!") }
+install.packages('dplyr')
+install.packages('tidyr')
+getwd()
+setwd("./Documents/Thesis/Datas/MDD44Characterize/)
+getwd()
+sessionInfo()
+setwd('./Documents/Thesis/Datas/MDD44Characterize/data/HowardEtAl/')
+library(readr)#
+library(here)#
+library(readxl)#
+Howard_SNP <- read_excel("./41593_2018_326_MOESM3_ESM.xlsx", skip = 2)#
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 2)#
+#
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')
+library(magrittr)
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')
+library(dplyr)
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')
+Howard_SNP
+Howard_Gene
+Howard_Genes
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 1)
+Howard_Genes
+library(tidyr)
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant"
+)
+Howard_SNP
+separate(Howard_SNP, "Region", c("Start","Stop"), sep = "-", remove = TRUE)
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')#
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant")#
+Howard_SNP %<>% separate(Howard_SNP, "Region", c("Start","Stop"), sep = "-", remove = TRUE, convert = TRUE)
+Howard_SNP <- read_excel("./41593_2018_326_MOESM3_ESM.xlsx", skip = 2)#
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 1)#
+#
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')#
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant")#
+Howard_SNP %<>% separate(Howard_SNP, "Region", c("Start","Stop"), sep = "-", remove = TRUE, convert = TRUE)
+Howard_SNP %<>% as.numeric(Howard_SNP$Start)
+Howard_SNP
+Howard_SNP %<>% separate(Howard_SNP, "Region", c("Start","Stop"), sep = "-", remove = TRUE)
+Howard_SNP %<>% separate( "Region", c("Start","Stop"), sep = "-", remove = TRUE)
+Howard_SNP
+Howard_SNP %<>% as.numeric(Howard_SNP$Start)
+Howard_SNP <- read_excel("./41593_2018_326_MOESM3_ESM.xlsx", skip = 2)#
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 1)#
+#
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')#
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant")#
+Howard_SNP %<>% separate( "Region", c("Start","Stop"), sep = " - ", remove = TRUE, convert = TRUE)
+Howard_SNP
+Howard_Genes[1,3]
+SNPS <- c()
+SNPS
+SNPS <- "x"
+SNPS
+SNPS %<>% append("y")
+SNPS
+SNPS <- c()
+SNPS
+for i in 1:len(Howard_Genes) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for j in 1:len(Howard_SNP) {#
+		s_start_pos <- Howard_SNP[i,3]#
+		s_end_pos <- Howard_SNP[i,4]#
+		if(g_start_pos < s_start_pos && g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker_Name)#
+		}#
+	}#
+	Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+}
+for (i in 1:len(Howard_Genes)) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for (j in 1:len(Howard_SNP)) {#
+		s_start_pos <- Howard_SNP[i,3]#
+		s_end_pos <- Howard_SNP[i,4]#
+		if(g_start_pos < s_start_pos && g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker_Name)#
+		}#
+	}#
+	Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+}
+for (i in 1:len(Howard_Genes)) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for (j in 1:len(Howard_SNP)) {#
+		s_start_pos <- Howard_SNP[i,3]#
+		s_end_pos <- Howard_SNP[i,4]#
+		if(g_start_pos < s_start_pos && g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker_Name`)#
+		}#
+	}#
+	Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+}
+length(Howard_Genes)
+lengths(Howard_Genes)
+dim(Howard_Genes)
+dim(Howard_Genes)[0]
+dim(Howard_Genes)[1]
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for (j in 1:dim(Howard_SNP)[1]) {#
+		s_start_pos <- Howard_SNP[i,3]#
+		s_end_pos <- Howard_SNP[i,4]#
+		if(g_start_pos < s_start_pos && g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker_Name`)#
+		}#
+	}#
+	Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+}
+SNPS <- c()
+SNPS == NULL
+SNPS == 1
+SNPS == "1"
+is.na(SNPS)
+SNPS
+if (NULL) {}
+if (NULL) { cat("null")}
+is.null(SNPS)
+c(1,2 3 4 5 6 7 8 )
+c(1,2,3 ,5,6,7,8,9)
+x <-c(1,2,3 ,5,6,7,8,9)
+x[x > 1 && x < 6]
+x[which(x > 1 && x < 6)]
+which(x >1)
+x[which(x > 1 & x < 6)]
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for (j in 1:dim(Howard_SNP)[1]) {#
+		s_start_pos <- Howard_SNP[i,3]#
+		s_end_pos <- Howard_SNP[i,4]#
+		if(g_start_pos < s_start_pos & g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker_Name`)#
+		}#
+	}#
+	if(is.null(SNPS)) {#
+		SNPS <- NA#
+		Howard_Genes %<>% mutate(Marker_Names = SNPS)		#
+	} else {#
+			Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+	}#
+#
+}
+Howard_SNP$`Marker_Name`[2]
+Howard_SNP$`Marker Name`[2]
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for (j in 1:dim(Howard_SNP)[1]) {#
+		s_start_pos <- Howard_SNP[i,3]#
+		s_end_pos <- Howard_SNP[i,4]#
+		if(g_start_pos < s_start_pos & g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker Name`[j])#
+		}#
+	}#
+	if(is.null(SNPS)) {#
+		SNPS <- NA#
+		Howard_Genes %<>% mutate(Marker_Names = SNPS)		#
+	} else {#
+			Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+	}#
+#
+}
+g_start_pos
+s_start_pos
+Howard_SNP
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS <- c()#
+	for (j in 1:dim(Howard_SNP)[1]) {#
+		s_start_pos <- Howard_SNP[j,3]#
+		s_end_pos <- Howard_SNP[j,4]#
+		if(g_start_pos < s_start_pos & g_end_pos > s_end_pos) {#
+			SNPS <- append(SNPS,Howard_SNP$`Marker Name`[j])#
+		}#
+	}#
+	if(is.null(SNPS)) {#
+		SNPS <- NA#
+		Howard_Genes %<>% mutate(Marker_Names = SNPS)		#
+	} else {#
+			Howard_Genes %<>% mutate(Marker_Names = SNPS)#
+	}#
+#
+}
+g_start_pos
+s_start_pos
+s_end_pos
+Howard_SNP
+Howard_SNP[1,3]
+dim(Howard_SNP)[1]
+Howard_SNP
+Howard_SNP[1,3]
+Howard_SNP[1,4]
+for (j in 1:dim(Howard_SNP)[1]) {
+s_start_pos <- Howard_SNP[j,3]
+cat(s_start_pos)
+}
+for (j in 1:dim(Howard_SNP)[1]) {
+s_start_pos <- Howard_SNP[j,3]
+print(s_start_pos)
+}
+which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_stop_pos)
+which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)
+which(Howard_SNP$Start > g_start_pos)
+g_start_pos
+g_end_pos
+which(Howard_SNP$Start > 1)
+Howard_SNP[1,]
+Howard_SNP
+Howard_SNP$Start
+which(Hoard_SNP$Start > 107024993)
+which(Howard_SNP$Start > 107024993)
+which(Howard_SNP$Start > g_start_pos)
+g_start_pos
+g_start_pos <- Howard_Genes[1,3]
+g_start_pos
+1 > g_start_pos
+x <- as_dataframe(Howard_Genes)
+x <- dataframe(Howard_Genes)
+x <- data.frame(Howard_Genes)
+x[1,3]
+Howard_Genes %<>% data.frame()
+Howard_Genes
+Howard_SNP <- read_excel("./41593_2018_326_MOESM3_ESM.xlsx", skip = 2)#
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 1)#
+#
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')#
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant")#
+Howard_SNP %<>% separate( "Region", c("Start","Stop"), sep = " - ", remove = TRUE, convert = TRUE)#
+#
+Howard_Genes %<>% data.frame()
+head(Howard_Genes)
+Howard_Genes[1,3]
+g_start_pos <- Howard_Genes[1,3]
+which(Howard_SNP$Start > g_start_pos)
+g_end_pos <- Howard_Genes[1,4]
+which(Howard_SNP$Start > g_start_pos & Howard_SNP < g_end_pos)
+which(Howard_SNP <- g_end_pos)
+which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)
+which(Howard_SNP%Stop < g_end_pos)
+which(Howard_SNP$Stop < g_end_pos)
+Howard_SNP$Stop
+Howard_SNP
+Howard_SNP <- read_excel("./41593_2018_326_MOESM3_ESM.xlsx", skip = 2)#
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 1)#
+#
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')#
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant")#
+Howard_SNP %<>% separate( "Region", c("Start","Stop"), sep = " - ", remove = TRUE, convert = TRUE)#
+#
+Howard_Genes %<>% data.frame()
+which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)
+which(Howard_SNP$Stop < g_end_pos)
+which(Howard_SNP$Start > g_start_pos)
+x<- which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)
+is.null(x)
+x
+Howard_Genes[1]
+Howard_Genes[1,]
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP > g_start_pos & Howard_SNP < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(Marker_Names = NA)		#
+	} else {#
+			Howard_Genes[i,] %<>% mutate(Marker_Names = Howard_SNP$`Marker_Names`[SNPs_index])#
+	}#
+}
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP > g_start_pos & Howard_SNP < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(Marker_Names = NA)		#
+	} else {#
+			Howard_Genes[i,] %<>% mutate(Marker_Names = Howard_SNP$`Marker Names`[SNPs_index])#
+	}#
+}
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP > g_start_pos & Howard_SNP < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(Marker_Names = NA)		#
+	} else {#
+			Howard_Genes[i,] %<>% mutate(Marker_Names = Howard_SNP$`Marker Names`[SNPS_index])#
+	}#
+}
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP > g_start_pos & Howard_SNP < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(SNP = NA)		#
+	} else {#
+			Howard_Genes[i,] %<>% mutate(SNP = Howard_SNP$`Marker Names`[SNPS_index])#
+	}#
+}
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP > g_start_pos & Howard_SNP < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(SNP = NA)		#
+	} else {#
+			Howard_Genes[i,] %<>% mutate(SNP = Howard_SNP$`Marker Name`[SNPS_index])#
+	}#
+}
+SNPS_index
+snp <- c(Howard_SNP$`Marker Name`[SNPS_index])
+snp
+Howard_SNP$`Marker Name`[SNPS_index]
+SNPS_index
+Hoard_SNP
+Howard_SNP
+Howard_SNP$`Marker Name`[164]
+Howard_SNP$`Marker Name`[164,]
+Howard_SNP [164,]
+length(SNPS_index == 0)
+Howard_SNP <- read_excel("./41593_2018_326_MOESM3_ESM.xlsx", skip = 2)#
+Howard_Genes <- read_excel("./41593_2018_326_MOESM11_ESM.xlsx", skip = 1)#
+#
+#Keep only these columns to match to Gene associated to SNP#
+Howard_SNP %<>% select('Marker Name','Postion (bp)','Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant')#
+Howard_SNP %<>% rename("Region" = "Region (bp) of clumped variants (P < 10-4) in linkage disequilibrium (r2 > 0.1) with lead variant")#
+Howard_SNP %<>% separate( "Region", c("Start","Stop"), sep = " - ", remove = TRUE, convert = TRUE)
+Howard_SNP [164,]
+Howard_SNP[163:166]
+dim(Howard_SNP)
+SNPS_index <- which(Howard_SNP > g_start_pos & Howard_SNP < g_end_pos)
+SNPS_index
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(SNP = NA)		#
+	} else {#
+			snp <- c(Howard_SNP$`Marker Name`[SNPS_index])#
+			Howard_Genes[i,] %<>% mutate(SNP = snp)#
+	}#
+}
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(SNP = NA)		#
+	} else {#
+			snp <- c(Howard_SNP$`Marker Name`[SNPS_index])#
+			Howard_Genes[i,] %<>% mutate(SNP = snp)#
+			snp <- c()#
+	}#
+}
+Howard_Genes
+Hoard_Genes %<>% mutate(SNP = "x")
+Howard_Genes %<>% mutate(SNP = "x")
+Howard_Genes
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP$Start > g_start_pos & Howard_SNP$Stop < g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(SNP = NA)		#
+	} else {#
+			snp <- c(Howard_SNP$`Marker Name`[SNPS_index])#
+			Howard_Genes[i,] %<>% mutate(SNP = snp)#
+			snp <- c()#
+	}#
+}
+Howard_Genes
+for (i in 1:dim(Howard_Genes)[1]) {#
+	g_start_pos <- Howard_Genes[i,3] #
+	g_end_pos <- Howard_Genes[i,4]#
+	SNPS_index <- which(Howard_SNP$Start < g_start_pos & Howard_SNP$Stop > g_end_pos)#
+	if(length(SNPS_index) == 0){#
+		Howard_Genes[i,] %<>% mutate(SNP = NA)		#
+	} else {#
+			snp <- c(Howard_SNP$`Marker Name`[SNPS_index])#
+			Howard_Genes[i,] %<>% mutate(SNP = snp)#
+			snp <- c()#
+	}#
+}
+Howard_Genes
