@@ -2,11 +2,9 @@ library(here)
 library(tidyr)
 library(edgeR) #loads limma
 library(metap)
-
 library(magrittr)
 library(dplyr)
-library(readr)
-library(stringr)
+
 #This script contains the meta-analysis functions used to calculate the meta-p and meta directions for the Ramaker dataset
 
 #This function replicates the model used by Ramaker, et al. in their paper: https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-017-0458-5
@@ -89,9 +87,9 @@ RamakerMetaAnalysis <- function(full_results, regions){
   	#add in individual directions for visualization
   	#handle flipping of male direction for sex-interaction meta-analysis 
   	if ("sex" %in% colnames(full_results)){
-    	directions <- full_results %>% dplyr::select(gene_symbol, target_region, t, sex)
+    	directions <- full_results %>% select(gene_symbol, target_region, t, sex)
     }else {
-      directions <- full_results %>% dplyr::select(gene_symbol, target_region, t)
+      directions <- full_results %>% select(gene_symbol, target_region, t)
     }
   	
   	#summarize the direction of expression with '+' and '-' 
