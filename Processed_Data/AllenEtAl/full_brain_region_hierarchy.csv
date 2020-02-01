@@ -1,0 +1,861 @@
+brain_region,region_location
+medial nucleus posterior division dorsal part, medial nucleus posterior division dorsal part <  medial nucleus posterior division  <  medial nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+medial nucleus posterior division ventral part, medial nucleus posterior division ventral part <  medial nucleus posterior division  <  medial nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus dorsal lateral division comb like part, lateral nucleus dorsal lateral division comb like part <  lateral nucleus dorsal lateral division  <  lateral nucleus dorsal division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+body of caudate nucleus, body of caudate nucleus <  body of the caudate nucleus  <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+head of caudate nucleus, head of caudate nucleus <  head of the caudate nucleus  <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+tail of caudate nucleus, tail of caudate nucleus <  tail of the caudate nucleus  <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part lateral zone, paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part lateral zone <  paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part  <  paraventricular nucleus of the hypothalamus magnocellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part medial zone, paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part medial zone <  paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part  <  paraventricular nucleus of the hypothalamus magnocellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+inferior nucleus of the pulvinar lateral division, inferior nucleus of the pulvinar lateral division <  inferior nucleus of the pulvinar  <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+inferior nucleus of the pulvinar medial division, inferior nucleus of the pulvinar medial division <  inferior nucleus of the pulvinar  <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral anterior nucleus of the thalamus magnocellular division, ventral anterior nucleus of the thalamus magnocellular division <  ventral anterior nucleus of the thalamus  <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral anterior nucleus of the thalamus principal division, ventral anterior nucleus of the thalamus principal division <  ventral anterior nucleus of the thalamus  <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral posterior lateral nucleus of the thalamus anterior division, ventral posterior lateral nucleus of the thalamus anterior division <  ventral posterior lateral nucleus of the thalamus  <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral posterior lateral nucleus of the thalamus posterior division, ventral posterior lateral nucleus of the thalamus posterior division <  ventral posterior lateral nucleus of the thalamus  <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+I II paravermis, I II paravermis <  I II  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+I II lateral hemisphere, I II lateral hemisphere <  I II  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+III paravermis, III paravermis <  III  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+III lateral hemisphere, III lateral hemisphere <  III  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+IV paravermis, IV paravermis <  IV  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+IV lateral hemisphere, IV lateral hemisphere <  IV  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+V paravermis, V paravermis <  V  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+V lateral hemisphere, V lateral hemisphere <  V  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VI paravermis, VI paravermis <  VI  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VI lateral hemisphere, VI lateral hemisphere <  VI  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Crus I paravermis, Crus I paravermis <  crus I  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Crus I lateral hemisphere, Crus I lateral hemisphere <  crus I  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Crus II paravermis, Crus II paravermis <  crus II  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Crus II lateral hemisphere, Crus II lateral hemisphere <  crus II  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIB paravermis, VIIB paravermis <  VIIB  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIB lateral hemisphere, VIIB lateral hemisphere <  VIIB  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIIA paravermis, VIIIA paravermis <  VIIIA  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIIA lateral hemisphere, VIIIA lateral hemisphere <  VIIIA  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIIB paravermis, VIIIB paravermis <  VIIIB  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIIB lateral hemisphere, VIIIB lateral hemisphere <  VIIIB  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+IX paravermis, IX paravermis <  IX  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+IX lateral hemisphere, IX lateral hemisphere <  IX  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+X paravermis, X paravermis <  X  <  flocculonodular lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+X lateral hemisphere, X lateral hemisphere <  X  <  flocculonodular lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+cingulate gyrus frontal part superior bank of gyrus, cingulate gyrus frontal part superior bank of gyrus <  cingulate gyrus frontal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus frontal part inferior bank of gyrus, cingulate gyrus frontal part inferior bank of gyrus <  cingulate gyrus frontal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus parietal part superior bank of gyrus, cingulate gyrus parietal part superior bank of gyrus <  cingulate gyrus parietal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus parietal part inferior bank of gyrus, cingulate gyrus parietal part inferior bank of gyrus <  cingulate gyrus parietal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus retrosplenial part superior bank of gyrus, cingulate gyrus retrosplenial part superior bank of gyrus <  cingulate gyrus retrosplenial part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus retrosplenial part inferior bank of gyrus, cingulate gyrus retrosplenial part inferior bank of gyrus <  cingulate gyrus retrosplenial part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+presubiculum, presubiculum <  subiculum  <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+parasubiculum, parasubiculum <  subiculum  <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+prosubiculum, prosubiculum <  subiculum  <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+subiculum proper, subiculum proper <  subiculum  <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+angular gyrus superior bank of gyrus, angular gyrus superior bank of gyrus <  angular gyrus  <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+angular gyrus inferior bank of gyrus, angular gyrus inferior bank of gyrus <  angular gyrus  <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+supramarginal gyrus superior bank of gyrus, supramarginal gyrus superior bank of gyrus <  supramarginal gyrus  <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+supramarginal gyrus inferior bank of gyrus, supramarginal gyrus inferior bank of gyrus <  supramarginal gyrus  <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+amygdalohippocampal area magnocellular division, amygdalohippocampal area magnocellular division <  amygdalohippocampal area  <  amygdalohippocampal transition zone  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+amygdalohippocampal area parvocellular division, amygdalohippocampal area parvocellular division <  amygdalohippocampal area  <  amygdalohippocampal transition zone  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+amygdalohippocampal area marginal layer, amygdalohippocampal area marginal layer <  amygdalohippocampal area  <  amygdalohippocampal transition zone  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus dorsolateral division, basolateral nucleus dorsolateral division <  basolateral nucleus magnocellular dorsal  <  basolateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus ventrolateral division, basolateral nucleus ventrolateral division <  basolateral nucleus parvicellular ventral  <  basolateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus ventromedial divison, basolateral nucleus ventromedial divison <  basolateral nucleus parvicellular ventral  <  basolateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus magnocellular division, basomedial nucleus magnocellular division <  basomedial nucleus dorsal division  <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus dorsolateral division, basomedial nucleus dorsolateral division <  basomedial nucleus dorsal division  <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus medial division, basomedial nucleus medial division <  basomedial nucleus dorsal division  <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus parvicellular division, basomedial nucleus parvicellular division <  basomedial nucleus ventral division  <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus ventromedial division, basomedial nucleus ventromedial division <  basomedial nucleus ventral division  <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus medial division dorsal part, central nucleus medial division dorsal part <  central nucleus medial division  <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus medial division ventral part, central nucleus medial division ventral part <  central nucleus medial division  <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus lateral division apical part, central nucleus lateral division apical part <  central nucleus lateral division  <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus lateral division capsular part, central nucleus lateral division capsular part <  central nucleus lateral division  <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus lateral division paracapsular part, central nucleus lateral division paracapsular part <  central nucleus lateral division  <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus lateral division central part, central nucleus lateral division central part <  central nucleus lateral division  <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior cortical nucleus dorsal division, anterior cortical nucleus dorsal division <  anterior cortical nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior cortical nucleus ventral division, anterior cortical nucleus ventral division <  anterior cortical nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior cortical nucleus marginal layer, anterior cortical nucleus marginal layer <  anterior cortical nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+medial nucleus anterior division, medial nucleus anterior division <  medial nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+medial nucleus posterior division, medial nucleus posterior division <  medial nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+medial nucleus marginal layer, medial nucleus marginal layer <  medial nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+posterior cortical nucleus dorsal division, posterior cortical nucleus dorsal division <  posterior cortical nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+posterior cortical nucleus ventral division, posterior cortical nucleus ventral division <  posterior cortical nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+posterior cortical nucleus marginal layer, posterior cortical nucleus marginal layer <  posterior cortical nucleus  <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus dorsal anterior division, lateral nucleus dorsal anterior division <  lateral nucleus dorsal division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus dorsal medial division, lateral nucleus dorsal medial division <  lateral nucleus dorsal division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus dorsal lateral division, lateral nucleus dorsal lateral division <  lateral nucleus dorsal division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus ventral lateral division, lateral nucleus ventral lateral division <  lateral nucleus ventral division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus ventral medial division, lateral nucleus ventral medial division <  lateral nucleus ventral division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus glomerular division, lateral nucleus glomerular division <  lateral nucleus ventral division  <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+paralmainar nucleus glomerular part, paralmainar nucleus glomerular part <  paralmainar nucleus  <  paralaminar nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+nucleus of the diagonal band horizontal division, nucleus of the diagonal band horizontal division <  nucleus of the diagonal band  <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+nucleus of the diagonal band vertical division, nucleus of the diagonal band vertical division <  nucleus of the diagonal band  <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+islands of calleja, islands of calleja <  olfactory tubercle  <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+body of the caudate nucleus, body of the caudate nucleus <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+head of the caudate nucleus, head of the caudate nucleus <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+tail of the caudate nucleus, tail of the caudate nucleus <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus descending division dorsal parvicellular part, paraventricular nucleus of the hypothalamus descending division dorsal parvicellular part <  paraventricular nucleus of the hypothalamus descending division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus descending division forniceal part, paraventricular nucleus of the hypothalamus descending division forniceal part <  paraventricular nucleus of the hypothalamus descending division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus descending division lateral parvicellular part, paraventricular nucleus of the hypothalamus descending division lateral parvicellular part <  paraventricular nucleus of the hypothalamus descending division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus descending division medial parvicellular part ventral zone, paraventricular nucleus of the hypothalamus descending division medial parvicellular part ventral zone <  paraventricular nucleus of the hypothalamus descending division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus magnocellular division anterior magnocellular part, paraventricular nucleus of the hypothalamus magnocellular division anterior magnocellular part <  paraventricular nucleus of the hypothalamus magnocellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus magnocellular division medial magnocellular part, paraventricular nucleus of the hypothalamus magnocellular division medial magnocellular part <  paraventricular nucleus of the hypothalamus magnocellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part, paraventricular nucleus of the hypothalamus magnocellular division posterior magnocellular part <  paraventricular nucleus of the hypothalamus magnocellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus parvicellular division anterior parvicellular part, paraventricular nucleus of the hypothalamus parvicellular division anterior parvicellular part <  paraventricular nucleus of the hypothalamus parvicellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus parvicellular division medial parvicellular part dorsal zone, paraventricular nucleus of the hypothalamus parvicellular division medial parvicellular part dorsal zone <  paraventricular nucleus of the hypothalamus parvicellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus parvicellular division periventricular part, paraventricular nucleus of the hypothalamus parvicellular division periventricular part <  paraventricular nucleus of the hypothalamus parvicellular division  <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+medial mammillary nucleus lateral part, medial mammillary nucleus lateral part <  medial mammillary nucleus  <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+medial mammillary nucleus medial part, medial mammillary nucleus medial part <  medial mammillary nucleus  <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+medial mammillary nucleus basal division, medial mammillary nucleus basal division <  medial mammillary nucleus  <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+premammillary nucleus dorsal part, premammillary nucleus dorsal part <  premammillary nucleus  <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+premammillary nucleus ventral part, premammillary nucleus ventral part <  premammillary nucleus  <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+medial preoptic nucleus central part, medial preoptic nucleus central part <  medial preoptic nucleus  <  medial preoptic area  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+medial preoptic nucleus lateral part, medial preoptic nucleus lateral part <  medial preoptic nucleus  <  medial preoptic area  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+medial preoptic nucleus medial part, medial preoptic nucleus medial part <  medial preoptic nucleus  <  medial preoptic area  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+dorsal lateral geniculate nucleus magnocellular layers, dorsal lateral geniculate nucleus magnocellular layers <  dorsal lateral geniculate nucleus  <  dorsal lateral geneiculate nucleus  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+dorsal lateral geniculate nucleus parvocellular layers, dorsal lateral geniculate nucleus parvocellular layers <  dorsal lateral geniculate nucleus  <  dorsal lateral geneiculate nucleus  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+dorsal lateral geniculate nucleus s and intercalated layers, dorsal lateral geniculate nucleus s and intercalated layers <  dorsal lateral geniculate nucleus  <  dorsal lateral geneiculate nucleus  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+lateral posterior nucleus of the thalamus, lateral posterior nucleus of the thalamus <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+anterior nucleus of the pulvinar, anterior nucleus of the pulvinar <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+inferior nucleus of the pulvinar, inferior nucleus of the pulvinar <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+lateral nucleus of the pulvinar, lateral nucleus of the pulvinar <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+medial nucleus of the pulvinar, medial nucleus of the pulvinar <  lateral group of nuclei dorsal division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+basal ventral medial nucleus of the thalamus, basal ventral medial nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral anterior nucleus of the thalamus, ventral anterior nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral lateral anterior nucleus of the thalamus, ventral lateral anterior nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral lateral posterior nucleus of the thalamus, ventral lateral posterior nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral medial nucleus of the thalamus, ventral medial nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral posterior inferior nucleus of the thalamus, ventral posterior inferior nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral posterior lateral nucleus of the thalamus, ventral posterior lateral nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral posterior medial nucleus of the thalamus, ventral posterior medial nucleus of the thalamus <  lateral group of nuclei ventral division  <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+anterodorsal nucleus of medial geniculate complex, anterodorsal nucleus of medial geniculate complex <  dorsal nucelus of medial geniculate complex  <  medial geniculate complex  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+posterodorsal nucleus of medial geniculate complex, posterodorsal nucleus of medial geniculate complex <  dorsal nucelus of medial geniculate complex  <  medial geniculate complex  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+mediodorsal nucleus of the thalamus parvocellular division, mediodorsal nucleus of the thalamus parvocellular division <  mediodorsal nucleus of the thalamus  <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+mediodorsal nucleus of the thalamus magnocellular division, mediodorsal nucleus of the thalamus magnocellular division <  mediodorsal nucleus of the thalamus  <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+mediodorsal nucleus of the thalamus densocelllular division, mediodorsal nucleus of the thalamus densocelllular division <  mediodorsal nucleus of the thalamus  <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+mediodorsal nucleus of thalamus multiform lateral division, mediodorsal nucleus of thalamus multiform lateral division <  mediodorsal nucleus of the thalamus  <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+I II, I II <  anterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+III, III <  anterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+IV, IV <  anterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+V, V <  anterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VI, VI <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIAf, VIIAf <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIAt, VIIAt <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIB, VIIB <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIIA, VIIIA <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+VIIIB, VIIIB <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+IX, IX <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+X, X <  Flocculonodular Lobe of the Vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+crus I, crus I <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+crus II, crus II <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+caudal pontine reticular nucleus, caudal pontine reticular nucleus <  pontine reticular formation  <  paramedian pontine reticular formation  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+oral pontine reticular nucleus, oral pontine reticular nucleus <  pontine reticular formation  <  paramedian pontine reticular formation  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+reticulotegmental nucleus, reticulotegmental nucleus <  pontine reticular formation  <  paramedian pontine reticular formation  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+lateral superior olivary nucleus, lateral superior olivary nucleus <  superior olive  <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+medial superior olivary nucleus, medial superior olivary nucleus <  superior olive  <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+frontal pole superior aspect, frontal pole superior aspect <  frontal pole  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+frontal pole inferior aspect, frontal pole inferior aspect <  frontal pole  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+frontal pole medial aspect, frontal pole medial aspect <  frontal pole  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior frontal gyrus opercular part, inferior frontal gyrus opercular part <  inferior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior frontal gyrus orbital part, inferior frontal gyrus orbital part <  inferior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior frontal gyrus triangular part, inferior frontal gyrus triangular part <  inferior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+middle frontal gyrus superior bank of gyrus, middle frontal gyrus superior bank of gyrus <  middle frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+middle frontal gyrus inferior bank of gyrus, middle frontal gyrus inferior bank of gyrus <  middle frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paracentral lobule anterior part superior bank of gyrus, paracentral lobule anterior part superior bank of gyrus <  paracentral lobule anterior part  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paracentral lobule anterior part inferior bank of gyrus, paracentral lobule anterior part inferior bank of gyrus <  paracentral lobule anterior part  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precentral gyrus bank of the precentral sulcus, precentral gyrus bank of the precentral sulcus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precentral gyrus superior lateral aspect of gyrus, precentral gyrus superior lateral aspect of gyrus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precentral gyrus inferior lateral aspect of gyrus, precentral gyrus inferior lateral aspect of gyrus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precentral gyrus bank of the central sulcus, precentral gyrus bank of the central sulcus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior frontal gyrus medial bank of gyrus, superior frontal gyrus medial bank of gyrus <  superior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior frontal gyrus lateral bank of gyrus, superior frontal gyrus lateral bank of gyrus <  superior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus frontal part, cingulate gyrus frontal part <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus parietal part, cingulate gyrus parietal part <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus retrosplenial part, cingulate gyrus retrosplenial part <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+subcallosal cingulate gyrus, subcallosal cingulate gyrus <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+dentate gyrus, dentate gyrus <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+CA1 field, CA1 field <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+CA2 field, CA2 field <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+CA3 field, CA3 field <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+CA4 field, CA4 field <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+indusium griseum, indusium griseum <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+subiculum, subiculum <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+parahippocampal gyrus lateral bank of gyrus, parahippocampal gyrus lateral bank of gyrus <  parahippocampal gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+parahippocampal gyrus bank of the cos, parahippocampal gyrus bank of the cos <  parahippocampal gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cuneus peristriate, cuneus peristriate <  cuneus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cuneus striate, cuneus striate <  cuneus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior occipital gyrus superior bank of gyrus, inferior occipital gyrus superior bank of gyrus <  inferior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior occipital gyrus inferior bank of gyrus, inferior occipital gyrus inferior bank of gyrus <  inferior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+lingual gyrus peristriate, lingual gyrus peristriate <  lingual gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+lingual gyrus striate, lingual gyrus striate <  lingual gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipital pole superior aspect, occipital pole superior aspect <  occipital pole  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipital pole inferior aspect, occipital pole inferior aspect <  occipital pole  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipital pole lateral aspect, occipital pole lateral aspect <  occipital pole  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipito temporal gyrus superior bank of gyrus, occipito temporal gyrus superior bank of gyrus <  occipito temporal gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipito temporal gyrus inferior bank of gyrus, occipito temporal gyrus inferior bank of gyrus <  occipito temporal gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior occipital gyrus superior bank of gyrus, superior occipital gyrus superior bank of gyrus <  superior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior occipital gyrus inferior bank of gyrus, superior occipital gyrus inferior bank of gyrus <  superior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+angular gyrus, angular gyrus <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+supramarginal gyrus, supramarginal gyrus <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paracentral lobule posterior part lateral bank of gyrus, paracentral lobule posterior part lateral bank of gyrus <  paracentral lobule posterior part  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paracentral lobule posterior part bank of cingulate sulcus, paracentral lobule posterior part bank of cingulate sulcus <  paracentral lobule posterior part  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+postcentral gyrus bank of the central sulcus, postcentral gyrus bank of the central sulcus <  postcentral gyrus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+postcentral gyrus superior lateral aspect of gyrus, postcentral gyrus superior lateral aspect of gyrus <  postcentral gyrus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+postcentral gyrus inferior lateral aspect of gyrus, postcentral gyrus inferior lateral aspect of gyrus <  postcentral gyrus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+postcentral gyrus bank of the posterior central sulcus, postcentral gyrus bank of the posterior central sulcus <  postcentral gyrus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precuneus superior lateral bank of gyrus, precuneus superior lateral bank of gyrus <  precuneus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precuneus inferior lateral bank of gyrus, precuneus inferior lateral bank of gyrus <  precuneus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior parietal lobule superior bank of gyrus, superior parietal lobule superior bank of gyrus <  superior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior parietal lobule inferior bank of gyrus, superior parietal lobule inferior bank of gyrus <  superior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+fusiform gyrus bank of the its, fusiform gyrus bank of the its <  fusiform gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+fusiform gyrus lateral bank of gyrus, fusiform gyrus lateral bank of gyrus <  fusiform gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+fusiform gyrus bank of cos, fusiform gyrus bank of cos <  fusiform gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior temporal gyrus bank of the its, inferior temporal gyrus bank of the its <  inferior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior temporal gyrus lateral bank of gyrus, inferior temporal gyrus lateral bank of gyrus <  inferior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior temporal gyrus bank of mts, inferior temporal gyrus bank of mts <  inferior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+middle temporal gyrus superior bank of gyrus, middle temporal gyrus superior bank of gyrus <  middle temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+middle temporal gyrus inferior bank of gyrus, middle temporal gyrus inferior bank of gyrus <  middle temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior temporal gyrus lateral bank of gyrus, superior temporal gyrus lateral bank of gyrus <  superior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior temporal gyrus inferior bank of gyrus, superior temporal gyrus inferior bank of gyrus <  superior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+temporal pole superior aspect, temporal pole superior aspect <  temporal pole  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+temporal pole inferior aspect, temporal pole inferior aspect <  temporal pole  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+temporal pole medial aspect, temporal pole medial aspect <  temporal pole  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+amygdalohippocampal area, amygdalohippocampal area <  amygdalohippocampal transition zone  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior amygdaloid area dorsal division, anterior amygdaloid area dorsal division <  anterior amygdaloid area  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior amygdaloid area ventral division, anterior amygdaloid area ventral division <  anterior amygdaloid area  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus magnocellular dorsal, basolateral nucleus magnocellular dorsal <  basolateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus intermediate, basolateral nucleus intermediate <  basolateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus parvicellular ventral, basolateral nucleus parvicellular ventral <  basolateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus dorsal division, basomedial nucleus dorsal division <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus ventral division, basomedial nucleus ventral division <  basomedial nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus medial division, central nucleus medial division <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus lateral division, central nucleus lateral division <  central nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior cortical nucleus, anterior cortical nucleus <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+medial nucleus, medial nucleus <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+posterior cortical nucleus, posterior cortical nucleus <  cortico medial group  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus dorsal division, lateral nucleus dorsal division <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus intermediate division, lateral nucleus intermediate division <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus ventral division, lateral nucleus ventral division <  lateral nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+paralmainar nucleus, paralmainar nucleus <  paralaminar nucleus  <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+medial septal nucleus, medial septal nucleus <  septal nuclei  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral septal nucleus, lateral septal nucleus <  septal nuclei  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+basal nucleus of meynert, basal nucleus of meynert <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+nucleus of the diagonal band, nucleus of the diagonal band <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+nucleus of the anterior commissure, nucleus of the anterior commissure <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+bed nucleus of stria terminalis, bed nucleus of stria terminalis <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+olfactory tubercle, olfactory tubercle <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+globus pallidus external segment, globus pallidus external segment <  globus pallidus  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+globus pallidus internal segment, globus pallidus internal segment <  globus pallidus  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+caudate nucleus, caudate nucleus <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+nucleus accumbens, nucleus accumbens <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+putamen, putamen <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral habenular nucleus magnocellular division, lateral habenular nucleus magnocellular division <  lateral habenular nucleus  <  habenular nuclei  <  epithalamus  <  diencephalon  < gray matter 
+lateral habenular nucleus parvocellular division, lateral habenular nucleus parvocellular division <  lateral habenular nucleus  <  habenular nuclei  <  epithalamus  <  diencephalon  < gray matter 
+anterior hypothalamic area anterior part, anterior hypothalamic area anterior part <  anterior hypothalamic area  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+anterior hypothalamic area central part, anterior hypothalamic area central part <  anterior hypothalamic area  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+subparaventricular zone, subparaventricular zone <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus descending division, paraventricular nucleus of the hypothalamus descending division <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus magnocellular division, paraventricular nucleus of the hypothalamus magnocellular division <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus parvicellular division, paraventricular nucleus of the hypothalamus parvicellular division <  paraventricular nucleus of the hypothalamus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+periventricular nucleus of the hypohalamus anterior part, periventricular nucleus of the hypohalamus anterior part <  periventricular nucleus of the hypothalamus anterior part  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+supraoptic nucleus dorsolateral part, supraoptic nucleus dorsolateral part <  supraoptic nucleus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+supraoptic nucleus ventromedial part, supraoptic nucleus ventromedial part <  supraoptic nucleus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+suprachiasmatic nucleus dorsomedial part, suprachiasmatic nucleus dorsomedial part <  suprachiasmatic nucleus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+suprachiasmatic nucleus ventrolateral part, suprachiasmatic nucleus ventrolateral part <  suprachiasmatic nucleus  <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+pallidohypothalamic nucleus, pallidohypothalamic nucleus <  lateral hypothalamic area mammillary region  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+lateral mammillary nucleus, lateral mammillary nucleus <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+medial mammillary nucleus, medial mammillary nucleus <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+premammillary nucleus, premammillary nucleus <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+supramammillary nucleus medial part, supramammillary nucleus medial part <  supramammillary nucleus  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+tuberomammillary nucleus principle part, tuberomammillary nucleus principle part <  tuberomammillary nucleus  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+intermediate nucleus, intermediate nucleus <  intermediate hypothalamic nuclei  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+uncinate nucleus, uncinate nucleus <  intermediate hypothalamic nuclei  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+medial preoptic nucleus, medial preoptic nucleus <  medial preoptic area  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+median preoptic nucleus, median preoptic nucleus <  medial preoptic area  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+anteroventral periventricular nucleus, anteroventral periventricular nucleus <  periventricular nucleus of the hypothalamus preoptic part  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+dorsal periventricular nucleus, dorsal periventricular nucleus <  periventricular nucleus of the hypothalamus preoptic part  <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+arcuate nucleus of the hypothalamus dorsal part, arcuate nucleus of the hypothalamus dorsal part <  arcuate nucleus of the hypothalamus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+arcuate nucleus of the hypothalamus lateral part, arcuate nucleus of the hypothalamus lateral part <  arcuate nucleus of the hypothalamus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+arcuate nucleus of the hypothalamus medial part, arcuate nucleus of the hypothalamus medial part <  arcuate nucleus of the hypothalamus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+dorsomedial hypothalamic nucleus compact part, dorsomedial hypothalamic nucleus compact part <  dorsomedial hypothalamic nucleus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+dorsomedial hypothalamic nucleus diffuse part, dorsomedial hypothalamic nucleus diffuse part <  dorsomedial hypothalamic nucleus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+ventromedial hypothalamic nucleus dorsal part, ventromedial hypothalamic nucleus dorsal part <  ventromedial hypothalamic nucleus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+ventromedial hypothalamic nucleus central part, ventromedial hypothalamic nucleus central part <  ventromedial hypothalamic nucleus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+ventromedial hypothalamic nucleus ventral part, ventromedial hypothalamic nucleus ventral part <  ventromedial hypothalamic nucleus  <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+anterodorsal nucleus of the thalamus, anterodorsal nucleus of the thalamus <  anterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+anteromedial nucleus of the thalamus, anteromedial nucleus of the thalamus <  anterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+anteroventral nucleus of the thalamus, anteroventral nucleus of the thalamus <  anterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+lateral dorsal nucleus of the thalamus, lateral dorsal nucleus of the thalamus <  anterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+centre median nucleus of the thalamus, centre median nucleus of the thalamus <  caudal group of intralaminar nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+parafascicular nucleus of the thalamus, parafascicular nucleus of the thalamus <  caudal group of intralaminar nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+dorsal lateral geniculate nucleus, dorsal lateral geniculate nucleus <  dorsal lateral geneiculate nucleus  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+lateral group of nuclei dorsal division, lateral group of nuclei dorsal division <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+lateral group of nuclei ventral division, lateral group of nuclei ventral division <  lateral group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+dorsal nucelus of medial geniculate complex, dorsal nucelus of medial geniculate complex <  medial geniculate complex  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+magnocellular nucleus of the medial geniculate complex, magnocellular nucleus of the medial geniculate complex <  medial geniculate complex  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+ventral nucleus of the medial geniculate complex, ventral nucleus of the medial geniculate complex <  medial geniculate complex  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+mediodorsal nucleus of the thalamus, mediodorsal nucleus of the thalamus <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+medioventral nucleus of the thalamus, medioventral nucleus of the thalamus <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+parataenial nucleus of the thalamus, parataenial nucleus of the thalamus <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+submedial nucleus of the thalamus, submedial nucleus of the thalamus <  medial group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+limitans nucleus of the thalamus, limitans nucleus of the thalamus <  posterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+posterior nucleus of the thalamus, posterior nucleus of the thalamus <  posterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+suprageniculate nucleus of the thalamus, suprageniculate nucleus of the thalamus <  posterior group of nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+central lateral nucleus of the thalamus, central lateral nucleus of the thalamus <  rostral group of intralaminar nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+central medial nucleus of the thalamus, central medial nucleus of the thalamus <  rostral group of intralaminar nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+paracentral nucleus of the thalamus, paracentral nucleus of the thalamus <  rostral group of intralaminar nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+rhomboid nucleus of the thalamus, rhomboid nucleus of the thalamus <  rostral group of intralaminar nuclei  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+deep gray layer of the superior colliculus, deep gray layer of the superior colliculus <  stratum lemnisci of the superior colliculus  <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+deep white layer of the superior colliculus, deep white layer of the superior colliculus <  stratum lemnisci of the superior colliculus  <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+middle gray layer of the superior colliculus, middle gray layer of the superior colliculus <  stratum lemnisci of the superior colliculus  <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+middle white layer of the superior colliculus, middle white layer of the superior colliculus <  stratum lemnisci of the superior colliculus  <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+dorsal raphe nucleus dorsal part, dorsal raphe nucleus dorsal part <  dorsal raphe nucleus  <  midbrain raphe nuclei  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+dorsal raphe nucleus interfascicular part, dorsal raphe nucleus interfascicular part <  dorsal raphe nucleus  <  midbrain raphe nuclei  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+dorsal raphe nucleus raphe cap, dorsal raphe nucleus raphe cap <  dorsal raphe nucleus  <  midbrain raphe nuclei  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+dorsal raphe nucleus ventral part, dorsal raphe nucleus ventral part <  dorsal raphe nucleus  <  midbrain raphe nuclei  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+anterior lobe of the vermis, anterior lobe of the vermis <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+posterior lobe of the vermis, posterior lobe of the vermis <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Flocculonodular Lobe of the Vermis, Flocculonodular Lobe of the Vermis <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Anterior Lobe, Anterior Lobe <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+Posterior Lobe, Posterior Lobe <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+flocculonodular lobe, flocculonodular lobe <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+facial motor nucleus lateral part, facial motor nucleus lateral part <  facial motor nucleus  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+facial motor nucleus intermediate part, facial motor nucleus intermediate part <  facial motor nucleus  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+facial motor nucleus medial part, facial motor nucleus medial part <  facial motor nucleus  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+facial motor nucleus perifacial zone, facial motor nucleus perifacial zone <  facial motor nucleus  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+facial motor nucleus ventral part, facial motor nucleus ventral part <  facial motor nucleus  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+facial motor nucleus ventrolateral part, facial motor nucleus ventrolateral part <  facial motor nucleus  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+pontine reticular formation, pontine reticular formation <  paramedian pontine reticular formation  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+periolivary nucleus, periolivary nucleus <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+preolivary nucleus, preolivary nucleus <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+retro olivary cell group, retro olivary cell group <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+superior olive, superior olive <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+superior paraolivary nucleus, superior paraolivary nucleus <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+trapezoid nuclei, trapezoid nuclei <  superior olivary complex  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+mesencephalic nucleus of trigeminal nerve, mesencephalic nucleus of trigeminal nerve <  trigeminal nuclei  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+motor nucleus of trigeminal nerve, motor nucleus of trigeminal nerve <  trigeminal nuclei  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+principal sensory nucleus of trigeminal nerve, principal sensory nucleus of trigeminal nerve <  trigeminal nuclei  <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+lateral olfactory tract, lateral olfactory tract <  olfactory tract  <  olfactory nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+medial olfactory tract, medial olfactory tract <  olfactory tract  <  olfactory nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+anterior orbital gyrus, anterior orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+frontal operculum, frontal operculum <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+frontal pole, frontal pole <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+gyrus rectus, gyrus rectus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior frontal gyrus, inferior frontal gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior rostral gyrus, inferior rostral gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+lateral orbital gyrus, lateral orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+medial orbital gyrus, medial orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+middle frontal gyrus, middle frontal gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+olfactory area, olfactory area <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paracentral lobule anterior part, paracentral lobule anterior part <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paraterminal gyrus, paraterminal gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+parolfactory gyri, parolfactory gyri <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+posterior orbital gyrus, posterior orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precentral gyrus, precentral gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior frontal gyrus, superior frontal gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior rostral gyrus, superior rostral gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+long insular gyri, long insular gyri <  insula  <  cerebral cortex  <  telencephalon  < gray matter 
+short insular gyri, short insular gyri <  insula  <  cerebral cortex  <  telencephalon  < gray matter 
+cingulate gyrus, cingulate gyrus <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+hippocampal formation, hippocampal formation <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+parahippocampal gyrus, parahippocampal gyrus <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+piriform cortex, piriform cortex <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+cuneus, cuneus <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior occipital gyrus, inferior occipital gyrus <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+lingual gyrus, lingual gyrus <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipital pole, occipital pole <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+occipito temporal gyrus, occipito temporal gyrus <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior occipital gyrus, superior occipital gyrus <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior parietal lobule, inferior parietal lobule <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+paracentral lobule posterior part, paracentral lobule posterior part <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+postcentral gyrus, postcentral gyrus <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+precuneus, precuneus <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior parietal lobule, superior parietal lobule <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+fusiform gyrus, fusiform gyrus <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+Heschl s gyrus, Heschl s gyrus <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+inferior temporal gyrus, inferior temporal gyrus <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+middle temporal gyrus, middle temporal gyrus <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+planum polare, planum polare <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+planum temporale, planum temporale <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+superior temporal gyrus, superior temporal gyrus <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+temporal pole, temporal pole <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+transverse gyri, transverse gyri <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter 
+amygdalohippocampal transition zone, amygdalohippocampal transition zone <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior amygdaloid area, anterior amygdaloid area <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basolateral nucleus, basolateral nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+basomedial nucleus, basomedial nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+central nucleus, central nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+cortico medial group, cortico medial group <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+intercalated nuclei, intercalated nuclei <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral nucleus, lateral nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+nucleus of the lateral olfactory tract, nucleus of the lateral olfactory tract <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+paralaminar nucleus, paralaminar nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter 
+septal nuclei, septal nuclei <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+substantia innominata, substantia innominata <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter 
+globus pallidus, globus pallidus <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+striatum, striatum <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter 
+lateral habenular nucleus, lateral habenular nucleus <  habenular nuclei  <  epithalamus  <  diencephalon  < gray matter 
+medial habenular nucleus, medial habenular nucleus <  habenular nuclei  <  epithalamus  <  diencephalon  < gray matter 
+anterior paraventricular nucleus of thalamus, anterior paraventricular nucleus of thalamus <  paraventricular nuclei of thalamus  <  epithalamus  <  diencephalon  < gray matter 
+posterior paraventricular nucleus of thalamus, posterior paraventricular nucleus of thalamus <  paraventricular nuclei of thalamus  <  epithalamus  <  diencephalon  < gray matter 
+anterior hypothalamic area, anterior hypothalamic area <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+anterior hypothalamic nucleus, anterior hypothalamic nucleus <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+lateral hypothalamic area anterior region, lateral hypothalamic area anterior region <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+paraventricular nucleus of the hypothalamus, paraventricular nucleus of the hypothalamus <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+periventricular nucleus of the hypothalamus anterior part, periventricular nucleus of the hypothalamus anterior part <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+supraoptic nucleus, supraoptic nucleus <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+suprachiasmatic nucleus, suprachiasmatic nucleus <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter 
+lateral hypothalamic area mammillary region, lateral hypothalamic area mammillary region <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+mammillary body, mammillary body <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+posterior hypothalamic area, posterior hypothalamic area <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+supramammillary nucleus, supramammillary nucleus <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+tuberomammillary nucleus, tuberomammillary nucleus <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter 
+intermediate hypothalamic nuclei, intermediate hypothalamic nuclei <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+lateral preoptic area, lateral preoptic area <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+medial preoptic area, medial preoptic area <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+periventricular nucleus of the hypothalamus preoptic part, periventricular nucleus of the hypothalamus preoptic part <  preoptic region  <  hypothalamus  <  diencephalon  < gray matter 
+pituitary body, pituitary body <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+arcuate nucleus of the hypothalamus, arcuate nucleus of the hypothalamus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+dorsomedial hypothalamic nucleus, dorsomedial hypothalamic nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+lateral hypothalamic area tuberal region, lateral hypothalamic area tuberal region <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+lateral tuberal nucleus, lateral tuberal nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+median eminence, median eminence <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+perifornical nucleus, perifornical nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+periventricular nucleus of the hypothalamus tuberal part, periventricular nucleus of the hypothalamus tuberal part <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+ventromedial hypothalamic nucleus, ventromedial hypothalamic nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter 
+anterior group of nuclei, anterior group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+caudal group of intralaminar nuclei, caudal group of intralaminar nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+dorsal lateral geneiculate nucleus, dorsal lateral geneiculate nucleus <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+lateral group of nuclei, lateral group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+medial geniculate complex, medial geniculate complex <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+medial group of nuclei, medial group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+posterior group of nuclei, posterior group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+rostral group of intralaminar nuclei, rostral group of intralaminar nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter 
+nucleus of the H field of Forel, nucleus of the H field of Forel <  ventral thalamus  <  thalamus  <  diencephalon  < gray matter 
+reticular nucleus of thalamus, reticular nucleus of thalamus <  ventral thalamus  <  thalamus  <  diencephalon  < gray matter 
+zona incerta, zona incerta <  ventral thalamus  <  thalamus  <  diencephalon  < gray matter 
+central nucleus of the inferior colliculus, central nucleus of the inferior colliculus <  inferior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+external nucleus of the inferior colliculus, external nucleus of the inferior colliculus <  inferior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+pericentral nucleus of the inferior colliculus, pericentral nucleus of the inferior colliculus <  inferior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+stratum lemnisci of the superior colliculus, stratum lemnisci of the superior colliculus <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+superficial gray layer of the superior colliculus, superficial gray layer of the superior colliculus <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+superficial white layer of the superior colliculus, superficial white layer of the superior colliculus <  superior colliculus  <  midbrain tectum  <  mesencephalon  < gray matter 
+central gray substance of midbrain dorsolateral division, central gray substance of midbrain dorsolateral division <  central gray substance of midbrain  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+central gray substance of midbrain dorsomedial division, central gray substance of midbrain dorsomedial division <  central gray substance of midbrain  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+central gray substance of midbrain lateral division, central gray substance of midbrain lateral division <  central gray substance of midbrain  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+central gray substance of midbrain pleioglial division, central gray substance of midbrain pleioglial division <  central gray substance of midbrain  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+central gray substance of midbrain ventrolateral division, central gray substance of midbrain ventrolateral division <  central gray substance of midbrain  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+dorsal raphe nucleus, dorsal raphe nucleus <  midbrain raphe nuclei  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+median raphe, median raphe <  midbrain raphe nuclei  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+cuneiform nucleus, cuneiform nucleus <  midbrain reticular formation  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+pedunculopontine tegmental nucleus, pedunculopontine tegmental nucleus <  midbrain reticular formation  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+subcuneiform nucleus, subcuneiform nucleus <  midbrain reticular formation  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+anterior median oculomotor nucleus, anterior median oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+caudal central oculomotor nucleus, caudal central oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+central oculomotor nucleus, central oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+dorsal oculomotor nucleus, dorsal oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+intermediate oculomotor nucleus, intermediate oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+medial oculomotor nucleus, medial oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+ventral oculomotor nucleus, ventral oculomotor nucleus <  oculomotor nuclear complex  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+magnocellular part of the red nucleus, magnocellular part of the red nucleus <  red nucleus  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+parvocellular part of the red nucleus, parvocellular part of the red nucleus <  red nucleus  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+parvocellular part of thered nucleus, parvocellular part of thered nucleus <  red nucleus  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+substantia nigra pars compacta, substantia nigra pars compacta <  substantia nigra  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+substantia nigra pars reticulata, substantia nigra pars reticulata <  substantia nigra  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+caudal linear nucleus, caudal linear nucleus <  ventral tegmental area  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+interfascicular nucleus, interfascicular nucleus <  ventral tegmental area  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+parabrachial pigmented nucleus, parabrachial pigmented nucleus <  ventral tegmental area  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+paranigral nucleus, paranigral nucleus <  ventral tegmental area  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+rostral linear nucleus, rostral linear nucleus <  ventral tegmental area  <  midbrain tegmentum  <  mesencephalon  < gray matter 
+vermis, vermis <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+cerebellar hemispheres, cerebellar hemispheres <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter 
+dentate nucleus, dentate nucleus <  cerebellar nuclei  <  cerebellum  <  metencephalon  < gray matter 
+emboliform nucleus, emboliform nucleus <  cerebellar nuclei  <  cerebellum  <  metencephalon  < gray matter 
+fastigial nucleus, fastigial nucleus <  cerebellar nuclei  <  cerebellum  <  metencephalon  < gray matter 
+globose nucleus, globose nucleus <  cerebellar nuclei  <  cerebellum  <  metencephalon  < gray matter 
+pontine nuclei, pontine nuclei <  basal part of pons  <  pons  <  metencephalon  < gray matter 
+abducens nucleus, abducens nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+accessory facial nucleus, accessory facial nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+accessory trigeminal nucleus, accessory trigeminal nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+central gray of the pons, central gray of the pons <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+dorsal nucleus of lateral lemniscus, dorsal nucleus of lateral lemniscus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+dorsomedial tegmental area, dorsomedial tegmental area <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+dorsal tegmental nucleus, dorsal tegmental nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+facial motor nucleus, facial motor nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+intermediate nucleus of lateral lemniscus, intermediate nucleus of lateral lemniscus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+lateral dorsal tegmental nucleus, lateral dorsal tegmental nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+lateral parabrachial nucleus, lateral parabrachial nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+locus ceruleus, locus ceruleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+medial parabrachial nucleus, medial parabrachial nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+nucleus subceruleus, nucleus subceruleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+pontine gamma nucleus, pontine gamma nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+pontine raphe nucleus, pontine raphe nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+paramedian pontine reticular formation, paramedian pontine reticular formation <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+superior olivary complex, superior olivary complex <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+superior salivatory nucleus, superior salivatory nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+trapezoid body, trapezoid body <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+trigeminal nuclei, trigeminal nuclei <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+ventral nucleus of lateral lemniscus, ventral nucleus of lateral lemniscus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter 
+anteroventral cochlear nucleus, anteroventral cochlear nucleus <  ventral cochlear nuclei  <  cochlear nuclei  <  myelencephalon  < gray matter 
+posteroventral cochlear nucleus, posteroventral cochlear nucleus <  ventral cochlear nuclei  <  cochlear nuclei  <  myelencephalon  < gray matter 
+central reticular nucleus of the medulla, central reticular nucleus of the medulla <  central medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+medial reticular nucleus of the medulla, medial reticular nucleus of the medulla <  central medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+ventral reticular nucleus of the medulla, ventral reticular nucleus of the medulla <  central medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+intermediate zone, intermediate zone <  central medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+dorsal paragigantocellular nucleus, dorsal paragigantocellular nucleus <  gigantocellular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+lateral paragigantocellular nucleus, lateral paragigantocellular nucleus <  gigantocellular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+gigantocellular nucleus, gigantocellular nucleus <  gigantocellular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+gigantocellular nucleus ventral part, gigantocellular nucleus ventral part <  gigantocellular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+paragigantocellular nucleus alpha part, paragigantocellular nucleus alpha part <  gigantocellular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+epiolivary nucleus, epiolivary nucleus <  lateral medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+lateral reticular nucleus, lateral reticular nucleus <  lateral medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+parvocellular division, parvocellular division <  lateral medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+subtrigeminal division, subtrigeminal division <  lateral medullary reticular group  <  medullary reticular formation  <  myelencephalon  < gray matter 
+caudal spinal trigeminal nucleus gelatenous part, caudal spinal trigeminal nucleus gelatenous part <  caudal spinal trigeminal nucleus  <  spinal trigeminal nucleus  <  myelencephalon  < gray matter 
+caudal spinal trigeminal nucleus magnocellular part, caudal spinal trigeminal nucleus magnocellular part <  caudal spinal trigeminal nucleus  <  spinal trigeminal nucleus  <  myelencephalon  < gray matter 
+caudal spinal trigeminal nucleus zonal part, caudal spinal trigeminal nucleus zonal part <  caudal spinal trigeminal nucleus  <  spinal trigeminal nucleus  <  myelencephalon  < gray matter 
+body of the corpus callosum, body of the corpus callosum <  corpus callosum  <  telencephalic commissures  <  telencephalic white matter  < white matter 
+genu of the corpus callosum, genu of the corpus callosum <  corpus callosum  <  telencephalic commissures  <  telencephalic white matter  < white matter 
+rostrum of the corpus callosum, rostrum of the corpus callosum <  corpus callosum  <  telencephalic commissures  <  telencephalic white matter  < white matter 
+splenium of the corpus callosum, splenium of the corpus callosum <  corpus callosum  <  telencephalic commissures  <  telencephalic white matter  < white matter 
+radiations of corpus callosum, radiations of corpus callosum <  corpus callosum  <  telencephalic commissures  <  telencephalic white matter  < white matter 
+tapetum of corpus callosum, tapetum of corpus callosum <  corpus callosum  <  telencephalic commissures  <  telencephalic white matter  < white matter 
+corticobulbar tract supracapsular part, corticobulbar tract supracapsular part <  corticobulbar tract  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+corticobulbar tract infracapsular part, corticobulbar tract infracapsular part <  corticobulbar tract  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+anterior column of the fornix, anterior column of the fornix <  fornix  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+body of the fornix, body of the fornix <  fornix  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+fimbria, fimbria <  fornix  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+posterior column of the fornix, posterior column of the fornix <  fornix  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+external sagittal stratum, external sagittal stratum <  sagittal stratum  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+internal sagittal stratum, internal sagittal stratum <  sagittal stratum  <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+decussation of the superior cerebellar peduncle, decussation of the superior cerebellar peduncle <  superior cerebellar peduncle  <  cerebellar white matter tracts  <  metencephalic white matter  < white matter 
+olfactory tract, olfactory tract <  olfactory nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+olfactory bulb, olfactory bulb <  olfactory nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+optic tract, optic tract <  optic nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+optic chiasm, optic chiasm <  optic nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+optic radiations, optic radiations <  optic nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+supraoptic dicussation, supraoptic dicussation <  optic nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+vestibulchochlear nerve, vestibulchochlear nerve <  vestibulocochlear nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+vestibulochochlear nerve, vestibulochochlear nerve <  vestibulocochlear nerve  <  cranial nerves  <  myelencephalic white matter  < white matter 
+frontal lobe, frontal lobe <  cerebral cortex  <  telencephalon  < gray matter 
+insula, insula <  cerebral cortex  <  telencephalon  < gray matter 
+limbic lobe, limbic lobe <  cerebral cortex  <  telencephalon  < gray matter 
+occipital lobe, occipital lobe <  cerebral cortex  <  telencephalon  < gray matter 
+parietal lobe, parietal lobe <  cerebral cortex  <  telencephalon  < gray matter 
+temporal lobe, temporal lobe <  cerebral cortex  <  telencephalon  < gray matter 
+amygdala, amygdala <  cerebral nuclei  <  telencephalon  < gray matter 
+anterior olfactory nucleus, anterior olfactory nucleus <  cerebral nuclei  <  telencephalon  < gray matter 
+basal forebrain, basal forebrain <  cerebral nuclei  <  telencephalon  < gray matter 
+basal ganglia, basal ganglia <  cerebral nuclei  <  telencephalon  < gray matter 
+claustrum, claustrum <  cerebral nuclei  <  telencephalon  < gray matter 
+habenular nuclei, habenular nuclei <  epithalamus  <  diencephalon  < gray matter 
+paraventricular nuclei of thalamus, paraventricular nuclei of thalamus <  epithalamus  <  diencephalon  < gray matter 
+pineal gland, pineal gland <  epithalamus  <  diencephalon  < gray matter 
+anterior hypothalamic region, anterior hypothalamic region <  hypothalamus  <  diencephalon  < gray matter 
+mammillary region, mammillary region <  hypothalamus  <  diencephalon  < gray matter 
+preoptic region, preoptic region <  hypothalamus  <  diencephalon  < gray matter 
+tuberal region, tuberal region <  hypothalamus  <  diencephalon  < gray matter 
+subthalamic nucleus, subthalamic nucleus <  subthalamus  <  diencephalon  < gray matter 
+dorsal thalamus, dorsal thalamus <  thalamus  <  diencephalon  < gray matter 
+ventral thalamus, ventral thalamus <  thalamus  <  diencephalon  < gray matter 
+inferior colliculus, inferior colliculus <  midbrain tectum  <  mesencephalon  < gray matter 
+intercollicular nucleus, intercollicular nucleus <  midbrain tectum  <  mesencephalon  < gray matter 
+nucleus of the brachium of the inferior colliculus, nucleus of the brachium of the inferior colliculus <  midbrain tectum  <  mesencephalon  < gray matter 
+parabigeminal nucleus, parabigeminal nucleus <  midbrain tectum  <  mesencephalon  < gray matter 
+superior colliculus, superior colliculus <  midbrain tectum  <  mesencephalon  < gray matter 
+sagulum nucleus, sagulum nucleus <  midbrain tectum  <  mesencephalon  < gray matter 
+subcommissural organ, subcommissural organ <  midbrain tectum  <  mesencephalon  < gray matter 
+central gray substance of midbrain, central gray substance of midbrain <  midbrain tegmentum  <  mesencephalon  < gray matter 
+Edinger Westphal nucleus, Edinger Westphal nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+interpeduncular nucleus, interpeduncular nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+interstitial nucleus of Cajal, interstitial nucleus of Cajal <  midbrain tegmentum  <  mesencephalon  < gray matter 
+isthmic reticular formation, isthmic reticular formation <  midbrain tegmentum  <  mesencephalon  < gray matter 
+midbrain raphe nuclei, midbrain raphe nuclei <  midbrain tegmentum  <  mesencephalon  < gray matter 
+midbrain reticular formation, midbrain reticular formation <  midbrain tegmentum  <  mesencephalon  < gray matter 
+nucleus of Darkschewitsch, nucleus of Darkschewitsch <  midbrain tegmentum  <  mesencephalon  < gray matter 
+nucleus of the posterior commissure, nucleus of the posterior commissure <  midbrain tegmentum  <  mesencephalon  < gray matter 
+oculomotor nuclear complex, oculomotor nuclear complex <  midbrain tegmentum  <  mesencephalon  < gray matter 
+peripeduncular nucleus, peripeduncular nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+red nucleus, red nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+rostral interstitial nucleus of the medial longitudinal fasciculus, rostral interstitial nucleus of the medial longitudinal fasciculus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+substantia nigra, substantia nigra <  midbrain tegmentum  <  mesencephalon  < gray matter 
+trochlear nucleus, trochlear nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+ventral tegmental area, ventral tegmental area <  midbrain tegmentum  <  mesencephalon  < gray matter 
+ventral tegmental nucleus, ventral tegmental nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter 
+nucleus of the optic tract, nucleus of the optic tract <  pretectal region  <  mesencephalon  < gray matter 
+nucleus of the pretectal area, nucleus of the pretectal area <  pretectal region  <  mesencephalon  < gray matter 
+olivary pretectal nucleus, olivary pretectal nucleus <  pretectal region  <  mesencephalon  < gray matter 
+principal pretectal nucleus, principal pretectal nucleus <  pretectal region  <  mesencephalon  < gray matter 
+sublentiform nucleus, sublentiform nucleus <  pretectal region  <  mesencephalon  < gray matter 
+cerebellar cortex, cerebellar cortex <  cerebellum  <  metencephalon  < gray matter 
+cerebellar nuclei, cerebellar nuclei <  cerebellum  <  metencephalon  < gray matter 
+basal part of pons, basal part of pons <  pons  <  metencephalon  < gray matter 
+pontine tegmentum, pontine tegmentum <  pons  <  metencephalon  < gray matter 
+dorsal cochlear nucleus, dorsal cochlear nucleus <  cochlear nuclei  <  myelencephalon  < gray matter 
+ventral cochlear nuclei, ventral cochlear nuclei <  cochlear nuclei  <  myelencephalon  < gray matter 
+dorsal accessory inferior olivary nucleus, dorsal accessory inferior olivary nucleus <  inferior olivary complex  <  myelencephalon  < gray matter 
+medial accessory inferior olivary nucleus, medial accessory inferior olivary nucleus <  inferior olivary complex  <  myelencephalon  < gray matter 
+principal inferior olivary nucleus, principal inferior olivary nucleus <  inferior olivary complex  <  myelencephalon  < gray matter 
+beta inferior olivary nucleus, beta inferior olivary nucleus <  inferior olivary complex  <  myelencephalon  < gray matter 
+central medullary reticular group, central medullary reticular group <  medullary reticular formation  <  myelencephalon  < gray matter 
+gigantocellular group, gigantocellular group <  medullary reticular formation  <  myelencephalon  < gray matter 
+lateral medullary reticular group, lateral medullary reticular group <  medullary reticular formation  <  myelencephalon  < gray matter 
+parvicellular reticular nucleus, parvicellular reticular nucleus <  medullary reticular formation  <  myelencephalon  < gray matter 
+nucleus raphe magnus, nucleus raphe magnus <  raphe nuclei of medulla  <  myelencephalon  < gray matter 
+nucleus raphe obscurus, nucleus raphe obscurus <  raphe nuclei of medulla  <  myelencephalon  < gray matter 
+nucleus raphe pallidus, nucleus raphe pallidus <  raphe nuclei of medulla  <  myelencephalon  < gray matter 
+nucleus pararaphales, nucleus pararaphales <  raphe nuclei of medulla  <  myelencephalon  < gray matter 
+solitary nucleus commissural subnucleus, solitary nucleus commissural subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus dorsal subnucleus, solitary nucleus dorsal subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus dorsolateral subnucleus, solitary nucleus dorsolateral subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus gelantinosus subnucleus, solitary nucleus gelantinosus subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus interstitial subnucleus, solitary nucleus interstitial subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus intermediate subnucleus, solitary nucleus intermediate subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus meidal subnucleus, solitary nucleus meidal subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus paracommissural part, solitary nucleus paracommissural part <  solitary nucleus  <  myelencephalon  < gray matter 
+solitary nucleus ventral subnucleus, solitary nucleus ventral subnucleus <  solitary nucleus  <  myelencephalon  < gray matter 
+ventrolateral subnucleus of solitary tract, ventrolateral subnucleus of solitary tract <  solitary nucleus  <  myelencephalon  < gray matter 
+caudal spinal trigeminal nucleus, caudal spinal trigeminal nucleus <  spinal trigeminal nucleus  <  myelencephalon  < gray matter 
+interpolar part of spinal trigeminal nucleus, interpolar part of spinal trigeminal nucleus <  spinal trigeminal nucleus  <  myelencephalon  < gray matter 
+oral part of spinal trigeminal nucleus, oral part of spinal trigeminal nucleus <  spinal trigeminal nucleus  <  myelencephalon  < gray matter 
+lateral vestibular nucleus, lateral vestibular nucleus <  vestibular nuclei  <  myelencephalon  < gray matter 
+medial vestibular nucleus, medial vestibular nucleus <  vestibular nuclei  <  myelencephalon  < gray matter 
+spinal vestibular nucleus, spinal vestibular nucleus <  vestibular nuclei  <  myelencephalon  < gray matter 
+superior vestibular nucleus, superior vestibular nucleus <  vestibular nuclei  <  myelencephalon  < gray matter 
+anterior commissure, anterior commissure <  telencephalic commissures  <  telencephalic white matter  < white matter 
+corpus callosum, corpus callosum <  telencephalic commissures  <  telencephalic white matter  < white matter 
+habenular commissure, habenular commissure <  telencephalic commissures  <  telencephalic white matter  < white matter 
+hippocampal commissure, hippocampal commissure <  telencephalic commissures  <  telencephalic white matter  < white matter 
+posterior commissure, posterior commissure <  telencephalic commissures  <  telencephalic white matter  < white matter 
+supramamillary commissure, supramamillary commissure <  telencephalic commissures  <  telencephalic white matter  < white matter 
+acoustic radiation, acoustic radiation <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+arcuate fasciculus, arcuate fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+alveus, alveus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+amygdalotegmental tract, amygdalotegmental tract <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+angular bundle, angular bundle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+ansa lenticularis, ansa lenticularis <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+ansa peduncularis, ansa peduncularis <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+bundle X, bundle X <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+cingulum bundle, cingulum bundle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+comb fibers, comb fibers <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+corona radiata, corona radiata <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+corticobulbar tract, corticobulbar tract <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+external capsule, external capsule <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+external medullary lamina of globus pallidus, external medullary lamina of globus pallidus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+external medullary lamina of thalamus, external medullary lamina of thalamus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+extreme capsule, extreme capsule <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+fornix, fornix <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+inferior longitudinal fasciculus, inferior longitudinal fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+inferior thalamic peduncle, inferior thalamic peduncle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+internal capsule, internal capsule <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+internal medullary lamina of globus pallidus, internal medullary lamina of globus pallidus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+internal medullary lamina of thalamus, internal medullary lamina of thalamus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+lateral longitudinal stria, lateral longitudinal stria <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+lenticular fasciculus, lenticular fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+mammillary peduncle, mammillary peduncle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+mammillotegmental tract, mammillotegmental tract <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+mammillothalamic tract, mammillothalamic tract <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+medial forebrain bundle, medial forebrain bundle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+medial longitudinal stria, medial longitudinal stria <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+Meyer s loop of optic radiation, Meyer s loop of optic radiation <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+middle longitudinal fasciculus, middle longitudinal fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+occipitofrontal fasciculus, occipitofrontal fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+orbito polar tract, orbito polar tract <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+perforant path, perforant path <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+perpendicular fasciculus, perpendicular fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+pontine bundle, pontine bundle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+rostral thalamic peduncle, rostral thalamic peduncle <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+sagittal stratum, sagittal stratum <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+short association fibers, short association fibers <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+stratum zonale of thalamus, stratum zonale of thalamus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+stria medullaris, stria medullaris <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+stria terminalis, stria terminalis <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+subcallosal fasciculus, subcallosal fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+subthalamic fasciculus, subthalamic fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+superficial presubicular path, superficial presubicular path <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+superior longitudinal fasciculus, superior longitudinal fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+thalamic fasciculus, thalamic fasciculus <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+uncinate fasciculus of the forebrain, uncinate fasciculus of the forebrain <  telencephalic white matter tracts  <  telencephalic white matter  < white matter 
+inferior cerebellar peduncle, inferior cerebellar peduncle <  cerebellar white matter tracts  <  metencephalic white matter  < white matter 
+middle cerebellar peduncle, middle cerebellar peduncle <  cerebellar white matter tracts  <  metencephalic white matter  < white matter 
+ponto cerebellar tract, ponto cerebellar tract <  cerebellar white matter tracts  <  metencephalic white matter  < white matter 
+superior cerebellar peduncle, superior cerebellar peduncle <  cerebellar white matter tracts  <  metencephalic white matter  < white matter 
+cortico pontine fibers, cortico pontine fibers <  pontine white matter tracts  <  metencephalic white matter  < white matter 
+longitudinal fasciculus of the pons, longitudinal fasciculus of the pons <  pontine white matter tracts  <  metencephalic white matter  < white matter 
+olfactory nerve, olfactory nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+optic nerve, optic nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+occulomotor nerve, occulomotor nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+trochlear nerve, trochlear nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+trigeminal nerve, trigeminal nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+abducens nerve, abducens nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+facial nerve, facial nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+vestibulocochlear nerve, vestibulocochlear nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+glossopharyngeal nerve, glossopharyngeal nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+vagus nerve, vagus nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+accessory nerve, accessory nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+hypoglossal nerve, hypoglossal nerve <  cranial nerves  <  myelencephalic white matter  < white matter 
+decussation of medial lemniscus, decussation of medial lemniscus <  medial lemniscus  <  myelencephalic white matter  < white matter 
+pyramidal decussation, pyramidal decussation <  pyramidal tract  <  myelencephalic white matter  < white matter 
+callosal sulcus, callosal sulcus <  major divisions  <  telencephalic spaces  < sulci spaces 
+central sulcus, central sulcus <  major divisions  <  telencephalic spaces  < sulci spaces 
+longitudinal fissure, longitudinal fissure <  major divisions  <  telencephalic spaces  < sulci spaces 
+sylvian fissure, sylvian fissure <  major divisions  <  telencephalic spaces  < sulci spaces 
+anteiror parolfactory sulcus, anteiror parolfactory sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+cingulate sulcus, cingulate sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+frontomarginal sulcus, frontomarginal sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+fronto orbital sulcus, fronto orbital sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+inferior frontal sulcus, inferior frontal sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+inferior rostral sulcus, inferior rostral sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+intermediate frontal sulcus, intermediate frontal sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+medial frontal sulcus, medial frontal sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+olfactory sulcus, olfactory sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+orbital sulcus, orbital sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+paracentral sulcus, paracentral sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+posterior parolfactory sulcus, posterior parolfactory sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+precentral sulcus, precentral sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+superior frontal sulcus, superior frontal sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+superior rostral sulcus, superior rostral sulcus <  frontal lobe sulci  <  telencephalic spaces  < sulci spaces 
+central sulcus of insula, central sulcus of insula <  insular lobe sulci  <  telencephalic spaces  < sulci spaces 
+circular sulcus, circular sulcus <  insular lobe sulci  <  telencephalic spaces  < sulci spaces 
+hippocampal sulcus, hippocampal sulcus <  limbic lobe sulci  <  telencephalic spaces  < sulci spaces 
+sulcus semi anularis, sulcus semi anularis <  limbic lobe sulci  <  telencephalic spaces  < sulci spaces 
+uncal sulcus, uncal sulcus <  limbic lobe sulci  <  telencephalic spaces  < sulci spaces 
+calcarine sulcus, calcarine sulcus <  occipital lobe sulci  <  telencephalic spaces  < sulci spaces 
+lateral occipital sulcus, lateral occipital sulcus <  occipital lobe sulci  <  telencephalic spaces  < sulci spaces 
+lunate sulcus, lunate sulcus <  occipital lobe sulci  <  telencephalic spaces  < sulci spaces 
+parieto occipital sulcus, parieto occipital sulcus <  occipital lobe sulci  <  telencephalic spaces  < sulci spaces 
+preoccipital notch, preoccipital notch <  occipital lobe sulci  <  telencephalic spaces  < sulci spaces 
+transverse occipital sulcus, transverse occipital sulcus <  occipital lobe sulci  <  telencephalic spaces  < sulci spaces 
+intraparietal sulcus, intraparietal sulcus <  parietal lobe sulci  <  telencephalic spaces  < sulci spaces 
+postcentral sulcus, postcentral sulcus <  parietal lobe sulci  <  telencephalic spaces  < sulci spaces 
+primary intermediate sulcus, primary intermediate sulcus <  parietal lobe sulci  <  telencephalic spaces  < sulci spaces 
+secondary intermediate sulcus, secondary intermediate sulcus <  parietal lobe sulci  <  telencephalic spaces  < sulci spaces 
+subparietal sulcus, subparietal sulcus <  parietal lobe sulci  <  telencephalic spaces  < sulci spaces 
+superior parietal sulcus, superior parietal sulcus <  parietal lobe sulci  <  telencephalic spaces  < sulci spaces 
+angular sulcus, angular sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+anterior occipital sulcus, anterior occipital sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+collateral sulcus, collateral sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+inferior temporal sulcus, inferior temporal sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+middle temporal sulcus, middle temporal sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+parahippocampal ramus, parahippocampal ramus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+parahippocampal sulcus, parahippocampal sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+rhinal sulcus, rhinal sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+superior temporal sulcus, superior temporal sulcus <  temporal lobe sulci  <  telencephalic spaces  < sulci spaces 
+precentral fissure, precentral fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+preculminate fissure, preculminate fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+intraculminate fissure, intraculminate fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+primary fissure, primary fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+superior posterior fissure, superior posterior fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+horizontal fissure, horizontal fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+ansoparamedian fissure, ansoparamedian fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+prepyramidal prebiventer fissure, prepyramidal prebiventer fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+intrabiventer fissure, intrabiventer fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+secondary fissure, secondary fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+posterolateral fissure, posterolateral fissure <  cerebellar sulci  <  metencephalic spaces  < sulci spaces 
+septum pallucidum, septum pallucidum <  lateral ventricle  <  ventricles  < sulci spaces 
+choroid plexus of the lateral ventricle, choroid plexus of the lateral ventricle <  lateral ventricle  <  ventricles  < sulci spaces 
+choroid plexus of the third ventricle, choroid plexus of the third ventricle <  third ventricle  <  ventricles  < sulci spaces 
+choroid plexus of the fourth ventricle, choroid plexus of the fourth ventricle <  fourth ventricle  <  ventricles  < sulci spaces 
+cerebral cortex, cerebral cortex <  telencephalon  < gray matter 
+cerebral nuclei, cerebral nuclei <  telencephalon  < gray matter 
+epithalamus, epithalamus <  diencephalon  < gray matter 
+hypothalamus, hypothalamus <  diencephalon  < gray matter 
+subthalamus, subthalamus <  diencephalon  < gray matter 
+thalamus, thalamus <  diencephalon  < gray matter 
+midbrain tectum, midbrain tectum <  mesencephalon  < gray matter 
+midbrain tegmentum, midbrain tegmentum <  mesencephalon  < gray matter 
+pretectal region, pretectal region <  mesencephalon  < gray matter 
+cerebellum, cerebellum <  metencephalon  < gray matter 
+pons, pons <  metencephalon  < gray matter 
+accessory cuneate nucleus, accessory cuneate nucleus <  myelencephalon  < gray matter 
+ambiguus nucleus, ambiguus nucleus <  myelencephalon  < gray matter 
+arcuate nucleus of medulla, arcuate nucleus of medulla <  myelencephalon  < gray matter 
+area postrema, area postrema <  myelencephalon  < gray matter 
+central glial substance, central glial substance <  myelencephalon  < gray matter 
+central gray of the medulla, central gray of the medulla <  myelencephalon  < gray matter 
+cochlear nuclei, cochlear nuclei <  myelencephalon  < gray matter 
+conterminalis, conterminalis <  myelencephalon  < gray matter 
+cuneate nucleus, cuneate nucleus <  myelencephalon  < gray matter 
+dorsal motor nucleus of the vagus, dorsal motor nucleus of the vagus <  myelencephalon  < gray matter 
+endolemniscal nucleus, endolemniscal nucleus <  myelencephalon  < gray matter 
+epifascicular nucleus, epifascicular nucleus <  myelencephalon  < gray matter 
+external accessory lateral cuneate nucleus, external accessory lateral cuneate nucleus <  myelencephalon  < gray matter 
+gracile nucleus, gracile nucleus <  myelencephalon  < gray matter 
+hypoglossal nucleus, hypoglossal nucleus <  myelencephalon  < gray matter 
+inferior olivary complex, inferior olivary complex <  myelencephalon  < gray matter 
+inferior salivatory nucleus, inferior salivatory nucleus <  myelencephalon  < gray matter 
+intercalated nucleus, intercalated nucleus <  myelencephalon  < gray matter 
+interfascicular hypoglossal nucleus, interfascicular hypoglossal nucleus <  myelencephalon  < gray matter 
+interpositus nucleus, interpositus nucleus <  myelencephalon  < gray matter 
+lateral pericuneate nucleus, lateral pericuneate nucleus <  myelencephalon  < gray matter 
+medial pericuneate nucleus, medial pericuneate nucleus <  myelencephalon  < gray matter 
+medullary reticular formation, medullary reticular formation <  myelencephalon  < gray matter 
+nucleus of Roller, nucleus of Roller <  myelencephalon  < gray matter 
+paratrigeminal nucleus, paratrigeminal nucleus <  myelencephalon  < gray matter 
+peritrigeminal nucleus, peritrigeminal nucleus <  myelencephalon  < gray matter 
+pontobulbar nucleus, pontobulbar nucleus <  myelencephalon  < gray matter 
+prepositus nucleus, prepositus nucleus <  myelencephalon  < gray matter 
+raphe nuclei of medulla, raphe nuclei of medulla <  myelencephalon  < gray matter 
+retroambiguus nucleus, retroambiguus nucleus <  myelencephalon  < gray matter 
+solitary nucleus, solitary nucleus <  myelencephalon  < gray matter 
+spinal trigeminal nucleus, spinal trigeminal nucleus <  myelencephalon  < gray matter 
+suprageniculate nucleus of the medulla, suprageniculate nucleus of the medulla <  myelencephalon  < gray matter 
+supraspinal nucleus, supraspinal nucleus <  myelencephalon  < gray matter 
+vestibular nuclei, vestibular nuclei <  myelencephalon  < gray matter 
+telencephalic commissures, telencephalic commissures <  telencephalic white matter  < white matter 
+telencephalic white matter tracts, telencephalic white matter tracts <  telencephalic white matter  < white matter 
+brachium of the inferior colliculus, brachium of the inferior colliculus <  mesencephalic white matter  < white matter 
+brachium of the superior colliculus, brachium of the superior colliculus <  mesencephalic white matter  < white matter 
+central tegmental tract midbrain portion, central tegmental tract midbrain portion <  mesencephalic white matter  < white matter 
+cerebral peduncle crus cerebri, cerebral peduncle crus cerebri <  mesencephalic white matter  < white matter 
+commissure of the inferior colliculus, commissure of the inferior colliculus <  mesencephalic white matter  < white matter 
+corticobulbar tract midbrain portion, corticobulbar tract midbrain portion <  mesencephalic white matter  < white matter 
+mesencephalic trigeminal tract, mesencephalic trigeminal tract <  mesencephalic white matter  < white matter 
+cerebellar white matter tracts, cerebellar white matter tracts <  metencephalic white matter  < white matter 
+pontine white matter tracts, pontine white matter tracts <  metencephalic white matter  < white matter 
+cranial nerves, cranial nerves <  myelencephalic white matter  < white matter 
+amiculum of the olive, amiculum of the olive <  myelencephalic white matter  < white matter 
+cuneate fasciculus, cuneate fasciculus <  myelencephalic white matter  < white matter 
+dorsal longitudinal fasciculus, dorsal longitudinal fasciculus <  myelencephalic white matter  < white matter 
+medial longitudinal fasciculus, medial longitudinal fasciculus <  myelencephalic white matter  < white matter 
+central tegmental tract, central tegmental tract <  myelencephalic white matter  < white matter 
+corticobulbar tract hindbrain portion, corticobulbar tract hindbrain portion <  myelencephalic white matter  < white matter 
+corticospinal tract, corticospinal tract <  myelencephalic white matter  < white matter 
+fasciculus retroflexus, fasciculus retroflexus <  myelencephalic white matter  < white matter 
+gracile fasciculus, gracile fasciculus <  myelencephalic white matter  < white matter 
+hilus of the inferior olive, hilus of the inferior olive <  myelencephalic white matter  < white matter 
+internal arcuate fibers, internal arcuate fibers <  myelencephalic white matter  < white matter 
+lateral lemniscus, lateral lemniscus <  myelencephalic white matter  < white matter 
+medial lemniscus, medial lemniscus <  myelencephalic white matter  < white matter 
+pyramidal tract, pyramidal tract <  myelencephalic white matter  < white matter 
+solitary tract, solitary tract <  myelencephalic white matter  < white matter 
+spinal lemniscus in hindbrain, spinal lemniscus in hindbrain <  myelencephalic white matter  < white matter 
+spinal trigeminal tract, spinal trigeminal tract <  myelencephalic white matter  < white matter 
+tectospinal tract, tectospinal tract <  myelencephalic white matter  < white matter 
+ventral tegmental tract, ventral tegmental tract <  myelencephalic white matter  < white matter 
+vestibulomesencephalic tract, vestibulomesencephalic tract <  myelencephalic white matter  < white matter 
+major divisions, major divisions <  telencephalic spaces  < sulci spaces 
+frontal lobe sulci, frontal lobe sulci <  telencephalic spaces  < sulci spaces 
+insular lobe sulci, insular lobe sulci <  telencephalic spaces  < sulci spaces 
+limbic lobe sulci, limbic lobe sulci <  telencephalic spaces  < sulci spaces 
+occipital lobe sulci, occipital lobe sulci <  telencephalic spaces  < sulci spaces 
+parietal lobe sulci, parietal lobe sulci <  telencephalic spaces  < sulci spaces 
+temporal lobe sulci, temporal lobe sulci <  telencephalic spaces  < sulci spaces 
+cerebellar sulci, cerebellar sulci <  metencephalic spaces  < sulci spaces 
+cerebral aquaduct, cerebral aquaduct <  myelencephalic spaces  < sulci spaces 
+lateral ventricle, lateral ventricle <  ventricles  < sulci spaces 
+third ventricle, third ventricle <  ventricles  < sulci spaces 
+fourth ventricle, fourth ventricle <  ventricles  < sulci spaces 
+central canal, central canal <  ventricles  < sulci spaces 
+telencephalon, telencephalon < gray matter 
+diencephalon, diencephalon < gray matter 
+mesencephalon, mesencephalon < gray matter 
+metencephalon, metencephalon < gray matter 
+myelencephalon, myelencephalon < gray matter 
+telencephalic white matter, telencephalic white matter < white matter 
+mesencephalic white matter, mesencephalic white matter < white matter 
+metencephalic white matter, metencephalic white matter < white matter 
+myelencephalic white matter, myelencephalic white matter < white matter 
+telencephalic spaces, telencephalic spaces < sulci spaces 
+metencephalic spaces, metencephalic spaces < sulci spaces 
+myelencephalic spaces, myelencephalic spaces < sulci spaces 
+ventricles, ventricles < sulci spaces 
+gray matter,gray matter
+white matter,white matter
+sulci spaces,sulci spaces
