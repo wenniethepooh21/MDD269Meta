@@ -1,9 +1,9 @@
 library(readr)
-
 library(tidyr)
+library(GEOquery)
 library(magrittr)
 library(dplyr)
-library(GEOquery)
+
 
 setwd('../../../school/thesis/')
 library(here)
@@ -17,37 +17,43 @@ library(here)
 
 source(here("R/transcriptomic_meta/RamakerFullMetaAnalysis.R"))
 
-metadata <- read_tsv(here("Raw_Data/RamakerEtAl/GSE80655/GSE80655-metadata.txt.txt"))
-regions <- unique(metadata$`brain region`)
-full_results <- tibble()
-
-#counts from Biojupies
-rawcount_dataframe <- read.csv(here("data", "RamakerEtAl", "GSE80655 from biojupies", "GSE80655-expression.txt.txt"),sep="\t", row.names = 1)
-
 gds <- getGEO("GSE80655")
-metadata_for_pH <- phenoData(gds$GSE80655_series_matrix.txt.gz)
+metadata_for_pH <- phenoData(gds$GSE80655_series_matrix.txt.gz) 
 metadata_for_pH <- as_tibble(as(metadata_for_pH, "data.frame"))
 metadata_for_pH %<>% select(Sample_geo_accession = geo_accession, brain_ph = 'brain ph:ch1')
-metadata_for_pH %<>% mutate(brain_ph = as.numeric(brain_ph))
+#count the number of missing brain pH values from samples
 print(paste("NA pH values:" , nrow(metadata_for_pH %>% filter(is.na(brain_ph)))))
+# convert column into numeric column, will get warning from NA's
+metadata_for_pH %<>% mutate(brain_ph = as.numeric(brain_ph))
 #replacing 3 missing values with mean brain ph
 metadata_for_pH %<>% mutate(brain_ph = if_else(is.na(brain_ph), mean(brain_ph, na.rm=T), brain_ph))
 
-#read count data
+
+#read rawcounts data downloaded from their GSE
+rawcount_dataframe <- read.csv(here("Raw_Data/RamakerEtAl/GSE80655/GSE80655-expression.txt.txt"),sep="\t", row.names = 1)
 read_counts <- as.data.frame(colSums(rawcount_dataframe))
+#create a new column that copied the GSM id's to convert to tibble 
 read_counts$Sample_geo_accession = rownames(read_counts)
+#convert to tibble (removes the first column)
 read_counts <- as_tibble(read_counts) %>% select(Sample_geo_accession , read_counts = `colSums(rawcount_dataframe)`)
 
+#read in the meta data downloaded from their GSE
+metadata <- read_tsv(here("Raw_Data/RamakerEtAl/GSE80655/GSE80655-metadata.txt.txt"))
 metadata %<>% rename(clinical_diagnosis = `clinical diagnosis`)
 metadata %<>% mutate(clinical_diagnosis = gsub(" ", "_", clinical_diagnosis))
-metadata <- inner_join(metadata, metadata_for_pH)
-metadata <- inner_join(metadata, read_counts)
+#merge data together
+fullmetadata <- inner_join(metadata, metadata_for_pH) %>% inner_join(read_counts)
+#separate the data for sex-specific analysis 
+female_metadata <- fullmetadata %>% filter(gender == "F")
+male_metadata <- fullmetadata %>% filter(geneder == "M") 
 
-female_metadata <- metadata[which(metadata$gender == "F"),]
-male_metadata <- metadata[which(metadata$gender == "M"),]
+#get the unique brain regions
+regions <- unique(metadata$`brain region`)
+#create empty tibble for data to be populated 
+full_results <- tibble()
 
-#full Ramaker data results
-summary_results <- RamakerMeta(metadata, read_counts, rawcount_dataframe, regions, full_results)
+#Perform Ramaker meta-analysis functions in RamakerMetaAnalysis.R
+summary_results <- RamakerMeta(fullmetadata, read_counts, rawcount_dataframe, regions, full_results)
 write_csv(summary_results, path = here("ProcessedData", "RamakerEtAl", "CompleteRamakerTable.csv"))
 summary_results %<>% RamakerAnalysis(regions)
 
