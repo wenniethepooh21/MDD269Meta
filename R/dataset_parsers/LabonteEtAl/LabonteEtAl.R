@@ -48,7 +48,7 @@ Labonte %<>% mutate(brain_region = ifelse(brain_region == "Anterior Insula", "An
 magma_table <- read_csv(here("Raw_Data/HowardEtAl/FullMagmaGenes.csv")) %>% select(Labonte_genes) %>% distinct() %>% na.omit()
 magma_labonte <- Labonte %>% right_join(magma_table , by = c('gene_symbol' = 'Labonte_genes'))
 #Write out formatted expression data 
-magma_labonte %>% write_csv(path = here("Processed_Data/LabonteEtAl/CompleteLabonteTable.csv"))
+magma_labonte %>% write_csv(path = here("Processed_Data/LabonteEtAl/CompleteLabonteTableMagma.csv"))
 
 #Expand table row wise to hold male and female data 
 Labonte_long <- bind_rows(magma_labonte %>% select(brain_region, gene_symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male"),
@@ -61,7 +61,7 @@ source(here("R/transcriptomic_meta/Labonte_Meta_Analysis.R"))
 #number of p-values we need to filter = 12 (6 regions * 2 sexes) 
 #number of brain regions = 6
 Labonte_summary_results <- Labonte_long %>% LabonteMetaAnalysis(12,6)
-Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/fullLabonteTable.csv"))
+Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/fullLabonteTableMagma.csv"))
 
 #Perform the sex-specific meta-analyses
 #Extract Female data 
@@ -70,7 +70,7 @@ Labonte_Female_Magma <- magma_labonte %>% select(brain_region, gene_symbol, logF
 #number of p-values we need to filter = 6 (6 regions * 1 sex) 
 #number of brain regions = 6
 Labonte_Female_results <- Labonte_Female_Magma %>% LabonteMetaAnalysis(6,6)
-Labonte_Female_results %>% write_csv(here("Processed_Data/LabonteEtAl/FemaleLabonteTable.csv"))
+Labonte_Female_results %>% write_csv(here("Processed_Data/LabonteEtAl/FemaleLabonteTableMagma.csv"))
 
 #Extract Male data
 Labonte_Male_Magma <- magma_labonte %>% select(brain_region, gene_symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male")
@@ -78,12 +78,43 @@ Labonte_Male_Magma <- magma_labonte %>% select(brain_region, gene_symbol, logFC 
 #number of p-values we need to filter = 6 (6 regions * 1 sex) 
 #number of brain regions = 6
 Labonte_Male_results <- Labonte_Male_Magma %>% LabonteMetaAnalysis(6,6)
-Labonte_Male_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/MaleLabonteTable.csv"))
+Labonte_Male_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/MaleLabonteTableMagma.csv"))
 
 
 ############
 # CORTICAL ANALYSIS
 ############
+#Pick out only the cortical regions that Labonte studied
+Labonte_Cortical <- Labonte_long %>% filter(brain_region != "Nac") %>% filter( brain_region != "Subic")
+#Perform meta-analysis on all brain regions across both sexes
+#number of p-values we need to filter = 8 (4 regions * 2 sexes) 
+#number of brain regions = 4
+cortical_Labonte_summary_results <- Labonte_Cortical %>% LabonteMeta(8,4)
+cortical_Labonte_summary_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
+
+
+##################
+# SEX-INTERACTION
+##################
+
+#Flip male logFC value
+Labonte_long_flip <- Labonte_long %>% mutate(logFC = if_else(sex == "male",logFC *-1, logFC))
+
+
+Labonte_long <- bind_rows(Labonte %>% dplyr::select(brain_region, symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male"),
+                          Labonte %>% dplyr::select(brain_region, symbol, logFC = Female.logFC, pvalue = Female.pvalue) %>% mutate(sex = "female"))
+
+#combine 12 (6 regions * 2 sexes) + 12 pvalues for each gene
+Labonte_summary_results <- LabonteMeta(Labonte_long,12,6)
+#change directions back to original
+
+#unflipped directions 
+labonte_unfliped <- read_csv(here("ProcessedData", "LabonteEtAl", "fullLabonteTable.csv"))
+labonte_unfliped %<>% select(1:2)
+labonte_unfliped %<>% right_join(Labonte_summary_results %>% select(-2))
+
+#needs writing out
+labonte_unfliped %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "fullLabonteTableMagma_flipped.csv"))
 
 # #------- Genome ranking (MAGMA list)
 magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
