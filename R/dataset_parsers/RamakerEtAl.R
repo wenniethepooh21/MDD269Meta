@@ -3,7 +3,7 @@ library(tidyr)
 library(GEOquery)
 library(magrittr)
 library(dplyr)
-
+#This script runs all meta-analyses on the Ramaker transcriptomic dataset 
 
 setwd('../../../school/thesis/')
 library(here)
@@ -44,6 +44,10 @@ fullmetadata <- inner_join(metadata, metadata_for_pH) %>% inner_join(read_counts
 #separate the data for sex-specific analysis 
 female_metadata <- fullmetadata %>% filter(gender == "F")
 male_metadata <- fullmetadata %>% filter(gender == "M") 
+
+###########################################################
+###### REGULAR META-ANALYSIS (FULL, FEMALE AND MALE) ######
+###########################################################
 
 source(here("R/transcriptomic_meta/Ramaker_Meta_Analysis.R"))
 #Read in the associated list of MAGMA genes that howard tested (17,842)
@@ -192,9 +196,9 @@ cortical_flipped_summary <- Ramaker_cortical_directions %>% left_join(full_flipp
 cortical_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma_flipped.csv"))
 
 
-##########################################
-###### GENOME PERCENTILE RANKING  ######
-##########################################
+###############################################################
+###### GENOME PERCENTILE RANKING FOR ALL ABOVE ANALYSES ######
+##############################################################
 #load script that holds the genome percentile ranking function used by all transcriptomic studies
 source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
