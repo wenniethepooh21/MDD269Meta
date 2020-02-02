@@ -39,29 +39,30 @@ Labonte_genes %<>% mutate(hgnc_symbol = if_else(ENSG == "ENSG00000230417" & hgnc
 Labonte %<>% left_join(Labonte_genes)
 Labonte %<>% select(-gene_symbol)
 Labonte %<>% rename(gene_symbol = "hgnc_symbol")
-############################################################################################
 #re-order columns
 Labonte <- Labonte[,c(1:2,9,3:8)]
+#########################################################################################################################################################
+#remove space between the words
 Labonte %<>% mutate(brain_region = ifelse(brain_region == "Anterior Insula", "Anterior_Insula",brain_region))
 
 #filter transcriptomic dataset for MAGMA genes tested by Howard, et al. 
 magma_table <- read_csv(here("Raw_Data/HowardEtAl/FullMagmaGenes.csv")) %>% select(Labonte_genes) %>% distinct() %>% na.omit()
 magma_labonte <- Labonte %>% right_join(magma_table , by = c('gene_symbol' = 'Labonte_genes'))
-#Write out formatted expression data 
-magma_labonte %>% write_csv(path = here("Processed_Data/LabonteEtAl/CompleteLabonteTableMagma.csv"))
 
 #Expand table row wise to hold male and female data 
 Labonte_long <- bind_rows(magma_labonte %>% select(brain_region, gene_symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male"),
                           magma_labonte %>% select(brain_region, gene_symbol, logFC = Female.logFC, pvalue = Female.pvalue) %>% mutate(sex = "female"))
 
-
-#Perform meta-analyses on Labonte dataset 
+###########################################################
+###### REGULAR META-ANALYSIS (FULL, FEMALE AND MALE) ######
+###########################################################
+#This file holds all functions used for meta-analyses - call this file
 source(here("R/transcriptomic_meta/Labonte_Meta_Analysis.R"))
 #Perform meta-analysis on all brain regions across both sexes
 #number of p-values we need to filter = 12 (6 regions * 2 sexes) 
 #number of brain regions = 6
 Labonte_summary_results <- Labonte_long %>% LabonteMetaAnalysis(12,6)
-Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/fullLabonteTableMagma.csv"))
+Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/FullLabonteTableMagma.csv"))
 
 #Perform the sex-specific meta-analyses
 #Extract Female data 
@@ -81,9 +82,9 @@ Labonte_Male_results <- Labonte_Male_Magma %>% LabonteMetaAnalysis(6,6)
 Labonte_Male_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/MaleLabonteTableMagma.csv"))
 
 
-############
-# CORTICAL ANALYSIS
-############
+###########################################
+###### CORTICAL ANALYSIS BOTH SEXES ######
+###########################################
 #Pick out only the cortical regions that Labonte studied
 Labonte_Cortical <- Labonte_long %>% filter(brain_region != "Nac") %>% filter( brain_region != "Subic")
 #Perform meta-analysis on all brain regions across both sexes
@@ -93,10 +94,9 @@ cortical_Labonte_summary_results <- Labonte_Cortical %>% LabonteMeta(8,4)
 cortical_Labonte_summary_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
 
 
-##################
-# SEX-INTERACTION FULL ANALYSIS
-##################
-
+#######################################
+####SEX-INTERACTION FULL ANALYSIS ####
+#######################################
 #Flip male logFC value
 Labonte_long_flip <- Labonte_long %>% mutate(logFC = if_else(sex == "male",logFC *-1, logFC))
 #Perform meta-analysis on all brain regions across both sexes
@@ -106,11 +106,11 @@ Labonte_full_flip <- Labonte_long_flip %>% LabonteMetaAnalysis(12,6)
 #change directions back to original
 full_labonte_dir <- Labonte_summary_results %>% select(1:2)
 Labonte_summary_full_flip <- full_labonte_dir %>% left_join(Labonte_full_flip %>% select(-2))
-Labonte_summary_full_flip %>% write_csv(here("Processed_Data/LabonteEtAl/fullLabonteTableMagma_flipped.csv"))
+Labonte_summary_full_flip %>% write_csv(here("Processed_Data/LabonteEtAl/FullLabonteTableMagma_flipped.csv"))
 
-##################
-# SEX-INTERACTION CORTICAL ANALYSIS
-##################
+############################################
+#### SEX-INTERACTION CORTICAL ANALYSIS ####
+############################################
 Labonte_long_cortical_flip <- Labonte_Cortical %>% mutate(logFC = if_else(sex == "male",logFC *-1, logFC))
 #Perform meta-analysis on all brain regions across both sexes
 #number of p-values we need to filter = 8 (4 regions * 2 sexes) 
@@ -122,9 +122,6 @@ Labonte_summary_cortical_flip <- cortical_labonte_dir %>% left_join(Labonte_cort
 Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma_flipped.csv"))
 
 
-
-
-
 ###############################################################
 ###### GENOME PERCENTILE RANKING FOR ALL ABOVE ANALYSES ######
 ##############################################################
@@ -133,7 +130,7 @@ source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our full meta-analysis
 Labonte_summary_results %<>% getRank()
-Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/fullLabonteTableMagma.csv"))
+Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/FullLabonteTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our female meta-analysis
 Labonte_Female_results %<>% getRank()
@@ -149,7 +146,7 @@ cortical_Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
 Labonte_summary_full_flip %<>% getRank()
-Labonte_summary_full_flip %>% write_csv(here("Processed_Data/RamakerEtAl/fullLabonteTableMagma_flipped.csv"))
+Labonte_summary_full_flip %>% write_csv(here("Processed_Data/RamakerEtAl/FullLabonteTableMagma_flipped.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
 Labonte_summary_cortical_flip %<>% getRank()
