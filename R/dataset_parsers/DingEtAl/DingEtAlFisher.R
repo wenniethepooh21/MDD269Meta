@@ -25,6 +25,7 @@ DingTable %<>% select(one_of(goodCols))
 DingTable %<>% select(-starts_with("X"))
 colnames(DingTable) <- gsub("[.]1", "_effectsize", colnames(DingTable))
 #use the 10680 genes that has p-values and effectsizes 
+#in the selected column filter for genes that were selected for analysis in the study
 DingTable %<>% filter(selected == 1)
 
 #correct the dates to gene symbols
@@ -62,7 +63,7 @@ Ding_summary_results %>% write_csv(path = here("Processed_Data/DingEtAl/FullDing
 Ding_Male <- fullDingMagma %>% filter(sex == "male") 
 #combine 4 (4 studies * 1 sexes) 
 Ding_Male_results <- Ding_Male %>% DingMetaAnalysis(4,4)
-Ding_Male_results %>% write_csv(path = here("Processed_Data/DingEtAl/MaleDingTable.csv"))
+Ding_Male_results %>% write_csv(path = here("Processed_Data/DingEtAl/MaleDingTableMagma.csv"))
 
 #Perform meta-analysis on all brain regions in females
 #number of p-values we need to filter = 4 (4 regions * 1 sex) 
@@ -70,7 +71,7 @@ Ding_Male_results %>% write_csv(path = here("Processed_Data/DingEtAl/MaleDingTab
 Ding_Female <- fullDingMagma %>% filter(sex == "female") 
 #combine 4 (4 studies * 1 sexes) 
 Ding_Female_results <- Ding_Female %>% DingMetaAnalysis(4, 4)
-Ding_Female_results %>% write_csv(path = here("Processed_Data/DingEtAl/FemaleDingTable.csv"))
+Ding_Female_results %>% write_csv(path = here("Processed_Data/DingEtAl/FemaleDingTableMagma.csv"))
 
 #########################################
 ###### CORTICAL META-ANALYSIS  ######
@@ -90,14 +91,19 @@ Ding_cortical_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTa
 #Flip male effectsize values
 fullDingMagma_flip <- fullDingMagma %>% rowwise() %>% mutate(effectsize = if_else(sex == "male", effectsize*-1, effectsize))
 full_Ding_flip_results <- fullDingMagma_flip %>% DingMetaAnalysis(8,4)
-full_Ding_flip_results %>% write_csv(here("Processed_Data/DingEtAl/FullDingTableMagma_flipped.csv"))
+#get the original directions of expressions 
+original_ding_dir <- Ding_summary_results %>% select(1:2)
+full_Ding_flip_results_summary <- original_ding_dir %>% left_join(full_Ding_flip_results %>% select(-2))
+full_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/FullDingTableMagma_flipped.csv"))
 
 #######################################
 ####SEX-INTERACTION CORTICAL ANALYSIS ####
 #######################################
 Ding_cortical_flip <- Ding_cortical %>% rowwise() %>% mutate(effectsize = if_else(sex == "male", effectsize*-1, effectsize))
 cortical_Ding_flip_results <- Ding_cortical_flip %>% DingMetaAnalysis(6,3)
-cortical_Ding_flip_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))
+original_ding_cortical_dir <- Ding_cortical_results %>% select(1:2)
+cortical_Ding_flip_results_summary <- original_ding_cortical_dir %>% left_join(cortical_Ding_flip_results %>% select(-2))
+cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))
 
 
 ###############################################################
@@ -123,9 +129,9 @@ Ding_cortical_results %<>% getRank()
 Ding_cortical_results %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
-full_Ding_flip_results %<>% getRank()
-full_Ding_flip_results %>% write_csv(here("Processed_Data/RamakerEtAl/FullDingTableMagma_flipped.csv"))
+full_Ding_flip_results_summary %<>% getRank()
+full_Ding_flip_results_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullDingTableMagma_flipped.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
-cortical_Ding_flip_results %<>% getRank()
-cortical_Ding_flip_results %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma_flipped.csv"))
+cortical_Ding_flip_results_summary %<>% getRank()
+cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma_flipped.csv"))
