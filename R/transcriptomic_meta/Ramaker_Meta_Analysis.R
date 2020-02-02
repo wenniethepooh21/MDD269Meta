@@ -61,7 +61,7 @@ RamakerDEModel <- function(metadata, read_counts, rawcount_dataframe, regions, f
 	return(full_results)
 }
 
-#Function that calculates the meta p values 
+#Function that calculates the meta p values using Fisher's method
 RamakerMetaAnalysis <- function(full_results, regions){
     #p-values are two tailed for negative and positive expression levels 
   	#create six one-sided pvalues per gene based on the direction of expression (get a p-value for both directions separately to see which is more significant)
@@ -102,19 +102,5 @@ RamakerMetaAnalysis <- function(full_results, regions){
   	summary_results %>% arrange(meta_p)
   
 	return(summary_results)
-}
-
-#This function is used to flip the male expressions for each gene to test for opposing directions of expression compared to females
-flipDirections <- function(dataset, gender) {
-  flipped_dataset <- dataset %>% filter(sex == gender)
-  unflipped_dataset <- dataset %>% filter(sex != gender)
-  
-  get_col <- flipped_dataset %>% select(contains("directions"))
-  flipped_dataset[[names(get_col)]]<- gsub("+", "_",flipped_dataset[[names(get_col)]], fixed = TRUE)
-  flipped_dataset[[names(get_col)]]<- gsub("-", "+",flipped_dataset[[names(get_col)]], fixed = TRUE)
-  flipped_dataset[[names(get_col)]]<- gsub("_", "-",flipped_dataset[[names(get_col)]], fixed = TRUE)
-  
-  new_dataset <- rbind(flipped_dataset, unflipped_dataset)
-  return(new_dataset)
 }
 
