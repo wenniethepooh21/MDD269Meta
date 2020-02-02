@@ -94,27 +94,32 @@ cortical_Labonte_summary_results %>% write_csv(path = here("Processed_Data/Labon
 
 
 ##################
-# SEX-INTERACTION
+# SEX-INTERACTION FULL ANALYSIS
 ##################
 
 #Flip male logFC value
 Labonte_long_flip <- Labonte_long %>% mutate(logFC = if_else(sex == "male",logFC *-1, logFC))
-
-
-Labonte_long <- bind_rows(Labonte %>% dplyr::select(brain_region, symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male"),
-                          Labonte %>% dplyr::select(brain_region, symbol, logFC = Female.logFC, pvalue = Female.pvalue) %>% mutate(sex = "female"))
-
-#combine 12 (6 regions * 2 sexes) + 12 pvalues for each gene
-Labonte_summary_results <- LabonteMeta(Labonte_long,12,6)
+#Perform meta-analysis on all brain regions across both sexes
+#number of p-values we need to filter = 12 (6 regions * 2 sexes) 
+#number of brain regions = 6
+Labonte_full_flip <- Labonte_long_flip %>% LabonteMetaAnalysis(12,6)
 #change directions back to original
+full_labonte_dir <- Labonte_summary_results %>% select(1:2)
+Labonte_summary_full_flip <- full_labonte_dir %>% left_join(Labonte_full_flip %>% select(-2))
+Labonte_summary_full_flip %>% write_csv(here("Processed_Data/LabonteEtAl/fullLabonteTableMagma_flipped.csv"))
 
-#unflipped directions 
-labonte_unfliped <- read_csv(here("ProcessedData", "LabonteEtAl", "fullLabonteTable.csv"))
-labonte_unfliped %<>% select(1:2)
-labonte_unfliped %<>% right_join(Labonte_summary_results %>% select(-2))
-
-#needs writing out
-labonte_unfliped %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "fullLabonteTableMagma_flipped.csv"))
+##################
+# SEX-INTERACTION CORTICAL ANALYSIS
+##################
+Labonte_long_cortical_flip <- Labonte_Cortical %>% mutate(logFC = if_else(sex == "male",logFC *-1, logFC))
+#Perform meta-analysis on all brain regions across both sexes
+#number of p-values we need to filter = 8 (4 regions * 2 sexes) 
+#number of brain regions = 4
+Labonte_cortical_flip <-Labonte_long_cortical_flip %>% LabonteMetaAnalysis(8,4)
+#change directions back to original
+cortical_labonte_dir <- cortical_Labonte_summary_results %>% select(1:2)
+Labonte_summary_cortical_flip <- cortical_labonte_dir %>% left_join(Labonte_cortical_flip %>% select(-2))
+Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma_flipped.csv"))
 
 # #------- Genome ranking (MAGMA list)
 magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
