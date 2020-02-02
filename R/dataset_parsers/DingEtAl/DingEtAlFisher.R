@@ -5,8 +5,7 @@ library(readr)
 library(reshape)
 library(dplyr)
 
-source(here("R", "loading datasets", "DingMetaPAnalysis.R"))
-#From email from Etienne - subject: MetaA-MDD results
+
 # Columns C-E tells you which genes were used and the reasons: Low mean meants too little expression for analysis, low variance meant invariant expression
 # Columns G-N are p-values per gene in the individual datasets (See paper for methods)
 # Columns P-W are effect sizes per genes in the individual datasets
@@ -15,85 +14,118 @@ source(here("R", "loading datasets", "DingMetaPAnalysis.R"))
 # Columns AK-AL are the results of the meta-regression for effects of sex.
 # 
 # For the initial analysis, I would use the REM-all p-values, but we should include the genes that were not analyzed due to low variance. These genes were detected but do not show any MDD-related effect (assume p-values ~0.9999)
-# We can discuss if any of this is not clear.
 
-
-fullDingTable <- read_csv(here("data","DingEtAl","MDD-metaAR_8cohorts_Final.csv"))
+#read in data provided by Dr. Sibille for this study
+DingTable <- read_csv(here("Raw_Data/DingEtAl/MDD-metaAR_8cohorts_Final.csv"))
 
 #remove the columns for the encoded subtable
-colnamesDing <- colnames(fullDingTable)
+colnamesDing <- colnames(DingTable)
 goodCols <- colnamesDing[1:which(colnamesDing =="X39")-1]
-fullDingTable %<>% dplyr::select(one_of(goodCols))
-fullDingTable %<>% dplyr::select(-starts_with("X"))
+DingTable %<>% select(one_of(goodCols))
+DingTable %<>% select(-starts_with("X"))
+colnames(DingTable) <- gsub("[.]1", "_effectsize", colnames(DingTable))
+#use the 10680 genes that has p-values and effectsizes 
+DingTable %<>% filter(selected == 1)
 
-colnames(fullDingTable) <- gsub("[.]1", "_effectsize", colnames(fullDingTable))
-#use the 10680
-fullDingTable %<>% filter(selected == 1)
-
-#correct the dates 
-change_date <- fullDingTable %>% filter(grepl("^[[:digit:]]+-", SYMBOL)) %>% select(SYMBOL)
-change_date %<>% mutate(month_val = toupper(gsub("^[[:digit:]]+-", "", SYMBOL)))
+#correct the dates to gene symbols
+Ding_no_date_table <- DingTable %>% filter(grepl("^[[:digit:]]+-", SYMBOL)) %>% select(SYMBOL)
+Ding_no_date_table %<>% mutate(month_val = toupper(gsub("^[[:digit:]]+-", "", SYMBOL)))
 #only march and sept, add the missing letters to the name 
-change_date %<>% mutate(month_val = ifelse(month_val == "MAR","MARCH", "SEPT"))
-change_date %<>% mutate(date_val = gsub("-[[:alpha:]]+","", SYMBOL))
-change_date %<>% unite(new_symbol, c("month_val", "date_val"), sep = "")
+Ding_no_date_table %<>% mutate(month_val = ifelse(month_val == "MAR","MARCH", "SEPT"))
+Ding_no_date_table %<>% mutate(date_val = gsub("-[[:alpha:]]+","", SYMBOL))
+Ding_no_date_table %<>% unite(new_symbol, c("month_val", "date_val"), sep = "")
+DingTable %<>% full_join(Ding_no_date_table, by = c('SYMBOL' = 'SYMBOL'))
+DingTable %<>% mutate(new_symbol = ifelse(is.na(new_symbol), SYMBOL, new_symbol)) %>% select(-SYMBOL) 
+DingTable %<>% rename(gene_symbol = new_symbol)
 
-change_date %<>% full_join(fullDingTable, by = c('SYMBOL' = 'SYMBOL'))
-change_date %<>% mutate(new_symbol = ifelse(is.na(new_symbol), SYMBOL, new_symbol)) %>% select(-SYMBOL) %>% dplyr::rename(SYMBOL = new_symbol)
+###########################################################
+###### REGULAR META-ANALYSIS (FULL, FEMALE AND MALE) ######
+###########################################################
+#This file holds all functions used for meta-analyses and other preprocessing of data - call this file
+source(here("R/transcriptomic_meta/Ding_Meta_Analysis.R"))
+fullDingTable <- DingTable %>% ProcessDingTable() 
+#Read in the associated list of MAGMA genes that howard tested (17,842)
+magma_table <- read_csv(here("Raw_Data/HowardEtAl/FullMagmaGenes.csv")) %>% select(Ding_genes) %>% distinct() %>% na.omit()
+#filter ding table for magma genes
+fullDingMagma <- fullDingTable %>% right_join(magma_table, by = c("gene_symbol" = "Ding_genes")) 
+fullDingMagma %>% write_csv(here("Processed_Data/DingEtAl/CompleteDingTableMagma.csv"))
 
-fullDingTable <- change_date #table is updated with no dates
+#Perform meta-analysis on all brain regions across both sexes
+#number of p-values we need to filter = 8 (4 regions * 2 sexes) 
+#number of brain regions = 4
+Ding_summary_results <- fullDingMagma %>% DingMetaAnalysis(8, 4)
+Ding_summary_results %>% write_csv(path = here("Processed_Data/DingEtAl/FullDingTableMagma.csv"))
 
-newFullDingTable <- fullDingTable %>% processDingTable() %>% write_csv(here("ProcessedData", "DingEtAl", "fullDingTableFisher.csv"))
-
-#combine 8 (4 studies * 2 sexes) 8 pvalues for each gene
-Ding_summary_results <- newDingMeta(newFullDingTable,8, 4)
-Ding_summary_results %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.csv"))
-
-#get the sex data separately
-Ding_Male <- newFullDingTable %>% filter(sex == "male") %>% write_csv(here("ProcessedData", "DingEtAl", "maleDingTableFisher.csv"))
-Ding_Female <- newFullDingTable %>% filter(sex == "female") %>% write_csv(here("ProcessedData", "DingEtAl", "femaleDingTableFisher.csv"))
-
+#Perform meta-analysis on all brain regions in males
+#number of p-values we need to filter = 4 (4 regions * 1 sex) 
+#number of brain regions = 4
+Ding_Male <- fullDingMagma %>% filter(sex == "male") 
 #combine 4 (4 studies * 1 sexes) 
-Ding_Female_results <- newDingMeta(Ding_Female,4, 4)
-Ding_Female_results %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Female.csv"))
+Ding_Male_results <- Ding_Male %>% DingMetaAnalysis(4,4)
+Ding_Male_results %>% write_csv(path = here("Processed_Data/DingEtAl/MaleDingTable.csv"))
 
+#Perform meta-analysis on all brain regions in females
+#number of p-values we need to filter = 4 (4 regions * 1 sex) 
+#number of brain regions = 4
+Ding_Female <- fullDingMagma %>% filter(sex == "female") 
 #combine 4 (4 studies * 1 sexes) 
-Ding_Male_results <- newDingMeta(Ding_Male,4,4)
-Ding_Male_results %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Male.csv"))
+Ding_Female_results <- Ding_Female %>% DingMetaAnalysis(4, 4)
+Ding_Female_results %>% write_csv(path = here("Processed_Data/DingEtAl/FemaleDingTable.csv"))
 
-#--------- Genome Percentile Ranking MAGMA--------------------------------#
-magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
+#########################################
+###### CORTICAL META-ANALYSIS  ######
+#########################################
 
-newFullDingTable %<>% mutate(SYMBOL = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", SYMBOL)) 
+#Remve the data for AMY brain region
+Ding_cortical <- fullDingMagma %>% filter(brain_region != "AMY")
+#Perform meta-analysis on cortical brain regions in both sexes
+#number of p-values we need to filter = 6 (3 regions * 2 sex) 
+#number of brain regions = 3
+Ding_cortical_results <- Ding_cortical %>% DingMetaAnalysis(6,3)
+Ding_cortical_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma.csv"))
 
-Ding_magma <- left_join(magma %>% select(Ding_genes) %>% distinct(), newFullDingTable, by = c('Ding_genes' = 'SYMBOL'))
-Ding_magma %<>% dplyr::rename(SYMBOL = Ding_genes) %>% na.omit() %>% write_csv(here("ProcessedData", "DingEtAl", "fullDingTableFisherMagma.csv"))
+#######################################
+####SEX-INTERACTION FULL ANALYSIS ####
+#######################################
+#Flip male effectsize values
+fullDingMagma_flip <- fullDingMagma %>% rowwise() %>% mutate(effectsize = if_else(sex == "male", effectsize*-1, effectsize))
+full_Ding_flip_results <- fullDingMagma_flip %>% DingMetaAnalysis(8,4)
+full_Ding_flip_results %>% write_csv(here("Processed_Data/DingEtAl/FullDingTableMagma_flipped.csv"))
 
-Ding_summary_magma<- Ding_magma %>% newDingMeta(8, 4)
-Ding_summary_magma %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim_magma.csv"))
+#######################################
+####SEX-INTERACTION CORTICAL ANALYSIS ####
+#######################################
+Ding_cortical_flip <- Ding_cortical %>% rowwise() %>% mutate(effectsize = if_else(sex == "male", effectsize*-1, effectsize))
+cortical_Ding_flip_results <- Ding_cortical_flip %>% DingMetaAnalysis(6,3)
+cortical_Ding_flip_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))
 
-Ding_summary_magma_Female<- Ding_magma %>% filter(sex == "female") %>% newDingMeta(4, 4)
-Ding_summary_magma_Female %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Female_magma.csv"))
 
-Ding_summary_magma_Male<- Ding_magma %>% filter(sex == "male") %>% newDingMeta(4, 4)
-Ding_summary_magma_Male %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Male_magma.csv"))
+###############################################################
+###### GENOME PERCENTILE RANKING FOR ALL ABOVE ANALYSES ######
+##############################################################
+#load script that holds the genome percentile ranking function used by all transcriptomic studies
+source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
-fullDing_meta <- read_csv(here("ProcessedData", "DingEtAl", "DingTableFisher.slim_magma.csv"))
-femaleDing_meta <- read_csv (here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Female_magma.csv"))
-maleDing_meta <- read_csv(here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Male_magma.csv"))
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our full meta-analysis
+Labonte_summary_results %<>% getRank()
+Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/FullDingTableMagma.csv"))
 
-num_genes_meta <- length(fullDing_meta$gene_symbol)
-num_genes_female <- length(femaleDing_meta$gene_symbol)
-num_genes_males <- length(maleDing_meta$gene_symbol)
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our female meta-analysis
+Labonte_Female_results %<>% getRank()
+Labonte_Female_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/FemaleDingTableMagma.csv"))
 
-fullDing <- getRankFishers(fullDing_meta, num_genes_meta)
-merged_full <- left_join(fullDing_meta, fullDing %>% dplyr::select(gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_symbol" = "gene_symbol"))
-merged_full %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim_magma.csv"))
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our male meta-analysis
+Labonte_Male_results %<>% getRank()
+Labonte_Male_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/MaleDingTableMagma.csv"))
 
-femaleDing <- getRankFishers(femaleDing_meta, num_genes_female)
-merged_female <- left_join(femaleDing_meta, femaleDing %>% dplyr::select(gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_symbol" = "gene_symbol"))
-merged_female %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Female_magma.csv"))
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our cortical meta-analysis
+cortical_Labonte_summary_results %<>% getRank()
+cortical_Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma.csv"))
 
-maleDing <- getRankFishers(maleDing_meta, num_genes_males)
-merged_male <- left_join(maleDing_meta, maleDing %>% dplyr::select(gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_symbol" = "gene_symbol"))
-merged_male %>% write_csv(path = here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Male_magma.csv"))
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
+Labonte_summary_full_flip %<>% getRank()
+Labonte_summary_full_flip %>% write_csv(here("Processed_Data/RamakerEtAl/FullDingTableMagma_flipped.csv"))
+
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
+Labonte_summary_cortical_flip %<>% getRank()
+Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma_flipped.csv"))
