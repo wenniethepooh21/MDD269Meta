@@ -192,66 +192,32 @@ cortical_flipped_summary <- Ramaker_cortical_directions %>% left_join(full_flipp
 cortical_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma_flipped.csv"))
 
 
+##########################################
+###### GENOME PERCENTILE RANKING  ######
+##########################################
+#load script that holds the genome percentile ranking function used by all transcriptomic studies
+source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our full meta-analysis
+Ramaker_summary %<>% getRank()
+Ramaker_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our female meta-analysis
+R_female_summary_results %<>% getRank()
+R_female_summary_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/FemaleRamakerTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our male meta-analysis
+R_male_summary_results %<>% getRank()
+R_male_summary_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/MaleRamakerTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our cortical meta-analysis
+cortical_summary %<>% getRank()
+cortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
+full_flipped_summary %<>% getRank()
+full_flipped_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma_flipped.csv"))
 
-
-
-
-
-
-
-#---------------------- Genome Ranking MAGMA --------------------------#
-magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
-full_Ramaker <- read_csv( here("ProcessedData", "RamakerEtAl","CompleteRamakerTable.csv"))
-
-full_Ramaker %<>% right_join(magma %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit() %>% write_csv(here("ProcessedData","RamakerEtAl", "CompleteRamakerTableMagma.csv"))
-full_Ramaker %<>% RamakerMetaAnalysis(regions)
-
-
-female_Ramaker_magma <- read_csv(here("ProcessedData", "RamakerEtAl", "CompleteFemaleRamakerTable.csv"))
-female_Ramaker_magma %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
-female_Ramaker_magma  %<>% right_join(magma %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit() %>% write_csv(here("ProcessedData", "RamakerEtAl","CompleteFemaleRamakerTableMagma.csv"))
-female_Ramaker_magma %<>% RamakerMetaAnalysis(regions)
-female_Ramaker_magma %<>% rename(AnCg_nAcc_DLPFC_Female_directions = AnCg_nAcc_DLPFC_directions)
-
-male_Ramaker_magma <- read_csv(here("ProcessedData", "RamakerEtAl", "CompleteMaleRamakerTable.csv"))
-male_Ramaker_magma %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
-male_Ramaker_magma  %<>% right_join(magma %>% select(Ramaker_genes) %>% distinct(), by = c( 'gene_symbol' = 'Ramaker_genes')) %>% na.omit() %>% write_csv(here("ProcessedData","RamakerEtAl", "CompleteMaleRamakerTableMagma.csv"))
-male_Ramaker_magma %<>% RamakerMetaAnalysis(regions)
-male_Ramaker_magma %<>% rename(AnCg_nAcc_DLPFC_Male_directions = AnCg_nAcc_DLPFC_directions)
-
-summary_magma <- left_join(female_Ramaker_magma %>% select(gene_symbol,AnCg_nAcc_DLPFC_Female_directions), male_Ramaker_magma %>% select(gene_symbol,AnCg_nAcc_DLPFC_Male_directions ))
-summary_magma %<>% unite(AnCg.F_nAcc.F_DLPFC.F_AnCg.M_nAcc.M_DLPFC.M, AnCg_nAcc_DLPFC_Female_directions, AnCg_nAcc_DLPFC_Male_directions, sep = "")
-summary_magma %<>% left_join(full_Ramaker) %>% select(-AnCg_nAcc_DLPFC_directions) %>% distinct()
-
-#Save data in .csv files
-summary_magma %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "fullRamakerTable_magma.csv"))
-female_Ramaker_magma %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "FemaleRamakerTable_magma.csv"))
-male_Ramaker_magma %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "MaleRamakerTable_magma.csv"))
-
-#get the meta-p value from the analysis
-fullRamaker_meta <- read_csv(here("ProcessedData", "RamakerEtAl", "fullRamakerTable_magma.csv"))
-femaleRamaker_meta <- read_csv(here("ProcessedData", "RamakerEtAl", "FemaleRamakerTable_magma.csv"))
-maleRamaker_meta <- read_csv(here("ProcessedData", "RamakerEtAl", "MaleRamakerTable_magma.csv"))
-
-
-num_genes_meta <- length(fullRamaker_meta$gene_symbol)
-num_genes_female <- length(femaleRamaker_meta$gene_symbol)
-num_genes_males <- length(maleRamaker_meta$gene_symbol)
-
-
-fullRamaker <- getRank(fullRamaker_meta, num_genes_meta)
-merged_full <- left_join(fullRamaker_meta, fullRamaker %>% dplyr::select(gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_symbol" = "gene_symbol"))
-merged_full %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "fullRamakerTable_magma.csv"))
-
-femaleRamaker <- getRank(femaleRamaker_meta, num_genes_female)
-merged_female <- left_join(femaleRamaker_meta, femaleRamaker %>% dplyr::select(gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_symbol" = "gene_symbol"))
-merged_female %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "FemaleRamakerTable_magma.csv"))
-
-maleRamaker <- getRank(maleRamaker_meta, num_genes_males)
-merged_male <- left_join(maleRamaker_meta, maleRamaker %>% dplyr::select(gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_symbol" = "gene_symbol"))
-merged_male %>% write_csv(path = here("ProcessedData", "RamakerEtAl", "MaleRamakerTable_magma.csv"))
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
+cortical_flipped_summary %<>% getRank()
+cortical_flipped_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullCorticalRamakerTableMagma_flipped.csv"))
