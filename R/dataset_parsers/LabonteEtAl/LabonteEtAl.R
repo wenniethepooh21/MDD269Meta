@@ -121,53 +121,8 @@ cortical_labonte_dir <- cortical_Labonte_summary_results %>% select(1:2)
 Labonte_summary_cortical_flip <- cortical_labonte_dir %>% left_join(Labonte_cortical_flip %>% select(-2))
 Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma_flipped.csv"))
 
-# #------- Genome ranking (MAGMA list)
-magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
-full_Labonte <- read_csv( here("ProcessedData", "LabonteEtAl", "CompleteLabonteTable.csv")) %>% na.omit()
-full_Labonte %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
-
-Labonte_magma <- left_join(magma %>% select(Labonte_genes) %>% distinct(), full_Labonte, by = c('Labonte_genes' = 'gene_symbol')) %>% na.omit() #remove the one NA value
-Labonte_magma %<>% rename(gene_symbol = Labonte_genes) %>% write_csv(here("ProcessedData", "LabonteEtAl", "CompleteLabonteTableMagma.csv"))
-
-Labonte_long_magma <- bind_rows(Labonte_magma %>% dplyr::select(brain_region, gene_symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male"),
-                          Labonte_magma %>% dplyr::select(brain_region, ENSG, gene_symbol, logFC = Female.logFC, pvalue = Female.pvalue) %>% mutate(sex = "female"))
-
-#combine 12 (6 regions * 2 sexes) + 12 pvalues for each gene
-Labonte_summary_magma <- LabonteMeta(Labonte_long_magma,12,6)
-
-#get the sex data separately
-Labonte_Male_magma <- Labonte_magma %>% select(brain_region, gene_symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male")
-Labonte_Female_magma <- Labonte_magma %>% select(brain_region, gene_symbol, logFC = Female.logFC, pvalue = Female.pvalue) %>% mutate(sex = "female")
-
-#combine 6 (6 regions * 1 sexes) 
-Labonte_Female_magma <- LabonteMeta(Labonte_Female_magma,6,6)
-
-#combine 6 (6 regions * 1 sexes) 
-Labonte_Male_magma <- LabonteMeta(Labonte_Male_magma,6,6)
-
-Labonte_summary_magma %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "fullLabonteTable_magma.csv")) 
-Labonte_Female_magma %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "FemaleLabonteTable_magma.csv"))
-Labonte_Male_magma %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "MaleLabonteTable_magma.csv"))
 
 
-fullLabonte_meta <- read_csv(here("ProcessedData", "LabonteEtAl", "fullLabonteTable_magma.csv"))
-femaleLabonte_meta <- read_csv(here("ProcessedData", "LabonteEtAl", "FemaleLabonteTable_magma.csv"))
-maleLabonte_meta <- read_csv(here("ProcessedData", "LabonteEtAl", "MaleLabonteTable_magma.csv"))
-
-num_genes_meta <- length(fullLabonte_meta$gene_gene_symbol)
-num_genes_female <- length(femaleLabonte_meta$gene_gene_symbol)
-num_genes_males <- length(maleLabonte_meta$gene_gene_symbol)
-
-fullLabonte <- getRank(fullLabonte_meta, num_genes_meta)
-merged_full <- left_join(fullLabonte_meta, fullLabonte %>% dplyr::select(gene_gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_gene_symbol" = "gene_gene_symbol"))
-merged_full %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "fullLabonteTable_magma.csv"))
-
-femaleLabonte <- getRank(femaleLabonte_meta, num_genes_female)
-merged_female <- left_join(femaleLabonte_meta, femaleLabonte %>% dplyr::select(gene_gene_symbol, meta_Up, meta_Down, genome_percentile_rank), by = c("gene_gene_symbol" = "gene_gene_symbol"))
-merged_female %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "FemaleLabonteTable_magma.csv"))
-
-maleLabonte <- getRank(maleLabonte_meta, num_genes_males)
-merged_male %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "MaleLabonteTable_magma.csv"))
 
 
 ###############################################################
@@ -176,9 +131,26 @@ merged_male %>% write_csv(path = here("ProcessedData", "LabonteEtAl", "MaleLabon
 #load script that holds the genome percentile ranking function used by all transcriptomic studies
 source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our full meta-analysis
+Labonte_summary_results %<>% getRank()
+Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/fullLabonteTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our female meta-analysis
+Labonte_Female_results %<>% getRank()
+Labonte_Female_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/FemaleLabonteTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our male meta-analysis
+Labonte_Male_results %<>% getRank()
+Labonte_Male_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/MaleLabonteTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our cortical meta-analysis
+cortical_Labonte_summary_results %<>% getRank()
+cortical_Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalLabonteTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
+Labonte_summary_full_flip %<>% getRank()
+Labonte_summary_full_flip %>% write_csv(here("Processed_Data/RamakerEtAl/fullLabonteTableMagma_flipped.csv"))
 
-
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
+Labonte_summary_cortical_flip %<>% getRank()
+Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalLabonteTableMagma_flipped.csv"))
