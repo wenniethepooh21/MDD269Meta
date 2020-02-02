@@ -48,10 +48,10 @@ male_metadata <- fullmetadata %>% filter(gender == "M")
 ###########################################################
 ###### REGULAR META-ANALYSIS (FULL, FEMALE AND MALE) ######
 ###########################################################
-
+#This file holds all functions used for meta-analyses - call this file
 source(here("R/transcriptomic_meta/Ramaker_Meta_Analysis.R"))
 #Read in the associated list of MAGMA genes that howard tested (17,842)
-magma_table <- read_csv(here("Raw_Data/HowardEtAl/FullMagmaGenes.csv"))
+magma_table <- read_csv(here("Raw_Data/HowardEtAl/FullMagmaGenes.csv")) %>% select(Ramaker_genes) %>% distinct() %>% na.omit()
 #get the unique brain regions
 regions <- unique(metadata$`brain region`)
 #create empty tibble for data to be populated 
@@ -61,7 +61,7 @@ full_results <- tibble()
 R_summary_results <- RamakerDEModel(fullmetadata, read_counts, rawcount_dataframe, regions, full_results)
 R_summary_results %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol)) #change from upper case to lower case for open reading frame genes
 #Filter Ramaker genome for the MAGMA genes tested by Howard
-R_summary_results %<>% right_join(magma_table %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit()
+R_summary_results %<>% right_join(magma_table, by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit()
 R_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteRamakerTableMagma.csv")) #write out for easier access in other analyses (cortical)
 #perform meta-analysis on full (female and male all brain regions) data
 R_summary_results %<>% RamakerMetaAnalysis(regions)
