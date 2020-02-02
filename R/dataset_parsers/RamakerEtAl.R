@@ -3,10 +3,12 @@ library(tidyr)
 library(GEOquery)
 library(magrittr)
 library(dplyr)
-#This script runs all meta-analyses on the Ramaker transcriptomic dataset 
-
-setwd('../../../school/thesis/')
 library(here)
+                                                                #This script runs all meta-analyses on the Ramaker transcriptomic dataset 
+# detach("package:here", unload=TRUE)
+# setwd('../../../school/thesis/')
+# library(here)
+
 #based on signature.R by the biojupies team
 #https://github.com/MaayanLab/biojupies-plugins/blob/1024a6ed702ad8b0958d4ccdd2afe89cbe493a51/library/core_scripts/signature/signature.R
 #from https://amp.pharm.mssm.edu/biojupies/notebook/tlNmgbMxY (just load biojupies with GSE80655)
@@ -15,6 +17,7 @@ library(here)
 #"Raw RNA-seq data for GEO dataset GSE80655 was downloaded from the SRA database (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE80655) and quantified to gene-level counts using the ARCHS4 pipeline (Lachmann et al., 2017). Gene counts were downloaded from the ARCHS4 gene expression matrix v6. For more information about ARCHS4, as well as free access to the quantified gene expression matrix, visit the project home page at the following URL: http://amp.pharm.mssm.edu/archs4/download.html."
 #(Biojupies)
 
+#parsing of their GEO SOFT format file into R object
 gds <- getGEO("GSE80655")
 metadata_for_pH <- phenoData(gds$GSE80655_series_matrix.txt.gz) 
 metadata_for_pH <- as_tibble(as(metadata_for_pH, "data.frame"))
