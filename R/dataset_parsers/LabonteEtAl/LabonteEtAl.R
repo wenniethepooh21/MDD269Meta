@@ -1,16 +1,19 @@
 library(magrittr)
-library(tidy)
+library(tidyr)
 library(here)
 #library(biomaRt)
 library(dplyr)
 library(readxl)
+                                                          #This script runs all meta-analyses on the Labonte ranscriptomic dataset 
+# detach("package:here", unload=TRUE)
+# setwd('../../../school/thesis/')
+# library(here)
 
-
-#Read in raw male expression data
+#Read in raw male expression data provided by Labonte, et al. 
 Labonte_Male <- read_xlsx(here("Raw_Data/LabonteEtAl/Male DEG all.xlsx"))
 Labonte_Male %<>% rename(gene_symbol  = "Gene name", brain_region = "Brain Region", Male.pvalue = "p-value", Male.logFC = logFC, Male.AveExpr = AveExpr)
 
-#Read in raw female expression data
+#Read in raw female expression data provided by Labonte, et al. 
 Labonte_Female <- read_xlsx(here("Raw_Data/LabonteEtAl/Female DEG all.xlsx"))
 Labonte_Female %<>% rename(brain_region = `Brain region`, gene_symbol = `Gene Name`, Female.pvalue = `p-value`, Female.logFC = logFC, Female.AveExpr = AveExpr)
 
