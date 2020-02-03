@@ -3,7 +3,7 @@ library(googledrive)
 library(googlesheets4)
 library(dplyr)
 library(tidyr)
-
+#This script creates a heatmap to display the corrected meta p-values of our top 11 genes and how they ranked in each meta-analysis
 
 top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A") 
 
@@ -55,3 +55,4 @@ ggplot(full_meta_analysis_results, aes(x=analysis_type,y=symbol)) +
         axis.text.y = element_text(size = 12), 
         plot.title = element_text(size = 16,hjust = 0.5)) # center the title 
 
+ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
