@@ -2,7 +2,6 @@ library(here)
 library(tidyr)
 library(magrittr)
 library(readr)
-library(reshape)
 library(dplyr)
 
 
@@ -114,24 +113,24 @@ source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our full meta-analysis
 Ding_summary_results %<>% getRank()
-Ding_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/FullDingTableMagma.csv"))
+Ding_summary_results %>% write_csv(here("Processed_Data/DingEtAl/FullDingTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our female meta-analysis
 Ding_Female_results %<>% getRank()
-Ding_Female_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/FemaleDingTableMagma.csv"))
+Ding_Female_results %>% write_csv(path = here("Processed_Data/DingEtAl/FemaleDingTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our male meta-analysis
 Ding_Male_results %<>% getRank()
-Ding_Male_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/MaleDingTableMagma.csv"))
+Ding_Male_results %>% write_csv(path = here("Processed_Data/DingEtAl/MaleDingTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our cortical meta-analysis
 Ding_cortical_results %<>% getRank()
-Ding_cortical_results %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma.csv"))
+Ding_cortical_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
 full_Ding_flip_results_summary %<>% getRank()
-full_Ding_flip_results_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullDingTableMagma_flipped.csv"))
+full_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/FullDingTableMagma_flipped.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
 cortical_Ding_flip_results_summary %<>% getRank()
-cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalDingTableMagma_flipped.csv"))
+cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))

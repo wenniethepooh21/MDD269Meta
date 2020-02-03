@@ -6,91 +6,72 @@ library(here)
 library(googledrive)
 library(googlesheets4)
 
-source(here("R", "loading datasets","mergeAnalysis.R"))
-source(here("R", "loading datasets","ZeiselPolygenic.R"))
+fullLabonte <- read_csv(here("Processed_Data/LabonteEtAl/FullLabonteTableMagma.csv"))
+femaleLabonte <- read_csv(here("Processed_Data/LabonteEtAl/FemaleLabonteTableMagma.csv")) 
+maleLabonte <- read_csv(here("Processed_Data/LabonteEtAl/MaleLabonteTableMagma.csv"))
+corticalLabonte <- read_csv( here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
+fullLabonte_flipped <- read_csv(here("Processed_Data/LabonteEtAl/FullLabonteTableMagma_flipped.csv"))
+corticalLabonte_flipped <- read_csv( here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
 
-fullLabonte <- read_csv( here("ProcessedData", "LabonteEtAl", "fullLabonteTable_magma.csv"))
-fullLabonte_flipped <- read_csv(here("ProcessedData", "LabonteEtAl", "fullLabonteTableMagma_flipped.csv"))
-femaleLabonte <- read_csv(here("ProcessedData", "LabonteEtAl", "FemaleLabonteTable_magma.csv")) 
-maleLabonte <- read_csv(here("ProcessedData", "LabonteEtAl", "MaleLabonteTable_magma.csv"))
-maleLabonte_flipped <- read_csv(here("ProcessedData", "LabonteEtAl", "MaleLabonteTableMagma_flipped.csv"))
+fullDing <- read_csv(here("Processed_Data/DingEtAl/FullDingTableMagma.csv"))
+femaleDing <-read_csv(here("Processed_Data/DingEtAl/FemaleDingTableMagma.csv"))
+maleDing <-read_csv(here("Processed_Data/DingEtAl/MaleDingTableMagma.csv"))
+corticalDing <- read_csv( here("Processed_Data/DingEtAl/CorticalDingTableMagma.csv"))
+fullDing_flipped <- read_csv(here("Processed_Data/DingEtAl/FullDingTableMagma_flipped.csv"))
+corticalDing_flipped <- read_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))
 
-corticalLabonte <- read_csv( here("ProcessedData", "LabonteEtAl", "CorticalLabonteTableMagma.csv"))
-corticalLabonte_flipped <- read_csv( here("ProcessedData", "LabonteEtAl", "CorticalLabonteTableMagma_flipped.csv"))
-femaleCorticalLabonte <- read_csv(here("ProcessedData", "LabonteEtAl", "CorticalFemaleLabonteTableMagma.csv"))
-maleCorticalLabonte <- read_csv(here("ProcessedData", "LabonteEtAl", "CorticalMaleLabonteTableMagma.csv"))
-maleCorticalLabonte_flipped <- read_csv(here("ProcessedData", "LabonteEtAl", "CorticalMaleLabonteTableMagma_flipped.csv"))
+fullRamaker <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma.csv"))
+femaleRamaker <- read_csv(here("Processed_Data/RamakerEtAl/FemaleRamakerTableMagma.csv"))
+maleRamaker <- read_csv(here("Processed_Data/RamakerEtAl/MaleRamakerTableMagma.csv"))
+corticalRamaker <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma.csv"))
+fullRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma_flipped.csv"))
+corticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma_flipped.csv"))
 
-fullDing <- read_csv(here("ProcessedData", "DingEtAl", "DingTableFisher.slim_magma.csv"))
-fullDing_flipped <- read_csv(here("ProcessedData", "DingEtAl", "DingTableFisherMagma.slim_flipped.csv"))
-femaleDing <-read_csv(here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Female_magma.csv"))
-maleDing <-read_csv(here("ProcessedData", "DingEtAl", "DingTableFisher.slim.Male_magma.csv"))
-maleDing_flipped <-read_csv(here("ProcessedData", "DingEtAl", "DingTableFisherMagma.slim.Male_flipped.csv"))
+#read in the equivalent Howard genes used in each transcriptomic study
+Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
+#read in the differentially expressed "prior ranking" for the genes identified in Crow, et al. 
+DE_Prior <- read_tsv(here("Raw_Data/CrowEtAl/pnas.1802973116.sd02.txt"))
+#Read in the associated transcriptomic cell types and brain regions that maximally expressed each Howard gene
+Howard_Polygenics <- read_csv(here("Processed_Data/HowardEtAl/HowardRegionsPolygenicCellTypes_four.csv"))
 
-corticalDing <- read_csv( here("ProcessedData", "DingEtAl", "CorticalDingTableFisherMagma.slim.csv"))
-corticalDing_flipped <- read_csv( here("ProcessedData", "DingEtAl", "CorticalDingTableFisherMagma.slim_flipped.csv"))
-femaleCorticalDing <- read_csv(here("ProcessedData", "DingEtAl", "CorticalDingTableFisherMagma.slim.Female.csv"))
-maleCorticalDing <- read_csv(here("ProcessedData", "DingEtAl", "CorticalDingTableFisherMagma.slim.Male.csv"))
-maleCorticalDing_flipped <- read_csv(here("ProcessedData", "DingEtAl", "CorticalDingTableFisherMagma.slim.Male_flipped.csv"))
-
-fullRamaker <- read_csv(here("ProcessedData", "RamakerEtAl", "fullRamakerTable_magma.csv"))
-fullRamaker_flipped <- read_csv(here("ProcessedData", "RamakerEtAl", "fullRamakerTableMagma_flipped.csv"))
-femaleRamaker <- read_csv(here("ProcessedData", "RamakerEtAl", "FemaleRamakerTable_magma.csv"))
-maleRamaker <- read_csv(here("ProcessedData", "RamakerEtAl", "MaleRamakerTable_magma.csv"))
-maleRamaker_flipped <- read_csv(here("ProcessedData", "RamakerEtAl", "MaleRamakerTableMagma_flipped.csv"))
-
-corticalRamaker <- read_csv(here("ProcessedData", "RamakerEtAl", "fullCorticalRamakerTable.csv"))
-corticalRamaker_flipped <- read_csv(here("ProcessedData", "RamakerEtAl", "fullCorticalRamakerTable_flipped.csv"))
-femaleCorticalRamaker <- read_csv(here("ProcessedData", "RamakerEtAl", "fullCorticalFemaleRamakerTable.csv"))
-maleCorticalRamaker <- read_csv(here("ProcessedData", "RamakerEtAl", "fullCorticalMaleRamakerTable.csv"))
-maleCorticalRamaker_flipped <- read_csv(here("ProcessedData", "RamakerEtAl", "fullCorticalMaleRamakerTable_flipped.csv"))
-
-Howard <- read_csv(here("ProcessedData", "HowardEtAl", "fullHowardTable.csv"))
-# Howard %<>% dplyr::rename(gene_symbol = Howard.Genes)
-DE_Prior <- read_tsv(here("data", "CrowEtAl","pnas.1802973116.sd02.txt"))
-Howard_Polygenics <- read_csv(here("ProcessedData","HowardEtAl", "HowardRegionsPolygenicCellTypes_four.csv"))
-
-
+# Column names - for the direction of expression in each brain region
 fullLabonteDir <- "female_Anterior_Insula_female_BA11_female_BA25_female_BA8/9_female_Nac_female_Subic_male_Anterior_Insula_male_BA11_male_BA25_male_BA8/9_male_Nac_male_Subic"
 femaleLabonteDir <- "female_Anterior_Insula_female_BA11_female_BA25_female_BA8/9_female_Nac_female_Subic"
 maleLabonteDir <- "male_Anterior_Insula_male_BA11_male_BA25_male_BA8/9_male_Nac_male_Subic"
-
 corticalLabonteDir <- "female_Anterior_Insula_female_BA11_female_BA25_female_BA8/9_male_Anterior_Insula_male_BA11_male_BA25_male_BA8/9"
-coritcalFemaleLabonteDir <-"female_Anterior_Insula_female_BA11_female_BA25_female_BA8/9"
-corticalMaleLabonteDir <-"male_Anterior_Insula_male_BA11_male_BA25_male_BA8/9"
 
 fullDingDir <- "female_ACC.1_female_ACC.2_female_AMY_female_DLPFC_male_ACC.1_male_ACC.2_male_AMY_male_DLPFC"
 femaleDingDir <-"female_ACC.1_female_ACC.2_female_AMY_female_DLPFC"
 maleDingDir <-"male_ACC.1_male_ACC.2_male_AMY_male_DLPFC"
-
 corticalDingDir <-"female_ACC.1_female_ACC.2_female_DLPFC_male_ACC.1_male_ACC.2_male_DLPFC"
-corticalFemaleDingDir <-"female_ACC.1_female_ACC.2_female_DLPFC"
-corticalMaleDingDir<-"male_ACC.1_male_ACC.2_male_DLPFC"
 
 fullRamakerDir <- "AnCg.F_nAcc.F_DLPFC.F_AnCg.M_nAcc.M_DLPFC.M"
 femaleRamakerDir <- "AnCg_nAcc_DLPFC_Female_directions"
 maleRamakerDir <- "AnCg_nAcc_DLPFC_Male_directions"
-
 corticalRamakerDir <- "AnCg.F_DLPFC.F_AnCg.M_DLPFC.M"
-corticalFemaleRamakerDir <- "AnCg_DLPFC_Female_directions"
-corticalMaleRamakerDir <- "AnCg_DLPFC_Male_directions"
+
+#Perform the meta-analysis combining all study-specific meta analyses together
+#Functions used for combining the data from each study and meta-analysis calculations can be found here
+source(here("R", "loading datasets","mergeAnalysis.R"))
+
+source(here("R", "loading datasets","ZeiselPolygenic.R"))
 
 ##### MAGMA ANALYSIS ON FULL GENOME Wilcox Test ####--------------------------------------------------
 magma <- read_csv(here("data", "HowardEtAl", "FullMagmaGenes.csv"))
 
 #full analysis of meta analysis on magma genes
-mergeMetaMagma(magma, fullLabonte, fullLabonteDir, fullDing, fullDingDir, fullRamaker, fullRamakerDir) %>% write_csv(here("ProcessedData","fullTableMetaMagma.csv"))
-mergeMetaMagmaRank(magma, fullLabonte, fullLabonteDir, fullDing, fullDingDir, fullRamaker, fullRamakerDir) %>% write_csv(path = here("ProcessedData", "fullTableMetaMagmaRank.csv"))
-mergeMetaMagma(magma, fullLabonte_flipped, fullLabonteDir, fullDing_flipped, fullDingDir, fullRamaker_flipped, fullRamakerDir) %>% write_csv(path = here("ProcessedData", "SIFullTableMetaMagma.csv"))
-mergeMetaMagmaRank(magma, fullLabonte_flipped, fullLabonteDir, fullDing_flipped, fullDingDir, fullRamaker_flipped, fullRamakerDir) %>% write_csv(path = here("ProcessedData", "SIFullTableMetaMagmaRank.csv"))
-mergeMetaMagma(magma, femaleLabonte, femaleLabonteDir, femaleDing, femaleDingDir, femaleRamaker, femaleRamakerDir) %>% write_csv(path = here("ProcessedData", "femaleTableMetaMagma.csv"))
-mergeMetaMagmaRank(magma, femaleLabonte, femaleLabonteDir, femaleDing, femaleDingDir, femaleRamaker, femaleRamakerDir) %>% write_csv(path = here("ProcessedData", "femaleTableMetaMagmaRank.csv"))
-mergeMetaMagma(magma, maleLabonte, maleLabonteDir, maleDing, maleDingDir, maleRamaker, maleRamakerDir) %>% write_csv(path = here("ProcessedData", "maleTableMetaMagma.csv"))
-mergeMetaMagmaRank(magma, maleLabonte, maleLabonteDir, maleDing, maleDingDir, maleRamaker, maleRamakerDir) %>% write_csv(path = here("ProcessedData", "maleTableMetaMagmaRank.csv"))
-mergeMetaMagma(magma, corticalLabonte, corticalLabonteDir, corticalDing, corticalDingDir, corticalRamaker, corticalRamakerDir) %>% write_csv(path = here("ProcessedData", "corticalTableMetaMagma.csv"))
-mergeMetaMagmaRank(magma, corticalLabonte, corticalLabonteDir, corticalDing, corticalDingDir, corticalRamaker, corticalRamakerDir) %>% write_csv(path = here("ProcessedData", "corticalTableMetaMagmaRank.csv"))
-mergeMetaMagma(magma, corticalLabonte_flipped, corticalLabonteDir, corticalDing_flipped, corticalDingDir, corticalRamaker_flipped, corticalRamakerDir) %>% write_csv(path = here("ProcessedData", "SICorticalTableMetaMagma.csv"))
-mergeMetaMagmaRank(magma, corticalLabonte_flipped, corticalLabonteDir, corticalDing_flipped, corticalDingDir, corticalRamaker_flipped, corticalRamakerDir) %>% write_csv(path = here("ProcessedData", "SICorticalTableMetaMagmaRank.csv"))
+mergeMagmaMetaRank(magma, fullLabonte, fullLabonteDir, fullDing, fullDingDir, fullRamaker, fullRamakerDir,"meta") %>% write_csv(here("Processed_Data/Meta_Results/MAGMA/fullTableMetaMagma.csv"))
+mergeMagmaMetaRank(magma, fullLabonte, fullLabonteDir, fullDing, fullDingDir, fullRamaker, fullRamakerDir,"rank") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/fullTableMetaMagmaRank.csv"))
+mergeMagmaMetaRank(magma, fullLabonte_flipped, fullLabonteDir, fullDing_flipped, fullDingDir, fullRamaker_flipped, fullRamakerDir,"meta") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/SIFullTableMetaMagma.csv"))
+mergeMagmaMetaRank(magma, fullLabonte_flipped, fullLabonteDir, fullDing_flipped, fullDingDir, fullRamaker_flipped, fullRamakerDir,"rank") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/SIFullTableMetaMagmaRank.csv"))
+mergeMagmaMetaRank(magma, femaleLabonte, femaleLabonteDir, femaleDing, femaleDingDir, femaleRamaker, femaleRamakerDir,"meta") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/femaleTableMetaMagma.csv"))
+mergeMagmaMetaRank(magma, femaleLabonte, femaleLabonteDir, femaleDing, femaleDingDir, femaleRamaker, femaleRamakerDir,"rank") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/femaleTableMetaMagmaRank.csv"))
+mergeMagmaMetaRank(magma, maleLabonte, maleLabonteDir, maleDing, maleDingDir, maleRamaker, maleRamakerDir,"meta") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/maleTableMetaMagma.csv"))
+mergeMagmaMetaRank(magma, maleLabonte, maleLabonteDir, maleDing, maleDingDir, maleRamaker, maleRamakerDir,"rank") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/maleTableMetaMagmaRank.csv"))
+mergeMagmaMetaRank(magma, corticalLabonte, corticalLabonteDir, corticalDing, corticalDingDir, corticalRamaker, corticalRamakerDir,"meta") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/corticalTableMetaMagma.csv"))
+mergeMagmaMetaRank(magma, corticalLabonte, corticalLabonteDir, corticalDing, corticalDingDir, corticalRamaker, corticalRamakerDir,"rank") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/corticalTableMetaMagmaRank.csv"))
+mergeMagmaMetaRank(magma, corticalLabonte_flipped, corticalLabonteDir, corticalDing_flipped, corticalDingDir, corticalRamaker_flipped, corticalRamakerDir,"meta") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/SICorticalTableMetaMagma.csv"))
+mergeMagmaMetaRank(magma, corticalLabonte_flipped, corticalLabonteDir, corticalDing_flipped, corticalDingDir, corticalRamaker_flipped, corticalRamakerDir,"rank") %>% write_csv(path = here("Processed_Data/Meta_Results/MAGMA/SICorticalTableMetaMagmaRank.csv"))
 #-----------------------------------------------------------------------------------------
 
 #full analysis

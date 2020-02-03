@@ -4,6 +4,7 @@ library(here)
 #library(biomaRt)
 library(dplyr)
 library(readxl)
+library(readr)
                                                           #This script runs all meta-analyses on the Labonte ranscriptomic dataset 
 # detach("package:here", unload=TRUE)
 # setwd('../../../school/thesis/')
@@ -27,7 +28,7 @@ Labonte <- left_join(Labonte_Male %>% select(-Biotype, -Description), Labonte_Fe
 #ENSG_Genes <- getBM(attributes = c('ensembl_gene_id','hgnc_gene_symbol'), filters = 'ensembl_gene_id', values = unique(Labonte$ENSG), mart = ensembl) %>% as_tibble() 
 #ENSG_Genes %>% write_csv(here("Processed_Data/LabonteEtAl/getBMGenes.csv"))
 
-ENSG_Genes <- read_csv(here("Processed_Data/LabonteEtAl/getBMGenes.csv")) # read in gene mapping file 
+ENSG_Genes <- read_csv(here("Processed_Data/LabonteEtAl/getBMGenes.csv")) # read in ENSG to hgnc symbol mapping file previously generated for Labonte's genes
 Labonte_genes <- Labonte %>% select(ENSG, gene_symbol)
 Labonte_genes %<>% left_join(ENSG_Genes, by = c('ENSG' = 'ensembl_gene_id'))
 
@@ -35,9 +36,11 @@ Labonte_genes %<>% left_join(ENSG_Genes, by = c('ENSG' = 'ensembl_gene_id'))
 Labonte_genes %<>% rowwise() %>% mutate(hgnc_symbol = if_else(is.na(hgnc_symbol), gene_symbol, hgnc_symbol))
 Labonte_genes %<>% select(-gene_symbol)	
 Labonte_genes %<>% distinct()
-#Find if all ENSG's are distinct
+#Find if all ENSG's are distinct (manual)
 Labonte_genes %>% group_by(ENSG) %>% filter(n() > 1)
-#keep the hgnc symbol == "LINC00856", remove for "LINC00595" for ENSG00000230417 == LINC00856
+#What should ENSG00000230417 map to?
+Labonte %>% filter(ENSG == "ENSG00000230417") %>% select(gene_symbol)
+#keep the hgnc symbol == "LINC00856", remove for "LINC00595":  ENSG00000230417 == LINC00856
 Labonte_genes %<>% mutate(hgnc_symbol = if_else(ENSG == "ENSG00000230417" & hgnc_symbol == "LINC00595", "LINC00856", hgnc_symbol)) %>% distinct() 
 Labonte %<>% left_join(Labonte_genes)
 Labonte %<>% select(-gene_symbol)
@@ -93,7 +96,7 @@ Labonte_Cortical <- Labonte_long %>% filter(brain_region != "Nac") %>% filter( b
 #Perform meta-analysis on all brain regions across both sexes
 #number of p-values we need to filter = 8 (4 regions * 2 sexes) 
 #number of brain regions = 4
-cortical_Labonte_summary_results <- Labonte_Cortical %>% LabonteMeta(8,4)
+cortical_Labonte_summary_results <- Labonte_Cortical %>% LabonteMetaAnalysis(8,4)
 cortical_Labonte_summary_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
 
 
@@ -133,24 +136,24 @@ source(here("R/transcriptomic_meta/Percentile_Rank_Analysis.R"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our full meta-analysis
 Labonte_summary_results %<>% getRank()
-Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/FullLabonteTableMagma.csv"))
+Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/FullLabonteTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our female meta-analysis
 Labonte_Female_results %<>% getRank()
-Labonte_Female_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/FemaleLabonteTableMagma.csv"))
+Labonte_Female_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/FemaleLabonteTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our male meta-analysis
 Labonte_Male_results %<>% getRank()
-Labonte_Male_results %>% write_csv(path = here("Processed_Data/RamakerEtAl/MaleLabonteTableMagma.csv"))
+Labonte_Male_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/MaleLabonteTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our cortical meta-analysis
 cortical_Labonte_summary_results %<>% getRank()
-cortical_Labonte_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalLabonteTableMagma.csv"))
+cortical_Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
 Labonte_summary_full_flip %<>% getRank()
-Labonte_summary_full_flip %>% write_csv(here("Processed_Data/RamakerEtAl/FullLabonteTableMagma_flipped.csv"))
+Labonte_summary_full_flip %>% write_csv(here("Processed_Data/LabonteEtAl/FullLabonteTableMagma_flipped.csv"))
 
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
 Labonte_summary_cortical_flip %<>% getRank()
-Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalLabonteTableMagma_flipped.csv"))
+Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma_flipped.csv"))

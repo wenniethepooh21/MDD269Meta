@@ -1,8 +1,6 @@
-library(reshape2)
 library(magrittr)
 library(dplyr)
-library(tidyverse)
-library(devtools)
+library(tidyr)
 library(metap)
 
 #Function that calculates the meta p values using Fisher's Method 
