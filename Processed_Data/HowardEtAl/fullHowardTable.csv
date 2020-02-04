@@ -1,0 +1,270 @@
+gene_symbol,Howard.pvalue,Updated_Gene_Names,gene_name,Ramaker.Gene,Labonte.Gene,Ding.Gene,Match Across Studies?
+HIST1H3J,1.09e-14,HIST1H3J,histone cluster 1 H3 family member j,HIST1H3J,NA,unused,FALSE
+HIST1H1B,9.97e-14,HIST1H1B,histone cluster 1 H1 family member b,HIST1H1B,NA,unused,FALSE
+OR2B2,2.79e-12,OR2B2,olfactory receptor family 2 subfamily B member 2,OR2B2,NA,unused,FALSE
+ZSCAN26,8.51e-12,ZSCAN26,zinc finger and SCAN domain containing 26,ZSCAN26,ZSCAN26,ZNF187,FALSE
+HIST1H2AL,3.49e-11,HIST1H2AL,histone cluster 1 H2A family member l,HIST1H2AL,NA,NA,FALSE
+HIST1H4L,6.17e-11,HIST1H4L,histone cluster 1 H4 family member l,HIST1H4L,NA,unused,FALSE
+HIST1H3I,6.38e-10,HIST1H3I,histone cluster 1 H3 family member i,HIST1H3I,NA,unused,FALSE
+PAX5,6.67e-10,PAX5,paired box 5,PAX5,UNUSED,unused,FALSE
+PROX2,7.55e-10,PROX2,prospero homeobox 2,PROX2,UNUSED,NA,FALSE
+OR12D3,1.2e-9,OR12D3,olfactory receptor family 12 subfamily D member 3,OR12D3,NA,unused,FALSE
+ANKK1,5.17e-9,ANKK1,ankyrin repeat and kinase domain containing 1,ANKK1,UNUSED,unused,FALSE
+TYR,6.97e-9,TYR,tyrosinase,TYR,NA,unused,FALSE
+PQLC2L,7.05e-9,PQLC2L,PQ loop repeat containing 2 like,PQLC2L,PQLC2L,unused,FALSE
+BTN1A1,7.4e-9,BTN1A1,butyrophilin subfamily 1 member A1,BTN1A1,NA,unused,FALSE
+PRR34,5.59e-8,PRR34,PRR34 long non-coding RNA,PRR34,PRR34,unused,FALSE
+HIST1H2BO,9.65e-8,HIST1H2BO,histone cluster 1 H2B family member o,HIST1H2BO,NA,unused,FALSE
+SLC17A3,1.67e-7,SLC17A3,solute carrier family 17 member 3,SLC17A3,NA,unused,FALSE
+HSPE1-MOB4,2.29e-7,HSPE1-MOB4,HSPE1-MOB4 readthrough,HSPE1-MOB4,NA,NA,FALSE
+C3orf84,2.53e-7,C3orf84,chromosome 3 open reading frame 84,C3orf84,NA,NA,FALSE
+PSORS1C2,2.98e-7,PSORS1C2,psoriasis susceptibility 1 candidate 2,PSORS1C2,NA,unused,FALSE
+ACTL8,6.06e-7,ACTL8,actin like 8,ACTL8,NA,unused,FALSE
+SLC44A4,7.98e-7,SLC44A4,solute carrier family 44 member 4,SLC44A4,NA,unused,FALSE
+C7orf72,8.26e-7,SPATA48,spermatogenesis associated 48,C7orf72,NA,NA,FALSE
+OTX2,8.91e-7,OTX2,orthodenticle homeobox 2,OTX2,UNUSED,unused,FALSE
+MYBPC3,1.39e-6,MYBPC3,"myosin binding protein C, cardiac",MYBPC3,NA,MYBPC3,FALSE
+SIM1,1.47e-6,SIM1,SIM bHLH transcription factor 1,SIM1,NA,unused,FALSE
+ITGB6,2.03e-6,ITGB6,integrin subunit beta 6,ITGB6,UNUSED,unused,FALSE
+SORCS3,2.27e-19,SORCS3,sortilin related VPS10 domain containing receptor 3,SORCS3,SORCS3,SORCS3,TRUE
+RBFOX1,6.09e-17,RBFOX1,RNA binding fox-1 homolog 1,RBFOX1,RBFOX1,A2BP1,FALSE
+GRM5,6.21e-17,GRM5,glutamate metabotropic receptor 5,GRM5,GRM5,unused,FALSE
+HIST1H2BN,6.9e-17,HIST1H2BN,histone cluster 1 H2B family member n,HIST1H2BN,HIST1H2BN,unused,FALSE
+SHISA9,8.98e-17,SHISA9,shisa family member 9,SHISA9,SHISA9,NA,FALSE
+TCF4,4.55e-16,TCF4,transcription factor 4,TCF4,TCF4,TCF4,TRUE
+NEGR1,3.55e-15,NEGR1,neuronal growth regulator 1,NEGR1,NEGR1,NEGR1,TRUE
+DENND1A,1.54e-14,DENND1A,DENN domain containing 1A,DENND1A,DENND1A,DENND1A,TRUE
+DCC,2.57e-14,DCC,DCC netrin 1 receptor,DCC,DCC,unused,TRUE
+RSRC1,2.6e-14,RSRC1,arginine and serine rich coiled-coil 1,RSRC1,RSRC1,RSRC1,TRUE
+TENM2,2.77e-14,TENM2,teneurin transmembrane protein 2,TENM2,TENM2,ODZ2,FALSE
+TMEM161B,4.77e-14,TMEM161B,transmembrane protein 161B,TMEM161B,TMEM161B,TMEM161B,TRUE
+DRD2,5.35e-14,DRD2,dopamine receptor D2,DRD2,DRD2,NA,FALSE
+PGBD1,5.95e-14,PGBD1,piggyBac transposable element derived 1,PGBD1,PGBD1,PGBD1,TRUE
+ZKSCAN4,7.51e-14,ZKSCAN4,zinc finger with KRAB and SCAN domains 4,ZKSCAN4,ZKSCAN4,ZKSCAN4,TRUE
+ERBB4,1.29e-13,ERBB4,erb-b2 receptor tyrosine kinase 4,ERBB4,ERBB4,ERBB4,TRUE
+ZKSCAN8,2.01e-13,ZKSCAN8,zinc finger with KRAB and SCAN domains 8,ZKSCAN8,ZKSCAN8,unused,FALSE
+BTN3A2,3.96e-13,BTN3A2,butyrophilin subfamily 3 member A2,BTN3A2,BTN3A2,BTN3A2,TRUE
+PCLO,6.57e-13,PCLO,piccolo presynaptic cytomatrix protein,PCLO,PCLO,NA,FALSE
+ZSCAN16,6.65e-13,ZSCAN16,zinc finger and SCAN domain containing 16,ZSCAN16,ZSCAN16,unused,FALSE
+ZSCAN9,8.28e-13,ZSCAN9,zinc finger and SCAN domain containing 9,ZSCAN9,ZSCAN9,unused,FALSE
+TMEM106B,1.22e-12,TMEM106B,transmembrane protein 106B,TMEM106B,TMEM106B,TMEM106B,TRUE
+MEF2C,1.58e-12,MEF2C,myocyte enhancer factor 2C,MEF2C,MEF2C,MEF2C,TRUE
+OLFM4,1.7e-12,OLFM4,olfactomedin 4,OLFM4,OLFM4,unused,FALSE
+GRM8,1.8e-12,GRM8,glutamate metabotropic receptor 8,GRM8,GRM8,GRM8,TRUE
+ZNF165,1.95e-12,ZNF165,zinc finger protein 165,ZNF165,ZNF165,unused,FALSE
+LRFN5,2.04e-12,LRFN5,leucine rich repeat and fibronectin type III domain containing 5,LRFN5,LRFN5,LRFN5,TRUE
+HIST1H2BL,3.54e-12,HIST1H2BL,histone cluster 1 H2B family member l,HIST1H2BL,HIST1H2BL,NA,FALSE
+ZCCHC7,4.19e-12,ZCCHC7,zinc finger CCHC-type containing 7,ZCCHC7,ZCCHC7,ZCCHC7,TRUE
+B3GALTL,5.7e-12,B3GLCT,beta 3-glucosyltransferase,B3GLCT,B3GLCT,B3GALTL,FALSE
+BTN2A1,6.69e-12,BTN2A1,butyrophilin subfamily 2 member A1,BTN2A1,BTN2A1,BTN2A1,TRUE
+RERE,1.43e-11,RERE,arginine-glutamic acid dipeptide repeats,RERE,RERE,RERE,TRUE
+CDH13,1.59e-11,CDH13,cadherin 13,CDH13,CDH13,CDH13,TRUE
+ASTN2,2.19e-11,ASTN2,astrotactin 2,ASTN2,ASTN2,ASTN2,TRUE
+CACNA1E,2.86e-11,CACNA1E,calcium voltage-gated channel subunit alpha1 E,CACNA1E,CACNA1E,CACNA1E,TRUE
+HLA-B,4.33e-11,HLA-B,"major histocompatibility complex, class I, B",HLA-B,HLA-B,HLA-B,TRUE
+ZSCAN12,8.58e-11,ZSCAN12,zinc finger and SCAN domain containing 12,ZSCAN12,ZSCAN12,unused,FALSE
+CHD6,1.38e-10,CHD6,chromodomain helicase DNA binding protein 6,CHD6,CHD6,CHD6,TRUE
+CTNNA3,1.69e-10,CTNNA3,catenin alpha 3,CTNNA3,CTNNA3,unused,FALSE
+METTL9,1.74e-10,METTL9,methyltransferase like 9,METTL9,METTL9,METTL9,TRUE
+MEGF11,1.78e-10,MEGF11,multiple EGF like domains 11,MEGF11,MEGF11,unused,FALSE
+ZSCAN31,1.82e-10,ZSCAN31,zinc finger and SCAN domain containing 31,ZSCAN31,ZSCAN31,ZNF323,FALSE
+ZNF197,2.28e-10,ZNF197,zinc finger protein 197,ZNF197,ZNF197,unused,FALSE
+KLC1,2.46e-10,KLC1,kinesin light chain 1,KLC1,KLC1,KLC1,TRUE
+ZNF660,2.47e-10,ZNF660,zinc finger protein 660,ZNF660,ZNF660,unused,FALSE
+SPPL3,2.85e-10,SPPL3,signal peptide peptidase like 3,SPPL3,SPPL3,NA,FALSE
+YLPM1,3.52e-10,YLPM1,YLP motif containing 1,YLPM1,YLPM1,NA,FALSE
+PCDH9,3.53e-10,PCDH9,protocadherin 9,PCDH9,PCDH9,PCDH9,TRUE
+ZNF445,3.53e-10,ZNF445,zinc finger protein 445,ZNF445,ZNF445,ZNF445,TRUE
+ZKSCAN7,5.11e-10,ZKSCAN7,zinc finger with KRAB and SCAN domains 7,ZKSCAN7,ZKSCAN7,unused,FALSE
+LIN28B,6.57e-10,LIN28B,lin-28 homolog B,LIN28B,LIN28B,unused,FALSE
+FAM172A,7.75e-10,FAM172A,family with sequence similarity 172 member A,FAM172A,FAM172A,NA,FALSE
+CELF4,8.75e-10,CELF4,CUGBP Elav-like family member 4,CELF4,CELF4,BRUNOL4,FALSE
+DLST,8.87e-10,DLST,dihydrolipoamide S-succinyltransferase,DLST,DLST,NA,FALSE
+NRG1,9.64e-10,NRG1,neuregulin 1,NRG1,NRG1,NRG1,TRUE
+SGCZ,9.76e-10,SGCZ,sarcoglycan zeta,SGCZ,SGCZ,unused,FALSE
+RAB27B,1.39e-9,RAB27B,"RAB27B, member RAS oncogene family",RAB27B,RAB27B,unused,FALSE
+IGSF6,1.56e-9,IGSF6,immunoglobulin superfamily member 6,IGSF6,IGSF6,unused,FALSE
+GPC6,1.6e-9,GPC6,glypican 6,GPC6,GPC6,GPC6,TRUE
+PAX6,1.67e-9,PAX6,paired box 6,PAX6,PAX6,PAX6,TRUE
+SGIP1,1.68e-9,SGIP1,SH3 domain GRB2 like endophilin interacting protein 1,SGIP1,SGIP1,SGIP1,TRUE
+KDM3A,1.76e-9,KDM3A,lysine demethylase 3A,KDM3A,KDM3A,NA,FALSE
+C16orf45,1.86e-9,C16orf45,BMERB Domain Containing 1,C16orf45,C16orf45,C16orf45,FALSE
+DCDC5,2.49e-9,DCDC1,doublecortin domain containing 1,DCDC1,DCDC1,unused,FALSE
+ESR2,2.67e-9,ESR2,estrogen receptor 2,ESR2,ESR2,unused,FALSE
+LRP1B,2.73e-9,LRP1B,LDL receptor related protein 1B,LRP1B,LRP1B,LRP1B,TRUE
+EMILIN3,3.37e-9,EMILIN3,elastin microfibril interfacer 3,EMILIN3,EMILIN3,EMILIN3,TRUE
+TRMT61A,3.68e-9,TRMT61A,tRNA methyltransferase 61A,TRMT61A,TRMT61A,NA,FALSE
+XRCC3,3.79e-9,XRCC3,X-ray repair cross complementing 3,XRCC3,XRCC3,unused,FALSE
+SOX5,3.79e-9,SOX5,SRY-box 5,SOX5,SOX5,unused,FALSE
+CNTNAP5,3.89e-9,CNTNAP5,contactin associated protein like 5,CNTNAP5,CNTNAP5,unused,FALSE
+SEMA6D,4.1e-9,SEMA6D,semaphorin 6D,SEMA6D,SEMA6D,SEMA6D,TRUE
+ZFHX4,5.27e-9,ZFHX4,zinc finger homeobox 4,ZFHX4,ZFHX4,ZFHX4,TRUE
+LST1,5.42e-9,LST1,leukocyte specific transcript 1,LST1,LST1,LST1,TRUE
+PRSS16,6.41e-9,PRSS16,serine protease 16,PRSS16,UNUSED,unused,FALSE
+RFWD2,7e-9,COP1,COP1 E3 ubiquitin ligase,RFWD2,COP1,RFWD2,TRUE
+DCDC1,7.46e-9,DCDC1,doublecortin domain containing 1,DCDC1,DCDC1,unused,FALSE
+ZDHHC21,7.5e-9,ZDHHC21,zinc finger DHHC-type containing 21,ZDHHC21,ZDHHC21,ZDHHC21,TRUE
+TTC12,8.38e-9,TTC12,tetratricopeptide repeat domain 12,TTC12,TTC12,unused,FALSE
+SDK1,9.19e-9,SDK1,sidekick cell adhesion molecule 1,SDK1,SDK1,unused,FALSE
+APOPT1,9.26e-9,APOPT1,"apoptogenic 1, mitochondrial",APOPT1,APOPT1,NA,FALSE
+VRK2,9.97e-9,VRK2,VRK serine/threonine kinase 2,VRK2,VRK2,VRK2,TRUE
+CABP1,1.01e-8,CABP1,calcium binding protein 1,CABP1,CABP1,CABP1,TRUE
+ZKSCAN3,1.16e-8,ZKSCAN3,zinc finger with KRAB and SCAN domains 3,ZKSCAN3,ZKSCAN3,unused,FALSE
+SAMD5,1.21e-8,SAMD5,sterile alpha motif domain containing 5,SAMD5,SAMD5,SAMD5,TRUE
+ADCK3,1.43e-8,COQ8A,coenzyme Q8A,ADCK3,COQ8A,CABC1,FALSE
+DENND1B,1.45e-8,DENND1B,DENN domain containing 1B,DENND1B,DENND1B,DENND1B,TRUE
+TAOK3,1.49e-8,TAOK3,TAO kinase 3,TAOK3,TAOK3,TAOK3,TRUE
+HS6ST3,1.66e-8,HS6ST3,heparan sulfate 6-O-sulfotransferase 3,HS6ST3,HS6ST3,HS6ST3,TRUE
+MYRF,1.68e-8,MYRF,myelin regulatory factor,MYRF,MYRF,C11orf9,FALSE
+RTN1,1.71e-8,RTN1,reticulon 1,RTN1,RTN1,RTN1,TRUE
+PSORS1C1,1.74e-8,PSORS1C1,psoriasis susceptibility 1 candidate 1,PSORS1C1,UNUSED,unused,FALSE
+CKB,1.76e-8,CKB,creatine kinase B,CKB,CKB,CKB,TRUE
+SF3B1,1.78e-8,SF3B1,splicing factor 3b subunit 1,SF3B1,SF3B1,SF3B1,TRUE
+FADS2,1.94e-8,FADS2,fatty acid desaturase 2,FADS2,FADS2,FADS2,TRUE
+GTF2IRD1,2.15e-8,GTF2IRD1,GTF2I repeat domain containing 1,GTF2IRD1,GTF2IRD1,GTF2IRD1,TRUE
+NRD1,2.66e-8,NRDC,nardilysin convertase,NRDC,NRDC,NRD1,FALSE
+ZC3H7B,2.91e-8,ZC3H7B,zinc finger CCCH-type containing 7B,ZC3H7B,ZC3H7B,ZC3H7B,TRUE
+AREL1,3.04e-8,AREL1,apoptosis resistant E3 ubiquitin protein ligase 1,AREL1,AREL1,KIAA0317,FALSE
+RANGAP1,3.07e-8,RANGAP1,Ran GTPase activating protein 1,RANGAP1,RANGAP1,RANGAP1,TRUE
+ZNF184,3.34e-8,ZNF184,zinc finger protein 184,ZNF184,ZNF184,ZNF184,TRUE
+ZDHHC5,3.47e-8,ZDHHC5,zinc finger DHHC-type containing 5,ZDHHC5,ZDHHC5,ZDHHC5,TRUE
+HIST1H2BF,3.58e-8,HIST1H2BF,histone cluster 1 H2B family member f,HIST1H2BF,HIST1H2BF,unused,FALSE
+FAM120A,3.67e-8,FAM120A,family with sequence similarity 120A,FAM120A,FAM120A,FAM120A,TRUE
+KIF15,3.68e-8,KIF15,kinesin family member 15,KIF15,KIF15,unused,FALSE
+NKAPL,3.84e-8,NKAPL,NFKB activating protein like,NKAPL,NKAPL,unused,FALSE
+FCF1,4.33e-8,FCF1,FCF1 rRNA-processing protein,FCF1,FCF1,unused,FALSE
+SORBS3,4.46e-8,SORBS3,sorbin and SH3 domain containing 3,SORBS3,SORBS3,SORBS3,TRUE
+PCDHA2,4.57e-8,PCDHA2,protocadherin alpha 2,PCDHA2,PCDHA2,unused,FALSE
+PCDHA1,5.44e-8,PCDHA1,protocadherin alpha 1,PCDHA1,PCDHA1,NA,FALSE
+SCYL1,6.11e-8,SCYL1,SCY1 like pseudokinase 1,SCYL1,SCYL1,SCYL1,TRUE
+MR1,6.25e-8,MR1,"major histocompatibility complex, class I-related",MR1,MR1,MR1,TRUE
+BTN3A3,6.6e-8,BTN3A3,butyrophilin subfamily 3 member A3,BTN3A3,BTN3A3,BTN3A3,TRUE
+TCTEX1D1,6.7e-8,TCTEX1D1,Tctex1 domain containing 1,TCTEX1D1,TCTEX1D1,unused,FALSE
+CELF2,7.52e-8,CELF2,CUGBP Elav-like family member 2,CELF2,CELF2,CUGBP2,FALSE
+CTNND1,7.75e-8,CTNND1,catenin delta 1,CTNND1,CTNND1,CTNND1,TRUE
+HSPA1A,8.13e-8,HSPA1A,heat shock protein family A (Hsp70) member 1A,HSPA1A,HSPA1A,HSPA1A,TRUE
+ASCC3,8.91e-8,ASCC3,activating signal cointegrator 1 complex subunit 3,ASCC3,ASCC3,ASCC3,TRUE
+ELAVL2,9e-8,ELAVL2,ELAV like RNA binding protein 2,ELAVL2,ELAVL2,ELAVL2,TRUE
+RPS6KL1,1.01e-7,RPS6KL1,ribosomal protein S6 kinase like 1,RPS6KL1,RPS6KL1,RPS6KL1,TRUE
+PCDHA3,1.06e-7,PCDHA3,protocadherin alpha 3,PCDHA3,PCDHA3,unused,FALSE
+TRMT10C,1.08e-7,TRMT10C,"tRNA methyltransferase 10C, mitochondrial RNase P subunit",TRMT10C,TRMT10C,RG9MTD1,FALSE
+ABT1,1.16e-7,ABT1,activator of basal transcription 1,ABT1,ABT1,ABT1,TRUE
+SCAI,1.19e-7,SCAI,suppressor of cancer cell invasion,SCAI,SCAI,NA,FALSE
+FADS1,1.25e-7,FADS1,fatty acid desaturase 1,FADS1,FADS1,FADS1,TRUE
+CTTNBP2,1.26e-7,CTTNBP2,cortactin binding protein 2,CTTNBP2,CTTNBP2,CTTNBP2,TRUE
+KMT2A,1.28e-7,KMT2A,lysine methyltransferase 2A,KMT2A,KMT2A,MLL,FALSE
+BEND4,1.3e-7,BEND4,BEN domain containing 4,BEND4,BEND4,NA,FALSE
+ESRRG,1.31e-7,ESRRG,estrogen related receptor gamma,ESRRG,ESRRG,ESRRG,TRUE
+BAZ2B,1.32e-7,BAZ2B,bromodomain adjacent to zinc finger domain 2B,BAZ2B,BAZ2B,BAZ2B,TRUE
+GPC5,1.35e-7,GPC5,glypican 5,GPC5,GPC5,GPC5,TRUE
+IQCJ-SCHIP1,1.37e-7,IQCJ-SCHIP1,IQCJ-SCHIP1 readthrough,IQCJ-SCHIP1,IQCJ-SCHIP1,NA,FALSE
+TCAIM,1.4e-7,TCAIM,"T cell activation inhibitor, mitochondrial",TCAIM,TCAIM,C3orf23,FALSE
+TMX2,1.49e-7,TMX2,thioredoxin related transmembrane protein 2,TMX2,TMX2,NA,FALSE
+MED19,1.75e-7,MED19,mediator complex subunit 19,MED19,MED19,MED19,TRUE
+ZNF638,1.83e-7,ZNF638,zinc finger protein 638,ZNF638,ZNF638,NA,FALSE
+CDH22,1.88e-7,CDH22,cadherin 22,CDH22,CDH22,CDH22,TRUE
+GRIK5,2.06e-7,GRIK5,glutamate ionotropic receptor kainate type subunit 5,GRIK5,GRIK5,GRIK5,TRUE
+HARS,2.1e-7,HARS,histidyl-tRNA synthetase,HARS,HARS,HARS,TRUE
+EP300,2.3e-7,EP300,E1A binding protein p300,EP300,EP300,EP300,TRUE
+HLA-DQB1,2.33e-7,HLA-DQB1,"major histocompatibility complex, class II, DQ beta 1",HLA-DQB1,HLA-DQB1,NA,FALSE
+PCNP,2.33e-7,PCNP,PEST proteolytic signal containing nuclear protein,PCNP,PCNP,PCNP,TRUE
+ZHX3,2.34e-7,ZHX3,zinc fingers and homeoboxes 3,ZHX3,ZHX3,ZHX3,TRUE
+BCHE,2.39e-7,BCHE,butyrylcholinesterase,BCHE,BCHE,BCHE,TRUE
+CRB1,2.5e-7,CRB1,crumbs cell polarity complex component 1,CRB1,CRB1,CRB1,TRUE
+MICB,2.62e-7,MICB,MHC class I polypeptide-related sequence B,MICB,MICB,unused,FALSE
+SLC30A9,2.62e-7,SLC30A9,solute carrier family 30 member 9,SLC30A9,SLC30A9,SLC30A9,TRUE
+MARK3,2.68e-7,MARK3,microtubule affinity regulating kinase 3,MARK3,MARK3,MARK3,TRUE
+FHIT,2.74e-7,FHIT,fragile histidine triad,FHIT,FHIT,FHIT,TRUE
+MARCH10,2.76e-7,MARCH10,membrane associated ring-CH-type finger 10,MARCH10,MARCH10,NA,FALSE
+CDK14,2.93e-7,CDK14,cyclin dependent kinase 14,CDK14,CDK14,PFTK1,FALSE
+PLCG1,2.94e-7,PLCG1,phospholipase C gamma 1,PLCG1,PLCG1,PLCG1,TRUE
+AP3B1,3.15e-7,AP3B1,adaptor related protein complex 3 subunit beta 1,AP3B1,AP3B1,AP3B1,TRUE
+POGZ,3.16e-7,POGZ,pogo transposable element derived with ZNF domain,POGZ,POGZ,POGZ,TRUE
+TRAF3,3.17e-7,TRAF3,TNF receptor associated factor 3,TRAF3,TRAF3,TRAF3,TRUE
+CSMD1,3.31e-7,CSMD1,CUB and Sushi multiple domains 1,CSMD1,CSMD1,CSMD1,TRUE
+TMEM67,3.38e-7,TMEM67,transmembrane protein 67,TMEM67,TMEM67,unused,FALSE
+PCDHA4,3.57e-7,PCDHA4,protocadherin alpha 4,PCDHA4,PCDHA4,NA,FALSE
+TOPAZ1,3.6e-7,TOPAZ1,testis and ovary specific PAZ domain containing 1,TOPAZ1,TOPAZ1,NA,FALSE
+PMFBP1,3.65e-7,PMFBP1,polyamine modulated factor 1 binding protein 1,PMFBP1,PMFBP1,unused,FALSE
+CNTN5,3.66e-7,CNTN5,contactin 5,CNTN5,CNTN5,unused,FALSE
+INPP4B,3.71e-7,INPP4B,inositol polyphosphate-4-phosphatase type II B,INPP4B,INPP4B,INPP4B,TRUE
+ZNF322,3.72e-7,ZNF322,zinc finger protein 322,ZNF322,ZNF322,ZNF322A,FALSE
+ASIC2,3.77e-7,ASIC2,acid sensing ion channel subunit 2,ASIC2,ASIC2,unused,FALSE
+PLA2R1,3.98e-7,PLA2R1,phospholipase A2 receptor 1,PLA2R1,PLA2R1,unused,FALSE
+CHMP3,4e-7,CHMP3,charged multivesicular body protein 3,CHMP3,CHMP3,VPS24,FALSE
+SOX6,4.17e-7,SOX6,SRY-box 6,SOX6,SOX6,unused,FALSE
+PCDHA5,4.3e-7,PCDHA5,protocadherin alpha 5,PCDHA5,PCDHA5,unused,FALSE
+FANCL,4.58e-7,FANCL,FA complementation group L,FANCL,FANCL,FANCL,TRUE
+ZNF35,4.66e-7,ZNF35,zinc finger protein 35,ZNF35,ZNF35,ZNF35,TRUE
+TMEM42,4.87e-7,TMEM42,transmembrane protein 42,TMEM42,TMEM42,NA,FALSE
+KIAA1143,5e-7,KIAA1143,KIAA1143,KIAA1143,KIAA1143,KIAA1143,TRUE
+C11orf31,5.11e-7,SELENOH,selenoprotein H,C11orf31,SELENOH,C11orf31,FALSE
+ACVR1B,5.28e-7,ACVR1B,activin A receptor type 1B,ACVR1B,ACVR1B,ACVR1B,TRUE
+ZNF501,5.35e-7,ZNF501,zinc finger protein 501,ZNF501,ZNF501,unused,FALSE
+RFTN2,5.41e-7,RFTN2,raftlin family member 2,RFTN2,RFTN2,RFTN2,TRUE
+TMEM258,5.55e-7,TMEM258,transmembrane protein 258,TMEM258,TMEM258,C11orf10,FALSE
+TAL1,5.73e-7,TAL1,"TAL bHLH transcription factor 1, erythroid differentiation factor",TAL1,TAL1,unused,FALSE
+NICN1,5.99e-7,NICN1,nicolin 1,NICN1,NICN1,NICN1,TRUE
+HLA-DQA1,6.06e-7,HLA-DQA1,"major histocompatibility complex, class II, DQ alpha 1",HLA-DQA1,HLA-DQA1,NA,FALSE
+MOB4,6.09e-7,MOB4,"MOB family member 4, phocein",MOB4,MOB4,NA,FALSE
+CCDC36,6.57e-7,CCDC36,coiled-coil domain containing 36,CCDC36,CCDC36,unused,FALSE
+PCDHA6,6.79e-7,PCDHA6,protocadherin alpha 6,PCDHA6,PCDHA6,unused,FALSE
+STK19,7.06e-7,STK19,serine/threonine kinase 19,STK19,STK19,STK19,TRUE
+RHOA,7.1e-7,RHOA,ras homolog family member A,RHOA,RHOA,RHOA,TRUE
+MAP9,7.15e-7,MAP9,microtubule associated protein 9,MAP9,MAP9,MAP9,TRUE
+FNIP2,7.22e-7,FNIP2,folliculin interacting protein 2,FNIP2,FNIP2,NA,FALSE
+RBMS3,7.31e-7,RBMS3,RNA binding motif single stranded interacting protein 3,RBMS3,RBMS3,unused,FALSE
+PLCL1,7.79e-7,PLCL1,phospholipase C like 1 (inactive),PLCL1,PLCL1,PLCL1,TRUE
+LTBP3,8.14e-7,LTBP3,latent transforming growth factor beta binding protein 3,LTBP3,LTBP3,LTBP3,TRUE
+SPRY2,8.26e-7,SPRY2,sprouty RTK signaling antagonist 2,SPRY2,SPRY2,SPRY2,TRUE
+HTT,8.85e-7,HTT,huntingtin,HTT,HTT,NA,FALSE
+UBE2M,8.89e-7,UBE2M,ubiquitin conjugating enzyme E2 M,UBE2M,UBE2M,UBE2M,TRUE
+BAG5,9.18e-7,BAG5,BCL2 associated athanogene 5,BAG5,BAG5,BAG5,TRUE
+CDH9,9.7e-7,CDH9,cadherin 9,CDH9,CDH9,CDH9,TRUE
+LPIN3,1.01e-6,LPIN3,lipin 3,LPIN3,LPIN3,unused,FALSE
+EPHB2,1.04e-6,EPHB2,EPH receptor B2,EPHB2,EPHB2,EPHB2,TRUE
+HMGN4,1.07e-6,HMGN4,high mobility group nucleosomal binding domain 4,HMGN4,HMGN4,HMGN4,TRUE
+PPP6C,1.1e-6,PPP6C,protein phosphatase 6 catalytic subunit,PPP6C,PPP6C,PPP6C,TRUE
+NOX4,1.16e-6,NOX4,NADPH oxidase 4,NOX4,NOX4,unused,FALSE
+PRR16,1.19e-6,PRR16,proline rich 16,PRR16,PRR16,unused,FALSE
+EXT1,1.2e-6,EXT1,exostosin glycosyltransferase 1,EXT1,EXT1,EXT1,TRUE
+MGAT4C,1.22e-6,MGAT4C,MGAT4 family member C,MGAT4C,MGAT4C,MGAT4C,TRUE
+EYS,1.32e-6,EYS,eyes shut homolog,EYS,EYS,NA,FALSE
+STAU1,1.34e-6,STAU1,staufen double-stranded RNA binding protein 1,STAU1,STAU1,STAU1,TRUE
+HARS2,1.35e-6,HARS2,"histidyl-tRNA synthetase 2, mitochondrial",HARS2,HARS2,HARS2,TRUE
+BAD,1.35e-6,BAD,BCL2 associated agonist of cell death,BAD,BAD,BAD,TRUE
+ETFDH,1.44e-6,ETFDH,electron transfer flavoprotein dehydrogenase,ETFDH,ETFDH,ETFDH,TRUE
+FH,1.47e-6,FH,fumarate hydratase,FH,FH,FH,TRUE
+ANKS1B,1.5e-6,ANKS1B,ankyrin repeat and sterile alpha motif domain containing 1B,ANKS1B,ANKS1B,ANKS1B,TRUE
+ITPR3,1.55e-6,ITPR3,"inositol 1,4,5-trisphosphate receptor type 3",ITPR3,ITPR3,unused,FALSE
+RABEPK,1.56e-6,RABEPK,Rab9 effector protein with kelch motifs,RABEPK,RABEPK,RABEPK,TRUE
+RHOBTB1,1.57e-6,RHOBTB1,Rho related BTB domain containing 1,RHOBTB1,RHOBTB1,RHOBTB1,TRUE
+BSN,1.61e-6,BSN,bassoon presynaptic cytomatrix protein,BSN,BSN,BSN,TRUE
+RAB3B,1.61e-6,RAB3B,"RAB3B, member RAS oncogene family",RAB3B,RAB3B,RAB3B,TRUE
+ZNF536,1.62e-6,ZNF536,zinc finger protein 536,ZNF536,ZNF536,ZNF536,TRUE
+TOP1,1.66e-6,TOP1,DNA topoisomerase I,TOP1,TOP1,TOP1,TRUE
+CAMKK2,1.88e-6,CAMKK2,calcium/calmodulin dependent protein kinase kinase 2,CAMKK2,CAMKK2,CAMKK2,TRUE
+MANEA,1.88e-6,MANEA,mannosidase endo-alpha,MANEA,MANEA,MANEA,TRUE
+ARHGEF25,1.9e-6,ARHGEF25,Rho guanine nucleotide exchange factor 25,ARHGEF25,ARHGEF25,NA,FALSE
+VPS41,1.94e-6,VPS41,VPS41 subunit of HOPS complex,VPS41,VPS41,VPS41,TRUE
+ATP1A3,2.03e-6,ATP1A3,ATPase Na+/K+ transporting subunit alpha 3,ATP1A3,ATP1A3,ATP1A3,TRUE
+ASXL3,2.06e-6,ASXL3,ASXL transcriptional regulator 3,ASXL3,ASXL3,ASXL3,TRUE
+ANKHD1,2.08e-6,ANKHD1,ankyrin repeat and KH domain containing 1,ANKHD1,ANKHD1,unused,FALSE
+PCDHA7,2.25e-6,PCDHA7,protocadherin alpha 7,PCDHA7,PCDHA7,NA,FALSE
+PTPRS,2.3e-6,PTPRS,protein tyrosine phosphatase receptor type S,PTPRS,PTPRS,PTPRS,TRUE
+CCS,2.3e-6,CCS,copper chaperone for superoxide dismutase,CCS,CCS,CCS,TRUE
+PHF2,2.32e-6,PHF2,PHD finger protein 2,PHF2,PHF2,PHF2,TRUE
+IK,2.32e-6,IK,IK cytokine,IK,IK,IK,TRUE
+KYNU,2.38e-6,KYNU,kynureninase,KYNU,KYNU,unused,FALSE
+PPID,2.41e-6,PPID,peptidylprolyl isomerase D,PPID,PPID,PPID,TRUE
+FAM120AOS,2.42e-6,FAM120AOS,family with sequence similarity 120A opposite strand,FAM120AOS,FAM120AOS,NA,FALSE
+ZMAT2,2.44e-6,ZMAT2,zinc finger matrin-type 2,ZMAT2,ZMAT2,ZMAT2,TRUE
+SERPING1,2.45e-6,SERPING1,serpin family G member 1,SERPING1,SERPING1,SERPING1,TRUE
+USP3,2.49e-6,USP3,ubiquitin specific peptidase 3,USP3,USP3,USP3,TRUE
+CACNA2D1,2.52e-6,CACNA2D1,calcium voltage-gated channel auxiliary subunit alpha2delta 1,CACNA2D1,CACNA2D1,CACNA2D1,TRUE
+ANKHD1-EIF4EBP3,2.53e-6,ANKHD1-EIF4EBP3,ANKHD1-EIF4EBP3 readthrough,ANKHD1-EIF4EBP3,ANKHD1-EIF4EBP3,NA,FALSE
+GINM1,2.54e-6,GINM1,glycoprotein integral membrane 1,GINM1,GINM1,C6orf72,FALSE
+C1QTNF7,2.61e-6,C1QTNF7,C1q and TNF related 7,C1QTNF7,C1QTNF7,unused,FALSE
+MIER1,2.62e-6,MIER1,MIER1 transcriptional regulator,MIER1,MIER1,unused,FALSE
+SLC4A9,2.66e-6,SLC4A9,solute carrier family 4 member 9,SLC4A9,SLC4A9,unused,FALSE
+PSEN2,2.68e-6,PSEN2,presenilin 2,PSEN2,PSEN2,PSEN2,TRUE

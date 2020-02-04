@@ -76,12 +76,13 @@ R_female_summary_results <- RamakerDEModel(female_metadata, read_counts, rawcoun
 R_female_summary_results %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol)) #change from upper case to lower case for open reading frame genes
 #Filter Ramaker genome for the MAGMA genes tested by Howard
 R_female_summary_results %<>% right_join(magma_table %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit()
-R_female_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))#write out for easier access in other analyses
+female_summary_ramaker <- R_female_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))#write out for easier access in other analyses
 #perform meta-analysis on female data
 R_female_summary_results %<>% RamakerMetaAnalysis(regions)
 R_female_summary_results %<>% rename(AnCg_nAcc_DLPFC_Female_directions = AnCg_nAcc_DLPFC_directions)
 #Save full female meta-analysis results
 R_female_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/FemaleRamakerTableMagma.csv"))
+
 
 #create empty tibble for data to be populated 
 male_results <- tibble()
@@ -89,7 +90,7 @@ male_results <- tibble()
 R_male_summary_results <- RamakerDEModel(male_metadata, read_counts, rawcount_dataframe, regions, male_results)
 R_male_summary_results %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol)) #change from upper case to lower case for open reading frame genes
 R_male_summary_results %<>% right_join(magma_table %>% select(Ramaker_genes) %>% distinct(), by = c('gene_symbol' = 'Ramaker_genes')) %>% na.omit()
-R_male_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTableMagma.csv"))#write out for easier access in other analyses
+male_summary_ramaker <- R_male_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTableMagma.csv"))#write out for easier access in other analyses
 #perform meta-analysis on male data
 R_male_summary_results %<>% RamakerMetaAnalysis(regions)
 R_male_summary_results %<>% rename(AnCg_nAcc_DLPFC_Male_directions = AnCg_nAcc_DLPFC_directions)
@@ -103,6 +104,10 @@ Ramaker_summary %<>% left_join(R_summary_results) %>% select(-AnCg_nAcc_DLPFC_di
 #Save full meta-analysis results
 Ramaker_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma.csv")) #used for combining across transcriptomic studies 
 
+male_summary_ramaker %<>% mutate(sex = "male")
+female_summary_ramaker %<>% mutate(sex = "female")
+#combine female and male raw expression stats together
+combined_sex_summary <- rbind(male_summary_ramaker, female_summary_ramaker) %>% write_csv("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTableMagma.csv")
 ########################################################
 ###### CORTICAL ANALYSIS (FULL, FEMALE AND MALE) ######
 ########################################################
@@ -142,12 +147,8 @@ cortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerT
 ############################################
 #### Full meta-analysis on flipped male expression data
 #Read in the post-model female data 
-full_female_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))
-#add sex for unique identifier 
-full_female_results %<>% mutate(sex = "female")
-
-#Read in the post-model male data 
-full_male_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTableMagma.csv"))
+full_female_results <- combined_sex_summary %>% filter(sex == "female")
+full_male_results <- combined_sex_summary %>% filter(sex == "male")
 #flip the expression levels of each gene in each brain region 
 full_male_results_flip <- full_male_results %>% mutate(t = t*-1)
 #add sex for unique identifier
@@ -171,18 +172,11 @@ full_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTab
 ###### SEX-INTERACTION CORTICAL ANALYSIS ######
 ########################################################
 #get female post model differential expression data for cortical regions
-cortical_female_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTableMagma.csv"))
-cortical_female_results %<>% filter(target_region != "nAcc")
-#add sex for unique identifier 
-cortical_female_results %<>% mutate(sex = "female")
-
+cortical_female_results <- combined_sex_summary  %>% filter(target_region != "nAcc") %>% filter(sex == "female")
 #get male post model differential expression data for cortical regions
-cortical_male_results <- read_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTableMagma.csv"))
-cortical_male_results %<>% filter(target_region != "nAcc")
+cortical_male_results <- combined_sex_summary  %>% filter(target_region != "nAcc") %>% filter(sex == "male")
 #flip the expression levels of each gene in each brain region 
 cortical_male_results_flip <- cortical_male_results %>% mutate(t = t*-1)
-#add sex for unique identifier
-cortical_male_results_flip %<>% mutate(sex = "male")
 #merge male cortical results with female cortical results into one table to perform meta-analysis calculations
 cortical_flipped <- rbind(cortical_male_results_flip, cortical_female_results)
 

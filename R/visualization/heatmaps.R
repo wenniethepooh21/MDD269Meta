@@ -1,58 +1,52 @@
+library(cowplot)
 library(ggplot2)
-library(googledrive)
-library(googlesheets4)
-library(dplyr)
-library(tidyr)
-#This script creates a heatmap to display the corrected meta p-values of our top 11 genes and how they ranked in each meta-analysis
+### This script draws the heatmaps showing the expression levels of each top gene across all brain regions for both sexes
 
-top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A") 
-
-drive_auth() #authenticate gmail
-sheets_auth(token = drive_token())
-
-full <- read_sheet(drive_get("Meta_Analysis"), sheet = 'Full_Meta_Analysis') 
-female<-read_sheet(drive_get("Meta_Analysis"), sheet = 'Female_Meta_Analysis')
-male <-read_sheet(drive_get("Meta_Analysis"), sheet = 'Male_Meta_Analysis')
-cortical <- read_sheet(drive_get("Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
-SIfull <- read_sheet(drive_get("Sex_Interaction_Meta_Analysis"), sheet = 'Full_Meta_Analysis')
-SIcortical <- read_sheet(drive_get("Sex_Interaction_Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
-
-fulltable <- full %>% select(gene_symbol, Corrected_p) %>% rename(Full = Corrected_p)
-femaletable <-female %>% select(gene_symbol, Corrected_p)  %>% rename(Female = Corrected_p)
-maletable <- male %>% select(gene_symbol, Corrected_p) %>% rename(Male = Corrected_p)
-corticaltable <- cortical %>% select(gene_symbol, Corrected_p) %>% rename(Cortical = Corrected_p)
-SIfulltable <- SIfull%>% select(gene_symbol, Corrected_p) %>% rename(Sex_Interaction_Full = Corrected_p)
-SIcorticaltable <- SIcortical%>% select(gene_symbol, Corrected_p) %>% rename(Sex_Interaction_Cortical = Corrected_p)
-
-#join the results into one table
-full_meta_analysis_results <- left_join(fulltable, femaletable) %>% left_join(corticaltable) %>% left_join(maletable) %>% left_join(SIfulltable) %>% left_join(SIcorticaltable)
-full_meta_analysis_results %<>% gather("Analysis", "Corrected_p", 2:ncol(full_meta_analysis_results))
-full_meta_analysis_results %<>% filter(gene_symbol %in% top_genes)
-full_meta_analysis_results %<>% mutate(Corrected_p = as.numeric(Corrected_p))
-
-# test <- full_meta_analysis_results %>% mutate(Corrected_p = if_else(Corrected_p > 0.05, 0.05, Corrected_p))
-
-full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))),
-                 Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "Sex_Interaction_Cortical", "Sex_Interaction_Full")))
-full_meta_analysis_results$bin <- cut(full_meta_analysis_results$Corrected_p, breaks = c(0, 0.0005, 0.001,0.005,0.01, 0.05, 0.1, 0.5, 5, 20,220),
-               labels = c("0.-0.0005", "0.0005-0.001","0.001-0.005","0.005-0.01", "0.01-0.05", "0.05 - 0.1", "0.1-0.5", "0.5-5", "5-20","20-220"),
-               include.lowest = TRUE)
-#arrange these genes with significant ones together 
-analysis_type <- full_meta_analysis_results$Analysis
-symbol <- full_meta_analysis_results$gene_symbol
-p_val <- full_meta_analysis_results$bin
-
-#heatmap
-ggplot(full_meta_analysis_results, aes(x=analysis_type,y=symbol)) + 
-  geom_tile(aes(fill = p_val), colour='black') +
-  labs(x="Meta-Analysis", fill = "Corrected\np-value") +
-  scale_fill_brewer(palette = "RdBu") +
-  ylab('Gene Symbol') +
-  ggtitle("Heatmap of the corrected meta p-values of the top genes")+
-  theme(axis.title.x = element_text(size = 14),
-        axis.text.x = element_text(size = 12,angle = 45, hjust=1,vjust=1), 
-        axis.title.y = element_text(size = 14),
-        axis.text.y = element_text(size = 12), 
-        plot.title = element_text(size = 16,hjust = 0.5)) # center the title 
-
-ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
+# This function draws the heatmap of both sexes and combines them into one plot
+# arguments: male and female expression data (dataframe), brain regions used in each sex (list), gene_symbols used in each sex (list)
+# returns the combined plot
+drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_symbol, female_regions, female_symbol, male_direction, female_direction, legend_title) {
+  #heatmap
+  male_heatmap <- ggplot(dataset_male, aes(x=male_regions,y=male_symbol)) + 
+    geom_tile(aes(fill = male_direction), colour='black') +
+    labs(x=NULL) +
+    scale_fill_distiller(palette = "RdBu") +
+    ylab('') +
+    ggtitle("Male expression levels") +
+    theme(
+          axis.text.x = element_text(size = 12, angle = 45, hjust=1,vjust=1),
+          axis.text.y = element_text(face = "italic"),
+          plot.title = element_text(hjust = 0.5),
+          plot.margin = unit(c(t=0, r=-0.5, b=0, l=0), "cm"),
+          panel.background = element_blank()) 
+  #heatmap
+  female_heatmap <- ggplot(dataset_female, aes(x=female_regions,y=female_symbol)) + 
+    geom_tile(aes(fill = female_direction), colour='black') +
+    labs(x=NULL, fill = "Expression\nsigned log(p_value)") +
+    scale_fill_distiller(palette = "RdBu") +
+    ylab('') +
+    ggtitle("Female expression levels")+
+    theme(
+          axis.text.x = element_text(size = 12, angle = 45, hjust=1,vjust=1),
+          axis.text.y = element_blank(),
+          axis.ticks.y = element_blank(),
+          plot.title = element_text(hjust = 0.5),
+          plot.margin = unit(c(t=0, r=0, b=0, l=-0.5), "cm"),
+          panel.background = element_blank())
+  
+  combined_plots <- plot_grid(male_heatmap + theme(legend.position = "none"), 
+                              female_heatmap + theme(legend.position = "none"),  
+                              align = 'vh'
+                              )
+  
+  # extract the legend from one of the plots
+  legend <- get_legend(
+    # create some space to the left of the legend
+    female_heatmap + theme(legend.box.margin = margin(0, 0, 0))
+  )
+  # add the legend to the space just made. Give it one-third of 
+  # the width of one plot (via rel_widths).
+  combined_plots_legend <- plot_grid(combined_plots, legend, rel_widths = c(2,0.3))
+  # print(combined_plots_legend)
+  return(combined_plots_legend)
+}

@@ -1,0 +1,75 @@
+﻿BrainRegion,location
+body of caudate nucleus, body of the caudate nucleus  <  caudate nucleus  <  striatum  < basal ganglia 
+III paravermis, III paravermis <  III  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+IV lateral hemisphere, IV lateral hemisphere <  IV  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+V lateral hemisphere, V lateral hemisphere <  V  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+IX paravermis, IX paravermis <  IX  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+VI paravermis, VI paravermis <  VI  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+VIIIA lateral hemisphere, VIIIA lateral hemisphere <  VIIIA  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+VIIIB lateral hemisphere, VIIIB lateral hemisphere <  VIIIB  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+VIIIB paravermis, VIIIB paravermis <  VIIIB  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex 
+nucleus of the diagonal band horizontal division, nucleus of the diagonal band horizontal division <  nucleus of the diagonal band  <  substantia innominata  < basal forebrain 
+IV, IV <  anterior lobe of the vermis  <  vermis  < cerebellar cortex 
+V, V <  anterior lobe of the vermis  <  vermis  < cerebellar cortex 
+IX, IX <  posterior lobe of the vermis  <  vermis  < cerebellar cortex 
+VI, VI <  posterior lobe of the vermis  <  vermis  < cerebellar cortex 
+VIIB, VIIB <  posterior lobe of the vermis  <  vermis  < cerebellar cortex 
+VIIIA, VIIIA <  posterior lobe of the vermis  <  vermis  < cerebellar cortex 
+supramarginal gyrus superior bank of gyrus, supramarginal gyrus superior bank of gyrus <  supramarginal gyrus  <  inferior parietal lobule  < parietal lobe 
+basal nucleus of meynert, basal nucleus of meynert <  substantia innominata  < basal forebrain 
+bed nucleus of stria terminalis, bed nucleus of stria terminalis <  substantia innominata  < basal forebrain 
+globus pallidus external segment, globus pallidus external segment <  globus pallidus  < basal ganglia 
+globus pallidus internal segment, globus pallidus internal segment <  globus pallidus  < basal ganglia 
+putamen, putamen <  striatum  < basal ganglia 
+dorsal lateral geniculate nucleus, dorsal lateral geniculate nucleus <  dorsal lateral geneiculate nucleus  < dorsal thalamus 
+lateral group of nuclei dorsal division, lateral group of nuclei dorsal division <  lateral group of nuclei  < dorsal thalamus 
+lateral group of nuclei ventral division, lateral group of nuclei ventral division <  lateral group of nuclei  < dorsal thalamus 
+CA1 field, CA1 field <  hippocampal formation  < limbic lobe 
+CA2 field, CA2 field <  hippocampal formation  < limbic lobe 
+CA3 field, CA3 field <  hippocampal formation  < limbic lobe 
+CA4 field, CA4 field <  hippocampal formation  < limbic lobe 
+dentate gyrus, dentate gyrus <  hippocampal formation  < limbic lobe 
+parahippocampal gyrus lateral bank of gyrus, parahippocampal gyrus lateral bank of gyrus <  parahippocampal gyrus  < limbic lobe 
+lateral mammillary nucleus, lateral mammillary nucleus <  mammillary body  < mammillary region 
+medial mammillary nucleus, medial mammillary nucleus <  mammillary body  < mammillary region 
+cuneus striate, cuneus striate <  cuneus  < occipital lobe 
+lingual gyrus striate, lingual gyrus striate <  lingual gyrus  < occipital lobe 
+postcentral gyrus bank of the central sulcus, postcentral gyrus bank of the central sulcus <  postcentral gyrus  < parietal lobe 
+postcentral gyrus superior lateral aspect of gyrus, postcentral gyrus superior lateral aspect of gyrus <  postcentral gyrus  < parietal lobe 
+motor nucleus of trigeminal nerve, motor nucleus of trigeminal nerve <  trigeminal nuclei  < pontine tegmentum 
+principal sensory nucleus of trigeminal nerve, principal sensory nucleus of trigeminal nerve <  trigeminal nuclei  < pontine tegmentum 
+fusiform gyrus bank of cos, fusiform gyrus bank of cos <  fusiform gyrus  < temporal lobe 
+fusiform gyrus lateral bank of gyrus, fusiform gyrus lateral bank of gyrus <  fusiform gyrus  < temporal lobe 
+inferior temporal gyrus lateral bank of gyrus, inferior temporal gyrus lateral bank of gyrus <  inferior temporal gyrus  < temporal lobe 
+superior temporal gyrus lateral bank of gyrus, superior temporal gyrus lateral bank of gyrus <  superior temporal gyrus  < temporal lobe 
+temporal pole superior aspect, temporal pole superior aspect <  temporal pole  < temporal lobe 
+zona incerta, zona incerta <  ventral thalamus  < thalamus 
+basolateral nucleus, basolateral nucleus < amygdala 
+central nucleus, central nucleus < amygdala 
+paraventricular nucleus of the hypothalamus, paraventricular nucleus of the hypothalamus < anterior hypothalamic region 
+supraoptic nucleus, supraoptic nucleus < anterior hypothalamic region 
+septal nuclei, septal nuclei < basal forebrain 
+pontine nuclei, pontine nuclei < basal part of pons 
+dentate nucleus, dentate nucleus < cerebellar nuclei 
+globose nucleus, globose nucleus < cerebellar nuclei 
+claustrum, claustrum < cerebral nuclei 
+caudal group of intralaminar nuclei, caudal group of intralaminar nuclei < dorsal thalamus 
+medial geniculate complex, medial geniculate complex < dorsal thalamus 
+parolfactory gyri, parolfactory gyri < frontal lobe 
+superior rostral gyrus, superior rostral gyrus < frontal lobe 
+preoptic region, preoptic region < hypothalamus 
+subcuneiform nucleus, subcuneiform nucleus < midbrain reticular formation 
+superior colliculus, superior colliculus < midbrain tectum 
+midbrain raphe nuclei, midbrain raphe nuclei < midbrain tegmentum 
+oculomotor nuclear complex, oculomotor nuclear complex < midbrain tegmentum 
+abducens nucleus, abducens nucleus < pontine tegmentum 
+lateral parabrachial nucleus, lateral parabrachial nucleus < pontine tegmentum 
+locus ceruleus, locus ceruleus < pontine tegmentum 
+superior olivary complex, superior olivary complex < pontine tegmentum 
+substantia nigra pars compacta, substantia nigra pars compacta < substantia nigra 
+substantia nigra pars reticulata, substantia nigra pars reticulata < substantia nigra 
+subthalamic nucleus, subthalamic nucleus < subthalamus 
+corpus callosum, corpus callosum < telencephalic commissures 
+lateral tuberal nucleus, lateral tuberal nucleus < tuberal region 
+ventromedial hypothalamic nucleus, ventromedial hypothalamic nucleus < tuberal region 
+reticular nucleus of thalamus, reticular nucleus of thalamus < ventral thalamus 

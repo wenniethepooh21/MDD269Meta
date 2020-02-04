@@ -1,8 +1,4 @@
 library(dplyr)
-library(loomR)
-library(here)
-library(stringr)
-library(readr)
 library(tidyr)
 
 #script to generate the max expression matrix for cell types and brain regions 

@@ -58,7 +58,7 @@ magma_labonte <- Labonte %>% right_join(magma_table , by = c('gene_symbol' = 'La
 #Expand table row wise to hold male and female data 
 Labonte_long <- bind_rows(magma_labonte %>% select(brain_region, gene_symbol, logFC = Male.logFC, pvalue = Male.pvalue) %>% mutate(sex = "male"),
                           magma_labonte %>% select(brain_region, gene_symbol, logFC = Female.logFC, pvalue = Female.pvalue) %>% mutate(sex = "female"))
-
+Labonte_long %>% write_csv(here("Processed_Data/LabonteEtAl/CompleteLabonteTableMagma.csv"))
 ###########################################################
 ###### REGULAR META-ANALYSIS (FULL, FEMALE AND MALE) ######
 ###########################################################

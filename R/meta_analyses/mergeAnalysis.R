@@ -165,12 +165,11 @@ mergeMagmaMetaRank<- function(m, L, Ldir, D, Ddir, R, Rdir, analysis){
   merged_table <- left_join(merged_directions, merged_p) %>% distinct()
   merged_table %<>% mutate(Howard.pvalue = NA, gene_name = NA)
   
-  if(anaysis == "meta") {
+  if(analysis == "meta") {
     merged_table %<>% MetaAnalysis() %>% select(-Howard.pvalue, -gene_name)
   } else {
     merged_table %<>% GenomeRank() %>% select(-Howard.pvalue, -gene_name)
   }
-  
   return(merged_table)
   
 }
