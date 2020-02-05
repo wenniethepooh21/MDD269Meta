@@ -37,7 +37,8 @@ drawRamaker <- function() {
   # add title to the combined plots 
   title <- ggdraw() + draw_label("Ramaker Gene Expression", fontface = "bold",size = 15)
   # plot heatmap
-  return(plot_grid(title, Ramaker_plots,ncol = 1, rel_heights = c(0.1, 1)) )
+  ramaker_heat <- plot_grid(title, Ramaker_plots,ncol = 1, rel_heights = c(0.1, 1))
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ramaker_expression_heatmap.png'), dpi=300, width=12, height=8)
+  return(ramaker_heat)
   
 }

@@ -45,7 +45,8 @@ drawDing <- function() {
   # add title to the combined plots 
   title <- ggdraw() + draw_label("Ding Gene Expression", fontface = "bold",size = 15)
   # plot heatmap
-  return(plot_grid(title, Ding_plots,ncol = 1, rel_heights = c(0.1, 1)) )
+  ding_heat <- plot_grid(title, Ding_plots,ncol = 1, rel_heights = c(0.1, 1))
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ding_expression_heatmap.png'),dpi=300, width=12, height=8)
+  return(ding_heat)
   
 }

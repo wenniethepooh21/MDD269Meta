@@ -47,7 +47,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
     female_heatmap + 
       guides(color = guide_legend(nrow = 1)) +
       theme(legend.position = "top",
-            legend.box.margin = unit(c(t=1, r=0, b=0.5, l=0), "cm"))
+            legend.box.margin = unit(c(t=0, r=0, b=0.5, l=0), "cm"))
   )
   
   # add the legend underneath the row we made earlier. Give it 10%
