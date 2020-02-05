@@ -149,7 +149,7 @@ corticalTableRank <- mergeMetaStudies(Howard, corticalLabonte, corticalLabonteDi
 corticalTableRank %<>% GenomeRank()
 corticalTableRank %<>% left_join(DE_Prior %>% select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 corticalTableRank %<>% left_join(Howard_Polygenics%>% select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-corticalTableRank %<>% mutate_all(replace_na, replace = "Gene_Not_Detected")
+corticalTableRank %<>% mutate_all(replace_na, replace = "Not_Available")
 
 fullTableRank_Flip <- mergeMetaStudies(Howard, fullLabonte_flipped, fullLabonteDir, fullDing_flipped, fullDingDir, fullRamaker_flipped, fullRamakerDir)
 fullTableRank_Flip %<>% GenomeRank()
@@ -161,7 +161,7 @@ corticalTableRank_Flip <- mergeMetaStudies(Howard, corticalLabonte_flipped, cort
 corticalTableRank_Flip %<>% GenomeRank()
 corticalTableRank_Flip %<>% left_join(DE_Prior %>% select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 corticalTableRank_Flip %<>% left_join(Howard_Polygenics%>% select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-corticalTableRank_Flip %<>% mutate_all(replace_na, replace = "Gene_Not_Detected")
+corticalTableRank_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 
 #Access googlesheets to upload the tables online for an interactive experience

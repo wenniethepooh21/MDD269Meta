@@ -1,29 +1,28 @@
-library(png)
-library(grid)
-library(gridExtra)
 library(here)
 library(cowplot)
 library(ggplot2)
 
 
-Labonte_heat <- readPNG(here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Labonte_expression_heatmap.png'))
-Labonte_heat %<>% rasterGrob(interpolate = FALSE)
-Ramaker_heat <- readPNG(here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ramaker_expression_heatmap.png'))
-Ramaker_heat %<>% rasterGrob(interpolate = FALSE)
-Ding_heat <- readPNG(here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ding_expression_heatmap.png'))
-Ding_heat %<>% rasterGrob(interpolate = FALSE)
-plots <- 
-heat_plots <- list(Labonte_heat,Ramaker_heat,Ding_heat)
-#Render a raster object (bitmap image) at the given location, size, and orientation.
-heat_plots_raster <- lapply(heat_plots, rasterGrob)
-combined_transcriptomic<- do.call(grid.arrange, c(heat_plots_raster,nrow = 1))
-g <- arrangeGrob(heat_plots_raster, nrow=1)
-ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/combined_transcriptomic_heatmaps.png'),g, dpi=300, width=11, height=8)
+source(here("R/visualization/Labonte_heatmap.R")) #generates a heatmap of each top gene expression direction across each sampled brain region in Labonte data
+source(here("R/visualization/Ramaker_heatmap.R")) #generates a heatmap of each top gene expression direction across each sampled brain region in Ramaker data
+source(here("R/visualization/Ding_heatmap.R")) #generates a heatmap of each top gene expression direction across each sampled brain region in Ding data
 
+labonte <- drawLabonte()
+ramaker<-drawRamaker()
+ding <-drawDing()
 
-plots <- lapply(ll <- list.files(heat_plots),function(x){
-                  heatmap_plot <- as.raster(x)
-  rasterGrob(heatmap_plot, interpolate = FALSE)
-})
+# add title to the combined plots 
+title <- ggdraw() + draw_label("Top 11 Direction of Gene Expression", fontface = "bold",size = 20)
 
-ggsave(here('Processed_Data/Meta_Analysis_Results/Heatmaps/combined_transcriptomic_heatmaps.png'), marrangeGrob(grobs=plots, nrow=1, ncol=3))
+plot_grid(title, labonte_plots,ncol = 1,rel_heights = c(0.1, 1)) 
+
+combined <- plot_grid(
+          ramaker + theme(plot.margin = unit(c(t=0, r=-1.3, b=0, l=0), "cm")),
+           labonte + theme(plot.margin = unit(c(t=0, r=-1.3, b=0, l=0), "cm")),
+           ding + theme(plot.margin = unit(c(t=0, r=-0.3, b=0, l=0), "cm")),
+           nrow = 1, 
+          align = "h", 
+          rel_widths = c(1, 1.3))
+print(plot_grid(title, combined, ncol = 1, rel_heights = c(0.1,3)))
+
+ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/combined_transcriptomic_heatmaps.png'), dpi=300, width=15.5, height=8)
