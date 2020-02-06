@@ -17,7 +17,7 @@ drawLabonte <- function() {
   Labonte %<>% rowwise() %>% mutate(brain_region = if_else(brain_region == "Nac", "nAcc", 
                                                   if_else(brain_region == "Subic", "Sub", 
                                                   if_else(brain_region == "Anterior_Insula", "Ins", brain_region))),
-                                    expression_direction = logFC*log(pvalue))
+                                    expression_direction = logFC*log(pvalue)*-1)
                       
   Labonte_male <- Labonte %>% filter(sex == "male")
   Labonte_female <- Labonte %>% filter(sex == "female")

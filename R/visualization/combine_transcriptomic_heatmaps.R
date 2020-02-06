@@ -14,12 +14,11 @@ ding <-drawDing()
 # add title to the combined plots 
 title <- ggdraw() + draw_label("Top 11 Direction of Gene Expression", fontface = "bold",size = 20)
 
-plot_grid(title, labonte_plots,ncol = 1,rel_heights = c(0.1, 1)) 
 
 combined <- plot_grid(
-          ramaker + theme(plot.margin = unit(c(t=0, r=-1.3, b=0, l=0), "cm")),
-           labonte + theme(plot.margin = unit(c(t=0, r=-1.3, b=0, l=0), "cm")),
-           ding + theme(plot.margin = unit(c(t=0, r=-0.3, b=0, l=0), "cm")),
+          ramaker + theme(plot.margin = unit(c(t=0, r=0.5, b=0, l=0), "cm")),
+           labonte + theme(plot.margin = unit(c(t=0, r=0.5, b=0, l=0), "cm")),
+           ding + theme(plot.margin = unit(c(t=0, r=0, b=0, l=0), "cm")),
            nrow = 1, 
           align = "h", 
           rel_widths = c(1, 1.3))

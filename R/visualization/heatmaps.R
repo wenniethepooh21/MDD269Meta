@@ -6,18 +6,34 @@ library(gridExtra)
 # This function draws the heatmap of both sexes and combines them into one plot
 # arguments: male and female expression data (dataframe), brain regions used in each sex (list), gene_symbols used in each sex (list)
 # returns the combined plot
-drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_symbol, female_regions, female_symbol, male_direction, female_direction) {
+drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_symbol, female_regions, female_symbol, male_direction, female_direction, study = "other") {
+  #only draw the gene symbols on y-axis for the Ramaker study
+  if(study == "other") {
+    y_axis = element_blank()
+  } else {
+    y_axis = element_text(face = "italic")
+  }
+  
+  
+  #determine limits
+  low_bound <- min(male_direction, female_direction)
+  upper_bound <- max(male_direction, female_direction)
+  abs_bound <- ceiling(max(abs(low_bound), abs(upper_bound)))
+  print(low_bound)
+  print(upper_bound)
+  print(abs_bound)
   #heatmap
   male_heatmap <- ggplot(dataset_male, aes(x=male_regions,y=male_symbol)) + 
     geom_tile(aes(fill = male_direction), colour='black') +
     labs(x=NULL) +
-    scale_fill_distiller(limits = c(min(male_direction,female_direction), max(male_direction,female_direction)),
+    scale_fill_distiller(limits = c(abs_bound*-1, abs_bound),
                                     palette = "RdBu") +
     ylab('') +
     ggtitle("Male") +
     theme(
           axis.text.x = element_text(size = 10, angle = 20, hjust=0.5,vjust=1),
-          axis.text.y = element_text(face = "italic"),
+          axis.ticks.y = element_blank(),
+          axis.text.y = y_axis,
           plot.title = element_text(hjust = 0.5),
           plot.margin = unit(c(t=0, r=-0.1, b=0, l=-0.3), "cm"),
           panel.background = element_blank()) 
@@ -25,7 +41,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
   female_heatmap <- ggplot(dataset_female, aes(x=female_regions,y=female_symbol)) + 
     geom_tile(aes(fill = female_direction), colour='black') +
     labs(x=NULL, fill = "Expression\nsigned log(p_value)") +
-    scale_fill_distiller(limits = c(min(male_direction,female_direction), max(male_direction,female_direction)),
+    scale_fill_distiller(limits = c(abs_bound*-1, abs_bound),
                          palette = "RdBu") +
     ylab('') +
     ggtitle("Female")+
@@ -34,7 +50,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
           axis.text.y = element_blank(),
           axis.ticks.y = element_blank(),
           plot.title = element_text(hjust = 0.5),
-          plot.margin = unit(c(t=0, r=1.2, b=0, l=-0.1), "cm"),
+          plot.margin = unit(c(t=0, r=0, b=0, l=-0.1), "cm"),
           panel.background = element_blank())
 
 

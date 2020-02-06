@@ -14,7 +14,7 @@ drawDing <- function() {
   Ding <- read_csv(here("Processed_Data/DingEtAl/CompleteDingTableMagma.csv"))
   Ding %<>% filter(gene_symbol %in% top_genes)
   
-  Ding %<>% mutate(expression_direction = effectsize*log(P.Value))
+  Ding %<>% mutate(expression_direction = effectsize*log(P.Value)*-1)
   
   #add in ITPR3 dummy data of 0's
   itpr3_row <- Ding %>% select(brain_region) %>% distinct()

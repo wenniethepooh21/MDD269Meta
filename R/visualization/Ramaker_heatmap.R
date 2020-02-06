@@ -14,7 +14,7 @@ drawRamaker <- function() {
   Ramaker <- read_csv(here("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTableMagma.csv"))
   Ramaker %<>% filter(gene_symbol %in% top_genes)
   Ramaker %<>% rowwise() %>% mutate(target_region = if_else(target_region == "AnCg", "ACC", target_region),
-                                    expression_direction = t*log(P.Value))
+                                    expression_direction = t*log(P.Value)*-1)
   Ramaker_male <- Ramaker %>% filter(sex == "male")
   Ramaker_female <- Ramaker %>% filter(sex == "female")
   
@@ -33,7 +33,7 @@ drawRamaker <- function() {
   #source file that has the drawExpressionHeat function 
   source(here("R/visualization/heatmaps.R"))
   #function returns the heatmaps of both sexes combined
-  Ramaker_plots <- drawExpressionHeat(Ramaker_male, Ramaker_female, ramaker_male_regions, ramaker_male_symbol, ramaker_female_regions, ramaker_female_symbol, ramaker_male_direction, ramaker_female_direction)
+  Ramaker_plots <- drawExpressionHeat(Ramaker_male, Ramaker_female, ramaker_male_regions, ramaker_male_symbol, ramaker_female_regions, ramaker_female_symbol, ramaker_male_direction, ramaker_female_direction, "ramaker")
   # add title to the combined plots 
   title <- ggdraw() + draw_label("Ramaker Gene Expression", fontface = "bold",size = 15)
   # plot heatmap
