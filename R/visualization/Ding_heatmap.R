@@ -27,8 +27,8 @@ drawDing <- function() {
   Ding_female %<>% rbind(itpr3_row)
   
   #arrange these genes with significant ones together 
-  Ding_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=c("HSPA1A","MANEA","TMEM106B","SPRY2","SAMD5","ASXL3","ZC3H7B","UBE2M", "CKB" ,"LST1" ,"ITPR3")))
-  Ding_female %<>% mutate(gene_symbol = factor(gene_symbol, levels=c("HSPA1A","MANEA","TMEM106B","SPRY2","SAMD5","ASXL3","ZC3H7B","UBE2M", "CKB" ,"LST1" ,"ITPR3")))
+  Ding_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))))
+  Ding_female %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))))
   
   ding_male_regions <- Ding_male$brain_region
   ding_male_symbol <- Ding_male$gene_symbol

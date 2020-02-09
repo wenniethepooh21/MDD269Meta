@@ -60,16 +60,14 @@ drawMetaHeat <- function() {
           axis.text.x = element_text(size = 10,angle = 20, hjust=0.5,vjust=1), 
           axis.text.y = element_text(face = "italic",size = 10), 
           plot.title = element_text(size = 20,face = "bold",hjust = 0.5),
-          panel.background = element_blank())  # center the title 
+          panel.background = element_blank(),
+          plot.margin = unit(c(t=1,r=1,l=1,b=0),"cm"),
+          legend.margin = margin(unit(c(t=0,r=-10,l=0,b = 0), "cm"))) # center the title 
 
-  print(meta_plot)
   
-  
-  
-  
-  title <- ggdraw() + draw_label("Meta p-values of Top 11 Genes", fontface = "bold",size = 20, hjust = 0.5)
-  plot_grid(title, meta_plot,ncol = 1, rel_heights = c(0.1, 1))
-  
+  title <- ggdraw() + draw_label("Meta p-values of Top 11 Genes", fontface = "bold",size = 20, hjust = 0.5,vjust = -0.2)
+  full_meta_plot <- plot_grid(title, meta_plot,ncol = 1, rel_heights = c(0.1, 1), rel_widths = c(1,0.5))
+  print(full_meta_plot)
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
-  return(meta_plot)
+  return(full_meta_plot)
 }

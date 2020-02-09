@@ -13,7 +13,7 @@ getExpressionHeat <- function() {
   ding <-drawDing()
   
   # add title to the combined plots 
-  title <- ggdraw() + draw_label("Direction of Gene Expressions", fontface = "bold",size = 20)
+  title <- ggdraw() + draw_label("Direction of Gene Expressions", fontface = "bold",size = 20, vjust = 1)
   
   
   combined <- plot_grid(

@@ -17,7 +17,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
     r_widths = c(.5,.5)
   } else {
     y_axis = element_text(face = "italic")
-    r_widths = c(1,.8)
+    r_widths = c(1,0.8)
   }
   
 
