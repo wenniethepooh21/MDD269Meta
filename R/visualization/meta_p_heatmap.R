@@ -22,8 +22,8 @@ fulltable <- full %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Full
 femaletable <-female %>% select(gene_symbol, Bonferroni_Correction)  %>% rename(Female = Bonferroni_Correction)
 maletable <- male %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Male = Bonferroni_Correction)
 corticaltable <- cortical %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Cortical = Bonferroni_Correction)
-SIfulltable <- SIfull%>% select(gene_symbol, Bonferroni_Correction) %>% rename(Sex_Interaction_Full = Bonferroni_Correction)
-SIcorticaltable <- SIcortical%>% select(gene_symbol, Bonferroni_Correction) %>% rename(Sex_Interaction_Cortical = Bonferroni_Correction)
+SIfulltable <- SIfull%>% select(gene_symbol, Bonferroni_Correction) %>% rename(SI_Full = Bonferroni_Correction)
+SIcorticaltable <- SIcortical%>% select(gene_symbol, Bonferroni_Correction) %>% rename(SI_Cortical = Bonferroni_Correction)
 
 #join the results into one table
 full_meta_analysis_results <- left_join(fulltable, femaletable) %>% left_join(corticaltable) %>% left_join(maletable) %>% left_join(SIfulltable) %>% left_join(SIcorticaltable)
@@ -34,7 +34,7 @@ full_meta_analysis_results %<>% mutate(Bonferroni_Correction = as.numeric(Bonfer
 # test <- full_meta_analysis_results %>% mutate(Bonferroni_Correction = if_else(Bonferroni_Correction > 0.05, 0.05, Bonferroni_Correction))
 
 full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))),
-                  Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "Sex_Interaction_Cortical", "Sex_Interaction_Full")))
+                  Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "SI_Cortical", "SI_Full")))
 
 #set the scale to range from 0 to 0.1
 full_meta_analysis_results %<>% mutate(Bonferroni_Correction = Bonferroni_Correction/10)
@@ -52,13 +52,14 @@ p_val <- full_meta_analysis_results$Bonferroni_Correction
 meta_plot <- ggplot(full_meta_analysis_results, aes(x=analysis_type,y=symbol)) + 
   geom_tile(aes(fill = p_val), colour='black') +
   labs(x="Meta-Analysis", fill = "Corrected\np-value") +
-  ylab('Gene Symbol') +
+  ylab('') +
   scale_fill_viridis(option = "D", direction = -1) + 
-  ggtitle("Heatmap of the top-genes significance in each meta-analysis")+
+  ggtitle("Meta p-values of Top 11 Genes")+
   theme(axis.title.x = element_text(size = 14),
         axis.text.x = element_text(size = 12,angle = 45, hjust=1,vjust=1), 
         axis.title.y = element_text(size = 14),
         axis.text.y = element_text(face = "italic",size = 12), 
         plot.title = element_text(size = 16,hjust = 0.5))  # center the title 
-plot(meta_plot)
-ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
+print(meta_plot)
+
+# ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
