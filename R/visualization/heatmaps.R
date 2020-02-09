@@ -25,8 +25,6 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
   low_bound <- min(male_direction, female_direction, na.rm = TRUE)
   upper_bound <- max(male_direction, female_direction, na.rm = TRUE)
   abs_bound <- ceiling(max(abs(low_bound), abs(upper_bound)))
-  print(abs_bound)
-
   #heatmap
   male_heatmap <- ggplot(dataset_male, aes(x=male_regions,y=male_symbol)) + 
     geom_tile(aes(fill = male_direction), colour='black') +
@@ -41,7 +39,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
           axis.text.x = element_text(size = 10, angle = 20, hjust=0.5,vjust=1),
           axis.ticks.y = element_blank(),
           axis.text.y = y_axis,
-          plot.title = element_text(hjust = 0.5, size = 9),
+          plot.title = element_text(hjust = 0.5, size = 10),
           plot.margin = unit(c(t=0, r=0, b=0, l=-0.3), "cm"),
           panel.background = element_blank()) 
   #heatmap
