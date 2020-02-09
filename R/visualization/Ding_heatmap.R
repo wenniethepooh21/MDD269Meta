@@ -19,7 +19,7 @@ drawDing <- function() {
   #add in ITPR3 dummy data of 0's
   itpr3_row <- Ding %>% select(brain_region) %>% distinct()
   itpr3_row %<>% mutate(gene_symbol = "ITPR3",
-                        expression_direction = 0)
+                        expression_direction = NA)
   
   Ding_male <- Ding %>% filter(sex == "male") %>% select(gene_symbol, brain_region, expression_direction)
   Ding_male %<>% rbind(itpr3_row)

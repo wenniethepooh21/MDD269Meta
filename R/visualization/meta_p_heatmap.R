@@ -36,6 +36,8 @@ full_meta_analysis_results %<>% mutate(Bonferroni_Correction = as.numeric(Bonfer
 full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))),
                   Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "Sex_Interaction_Cortical", "Sex_Interaction_Full")))
 
+#set the scale to range from 0 to 0.1
+full_meta_analysis_results %<>% mutate(Bonferroni_Correction = Bonferroni_Correction/10)
 ## used for breaking the corrected p-values into ranges
 # full_meta_analysis_results$bin <- cut(full_meta_analysis_results$Bonferroni_Correction, breaks = c(0, 0.0005, 0.001,0.005,0.01, 0.05, 0.1, 0.5, 5, 20,220),
 #                labels = c("0.-0.0005", "0.0005-0.001","0.001-0.005","0.005-0.01", "0.01-0.05", "0.05 - 0.1", "0.1-0.5", "0.5-5", "5-20","20-220"),
@@ -51,7 +53,7 @@ meta_plot <- ggplot(full_meta_analysis_results, aes(x=analysis_type,y=symbol)) +
   geom_tile(aes(fill = p_val), colour='black') +
   labs(x="Meta-Analysis", fill = "Corrected\np-value") +
   ylab('Gene Symbol') +
-  scale_fill_viridis(option = "D") + 
+  scale_fill_viridis(option = "D", direction = -1) + 
   ggtitle("Heatmap of the top-genes significance in each meta-analysis")+
   theme(axis.title.x = element_text(size = 14),
         axis.text.x = element_text(size = 12,angle = 45, hjust=1,vjust=1), 

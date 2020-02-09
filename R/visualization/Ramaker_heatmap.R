@@ -35,7 +35,7 @@ drawRamaker <- function() {
   #function returns the heatmaps of both sexes combined
   Ramaker_plots <- drawExpressionHeat(Ramaker_male, Ramaker_female, ramaker_male_regions, ramaker_male_symbol, ramaker_female_regions, ramaker_female_symbol, ramaker_male_direction, ramaker_female_direction, "ramaker")
   # add title to the combined plots 
-  title <- ggdraw() + draw_label("Ramaker Gene Expression", fontface = "bold",size = 15)
+  title <- ggdraw() + draw_label("Ramaker Gene Expression", fontface = "bold",size = 15, hjust = 0.35)
   # plot heatmap
   ramaker_heat <- plot_grid(title, Ramaker_plots,ncol = 1, rel_heights = c(0.1, 1))
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ramaker_expression_heatmap.png'), dpi=300, width=12, height=8)
