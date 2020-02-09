@@ -17,6 +17,5 @@ combined <- plot_grid(
   align = "h",
   rel_heights = c(0.1,3),
   rel_widths = c(1,0.4))
-  # rel_widths = c(.5, 1.3))
-print(combined)
+
 ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/combined_all_heatmaps.png'), dpi=300, width=22, height=8)
