@@ -164,47 +164,47 @@ corticalTableRank_Flip %<>% left_join(Howard_Polygenics%>% select(-Updated_Gene_
 corticalTableRank_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 
-#Access googlesheets to upload the tables online for an interactive experience
-drive_auth() #authenticate gmail
-sheets_auth(token = drive_token())
-
-ma <- drive_get("Meta_Analysis")
-if(nrow(ma) != 0) {
-  drive_rm(ma)
-}
-#create the google worksheet
-ma <- sheets_create("Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Male_Meta_Analysis','Female_Meta_Analysis','Cortical_Meta_Analysis'))
-sheets_write(fullTable, ma, sheet = "Full_Meta_Analysis")
-sheets_write(femaleTable, ma, sheet = 'Female_Meta_Analysis')
-sheets_write(maleTable, ma,'Male_Meta_Analysis')
-sheets_write(corticalTable, ma, 'Cortical_Meta_Analysis')
-
-mar <- drive_get("Meta_Analysis_Rank")
-if(nrow(mar) != 0) {
-  drive_rm(mar)
-}
-#create the google worksheet
-mar <- sheets_create("Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Male_Meta_Analysis_Rank','Female_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
-sheets_write(fullTableRank, mar, sheet = "Full_Meta_Analysis_Rank")
-sheets_write(femaleTableRank, mar, sheet = 'Female_Meta_Analysis_Rank')
-sheets_write(maleTableRank, mar,'Male_Meta_Analysis_Rank')
-sheets_write(corticalTableRank, mar, 'Cortical_Meta_Analysis_Rank')
-
-maf <- drive_get("Sex_Interaction_Meta_Analysis")
-if(nrow(maf) != 0) {
-  drive_rm(maf)
-}
-#create the google worksheet
-maf <- sheets_create("Sex_Interaction_Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Cortical_Meta_Analysis'))
-sheets_write(fullTable_Flip, maf, sheet = "Full_Meta_Analysis")
-sheets_write(corticalTable_Flip, maf, 'Cortical_Meta_Analysis')
-
-marf <- drive_get("Sex_Interaction_Meta_Analysis_Rank")
-if(nrow(marf) != 0) {
-  drive_rm(marf)
-}
-#create the google worksheet
-marf <- sheets_create("Sex_Interaction_Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
-sheets_write(fullTableRank_Flip, marf, sheet = "Full_Meta_Analysis_Rank")
-sheets_write(corticalTableRank_Flip, marf, 'Cortical_Meta_Analysis_Rank')
- 
+# #Access googlesheets to upload the tables online for an interactive experience
+# drive_auth() #authenticate gmail
+# sheets_auth(token = drive_token())
+# 
+# ma <- drive_get("Meta_Analysis")
+# if(nrow(ma) != 0) {
+#   drive_rm(ma)
+# }
+# #create the google worksheet
+# ma <- sheets_create("Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Male_Meta_Analysis','Female_Meta_Analysis','Cortical_Meta_Analysis'))
+# sheets_write(fullTable, ma, sheet = "Full_Meta_Analysis")
+# sheets_write(femaleTable, ma, sheet = 'Female_Meta_Analysis')
+# sheets_write(maleTable, ma,'Male_Meta_Analysis')
+# sheets_write(corticalTable, ma, 'Cortical_Meta_Analysis')
+# 
+# mar <- drive_get("Meta_Analysis_Rank")
+# if(nrow(mar) != 0) {
+#   drive_rm(mar)
+# }
+# #create the google worksheet
+# mar <- sheets_create("Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Male_Meta_Analysis_Rank','Female_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
+# sheets_write(fullTableRank, mar, sheet = "Full_Meta_Analysis_Rank")
+# sheets_write(femaleTableRank, mar, sheet = 'Female_Meta_Analysis_Rank')
+# sheets_write(maleTableRank, mar,'Male_Meta_Analysis_Rank')
+# sheets_write(corticalTableRank, mar, 'Cortical_Meta_Analysis_Rank')
+# 
+# maf <- drive_get("Sex_Interaction_Meta_Analysis")
+# if(nrow(maf) != 0) {
+#   drive_rm(maf)
+# }
+# #create the google worksheet
+# maf <- sheets_create("Sex_Interaction_Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Cortical_Meta_Analysis'))
+# sheets_write(fullTable_Flip, maf, sheet = "Full_Meta_Analysis")
+# sheets_write(corticalTable_Flip, maf, 'Cortical_Meta_Analysis')
+# 
+# marf <- drive_get("Sex_Interaction_Meta_Analysis_Rank")
+# if(nrow(marf) != 0) {
+#   drive_rm(marf)
+# }
+# #create the google worksheet
+# marf <- sheets_create("Sex_Interaction_Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
+# sheets_write(fullTableRank_Flip, marf, sheet = "Full_Meta_Analysis_Rank")
+# sheets_write(corticalTableRank_Flip, marf, 'Cortical_Meta_Analysis_Rank')
+#  

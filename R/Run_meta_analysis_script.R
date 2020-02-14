@@ -1,6 +1,7 @@
 
 #### General Script to run all meta-analysis to prioritize the 269 genes and identify which cell-type taxon and brain regions most highly express each gene 
 #set the current working directory
+detach("package:here", unload=TRUE)
 setwd('../../../school/thesis/')
 library(here)
 
@@ -28,6 +29,4 @@ source(here("R/transcriptomic_meta/mergeMetaOnSlims.R"))
 
 #Create heatmaps for visualization! 
 source(here("R/visualization/meta_p_heatmap.R")) #generates a heatmap of the corrected meta p-values for each top gene across all meta-analyses (except ranking)
-source(here("R/visualization/Labonte_heatmap.R")) #generates a heatmap of each top gene expression direction across each sampled brain region in Labonte data
-source(here("R/visualization/Ramaker_heatmap.R")) #generates a heatmap of each top gene expression direction across each sampled brain region in Ramaker data
-source(here("R/visualization/Ding_heatmap.R")) #generates a heatmap of each top gene expression direction across each sampled brain region in Ding data
+source(here("R/visualization/combine_transcriptomic_heatmaps.R")) #generates a plot of the combined transcriptomic heatmaps (top 11 gene expressions)
