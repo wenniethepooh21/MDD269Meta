@@ -24,12 +24,12 @@ getRank <- function(dataset){
     #compare the current genes direction with the rest of the genome 
     if(direction_val == +1) {      
       #this current gene will be in the down regulation list, offset it
-      dataset$meta_Up[i] <- higher_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() / num_genes
-      dataset$meta_Down[i] <- (lower_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() + 1) / (num_genes + 1)
-      
+      dataset$meta_Up[i] <- higher_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() / num_genes
+      dataset$meta_Down[i] <- (lower_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() + 1) / (num_genes + 1)
+    
      }else if (direction_val == -1) {
-      dataset$meta_Up[i] <- (higher_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() + 1) / (num_genes + 1)
-      dataset$meta_Down[i] <- lower_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() / num_genes
+      dataset$meta_Up[i] <- (higher_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() + 1) / (num_genes + 1)
+      dataset$meta_Down[i] <- lower_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() / num_genes
     }
     
   }
