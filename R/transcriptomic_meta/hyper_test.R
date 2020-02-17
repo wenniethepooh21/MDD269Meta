@@ -18,23 +18,3 @@ hyper_test <- function(sample_success, pop_success, pop_size, sample_size){
   
   return(p_greater_equal)
 }
-
-# #reset the 'here' package in case we're not in this directory
-# detach("package:here", unload=TRUE)
-# setwd('../../../Thesis/Datas/MDD44Characterize/')
-# library(here)
-# 
-# #data used from all 6 donors
-# Howard_full <- read_csv(here("ProcessedData", "HowardEtAl", "HowardRegionsPolygenicCellTypes.csv"))
-# #data used from 4 donors
-# Howard_full <- read_csv(here("ProcessedData", "HowardEtAl", "HowardRegionsPolygenicCellTypes_four.csv"))
-# 
-# #data used from 4 donors
-# six_brains <- read_csv(here("ProcessedData", "AllenEtAl", "max_expression_in_four_donors.csv"))
-# 
-# cell_types <- read_csv(here("ProcessedData", "ZeiselEtAl", "max_cell_type_expression.csv"))
-# cns_cell_types <- read_csv(here("ProcessedData", "ZeiselEtAl", "max_cns_cell_type_expression.csv"))
-# #
-# #
-
-
