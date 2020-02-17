@@ -189,7 +189,7 @@ Ramaker_cortical_directions <- read_csv(here("Processed_Data/RamakerEtAl/Cortica
 #Keep flipped meta-analysis results 
 cortical_flipped %<>% select(-sex, -AnCg_DLPFC_directions)
 #join the direction data with the meta-analysis results on the flipped male expression data across all cortical brain regions
-cortical_flipped_summary <- Ramaker_cortical_directions %>% left_join(full_flipped) %>% distinct()
+cortical_flipped_summary <- Ramaker_cortical_directions %>% left_join(cortical_flipped) %>% distinct()
 cortical_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma_flipped.csv"))
 
 
