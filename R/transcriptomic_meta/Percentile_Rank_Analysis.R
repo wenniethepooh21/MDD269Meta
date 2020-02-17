@@ -7,14 +7,14 @@ library(dplyr)
 getRank <- function(dataset){
   print("Running rank calculations.. ")
   #get the number of genes
-  num_genes <- dataset %>% select(gene_symbol) %>% nrow()
+  num_genes <- (dataset %>% select(gene_symbol) %>% nrow())
   dataset %<>% mutate(meta_Up = NA, meta_Down = NA)
   #filter for all genes that have higher expression levels
   higher_expression <- dataset %>% filter(meta_direction == +1)
   #filter all genes that have lower expression levels
   lower_expression <- dataset %>% filter(meta_direction == -1) 
   for (i in 1:num_genes) {
-    if(i == num_genes/2){
+    if(i == ceiling(num_genes/2)){
       print("50% complete")
     }
     #get current genes calculated meta_p value
@@ -22,15 +22,14 @@ getRank <- function(dataset){
     #get current genes calculated meta direction
     direction_val <- dataset$meta_direction[i]
     #compare the current genes direction with the rest of the genome 
-    if(direction_val == +1) {
-      #current gene will be in this list, offset it
-      dataset$meta_Up[i] <- higher_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() / (num_genes - 1)
-      dataset$meta_Down[i] <- (lower_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() + 1) / num_genes 
+    if(direction_val == +1) {      
+      #this current gene will be in the down regulation list, offset it
+      dataset$meta_Up[i] <- higher_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() / num_genes
+      dataset$meta_Down[i] <- (lower_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() + 1) / (num_genes + 1)
       
-    }else if (direction_val == -1) {
-      dataset$meta_Up[i] <- (higher_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() + 1) / num_genes
-      #current gene will be in this list, offset it
-      dataset$meta_Down[i] <- lower_expression %>% filter(meta_p <= gene_meta) %>% select(gene_symbol) %>% nrow() / (num_genes - 1)
+     }else if (direction_val == -1) {
+      dataset$meta_Up[i] <- (higher_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() + 1) / (num_genes + 1)
+      dataset$meta_Down[i] <- lower_expression %>% filter(meta_p <= gene_meta) %>% dplyr::select(gene_symbol) %>% nrow() / num_genes
     }
     
   }
