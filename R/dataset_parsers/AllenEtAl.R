@@ -48,3 +48,35 @@ Howard_Table %<>% mutate(location = if_else(is.na(location), region_location, lo
 
 Howard_Table %>% write_csv(here("Processed_Data/HowardEtAl/HowardRegions_four.csv"))
 
+# ##############################calculate the probability for the brain regions
+brain_pop <- nrow(max_four_donors_reannotated)
+structure_count <- max_four_donors_reannotated %>% group_by(structure_name) %>% summarize(genome_tissue_count = n())
+#
+howard_brain <- Howard_Table %>% select(gene_symbol, Updated_Gene_Names,brain_region,slim_region_location)
+howard_brain %<>% mutate(brain_region = ifelse(brain_region == "character(0)", NA, brain_region))
+howard_count <- howard_brain %>% group_by(brain_region) %>% summarise(sample_tissue_count = n())
+
+full_count <- structure_count %>% left_join(howard_count, by = c('structure_name' = 'brain_region'))
+# perform hypergeometric test - read in file for hyper_test function
+source(here("R/transcriptomic_meta/hyper_test.R"))
+tissue_expected_probs <- full_count %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_tissue_count, genome_tissue_count, brain_pop, colSums(na.omit(howard_count)[,2])))
+#
+#correct by number of possible brain structures to choose from
+tissue_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n = nrow(structure_count)))
+tissue_expected_probs %<>% arrange(hypergeometric_p)
+
+
+#upload to google drive
+sheets_auth(token = drive_token())
+
+region <- drive_get("~/Thesis/Manuscript/Supplement_Tables/tissue_hyper_expected_four")
+if(nrow(region) != 0) {
+  drive_rm(region)
+}
+#create the google worksheet
+region <- sheets_create("tissue_hyper_expected_four",sheets = c('hypergeometric_brain_regions'))
+sheets_write(tissue_expected_probs, region,  sheet = "hypergeometric_brain_regions")
+
+drive_mv(file = "tissue_hyper_expected_four", path = "~/Thesis/Manuscript/Supplement_Tables/")  # move Sheets file
+
+
