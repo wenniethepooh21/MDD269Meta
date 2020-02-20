@@ -34,18 +34,15 @@ Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PRR34", max_four
 #PQLC2L old gene symbol is C3orf55
 Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PQLC2L", max_four_donors_reannotated %>% filter(gene_symbol == "C3orf55") %>% select(structure_name) %>% as.character(), brain_region))
 
-# brain_structures<-brain_structures[!duplicated(brain_structures$brain_region),] #remove duplicates 
 #Map brain structures to ambiguous brain regions 
-enclosing_regions <- read_csv(here("Processed_Data/AllenEtAl/full_brain_region_hierarchy.csv"))
-
+# Full list of enclosing brain regions
+enclosing_regions_2 <- read_csv(here("Processed_Data/AllenEtAl/full_brain_region_hierarchy.csv"))
 
 Howard_Table %<>% left_join(enclosing_regions, by = c('brain_region' = 'brain_region'))
-
+#slimmed list of enclosing brain regions
 brain_slim <- read_csv(here("Processed_Data/AllenEtAl/brain_regions_slim.csv"))
 Howard_Table %<>% left_join(brain_slim, by = c('brain_region' = 'BrainRegion'))
 Howard_Table %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% rename(slim_region_location = location)
-
-
 
 Howard_Table %>% write_csv(here("Processed_Data/HowardEtAl/HowardRegions_four.csv"))
 
@@ -66,11 +63,6 @@ tissue_expected_probs <- full_count %>% rowwise() %>% mutate(hypergeometric_p = 
 tissue_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n = nrow(structure_count)))
 tissue_expected_probs %<>% arrange(hypergeometric_p,-sample_tissue_count)
 tissue_expected_probs %<>% left_join(brain_slim, by = c('structure_name'='BrainRegion')) %>% ungroup()
-
-#remove the comma's in the region name
-tissue_expected_probs %<>% mutate(structure_name = gsub(",","",structure_name))
-#remove additional spaces 
-tissue_expected_probs %<>% mutate(structure_name = gsub("\\s+", " ", structure_name))
 tissue_expected_probs %<>% left_join(enclosing_regions, by = c('structure_name' = 'brain_region'))%>% ungroup()
 tissue_expected_probs %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% rename(enclosing_regions = location)
 
