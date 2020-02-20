@@ -5,6 +5,10 @@ detach("package:here", unload=TRUE)
 setwd('../../../school/thesis/')
 library(here)
 
+detach("package:here", unload=TRUE)
+setwd('../../Thesis/Datas/MDD44Characterize/')
+library(here)
+
 #1. run the study-specific analyses (pre-processing included)
 source(here("R/dataset_parsers/RamakerEtAl.R"))
 source(here("R/dataset_parsers/DingEtAl.R"))
@@ -24,9 +28,10 @@ source(here("R/dataset_parsers/ZeiselEtAl.R"))
 source(here("R/dataset_parsers/Howard_max_celltypes_regions.R"))
 
 #run overall meta-analysis combining the results from the study-specific meta-analyses
-source(here("R/transcriptomic_meta/mergeMetaOnSlims.R"))
+source(here("R/meta_analyses/mergeMetaOnSlims.R"))
+source(here("R/meta_analyses/Wilkoxon_Test.R")) #-- side analysis 
+
 #view the final product online in google drive! 
 
 #Create heatmaps for visualization! 
-source(here("R/visualization/meta_p_heatmap.R")) #generates a heatmap of the corrected meta p-values for each top gene across all meta-analyses (except ranking)
-source(here("R/visualization/combine_transcriptomic_heatmaps.R")) #generates a plot of the combined transcriptomic heatmaps (top 11 gene expressions)
+source(here("R/visualization/combine_heatmaps.R")) #generates a plot of the combined transcriptomic heatmaps (top 11 gene expressions)

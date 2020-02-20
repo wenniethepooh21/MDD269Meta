@@ -4,6 +4,7 @@ library(googlesheets4)
 library(dplyr)
 library(tidyr)
 library(viridis)
+library(cowplot)
 #This script creates a heatmap to display the corrected meta p-values of our top 11 genes and how they ranked in each meta-analysis
 
 drawMetaHeat <- function() {
@@ -12,12 +13,12 @@ drawMetaHeat <- function() {
   # drive_auth() #authenticate gmail
   sheets_auth(token = drive_token())
   
-  full <- read_sheet(drive_get("Meta_Analysis"), sheet = 'Full_Meta_Analysis') 
-  female<-read_sheet(drive_get("Meta_Analysis"), sheet = 'Female_Meta_Analysis')
-  male <-read_sheet(drive_get("Meta_Analysis"), sheet = 'Male_Meta_Analysis')
-  cortical <- read_sheet(drive_get("Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
-  SIfull <- read_sheet(drive_get("Sex_Interaction_Meta_Analysis"), sheet = 'Full_Meta_Analysis')
-  SIcortical <- read_sheet(drive_get("Sex-Interaction-Meta-Analysis"), sheet = 'Cortical_Meta_Analysis')
+  full <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Full_Meta_Analysis') 
+  female<-read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Female_Meta_Analysis')
+  male <-read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Male_Meta_Analysis')
+  cortical <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
+  SIfull <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis"), sheet = 'Full_Meta_Analysis')
+  SIcortical <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
   
   fulltable <- full %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Full = Bonferroni_Correction)
   femaletable <-female %>% select(gene_symbol, Bonferroni_Correction)  %>% rename(Female = Bonferroni_Correction)
@@ -61,11 +62,11 @@ drawMetaHeat <- function() {
           axis.text.y = element_text(face = "italic",size = 10), 
           plot.title = element_text(size = 20,face = "bold",hjust = 0.5),
           panel.background = element_blank(),
-          plot.margin = unit(c(t=1,r=1,l=1,b=0),"cm"),
-          legend.margin = margin(unit(c(t=0,r=-10,l=0,b = 0), "cm"))) # center the title 
+          plot.margin = unit(c(t=0.5,r=1,l=1,b=2),"cm"),
+          legend.margin = margin(unit(c(t=0,r=-10,l=-0.5,b = 0), "cm"))) # center the title 
 
   
-  title <- ggdraw() + draw_label("Meta p-values of Top 11 Genes", fontface = "bold",size = 20, hjust = 0.5,vjust = -0.2)
+  title <- ggdraw() + draw_label("Meta p-values of Top 11 Genes", fontface = "bold",size = 20, hjust = 0.5,vjust = 0.5)
   full_meta_plot <- plot_grid(title, meta_plot,ncol = 1, rel_heights = c(0.1, 1), rel_widths = c(1,0.5))
   
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)

@@ -94,8 +94,8 @@ MetaAnalysis <- function(merged_table){
   full_table %<>%distinct() #fix the 666 rows 
   full_table %<>% mutate(Bonferroni_Correction = p.adjust(meta_p, method = "bonferroni") ) 
   full_table %<>% arrange(Corrected_p)
-  
-  if(length(is.na(full_table$Howard.pvalue)) == 0){
+
+  if(length(is.na(full_table$Howard.pvalue)) == 269){
     full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
     full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
   }
@@ -137,7 +137,7 @@ GenomeRank <- function(merged_table) {
   keep_index <- keep[-c(1:6)]
   full_table[which(full_table$gene_symbol == "DCDC5"),c(7:ncol(full_table))]<- keep_index
   
-  if(length(is.na(full_table$Howard.pvalue)) == 0){
+  if(length(is.na(full_table$Howard.pvalue)) == 269){
     full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
     full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
   }  

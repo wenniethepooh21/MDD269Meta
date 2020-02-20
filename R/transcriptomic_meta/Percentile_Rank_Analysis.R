@@ -34,7 +34,7 @@ getRank <- function(dataset){
     
   }
   print("Complete!")
-  dataset %<>% rowwise() %>% mutate(empirical_meta_p = if_else(2 * min(meta_Up, meta_Down) > 1, 1, 2 * min(meta_Up, meta_Down)))
+  dataset %<>% rowwise() %>% mutate(empirical_meta_p = if_else(2 * min(meta_Up, meta_Down) > 1, 1, 2 * min(meta_Up, meta_Down))) %>% ungroup()
   return(dataset)
 }
 

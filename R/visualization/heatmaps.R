@@ -45,7 +45,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
   #heatmap
   female_heatmap <- ggplot(dataset_female, aes(x=female_regions,y=female_symbol)) + 
     geom_tile(aes(fill = female_direction), colour='black') +
-    labs(x=NULL, fill = "Expression\nsigned log(p_value)") +
+    labs(x=NULL, fill = "signed log(p_value)") +
     scale_fill_distiller(limits = c(abs_bound*-1, abs_bound),
                          palette = "RdBu") +
     # scale_fill_gradientn(limits = c(abs_bound*-1, abs_bound),
@@ -70,8 +70,8 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
   legend <- get_legend(
     female_heatmap + 
       guides(color = guide_legend(nrow = 1)) +
-      theme(legend.position = "top",
-            legend.box.margin = unit(c(t=0, r=0, b=0.5, l=0), "cm"))
+      theme(legend.position = "bottom",
+            legend.box.margin = unit(c(t=0, r=0, b=0, l=0), "cm"))
   )
   
   # add the legend underneath the row we made earlier. Give it 10%

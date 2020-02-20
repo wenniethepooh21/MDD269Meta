@@ -43,7 +43,7 @@ drawDing <- function() {
   #function returns the heatmaps of both sexes combined
   Ding_plots <- drawExpressionHeat(Ding_male, Ding_female, ding_male_regions, ding_male_symbol, ding_female_regions, ding_female_symbol, ding_male_direction, ding_female_direction)
   # add title to the combined plots 
-  title <- ggdraw() + draw_label("Ding Gene Expression", fontface = "bold",size = 15)
+  title <- ggdraw() + draw_label("Ding, et al.", fontface = "bold",size = 20)
   # plot heatmap
   ding_heat <- plot_grid(title, Ding_plots,ncol = 1, rel_heights = c(0.1, 1))
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ding_expression_heatmap.png'),dpi=300, width=12, height=8)
