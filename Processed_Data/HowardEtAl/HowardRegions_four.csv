@@ -11,9 +11,9 @@ PROX2,PROX2,globose nucleus,globose nucleus <  cerebellar nuclei  <  cerebellum 
 OR12D3,OR12D3,lateral tuberal nucleus,lateral tuberal nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter,lateral tuberal nucleus < tuberal region
 ANKK1,ANKK1,IV,IV <  anterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter,IV <  anterior lobe of the vermis  <  vermis  < cerebellar cortex
 TYR,TYR,inferior temporal gyrus lateral bank of gyrus,inferior temporal gyrus lateral bank of gyrus <  inferior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter,inferior temporal gyrus lateral bank of gyrus <  inferior temporal gyrus  < temporal lobe
-PQLC2L,PQLC2L,character(0),NA,NA
+PQLC2L,PQLC2L,dorsal lateral geniculate nucleus,dorsal lateral geniculate nucleus <  dorsal lateral geneiculate nucleus  <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter,dorsal lateral geniculate nucleus <  dorsal lateral geneiculate nucleus  < dorsal thalamus
 BTN1A1,BTN1A1,CA2 field,CA2 field <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter,CA2 field <  hippocampal formation  < limbic lobe
-PRR34,PRR34,character(0),NA,NA
+PRR34,PRR34,preoptic region,preoptic region <  hypothalamus  <  diencephalon  < gray matter,preoptic region < hypothalamus
 HIST1H2BO,HIST1H2BO,III paravermis,III paravermis <  III  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter,III paravermis <  III  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
 SLC17A3,SLC17A3,VIIB,VIIB <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter,VIIB <  posterior lobe of the vermis  <  vermis  < cerebellar cortex
 HSPE1-MOB4,HSPE1-MOB4,medial mammillary nucleus,medial mammillary nucleus <  mammillary body  <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter,medial mammillary nucleus <  mammillary body  < mammillary region
