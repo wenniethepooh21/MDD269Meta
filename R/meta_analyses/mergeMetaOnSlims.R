@@ -31,6 +31,7 @@ corticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRam
 Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
 #read in the differentially expressed "prior ranking" for the genes identified in Crow, et al. 
 DE_Prior <- read_tsv(here("Raw_Data/CrowEtAl/pnas.1802973116.sd02.txt"))
+DE_Prior$DE_Prior_Rank <- signif(as.numeric(DE_Prior$DE_Prior_Rank),digits=3)
 #Read in the associated transcriptomic cell types and brain regions that maximally expressed each Howard gene
 Howard_Polygenics <- read_csv(here("Processed_Data/HowardEtAl/HowardRegionsPolygenicCellTypes_four.csv"))
 
@@ -163,43 +164,47 @@ corticalTableRank_Flip %<>% left_join(DE_Prior %>% select(Gene_Name, DE_Prior_Ra
 corticalTableRank_Flip %<>% left_join(Howard_Polygenics%>% select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 corticalTableRank_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
-# #FULL DATA SHEETS
-# #Access googlesheets to upload the tables online for an interactive experience
-# 
-# sheets_auth(token = drive_token())
-# 
-# ma <- drive_get("~/Thesis/Manuscript/Tables/Full_Tables/Meta_Analysis")
-# if(nrow(ma) != 0) {
-#   drive_rm(ma)
-# }
-# #create the google worksheet
-# ma <- sheets_create("Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Male_Meta_Analysis','Female_Meta_Analysis','Cortical_Meta_Analysis'))
-# sheets_write(fullTable, ma, sheet = "Full_Meta_Analysis")
-# sheets_write(femaleTable, ma, sheet = 'Female_Meta_Analysis')
-# sheets_write(maleTable, ma,'Male_Meta_Analysis')
-# sheets_write(corticalTable, ma, 'Cortical_Meta_Analysis')
-# 
-# drive_mv(file = "Meta_Analysis", path = "~/Thesis/Manuscript/Tables/Full_Tables/")  # move Sheets file
-# 
-# mar <- drive_get("Thesis/Manuscript/Tables/Full_Tables/Meta_Analysis_Rank")
-# if(nrow(mar) != 0) {
-#   drive_rm(mar)
-# }
-# #create the google worksheet
-# mar <- sheets_create("Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Male_Meta_Analysis_Rank','Female_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
-# sheets_write(fullTableRank, mar, sheet = "Full_Meta_Analysis_Rank")
-# sheets_write(femaleTableRank, mar, sheet = 'Female_Meta_Analysis_Rank')
-# sheets_write(maleTableRank, mar,'Male_Meta_Analysis_Rank')
-# sheets_write(corticalTableRank, mar, 'Cortical_Meta_Analysis_Rank')
-# 
-# drive_mv(file = "Meta_Analysis_Rank", path = "~/Thesis/Manuscript/Tables/Full_Tables/")  # move Sheets file
-# 
-# 
+#FULL DATA SHEETS
+#Access googlesheets to upload the tables online for an interactive experience
+
+sheets_auth(token = drive_token())
+
+ma <- drive_get("~/Thesis/Manuscript/Tables/Full_Tables/Meta_Analysis")
+if(nrow(ma) != 0) {
+  drive_rm(ma)
+}
+#create the google worksheet
+ma <- sheets_create("Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Male_Meta_Analysis','Female_Meta_Analysis','Cortical_Meta_Analysis', 'Sex_interaction_Full_Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis'))
+sheets_write(fullTable, ma, sheet = "Full_Meta_Analysis")
+sheets_write(femaleTable, ma, sheet = 'Female_Meta_Analysis')
+sheets_write(maleTable, ma,'Male_Meta_Analysis')
+sheets_write(corticalTable, ma, 'Cortical_Meta_Analysis')
+sheets_write(fullTable_Flip, ma, 'Sex_interaction_Full_Meta_Analysis')
+sheets_write(corticalTable_Flip, ma, 'Sex_interaction_Cortical_Meta_Analysis')
+
+drive_mv(file = "Meta_Analysis", path = "~/Thesis/Manuscript/Tables/Full_Tables/")  # move Sheets file
+
+mar <- drive_get("Thesis/Manuscript/Tables/Full_Tables/Genome_Percentile_Rank")
+if(nrow(mar) != 0) {
+  drive_rm(mar)
+}
+#create the google worksheet
+mar <- sheets_create("Genome_Percentile_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Male_Meta_Analysis_Rank','Female_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank', 'Sex_interaction_Full_Meta_Analysis_Rank',  'Sex_interaction_Cortical_Meta_Analysis_Rank'))
+sheets_write(fullTableRank, mar, sheet = "Full_Meta_Analysis_Rank")
+sheets_write(femaleTableRank, mar, sheet = 'Female_Meta_Analysis_Rank')
+sheets_write(maleTableRank, mar,'Male_Meta_Analysis_Rank')
+sheets_write(corticalTableRank, mar, 'Cortical_Meta_Analysis_Rank')
+sheets_write(fullTableRank_Flip, mar, 'Sex_interaction_Full_Meta_Analysis_Rank')
+sheets_write(corticalTableRank_Flip, mar, 'Sex_interaction_Cortical_Meta_Analysis_Rank')
+
+drive_mv(file = "Genome_Percentile_Rank", path = "~/Thesis/Manuscript/Tables/Full_Tables/")  # move Sheets file
+
+
 # maf <- drive_get("Thesis/Manuscript/Tables/Full_Tables/Sex_Interaction_Meta_Analysis")
 # if(nrow(maf) != 0) {
 #   drive_rm(maf)
 # }
-# #create the google worksheet
+# # #create the google worksheet
 # maf <- sheets_create("Sex_Interaction_Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Cortical_Meta_Analysis'))
 # sheets_write(fullTable_Flip, maf, sheet = "Full_Meta_Analysis")
 # sheets_write(corticalTable_Flip, maf, 'Cortical_Meta_Analysis')
@@ -226,50 +231,54 @@ if(nrow(ma) != 0) {
   drive_rm(ma)
 }
 #create the google worksheet
-ma <- sheets_create("Official_Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Male_Meta_Analysis','Female_Meta_Analysis','Cortical_Meta_Analysis'))
-sheets_write(fullTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_Correction, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, sheet = "Full_Meta_Analysis")
-sheets_write(femaleTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_Correction, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, sheet = 'Female_Meta_Analysis')
-sheets_write(maleTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_Correction, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma,'Male_Meta_Analysis')
-sheets_write(corticalTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_Correction, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, 'Cortical_Meta_Analysis')
+ma <- sheets_create("Official_Meta_Analysis", sheets = c('First_model_Full_Meta_Analysis', 'First_model_Male_Meta_Analysis','First_model_Female_Meta_Analysis','First_model_Cortical_Meta_Analysis','Sex_interaction_Full_Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis'))
+sheets_write(fullTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, sheet = "First_model_Full_Meta_Analysis")
+sheets_write(femaleTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, sheet = 'First_model_Female_Meta_Analysis')
+sheets_write(maleTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma,'First_model_Male_Meta_Analysis')
+sheets_write(corticalTable %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, 'First_model_Cortical_Meta_Analysis')
+sheets_write(fullTable_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, sheet = "Sex_interaction_Full_Meta_Analysis")
+sheets_write(corticalTable_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), ma, 'Sex_interaction_Cortical_Meta_Analysis')
 
 drive_mv(file = "Official_Meta_Analysis", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
 
-mar <- drive_get("Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis_Rank")
+mar <- drive_get("Thesis/Manuscript/Tables/Slim_Tables/Official_Genome_Percentile_Rank")
 if(nrow(mar) != 0) {
   drive_rm(mar)
 }
 #create the google worksheet
-mar <- sheets_create("Official_Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Male_Meta_Analysis_Rank','Female_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
-sheets_write(fullTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Corrected_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, sheet = "Full_Meta_Analysis_Rank")
-sheets_write(femaleTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Corrected_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, sheet = 'Female_Meta_Analysis_Rank')
-sheets_write(maleTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Corrected_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar,'Male_Meta_Analysis_Rank')
-sheets_write(corticalTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Corrected_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, 'Cortical_Meta_Analysis_Rank')
+mar <- sheets_create("Official_Genome_Percentile_Rank", sheets = c('First_model_Full_Meta_Analysis_Rank', 'First_model_Male_Meta_Analysis_Rank','First_model_Female_Meta_Analysis_Rank', 'First_model_Cortical_Meta_Analysis_Rank','Sex_interaction_Full_Meta_Analysis_Rank', 'Sex_interaction_Cortical_Meta_Analysis_Rank'))
+sheets_write(fullTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, sheet = "First_model_Full_Meta_Analysis_Rank")
+sheets_write(femaleTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, sheet = 'First_model_Female_Meta_Analysis_Rank')
+sheets_write(maleTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar,'First_model_Male_Meta_Analysis_Rank')
+sheets_write(corticalTableRank  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, 'First_model_Cortical_Meta_Analysis_Rank')
+sheets_write(fullTableRank_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, sheet = "Sex_interaction_Full_Meta_Analysis_Rank")
+sheets_write(corticalTableRank_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, 'Sex_interaction_Cortical_Meta_Analysis_Rank')
 
-drive_mv(file = "Official_Meta_Analysis_Rank", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
-
-
-maf <- drive_get("Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis")
-if(nrow(maf) != 0) {
-  drive_rm(maf)
-}
-#create the google worksheet
-maf <- sheets_create("Official_Sex_Interaction_Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Cortical_Meta_Analysis'))
-sheets_write(fullTable_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_Correction, slim_region_location, cell_type_taxon, DE_Prior_Rank), maf, sheet = "Full_Meta_Analysis")
-sheets_write(corticalTable_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_Correction, slim_region_location, cell_type_taxon, DE_Prior_Rank), maf, 'Cortical_Meta_Analysis')
-
-drive_mv(file = "Official_Sex_Interaction_Meta_Analysis", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
+drive_mv(file = "Official_Genome_Percentile_Rank", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
 
 
-marf <- drive_get("Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis_Rank")
-if(nrow(marf) != 0) {
-  drive_rm(marf)
-}
-#create the google worksheet
-marf <- sheets_create("Official_Sex_Interaction_Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
-sheets_write(fullTableRank_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Corrected_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), marf, sheet = "Full_Meta_Analysis_Rank")
-sheets_write(corticalTableRank_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Corrected_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), marf, 'Cortical_Meta_Analysis_Rank')
-
-drive_mv(file = "Official_Sex_Interaction_Meta_Analysis_Rank", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
+# maf <- drive_get("Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis")
+# if(nrow(maf) != 0) {
+#   drive_rm(maf)
+# }
+# #create the google worksheet
+# maf <- sheets_create("Official_Sex_Interaction_Meta_Analysis", sheets = c('Full_Meta_Analysis', 'Cortical_Meta_Analysis'))
+# sheets_write(fullTable_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), maf, sheet = "Full_Meta_Analysis")
+# sheets_write(corticalTable_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_p, Bonferroni_meta_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), maf, 'Cortical_Meta_Analysis')
+# 
+# drive_mv(file = "Official_Sex_Interaction_Meta_Analysis", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
+# 
+# 
+# marf <- drive_get("Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis_Rank")
+# if(nrow(marf) != 0) {
+#   drive_rm(marf)
+# }
+# #create the google worksheet
+# marf <- sheets_create("Official_Sex_Interaction_Meta_Analysis_Rank", sheets = c('Full_Meta_Analysis_Rank', 'Cortical_Meta_Analysis_Rank'))
+# sheets_write(fullTableRank_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), marf, sheet = "Full_Meta_Analysis_Rank")
+# sheets_write(corticalTableRank_Flip  %>% select(gene_symbol, Howard.pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), marf, 'Cortical_Meta_Analysis_Rank')
+# 
+# drive_mv(file = "Official_Sex_Interaction_Meta_Analysis_Rank", path = "~/Thesis/Manuscript/Tables/Slim_Tables/")  # move Sheets file
 
 
 

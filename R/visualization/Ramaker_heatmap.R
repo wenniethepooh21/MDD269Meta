@@ -19,8 +19,8 @@ drawRamaker <- function() {
   Ramaker_female <- Ramaker %>% filter(sex == "female")
   
   #arrange these genes with significant ones together 
-  Ramaker_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))))
-  Ramaker_female %<>% mutate(gene_symbol = factor(gene_symbol, levels = rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))))
+  Ramaker_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))))
+  Ramaker_female %<>% mutate(gene_symbol = factor(gene_symbol, levels = rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))))
   
   ramaker_male_regions <- Ramaker_male$target_region
   ramaker_male_symbol <- Ramaker_male$gene_symbol

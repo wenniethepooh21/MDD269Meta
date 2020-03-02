@@ -66,6 +66,9 @@ tissue_expected_probs %<>% left_join(brain_slim, by = c('structure_name'='BrainR
 tissue_expected_probs %<>% left_join(enclosing_regions, by = c('structure_name' = 'brain_region'))%>% ungroup()
 tissue_expected_probs %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% rename(enclosing_regions = location)
 
+tissue_expected_probs$hypergeometric_p <- signif(as.numeric(tissue_expected_probs$hypergeometric_p),digits=3)
+tissue_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(tissue_expected_probs$corrected_hypergeometric_p),digits=3)
+
 #upload to google drive
 sheets_auth(token = drive_token())
 

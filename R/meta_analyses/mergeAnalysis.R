@@ -92,13 +92,20 @@ MetaAnalysis <- function(merged_table){
   full_table %<>% mutate(Corrected_p = meta_p*269)
   # 
   full_table %<>%distinct() #fix the 666 rows 
-  full_table %<>% mutate(Bonferroni_Correction = p.adjust(meta_p, method = "bonferroni") ) 
+  full_table %<>% mutate(Bonferroni_meta_p = p.adjust(meta_p, method = "bonferroni") ) 
   full_table %<>% arrange(Corrected_p)
-
+  # three significant digits 
+  full_table$Corrected_p <- signif(as.numeric(full_table$Corrected_p),digits=3)
+  full_table$Bonferroni_meta_p <- signif(as.numeric(full_table$Bonferroni_meta_p),digits=3)
+  
   if(length(is.na(full_table$Howard.pvalue)) == 269){
     full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
     full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
+    full_table$Spearman_corr <- signif(as.numeric(full_table$Spearman_corr),digits=3)
+    full_table$Spearman_p <- signif(as.numeric(full_table$Spearman_p),digits=3)
+    
   }
+  full_table$meta_p <- signif(as.numeric(full_table$meta_p),digits=3)
   return(full_table)
 }
 
@@ -140,11 +147,17 @@ GenomeRank <- function(merged_table) {
   if(length(is.na(full_table$Howard.pvalue)) == 269){
     full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
     full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
+    full_table$Spearman_corr <- signif(as.numeric(full_table$Spearman_corr),digits=3)
+    full_table$Spearman_p <- signif(as.numeric(full_table$Spearman_p),digits=3)
   }  
   full_table %<>% mutate(Corrected_meta_empirical_p = meta_empirical_p*269) #Bonferroni correction
-  full_table %<>% mutate(Corrected_meta_empirical_p_2 = p.adjust(Corrected_meta_empirical_p, method = "bonferroni"))
+  
+  full_table %<>% mutate(Bonferroni_meta_empirical_p = p.adjust(meta_empirical_p, method = "bonferroni"))
   
   full_table %<>% arrange(Corrected_meta_empirical_p)
+  full_table$Corrected_meta_empirical_p <- signif(as.numeric(full_table$Corrected_meta_empirical_p),digits=3)
+  full_table$Bonferroni_meta_empirical_p <- signif(as.numeric(full_table$Bonferroni_meta_empirical_p),digits=3)
+  full_table$meta_empirical_p <- signif(as.numeric(full_table$meta_empirical_p),digits=3)
   return(full_table)
 }
 

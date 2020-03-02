@@ -77,12 +77,14 @@ full_cell_count <- cell_count %>% left_join(howard_count, by=c('cell_type_taxon'
 # perform hypergeometric test - read in file for hyper_test function
 source(here("R/transcriptomic_meta/hyper_test.R"))
 #subtract one for the gene that wasn't assigned a cell type but was observed
-cell_expected_probs  <- full_count %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_cell_count, genome_cell_count, cell_pop, colSums(na.omit(howard_count)[,2]) - 1))
+cell_expected_probs  <- full_cell_count %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_cell_count, genome_cell_count, cell_pop, colSums(na.omit(howard_count)[,2]) - 1))
 #corrected by the number of possible cell types to choose from subtract one because of the 'gene not expressed option'
 cell_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n= (nrow(cell_count) - 1)))
 cell_expected_probs %<>% mutate(corrected_hypergeometric_p = ifelse(cell_type_taxon == "Gene detected; No expression measured", NA, corrected_hypergeometric_p))
 cell_expected_probs %<>% arrange(hypergeometric_p)
 
+cell_expected_probs$hypergeometric_p <- signif(as.numeric(cell_expected_probs$hypergeometric_p),digits=3)
+cell_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(cell_expected_probs$corrected_hypergeometric_p),digits=3)
 
 # #################################
 cns_cell_pop <- nrow(cns_max_cell_types)
@@ -102,7 +104,8 @@ cns_cell_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hyperg
 cns_cell_expected_probs %<>% mutate(corrected_hypergeometric_p = ifelse(cns_cell_type_taxon == "Gene detected; No expression measured", NA, corrected_hypergeometric_p))
 cns_cell_expected_probs %<>% arrange(hypergeometric_p)
 
-
+cns_cell_expected_probs$hypergeometric_p <- signif(as.numeric(cns_cell_expected_probs$hypergeometric_p),digits=3)
+cns_cell_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(cns_cell_expected_probs$corrected_hypergeometric_p),digits=3)
 #upload to google drive
 sheets_auth(token = drive_token())
 

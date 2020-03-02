@@ -35,9 +35,10 @@ drawMetaHeat <- function() {
   
   # test <- full_meta_analysis_results %>% mutate(Bonferroni_Correction = if_else(Bonferroni_Correction > 0.05, 0.05, Bonferroni_Correction))
   
-  full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))),
-                    Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "SI_Cortical", "SI_Full")))
-  
+  # full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))),
+  #                   Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "SI_Cortical", "SI_Full")))
+  full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))),
+                                         Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "SI_Cortical", "SI_Full")))
   #set the scale to range from 0 to 0.1
   full_meta_analysis_results %<>% mutate(Bonferroni_Correction = Bonferroni_Correction/10)
   ## used for breaking the corrected p-values into ranges
@@ -66,7 +67,7 @@ drawMetaHeat <- function() {
           legend.margin = margin(unit(c(t=0,r=-10,l=-0.5,b = 0), "cm"))) # center the title 
 
   
-  title <- ggdraw() + draw_label("Meta p-values of Top 11 Genes", fontface = "bold",size = 20, hjust = 0.5,vjust = 0.5)
+  title <- ggdraw() + draw_label("Meta p-values of Top 11 Genes", fontface = "bold",size = 20, hjust = 0.4,vjust = 0.5)
   full_meta_plot <- plot_grid(title, meta_plot,ncol = 1, rel_heights = c(0.1, 1), rel_widths = c(1,0.5))
   
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
