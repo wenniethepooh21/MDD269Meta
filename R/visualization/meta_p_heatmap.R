@@ -9,16 +9,13 @@ library(cowplot)
 
 drawMetaHeat <- function() {
   top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A") 
-  
-  # drive_auth() #authenticate gmail
-  sheets_auth(token = drive_token())
-  
-  full <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Full_Meta_Analysis') 
-  female<-read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Female_Meta_Analysis')
-  male <-read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Male_Meta_Analysis')
-  cortical <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
-  SIfull <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis"), sheet = 'Full_Meta_Analysis')
-  SIcortical <- read_sheet(drive_get("~/Thesis/Manuscript/Tables/Slim_Tables/Official_Sex_Interaction_Meta_Analysis"), sheet = 'Cortical_Meta_Analysis')
+
+  full <- read_csv(here('Results', 'Tables', 'Meta_Analysis', "Full_Meta_Analysis.csv"))
+  female <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Female_Meta_Analysis.csv'))
+  male <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Male_Meta_Analysis.csv'))
+  cortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Cortical_Meta_Analysis.csv'))
+  SIfull <- read_csv(here('Results', 'Tables', 'Meta_Analysis','Sex_interaction_Full_Meta_Analysis.csv'))
+  SIcortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis.csv'))
   
   fulltable <- full %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Full = Bonferroni_Correction)
   femaletable <-female %>% select(gene_symbol, Bonferroni_Correction)  %>% rename(Female = Bonferroni_Correction)

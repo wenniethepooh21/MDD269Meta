@@ -3,6 +3,8 @@ library(dplyr)
 library(homologene)
 library(here)
 
+use_gdrive <- FALSE
+
 #-------- read cell-type matrix data 
 loom_file <- connect(filename = here("Raw_Data/ZeiselEtAl/l6_r4.agg.loom"))
 cell_types <- as_tibble(t(as.matrix(loom_file[["matrix"]][,])))
@@ -39,7 +41,8 @@ cns_max_cell_types %<>% mutate(cns_cell_type_taxon = if_else(expression_levels =
 ####################################################################
 howard<- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv")) 
 howard_genes <- howard %>% select(gene_symbol) %>% pull()
-howard %<>% select(gene_symbol, Updated_Gene_Names)
+#howard %<>% select(gene_symbol, Updated_Gene_Names)
+howard %<>% select(gene_symbol, gene_symbol)
 
 #Howard genes must be converted to mouse 
 #gene_symbol and Updated_Gene_Names mapped to the same mouse genes, no need for double comparison
@@ -106,6 +109,8 @@ cns_cell_expected_probs %<>% arrange(hypergeometric_p)
 
 cns_cell_expected_probs$hypergeometric_p <- signif(as.numeric(cns_cell_expected_probs$hypergeometric_p),digits=3)
 cns_cell_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(cns_cell_expected_probs$corrected_hypergeometric_p),digits=3)
+
+if (use_gdrive == TRUE) {
 #upload to google drive
 sheets_auth(token = drive_token())
 
@@ -119,4 +124,7 @@ sheets_write(cell_expected_probs, cells,  sheet = "hypergeometric_cell_type_taxo
 sheets_write(cns_cell_expected_probs, cells,  sheet = "hypergeometric_cns_cell_type_taxons")
 
 drive_mv(file = "cell_hyper_expected", path = "~/Thesis/Manuscript/Supplement_Tables/")  # move Sheets file
-
+} else {
+  write_csv(cell_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_cell_type_taxons_cell_expected_probs.csv'))
+  write_csv(cns_cell_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_cns_cell_type_taxons_cell_expected_probs.csv'))
+}

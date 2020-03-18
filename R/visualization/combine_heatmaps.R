@@ -19,4 +19,5 @@ combined <- plot_grid(
   rel_widths = c(1,0.4), 
   labels = 'AUTO')
 
+dir.create(here('Processed_Data/Meta_Analysis_Results/Heatmaps'), recursive = TRUE)
 ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/combined_all_heatmaps.png'), dpi=300, width=22, height=8)

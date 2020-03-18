@@ -5,6 +5,7 @@ library(dplyr)
 library(tidyr)
 library(here)
 
+
 #This function merges the study-specific meta-analysis results into one table filtered for the 269 genes
 mergeMetaStudies <- function (H, L, Ldir, D, Ddir, R, Rdir) {
   #All studies were used
@@ -46,7 +47,8 @@ mergeMetaStudies <- function (H, L, Ldir, D, Ddir, R, Rdir) {
   merged_p <- bind_rows(L, D, R)
 
   #merge two datasets together
-  merged_directions %<>% select(-Updated_Gene_Names, -`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
+  #merged_directions %<>% select(-Updated_Gene_Names, -`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
+  merged_directions %<>% select(-`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
   
   merged_p %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
   
@@ -59,7 +61,7 @@ MetaAnalysis <- function(merged_table){
   
   #get just minp and the two one-sided meta p-values for each row
   merged_p <- merged_table %>% dplyr::select(gene_symbol, min_p_across_regions, meta_lower_in_MDD_pvalue, meta_higher_in_MDD_pvalue)
-  merged_directions <- merged_table %>% dplyr:: select(gene_symbol, Howard.pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
+  merged_directions <- merged_table %>% dplyr:: select(gene_symbol, Howard_pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
   
   meta_merged_p <- merged_p %>% group_by(gene_symbol) %>% summarize(list_of_meta_higher_in_MDD_pvalue = list(meta_higher_in_MDD_pvalue), 
                                                                     list_of_meta_lower_in_MDD_pvalue = list(meta_lower_in_MDD_pvalue), count_of_pvalues=n())
@@ -98,9 +100,9 @@ MetaAnalysis <- function(merged_table){
   full_table$Corrected_p <- signif(as.numeric(full_table$Corrected_p),digits=3)
   full_table$Bonferroni_meta_p <- signif(as.numeric(full_table$Bonferroni_meta_p),digits=3)
   
-  if(length(is.na(full_table$Howard.pvalue)) == 269){
-    full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
-    full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
+  if(length(is.na(full_table$Howard_pvalue)) == 269){
+    full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard_pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
+    full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard_pvalue, full_table$meta_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
     full_table$Spearman_corr <- signif(as.numeric(full_table$Spearman_corr),digits=3)
     full_table$Spearman_p <- signif(as.numeric(full_table$Spearman_p),digits=3)
     
@@ -113,7 +115,7 @@ MetaAnalysis <- function(merged_table){
 GenomeRank <- function(merged_table) {
   
   merged_p <- merged_table %>% select(gene_symbol, min_p_across_regions, meta_Down, meta_Up)
-  merged_directions <- merged_table %>% select(gene_symbol, Howard.pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
+  merged_directions <- merged_table %>% select(gene_symbol, Howard_pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
   
   #get just minp and the two one-sided meta p-values for each row
   meta_merged_p <- merged_p %>% group_by(gene_symbol) %>% summarize(list_of_meta_higher_in_MDD_genome_percentile_rank = list(meta_Up), 
@@ -144,9 +146,9 @@ GenomeRank <- function(merged_table) {
   keep_index <- keep[-c(1:6)]
   full_table[which(full_table$gene_symbol == "DCDC5"),c(7:ncol(full_table))]<- keep_index
   
-  if(length(is.na(full_table$Howard.pvalue)) == 269){
-    full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard.pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
-    full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard.pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
+  if(length(is.na(full_table$Howard_pvalue)) == 269){
+    full_table %<>% mutate(Spearman_corr = cor.test(full_table$Howard_pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$estimate)
+    full_table %<>% mutate(Spearman_p = cor.test(full_table$Howard_pvalue, full_table$meta_empirical_p, use = 'pairwise.complete.obs', method = "spearman")$p.value)
     full_table$Spearman_corr <- signif(as.numeric(full_table$Spearman_corr),digits=3)
     full_table$Spearman_p <- signif(as.numeric(full_table$Spearman_p),digits=3)
   }  
@@ -176,12 +178,12 @@ mergeMagmaMetaRank<- function(m, L, Ldir, D, Ddir, R, Rdir, analysis){
   merged_p <- bind_rows(Labonte, Ding, Ramaker)
   
   merged_table <- left_join(merged_directions, merged_p) %>% distinct()
-  merged_table %<>% mutate(Howard.pvalue = NA, gene_name = NA)
+  merged_table %<>% mutate(Howard_pvalue = NA, gene_name = NA)
   
   if(analysis == "meta") {
-    merged_table %<>% MetaAnalysis() %>% select(-Howard.pvalue, -gene_name)
+    merged_table %<>% MetaAnalysis() %>% select(-Howard_pvalue, -gene_name)
   } else {
-    merged_table %<>% GenomeRank() %>% select(-Howard.pvalue, -gene_name)
+    merged_table %<>% GenomeRank() %>% select(-Howard_pvalue, -gene_name)
   }
   return(merged_table)
   
