@@ -111,7 +111,7 @@ get_hyper <- function(max_table, howard_table) {
   
   return(cell_expected_probs)
 }
-
+#Hyper test results 
 full_hyper <- get_hyper(full_max_cell_types, full_Howard_Table)
 chol_hyper <- get_hyper(chol_max_cell_types, chol_Howard_Table)
 ent_hyper <- get_hyper(ent_max_cell_types, ent_Howard_Table)
