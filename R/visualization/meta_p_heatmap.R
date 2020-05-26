@@ -17,36 +17,36 @@ drawMetaHeat <- function() {
   SIfull <- read_csv(here('Results', 'Tables', 'Meta_Analysis','Sex_interaction_Full_Meta_Analysis.csv'))
   SIcortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis.csv'))
   
-  fulltable <- full %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Full = Bonferroni_Correction)
-  femaletable <-female %>% select(gene_symbol, Bonferroni_Correction)  %>% rename(Female = Bonferroni_Correction)
-  maletable <- male %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Male = Bonferroni_Correction)
-  corticaltable <- cortical %>% select(gene_symbol, Bonferroni_Correction) %>% rename(Cortical = Bonferroni_Correction)
-  SIfulltable <- SIfull%>% select(gene_symbol, Bonferroni_Correction) %>% rename(SI_Full = Bonferroni_Correction)
-  SIcorticaltable <- SIcortical%>% select(gene_symbol, Bonferroni_Correction) %>% rename(SI_Cortical = Bonferroni_Correction)
+  fulltable <- full %>% select(gene_symbol, Bonferroni_meta_p) %>% rename(Full = Bonferroni_meta_p)
+  femaletable <-female %>% select(gene_symbol, Bonferroni_meta_p)  %>% rename(Female = Bonferroni_meta_p)
+  maletable <- male %>% select(gene_symbol, Bonferroni_meta_p) %>% rename(Male = Bonferroni_meta_p)
+  corticaltable <- cortical %>% select(gene_symbol, Bonferroni_meta_p) %>% rename(Cortical = Bonferroni_meta_p)
+  SIfulltable <- SIfull%>% select(gene_symbol, Bonferroni_meta_p) %>% rename(SI_Full = Bonferroni_meta_p)
+  SIcorticaltable <- SIcortical%>% select(gene_symbol, Bonferroni_meta_p) %>% rename(SI_Cortical = Bonferroni_meta_p)
   
   #join the results into one table
   full_meta_analysis_results <- left_join(fulltable, femaletable) %>% left_join(corticaltable) %>% left_join(maletable) %>% left_join(SIfulltable) %>% left_join(SIcorticaltable)
-  full_meta_analysis_results %<>% gather("Analysis", "Bonferroni_Correction", 2:ncol(full_meta_analysis_results))
+  full_meta_analysis_results %<>% gather("Analysis", "Bonferroni_meta_p", 2:ncol(full_meta_analysis_results))
   full_meta_analysis_results %<>% filter(gene_symbol %in% top_genes)
-  full_meta_analysis_results %<>% mutate(Bonferroni_Correction = as.numeric(Bonferroni_Correction))
+  full_meta_analysis_results %<>% mutate(Bonferroni_meta_p = as.numeric(Bonferroni_meta_p))
   
-  # test <- full_meta_analysis_results %>% mutate(Bonferroni_Correction = if_else(Bonferroni_Correction > 0.05, 0.05, Bonferroni_Correction))
+  # test <- full_meta_analysis_results %>% mutate(Bonferroni_meta_p = if_else(Bonferroni_meta_p > 0.05, 0.05, Bonferroni_meta_p))
   
   # full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "SAMD5", "SPRY2", "ITPR3", "MANEA", "UBE2M", "CKB", "TMEM106B","ASXL3", "LST1"))),
   #                   Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "SI_Cortical", "SI_Full")))
   full_meta_analysis_results %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))),
                                          Analysis = factor(Analysis, levels = c("Full", "Cortical", "Male", "Female", "SI_Cortical", "SI_Full")))
   #set the scale to range from 0 to 0.1
-  full_meta_analysis_results %<>% mutate(Bonferroni_Correction = Bonferroni_Correction/10)
+  full_meta_analysis_results %<>% mutate(Bonferroni_meta_p = Bonferroni_meta_p/10)
   ## used for breaking the corrected p-values into ranges
-  # full_meta_analysis_results$bin <- cut(full_meta_analysis_results$Bonferroni_Correction, breaks = c(0, 0.0005, 0.001,0.005,0.01, 0.05, 0.1, 0.5, 5, 20,220),
+  # full_meta_analysis_results$bin <- cut(full_meta_analysis_results$Bonferroni_meta_p, breaks = c(0, 0.0005, 0.001,0.005,0.01, 0.05, 0.1, 0.5, 5, 20,220),
   #                labels = c("0.-0.0005", "0.0005-0.001","0.001-0.005","0.005-0.01", "0.01-0.05", "0.05 - 0.1", "0.1-0.5", "0.5-5", "5-20","20-220"),
   #                include.lowest = TRUE)
   
   #arrange these genes with significant ones together 
   analysis_type <- full_meta_analysis_results$Analysis
   symbol <- full_meta_analysis_results$gene_symbol
-  p_val <- full_meta_analysis_results$Bonferroni_Correction
+  p_val <- full_meta_analysis_results$Bonferroni_meta_p
   
   #heatmap
   meta_plot <- ggplot(full_meta_analysis_results, aes(x=analysis_type,y=symbol)) + 
