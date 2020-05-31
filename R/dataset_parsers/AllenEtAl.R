@@ -3,6 +3,7 @@ library(readr)
 library(magrittr)
 library(dplyr)
 
+use_gdrive <- FALSE
 #This script aims to identify the brain region that maximally expresses the 269 genes 
 
 #Read in the gene expression data in the brain 
@@ -19,12 +20,13 @@ max_four_donors_reannotated %<>% mutate(structure_name = gsub("\\s+", " ", struc
 
 
 howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv")) 
-howard_genes <- howard %>% select(gene_symbol) %>% pull()
+howard_genes <- howard %>% dplyr::select(gene_symbol) %>% dplyr::pull()
 #filter the brain expression data for the 269
 brain_expression <- max_four_donors_reannotated %>% filter(gene_symbol %in% howard_genes)
-howard %<>% select(gene_symbol, Updated_Gene_Names)
+#howard %<>% dplyr::select(gene_symbol, Updated_Gene_Names)
+howard %<>% dplyr::select(gene_symbol, gene_name)
 
-Howard_Table <- howard %>% left_join(brain_expression %>% select(gene_symbol, structure_name), by = c('gene_symbol' = 'gene_symbol'))
+Howard_Table <- howard %>% left_join(brain_expression %>% dplyr::select(gene_symbol, structure_name), by = c('gene_symbol' = 'gene_symbol'))
 Howard_Table %<>% rename(brain_region = structure_name)
 
 Howard_Table %>% filter(is.na(brain_region))
@@ -36,7 +38,8 @@ Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PQLC2L", max_fou
 
 #Map brain structures to ambiguous brain regions 
 # Full list of enclosing brain regions
-enclosing_regions_2 <- read_csv(here("Processed_Data/AllenEtAl/full_brain_region_hierarchy.csv"))
+#enclosing_regions_2 <- read_csv(here("Processed_Data/AllenEtAl/full_brain_region_hierarchy.csv"))
+enclosing_regions <- read_csv(here("Processed_Data/AllenEtAl/full_brain_region_hierarchy.csv"))
 
 Howard_Table %<>% left_join(enclosing_regions, by = c('brain_region' = 'brain_region'))
 #slimmed list of enclosing brain regions
@@ -50,7 +53,7 @@ Howard_Table %>% write_csv(here("Processed_Data/HowardEtAl/HowardRegions_four.cs
 brain_pop <- nrow(max_four_donors_reannotated)
 structure_count <- max_four_donors_reannotated %>% group_by(structure_name) %>% summarize(genome_tissue_count = n())
 #
-howard_brain <- Howard_Table %>% select(gene_symbol, Updated_Gene_Names,brain_region,slim_region_location)
+howard_brain <- Howard_Table %>% dplyr::select(gene_symbol, gene_name,brain_region,slim_region_location)
 howard_count <- howard_brain %>% group_by(brain_region) %>% summarise(sample_tissue_count = n()) %>% na.omit()
 
 full_count <- structure_count %>% full_join(howard_count, by = c('structure_name' = 'brain_region'))
@@ -69,7 +72,10 @@ tissue_expected_probs %<>% mutate(location = if_else(is.na(location), region_loc
 tissue_expected_probs$hypergeometric_p <- signif(as.numeric(tissue_expected_probs$hypergeometric_p),digits=3)
 tissue_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(tissue_expected_probs$corrected_hypergeometric_p),digits=3)
 
+if (use_gdrive == TRUE) {
 #upload to google drive
+library(googlesheets4)
+library(googledrive)
 sheets_auth(token = drive_token())
 
 region <- drive_get("~/Thesis/Manuscript/Supplement_Tables/tissue_hyper_expected_four_full")
@@ -92,4 +98,7 @@ region <- sheets_create("tissue_hyper_expected_four",sheets = c('hypergeometric_
 sheets_write(tissue_expected_probs %>% select(-region_location), region,  sheet = "hypergeometric_brain_regions")
 
 drive_mv(file = "tissue_hyper_expected_four", path = "~/Thesis/Manuscript/Supplement_Tables/") 
-
+} else {
+  write_csv(tissue_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
+  write_csv(tissue_expected_probs %>% select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
+}

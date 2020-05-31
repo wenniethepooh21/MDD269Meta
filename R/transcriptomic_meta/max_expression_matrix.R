@@ -8,7 +8,7 @@ library(tidyr)
 get_max_expression <-function(full_expression_matrix, key.col, group.col) {
   #expand matrix to have the genes as rows instead of columns 
   exp_matrix_long <- gather_(full_expression_matrix, colnames(full_expression_matrix)[-1], key = key.col, value = "expression_levels")
-  max_expression <- exp_matrix_long %>% group_by_(group.col) %>% slice(which.max(expression_levels)) %>% ungroup()
+  max_expression <- exp_matrix_long %>% group_by_(group.col) %>% dplyr::slice(which.max(expression_levels)) %>% ungroup()
   return(max_expression)
 }
 

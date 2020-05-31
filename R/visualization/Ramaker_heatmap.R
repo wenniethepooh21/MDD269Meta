@@ -14,7 +14,7 @@ drawRamaker <- function() {
   Ramaker <- read_csv(here("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTableMagma.csv"))
   Ramaker %<>% filter(gene_symbol %in% top_genes)
   Ramaker %<>% rowwise() %>% mutate(target_region = if_else(target_region == "AnCg", "ACC", target_region),
-                                    expression_direction = t*log(P.Value)*-1)
+                                    expression_direction = sign(t)*log10(P.Value)*-1)
   Ramaker_male <- Ramaker %>% filter(sex == "male")
   Ramaker_female <- Ramaker %>% filter(sex == "female")
   

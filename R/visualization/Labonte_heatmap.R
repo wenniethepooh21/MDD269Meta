@@ -17,7 +17,7 @@ drawLabonte <- function() {
   Labonte %<>% rowwise() %>% mutate(brain_region = if_else(brain_region == "Nac", "nAcc", 
                                                   if_else(brain_region == "Subic", "Sub", 
                                                   if_else(brain_region == "Anterior_Insula", "Ins", brain_region))),
-                                    expression_direction = logFC*log(pvalue)*-1)
+                                    expression_direction = sign(logFC)*log10(pvalue)*-1)
                       
   Labonte_male <- Labonte %>% filter(sex == "male")
   Labonte_female <- Labonte %>% filter(sex == "female")
@@ -45,6 +45,4 @@ drawLabonte <- function() {
   labonte_heat <- plot_grid(title, labonte_plots,ncol = 1,rel_heights = c(0.1, 1)) 
   ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Labonte_expression_heatmap.png'), dpi=300, width=12, height=8)
   return(labonte_heat)
-  
-  
 }
