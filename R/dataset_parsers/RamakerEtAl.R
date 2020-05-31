@@ -135,6 +135,41 @@ cortical_summary %<>% left_join(Ramaker_cortical) %>% select(-AnCg_DLPFC_directi
 #Save full cortical meta-analysis results 
 cortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTable.csv"))
 
+
+########################################################
+###### SUBCORTICAL ANALYSIS (FULL, FEMALE AND MALE) ######
+########################################################
+#extract cortical data and re-run meta-analysis -- don't have to re-run model creation
+Ramaker_subcortical<- read_csv(here("Processed_Data/RamakerEtAl/CompleteRamakerTable.csv"))
+#Extract the cortical region data & run analysis
+Ramaker_subcortical %<>% filter(target_region == "nAcc")
+subcortical_regions <- Ramaker_subcortical %>% select(target_region) %>% distinct() %>% pull()
+#run the meta-analysis on only the cortical regions sampled
+Ramaker_subcortical %<>% RamakerMetaAnalysis(subcortical_regions)
+
+#Extract the cortical region data & run analysis on female data
+female_ramaker_subcortical <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTable.csv"))
+female_ramaker_subcortical %<>% filter(target_region == "nAcc")
+#run the meta-analysis on only the cortical regions sampled in female data
+female_ramaker_subcortical %<>% RamakerMetaAnalysis(subcortical_regions)
+female_ramaker_subcortical %<>% rename(nAcc_Female_directions = nAcc_Female_directions)
+female_ramaker_subcortical %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalFemaleRamakerTable.csv"))
+
+#Extract the cortical region data & run analysis on male data
+male_ramaker_subcortical<- read_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTable.csv"))
+male_ramaker_subcortical %<>% filter(target_region == "nAcc")
+#run the meta-analysis on only the cortical regions sampled in male data
+male_ramaker_subcortical %<>% RamakerMetaAnalysis(subcortical_regions)
+male_ramaker_subcortical %<>% rename(nAcc_Male_directions = nAcc_Female_directions)
+male_ramaker_subcortical %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalMaleRamakerTable.csv"))
+
+#merge all directions from male and female data to visualize cortical directions across sexes
+subcortical_summary <- left_join(female_ramaker_subcortical %>% select(gene_symbol,nAcc_Female_directions), male_ramaker_subcortical %>% select(gene_symbol,nAcc_Male_directions ))
+subcortical_summary %<>% unite("nAcc.F_nAcc.M", nAcc_Female_directions, nAcc_Male_directions, sep = "")
+subcortical_summary %<>% left_join(Ramaker_subcortical) %>% select(-nAcc_Female_directions) %>% distinct()
+#Save full cortical meta-analysis results 
+subcortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTable.csv"))
+
 #############################################
 ###### SEX-INTERACTION FULL ANALYSIS ######
 ############################################
@@ -185,6 +220,30 @@ cortical_flipped %<>% select(-sex, -AnCg_DLPFC_directions)
 cortical_flipped_summary <- Ramaker_cortical_directions %>% left_join(cortical_flipped) %>% distinct()
 cortical_flipped_summary%>%write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTable_flipped.csv"))
 
+########################################################
+###### SEX-INTERACTION SUBORTICAL ANALYSIS ######
+########################################################
+#get female post model differential expression data for cortical regions
+subcortical_female_results <- combined_sex_summary  %>% filter(target_region == "nAcc" ) %>% filter(sex == "female")
+#get male post model differential expression data for cortical regions
+subcortical_male_results <- combined_sex_summary  %>% filter(target_region == "nAcc") %>% filter(sex == "male")
+#flip the expression levels of each gene in each brain region 
+subcortical_male_results_flip <- subcortical_male_results %>% mutate(t = t*-1)
+#merge male cortical results with female cortical results into one table to perform meta-analysis calculations
+subcortical_flipped <- rbind(subcortical_male_results_flip, subcortical_female_results)
+
+#Perform the meta-analysis on the female and flipped male data across all cortical brain regions
+subcortical_flipped %<>% RamakerMetaAnalysis(subcortical_regions)
+
+#Read in to get the original directions data from the cortical meta-analysis
+Ramaker_subcortical_directions <- read_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTable.csv")) %>% select(1:2)
+
+#Keep flipped meta-analysis results 
+subcortical_flipped %<>% select(-sex, -nAcc_directions)
+#join the direction data with the meta-analysis results on the flipped male expression data across all cortical brain regions
+subcortical_flipped_summary <- Ramaker_subcortical_directions %>% left_join(subcortical_flipped) %>% distinct()
+subcortical_flipped_summary %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTable_flipped.csv"))
+
 
 ###############################################################
 ###### GENOME PERCENTILE RANKING FOR ALL ABOVE ANALYSES ######
@@ -214,6 +273,11 @@ cortical_summary%<>% right_join(ramaker_magma, by = c('gene_symbol' = 'Ramaker_g
 cortical_summary %<>% getRank()
 cortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our subcortical meta-analysis
+subcortical_summary%<>% right_join(ramaker_magma, by = c('gene_symbol' = 'Ramaker_genes'))
+subcortical_summary %<>% getRank()
+subcortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTableMagma.csv"))
+
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
 full_flipped_summary%<>% right_join(ramaker_magma, by = c('gene_symbol' = 'Ramaker_genes'))
 full_flipped_summary %<>% getRank()
@@ -223,3 +287,8 @@ full_flipped_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullRamakerT
 cortical_flipped_summary%<>% right_join(ramaker_magma, by = c('gene_symbol' = 'Ramaker_genes'))
 cortical_flipped_summary %<>% getRank()
 cortical_flipped_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma_flipped.csv"))
+
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction subcortical meta-analysis
+subcortical_flipped_summary%<>% right_join(ramaker_magma, by = c('gene_symbol' = 'Ramaker_genes'))
+subcortical_flipped_summary %<>% getRank()
+ubcortical_flipped_summary %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTableMagma_flipped.csv"))

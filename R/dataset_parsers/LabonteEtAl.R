@@ -98,6 +98,18 @@ Labonte_Cortical <- Labonte_long %>% filter(brain_region != "Nac") %>% filter( b
 cortical_Labonte_summary_results <- Labonte_Cortical %>% LabonteMetaAnalysis(8,4)
 cortical_Labonte_summary_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/CorticalLabonteTable.csv"))
 
+###########################################
+###### SUBCORTICAL ANALYSIS BOTH SEXES ######
+###########################################
+#Pick out only the cortical regions that Labonte studied
+Labonte_Subcortical <- Labonte_long %>% filter(brain_region == "Nac" | brain_region == "Subic") 
+#Perform meta-analysis on all brain regions across both sexes
+#number of p-values we need to filter = 4 (2 regions * 2 sexes) 
+#number of brain regions = 2
+subcortical_Labonte_summary_results <- Labonte_Subcortical %>% LabonteMetaAnalysis(4,2)
+subcortical_Labonte_summary_results %>% write_csv(path = here("Processed_Data/LabonteEtAl/SubcorticalLabonteTable.csv"))
+
+
 
 #######################################
 ####SEX-INTERACTION FULL ANALYSIS ####
@@ -125,6 +137,20 @@ Labonte_cortical_flip <-Labonte_long_cortical_flip %>% LabonteMetaAnalysis(8,4)
 cortical_labonte_dir <- cortical_Labonte_summary_results %>% select(1:2)
 Labonte_summary_cortical_flip <- cortical_labonte_dir %>% left_join(Labonte_cortical_flip %>% select(-2))
 Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTable_flipped.csv"))
+
+############################################
+#### SEX-INTERACTION SUBCORTICAL ANALYSIS ####
+############################################
+Labonte_long_subcortical_flip <- Labonte_Subcortical %>% mutate(logFC = if_else(sex == "male",logFC *-1, logFC))
+#Perform meta-analysis on all brain regions across both sexes
+#number of p-values we need to filter = 4 (2 regions * 2 sexes) 
+#number of brain regions = 2
+Labonte_subcortical_flip <-Labonte_long_subcortical_flip %>% LabonteMetaAnalysis(8,4)
+#change directions back to original
+subcortical_labonte_dir <- subcortical_Labonte_summary_results %>% select(1:2)
+Labonte_summary_subcortical_flip <- subcortical_labonte_dir %>% left_join(Labonte_subcortical_flip %>% select(-2))
+Labonte_summary_subcortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/SubcorticalLabonteTable_flipped.csv"))
+
 
 
 ###############################################################
@@ -156,6 +182,12 @@ cortical_Labonte_summary_results%<>% right_join(labonte_magma, by = c('gene_symb
 cortical_Labonte_summary_results %<>% getRank()
 cortical_Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our subcortical meta-analysis
+subcortical_Labonte_summary_results%<>% right_join(labonte_magma, by = c('gene_symbol' = 'Labonte_genes'))
+subcortical_Labonte_summary_results %<>% getRank()
+subcortical_Labonte_summary_results %>% write_csv(here("Processed_Data/LabonteEtAl/SubcorticalLabonteTableMagma.csv"))
+
+
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
 Labonte_summary_full_flip%<>% right_join(labonte_magma, by = c('gene_symbol' = 'Labonte_genes'))
 Labonte_summary_full_flip %<>% getRank()
@@ -165,3 +197,9 @@ Labonte_summary_full_flip %>% write_csv(here("Processed_Data/LabonteEtAl/FullLab
 Labonte_summary_cortical_flip%<>% right_join(labonte_magma, by = c('gene_symbol' = 'Labonte_genes'))
 Labonte_summary_cortical_flip %<>% getRank()
 Labonte_summary_cortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/CorticalLabonteTableMagma_flipped.csv"))
+
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction subcortical meta-analysis
+Labonte_summary_subcortical_flip%<>% right_join(labonte_magma, by = c('gene_symbol' = 'Labonte_genes'))
+Labonte_summary_subcortical_flip %<>% getRank()
+Labonte_summary_subcortical_flip %>% write_csv(here("Processed_Data/LabonteEtAl/SubcorticalLabonteTableMagma_flipped.csv"))
+

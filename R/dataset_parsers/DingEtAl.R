@@ -80,6 +80,19 @@ Ding_cortical <- fullDingTable %>% filter(brain_region != "AMY")
 Ding_cortical_results <- Ding_cortical %>% DingMetaAnalysis(6,3)
 Ding_cortical_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTable.csv"))
 
+#########################################
+###### SUBCORTICAL META-ANALYSIS  ######
+#########################################
+
+#Remve the data for AMY brain region
+Ding_subcortical <- fullDingTable %>% filter(brain_region == "AMY")
+#Perform meta-analysis on cortical brain regions in both sexes
+#number of p-values we need to filter = 2 (1 region * 2 sex) 
+#number of brain regions = 1
+Ding_subcortical_results <- Ding_subcortical %>% DingMetaAnalysis(2,1)
+Ding_subcortical_results %>% write_csv(here("Processed_Data/DingEtAl/SubcorticalDingTable.csv"))
+
+
 #######################################
 ####SEX-INTERACTION FULL ANALYSIS ####
 #######################################
@@ -98,7 +111,17 @@ Ding_cortical_flip <- Ding_cortical %>% rowwise() %>% mutate(effectsize = if_els
 cortical_Ding_flip_results <- Ding_cortical_flip %>% DingMetaAnalysis(6,3)
 original_ding_cortical_dir <- Ding_cortical_results %>% select(1:2)
 cortical_Ding_flip_results_summary <- original_ding_cortical_dir %>% left_join(cortical_Ding_flip_results %>% select(-2))
-cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTable_flipped.csv"))
+cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/SubcorticalDingTable_flipped.csv"))
+
+
+#######################################
+####SEX-INTERACTION SUBCORTICAL ANALYSIS ####
+#######################################
+Ding_subcortical_flip <- Ding_subcortical %>% rowwise() %>% mutate(effectsize = if_else(sex == "male", effectsize*-1, effectsize))
+subcortical_Ding_flip_results <- Ding_subcortical_flip %>% DingMetaAnalysis(6,3)
+original_ding_subcortical_dir <- Ding_subcortical_results %>% select(1:2)
+subcortical_Ding_flip_results_summary <- original_ding_subcortical_dir %>% left_join(subcortical_Ding_flip_results %>% select(-2))
+subcortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/SubcorticalDingTable_flipped.csv"))
 
 
 ###############################################################
@@ -130,6 +153,11 @@ Ding_cortical_results%<>% right_join(ding_magma, by = c("gene_symbol" = "Ding_ge
 Ding_cortical_results %<>% getRank()
 Ding_cortical_results %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma.csv"))
 
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our cortical meta-analysis
+Ding_subcortical_results%<>% right_join(ding_magma, by = c("gene_symbol" = "Ding_genes")) 
+Ding_subcortical_results %<>% getRank()
+Ding_subcortical_results %>% write_csv(here("Processed_Data/DingEtAl/SubcorticalDingTableMagma.csv"))
+
 #Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction full meta-analysis
 full_Ding_flip_results_summary%<>% right_join(ding_magma, by = c("gene_symbol" = "Ding_genes")) 
 full_Ding_flip_results_summary %<>% getRank()
@@ -139,3 +167,9 @@ full_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/FullD
 cortical_Ding_flip_results_summary%<>% right_join(ding_magma, by = c("gene_symbol" = "Ding_genes")) 
 cortical_Ding_flip_results_summary %<>% getRank()
 cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))
+
+#Run genome percentile ranking analysis - calculates the percentage of genes that have a smaller meta p-value than the current gene on our sex-interaction cortical meta-analysis
+subcortical_Ding_flip_results_summary%<>% right_join(ding_magma, by = c("gene_symbol" = "Ding_genes")) 
+subcortical_Ding_flip_results_summary %<>% getRank()
+subcortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/SubcorticalDingTableMagma_flipped.csv"))
+
