@@ -95,7 +95,7 @@ RamakerMetaAnalysis <- function(full_results, regions){
   	#summarize the direction of expression with '+' and '-' 
   	directions %<>% spread(target_region, t)
   	directions %<>% mutate_at(regions, list(~ if_else(. > 0, "+", "-")))  
-  	colname = as.character(paste(c(regions, "directions"), collapse = "_"))
+  	colname <- as.character(paste(c(regions, "directions"), collapse = "_"))
   	directions %<>% unite(col = !!colname, regions, sep="", remove = TRUE)
   
   	summary_results <- inner_join(directions, summary_results)
