@@ -145,7 +145,7 @@ Labonte_long_subcortical_flip <- Labonte_Subcortical %>% mutate(logFC = if_else(
 #Perform meta-analysis on all brain regions across both sexes
 #number of p-values we need to filter = 4 (2 regions * 2 sexes) 
 #number of brain regions = 2
-Labonte_subcortical_flip <-Labonte_long_subcortical_flip %>% LabonteMetaAnalysis(8,4)
+Labonte_subcortical_flip <-Labonte_long_subcortical_flip %>% LabonteMetaAnalysis(4,2)
 #change directions back to original
 subcortical_labonte_dir <- subcortical_Labonte_summary_results %>% select(1:2)
 Labonte_summary_subcortical_flip <- subcortical_labonte_dir %>% left_join(Labonte_subcortical_flip %>% select(-2))

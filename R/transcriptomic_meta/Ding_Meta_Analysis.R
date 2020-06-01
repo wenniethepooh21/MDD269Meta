@@ -31,7 +31,7 @@ DingMetaAnalysis <- function(full_results, num_p, num_regions) {
   #append different brain regions together for column header
   full_results %<>% mutate(combined_region_sex = paste(sex, brain_region, sep="_"))
   combined_order <- sort(unique(full_results$combined_region_sex))
-  combined_order_string = paste(combined_order, collapse="_")
+  combined_order_string <- paste(combined_order, collapse="_")
   
   #summarize the direction of expression with '+' and '-' 
   directions <- full_results %>% select(gene_symbol, combined_region_sex, effectsize)

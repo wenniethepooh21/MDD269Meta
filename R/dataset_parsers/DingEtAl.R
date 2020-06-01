@@ -118,7 +118,7 @@ cortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/S
 ####SEX-INTERACTION SUBCORTICAL ANALYSIS ####
 #######################################
 Ding_subcortical_flip <- Ding_subcortical %>% rowwise() %>% mutate(effectsize = if_else(sex == "male", effectsize*-1, effectsize))
-subcortical_Ding_flip_results <- Ding_subcortical_flip %>% DingMetaAnalysis(6,3)
+subcortical_Ding_flip_results <- Ding_subcortical_flip %>% DingMetaAnalysis(2,1)
 original_ding_subcortical_dir <- Ding_subcortical_results %>% select(1:2)
 subcortical_Ding_flip_results_summary <- original_ding_subcortical_dir %>% left_join(subcortical_Ding_flip_results %>% select(-2))
 subcortical_Ding_flip_results_summary %>% write_csv(here("Processed_Data/DingEtAl/SubcorticalDingTable_flipped.csv"))

@@ -30,13 +30,14 @@ fullRamaker <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma.c
 femaleRamaker <- read_csv(here("Processed_Data/RamakerEtAl/FemaleRamakerTableMagma.csv"))
 maleRamaker <- read_csv(here("Processed_Data/RamakerEtAl/MaleRamakerTableMagma.csv"))
 corticalRamaker <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma.csv"))
-subcorticalRamaker <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma.csv"))
+subcorticalRamaker <- read_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTableMagma.csv"))
 fullRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma_flipped.csv"))
 corticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma_flipped.csv"))
 subcorticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTableMagma_flipped.csv"))
 
 #read in the equivalent Howard genes used in each transcriptomic study
 Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
+Howard %<>% rename(Howard_pvalue = Howard.pvalue)
 #read in the differentially expressed "prior ranking" for the genes identified in Crow, et al. 
 DE_Prior <- read_tsv(here("Raw_Data/CrowEtAl/pnas.1802973116.sd02.txt"))
 DE_Prior$DE_Prior_Rank <- signif(as.numeric(DE_Prior$DE_Prior_Rank),digits=3)
@@ -60,7 +61,7 @@ fullRamakerDir <- "AnCg.F_nAcc.F_DLPFC.F_AnCg.M_nAcc.M_DLPFC.M"
 femaleRamakerDir <- "AnCg_nAcc_DLPFC_Female_directions"
 maleRamakerDir <- "AnCg_nAcc_DLPFC_Male_directions"
 corticalRamakerDir <- "AnCg.F_DLPFC.F_AnCg.M_DLPFC.M"
-corticalRamakerDir <- "nAcc.F_nAcc.M"
+subcorticalRamakerDir <- "nAcc.F_nAcc.M"
 
 #Perform the meta-analysis combining all study-specific meta analyses together
 #Functions used for combining the data from each study and meta-analysis calculations can be found here

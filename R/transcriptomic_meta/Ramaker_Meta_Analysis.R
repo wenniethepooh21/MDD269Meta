@@ -68,10 +68,12 @@ RamakerMetaAnalysis <- function(full_results, regions){
   	full_results %<>% mutate(higher_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(-1*t))) #invert p-value if expression is lower (1-p_value) otherwise (pvalue/2)
   	full_results %<>% mutate(lower_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(1*t))) #invert p-value if expression is higher (1-p_value) otherwise (p_value/2)
   	
+  	#count the number of occurrence each gene has
+  	num_distinct <- full_results %>% select(gene_symbol) %>% group_by(gene_symbol) %>% summarize(total_num = n()) %>% select(total_num) %>% distinct() %>% pull()
   	#perform meta-analysis 
   	#Run Fisher's method grouping genes across brain regions (if there's more than one brain region)
   	  #combining the information in the p-values from different statistical tests to form a single overall test
-  	if(length(regions) > 1) {
+  	if(num_distinct > 1) {
   		summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), 
   	                                                      meta_higher_in_MDD_pvalue = sumlog(c(higher_in_MDD_pvalue))$p,
   	                                                      meta_lower_in_MDD_pvalue = sumlog(c(lower_in_MDD_pvalue))$p)
