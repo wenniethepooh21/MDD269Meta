@@ -62,38 +62,41 @@ RamakerDEModel <- function(metadata, read_counts, rawcount_dataframe, regions, f
 }
 
 #Function that calculates the meta p values using Fisher's method
-RamakerMetaAnalysis <- function(full_results, regions){
+RamakerMetaAnalysis <- function(results, regions){
+    #get the min P.value
+    results_p_summary <- results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value))
+    
     #p-values are two tailed for negative and positive expression levels 
-  	#create six one-sided pvalues per gene based on the direction of expression (get a p-value for both directions separately to see which is more significant)
-  	full_results %<>% mutate(higher_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(-1*t))) #invert p-value if expression is lower (1-p_value) otherwise (pvalue/2)
-  	full_results %<>% mutate(lower_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(1*t))) #invert p-value if expression is higher (1-p_value) otherwise (p_value/2)
-  	
-  	#count the number of occurrence each gene has
-  	num_distinct <- full_results %>% select(gene_symbol) %>% group_by(gene_symbol) %>% summarize(total_num = n()) %>% select(total_num) %>% distinct() %>% pull()
-  	#perform meta-analysis 
-  	#Run Fisher's method grouping genes across brain regions (if there's more than one brain region)
-  	  #combining the information in the p-values from different statistical tests to form a single overall test
-  	if(num_distinct > 1) {
-  		summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), 
-  	                                                      meta_higher_in_MDD_pvalue = sumlog(c(higher_in_MDD_pvalue))$p,
-  	                                                      meta_lower_in_MDD_pvalue = sumlog(c(lower_in_MDD_pvalue))$p)
-  		} else {
-  		  #there's only data for one brain region not need to perform Fisher's method  
-  			summary_results <- full_results %>% group_by(gene_symbol) %>% summarize(min_p_across_regions = min(P.Value), 
-  	                                                      meta_higher_in_MDD_pvalue = higher_in_MDD_pvalue,
-  	                                                      meta_lower_in_MDD_pvalue = lower_in_MDD_pvalue)
-  		}
-  	#meta p-value is the direction with the more significant p-value, multiply by 2 to change back to 2 sided p-value
-  	summary_results %<>% rowwise() %>% mutate(meta_direction = if_else(meta_higher_in_MDD_pvalue < meta_lower_in_MDD_pvalue, 1, -1), meta_p = 2 * min(meta_higher_in_MDD_pvalue, meta_lower_in_MDD_pvalue))
-  	
+    #create six one-sided pvalues per gene based on the direction of expression (get a p-value for both directions separately to see which is more significant)
+    meta_results <- results %<>% mutate(higher_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(-1*t)),  #invert p-value if expression is lower (1-p_value) otherwise (pvalue/2)
+                                       lower_in_MDD_pvalue = two2one(P.Value, invert=1 == sign(1*t)))   #invert p-value if expression is higher (1-p_value) otherwise (p_value/2)
+    
+    
+    #count the number of occurrence each gene has
+    num_distinct <- meta_results %>% select(gene_symbol) %>% group_by(gene_symbol) %>% summarize(total_num = n()) %>% select(total_num) %>% distinct() %>% pull()
+    #perform meta-analysis 
+    #Run Fisher's method grouping genes across brain regions (if there's more than one brain region)
+    #combining the information in the p-values from different statistical tests to form a single overall test
+    if(num_distinct > 1) {
+      summary_results <- meta_results %>% group_by(gene_symbol) %>% summarize( 
+        meta_higher_in_MDD_pvalue = sumlog(c(higher_in_MDD_pvalue))$p,
+        meta_lower_in_MDD_pvalue = sumlog(c(lower_in_MDD_pvalue))$p)
+    } else {
+      #there's only data for one brain region not need to perform Fisher's method  
+      summary_results <- meta_results %>% group_by(gene_symbol) %>% summarize(
+        meta_higher_in_MDD_pvalue = higher_in_MDD_pvalue,
+        meta_lower_in_MDD_pvalue = lower_in_MDD_pvalue)
+    }
+    #join min p-value with meta values
+    summary_results <- results_p_summary %>% left_join(summary_results)
+    
+    #meta p-value is the direction with the more significant p-value, multiply by 2 to change back to 2 sided p-value
+    summary_results %<>% rowwise() %>% mutate(meta_direction = if_else(meta_higher_in_MDD_pvalue < meta_lower_in_MDD_pvalue, 1, -1), meta_p = 2 * min(meta_higher_in_MDD_pvalue, meta_lower_in_MDD_pvalue))
+  
   	#add in individual directions for visualization
   	#handle flipping of male direction for sex-interaction meta-analysis 
-  	if ("sex" %in% colnames(full_results)){
-    	directions <- full_results %>% select(gene_symbol, target_region, t, sex)
-    }else {
-      directions <- full_results %>% select(gene_symbol, target_region, t)
-    }
-  	
+
+    directions <- results %>% select(gene_symbol, target_region, t, sex)
   	#summarize the direction of expression with '+' and '-' 
   	directions %<>% spread(target_region, t)
   	directions %<>% mutate_at(regions, list(~ if_else(. > 0, "+", "-")))  
