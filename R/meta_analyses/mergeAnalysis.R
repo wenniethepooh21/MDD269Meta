@@ -83,17 +83,17 @@ MetaAnalysis <- function(merged_table){
   meta_merged_p %<>% rowwise() %>% mutate(meta_direction = if_else(meta_meta_higher_in_MDD_pvalue < meta_meta_lower_in_MDD_pvalue, '+', '-'), meta_p = if_else(2 * min(meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue) > 1, 1, 2 * min(meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue)))
   
   full_table <- inner_join(meta_merged_p,min_p)
-  full_table <- left_join(merged_directions,full_table) 
+  full_table <- left_join(merged_directions,full_table) %>% distinct()
   
   #copy the values from DCDC1 to DCDC5 (same gene.. but have different p values for Howard)
   keep <- full_table %>% filter(gene_symbol == "DCDC1")
   keep_index <- keep[-c(1:6)]
-  full_table[which(full_table$gene_symbol == "DCDC5"),c(7:ncol(full_table))]<- keep_index
+  dcdc5 <- full_table %>% filter(gene_symbol == "DCDC5") %>% select(1:6) %>% cbind(keep_index)
+  full_table %<>% filter(gene_symbol != "DCDC5")
+  full_table %<>% rbind(dcdc5) 
   
-  #why is there extra rows
   full_table %<>% mutate(Corrected_p = meta_p*269)
-  # 
-  full_table %<>%distinct() #fix the 666 rows 
+  
   full_table %<>% mutate(Bonferroni_meta_p = p.adjust(meta_p, method = "bonferroni") ) 
   full_table %<>% arrange(Corrected_p)
   # three significant digits 
