@@ -1,4 +1,4 @@
-<h1> MDD 269 Meta-Analyses <h2>
+# MDD 269 Meta-Analyses <h1>
 
 Meta-analyses performed was using data from: 
 
