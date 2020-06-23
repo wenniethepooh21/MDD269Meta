@@ -57,6 +57,16 @@ source(here("R/transcriptomic_meta/Ramaker_Meta_Analysis.R"))
 regions <- unique(metadata$`brain region`)
 
 #create empty tibble for data to be populated 
+full_results <- tibble()
+
+#Perform Ramaker meta-analysis functions in RamakerMetaAnalysis.R
+R_summary_results <- RamakerDEModel(fullmetadata, read_counts, rawcount_dataframe, regions, full_results)
+R_summary_results %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol), sex = "both") #change from upper case to lower case for open reading frame genes
+R_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteRamakerTable.csv")) #write out for easier access in other analyses (cortical)
+#perform meta-analysis on full (female and male all brain regions) data
+R_summary_results %<>% RamakerMetaAnalysis(regions)
+
+#create empty tibble for data to be populated 
 female_results <- tibble()
 #full female Ramaker data results
 R_female_summary_results <- RamakerDEModel(female_metadata, read_counts, rawcount_dataframe, regions, female_results)
@@ -65,6 +75,7 @@ female_summary_ramaker <- R_female_summary_results %>% write_csv(here("Processed
 #perform meta-analysis on female data
 R_female_summary_results %<>% RamakerMetaAnalysis(regions)
 R_female_summary_results %<>% rename(AnCg_nAcc_DLPFC_Female_directions = AnCg_nAcc_DLPFC_directions)
+R_female_summary_results %<>% select(-sex)
 #Save full female meta-analysis results
 R_female_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/FemaleRamakerTable.csv"))
 
@@ -78,26 +89,17 @@ male_summary_ramaker <- R_male_summary_results %>% write_csv(here("Processed_Dat
 #perform meta-analysis on male data
 R_male_summary_results %<>% RamakerMetaAnalysis(regions)
 R_male_summary_results %<>% rename(AnCg_nAcc_DLPFC_Male_directions = AnCg_nAcc_DLPFC_directions)
+R_male_summary_results %<>% select(-sex)
 #Save full male meta-analysis results
 R_male_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/MaleRamakerTable.csv"))
 
 #combine female and male raw expression stats together
 combined_sex_summary <- rbind(male_summary_ramaker, female_summary_ramaker) %>% write_csv("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTable.csv")
 
-#Perform Ramaker meta-analysis functions in RamakerMetaAnalysis.R
-#R_summary_results <- RamakerDEModel(fullmetadata, read_counts, rawcount_dataframe, regions, full_results)
-R_summary_results <- combined_sex_summary 
-#R_summary_results %>% write_csv(here("Processed_Data/RamakerEtAl/CompleteRamakerTable.csv")) #write out for easier access in other analyses (cortical)
-#perform meta-analysis on full (female and male all brain regions) data
-
-R_summary_results %<>% RamakerMetaAnalysis(regions)
-
-
-
 #merge all gender directions into summary_results table full meta analysis visualization
 Ramaker_summary <- left_join(R_female_summary_results %>% select(gene_symbol,AnCg_nAcc_DLPFC_Female_directions), R_male_summary_results %>% select(gene_symbol,AnCg_nAcc_DLPFC_Male_directions ))
 Ramaker_summary %<>% unite(AnCg.F_nAcc.F_DLPFC.F_AnCg.M_nAcc.M_DLPFC.M, AnCg_nAcc_DLPFC_Female_directions, AnCg_nAcc_DLPFC_Male_directions, sep = "")
-Ramaker_summary %<>% left_join(R_summary_results%>% select(-sex,-AnCg_nAcc_DLPFC_directions) %>% distinct())
+Ramaker_summary %<>% left_join(R_summary_results%>% select(-sex, -AnCg_nAcc_DLPFC_directions) %>% distinct())
 #Save full meta-analysis results
 Ramaker_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTable.csv")) #used for combining across transcriptomic studies 
 
