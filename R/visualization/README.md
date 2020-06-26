@@ -1,6 +1,6 @@
-##### This folder contains the files used to generate the heatmaps
+### This folder contains the files used to generate the heatmaps
 
-- The main file that generates the combined heatmaps is **combine_heatmaps.R** which is called in the main script **Run_meta_analysis_script.R**
+- The main file that generates the combined heatmaps is **combine_heatmaps.R** which is called in the main script **MDD269Meta/R/Run_meta_analysis_script.R**
 - This script can only be successfully completed after all meta-analyses have been performed and their results saved in the specified folders
 - The main file makes calls to:
   - **combine_transcriptomic_heatmaps.R**
