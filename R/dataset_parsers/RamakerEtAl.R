@@ -107,7 +107,7 @@ Ramaker_summary %>% write_csv(here("Processed_Data/RamakerEtAl/FullRamakerTable.
 ###### CORTICAL ANALYSIS (FULL, FEMALE AND MALE) ######
 ########################################################
 #extract cortical data and re-run meta-analysis -- don't have to re-run model creation
-Ramaker_cortical<- read_csv(here("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTable.csv"))
+Ramaker_cortical<- read_csv(here("Processed_Data/RamakerEtAl/CompleteRamakerTable.csv"))
 #Extract the cortical region data & run analysis
 Ramaker_cortical %<>% filter(target_region != "nAcc")
 cortical_regions <- Ramaker_cortical %>% select(target_region) %>% distinct() %>% pull()
