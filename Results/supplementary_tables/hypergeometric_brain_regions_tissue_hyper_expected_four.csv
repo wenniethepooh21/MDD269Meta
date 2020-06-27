@@ -1,0 +1,179 @@
+structure_name,genome_tissue_count,sample_tissue_count,hypergeometric_p,corrected_hypergeometric_p,enclosing_regions
+midbrain raphe nuclei,60,6,1.21e-4,0.0216,midbrain raphe nuclei < midbrain tegmentum
+dorsal lateral geniculate nucleus,431,15,5.09e-4,0.0906,dorsal lateral geniculate nucleus <  dorsal lateral geneiculate nucleus  < dorsal thalamus
+CA3 field,216,8,0.00712,1,CA3 field <  hippocampal formation  < limbic lobe
+III paravermis,180,7,0.00896,1,III paravermis <  III  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+nucleus of the diagonal band horizontal division,56,3,0.0356,1,nucleus of the diagonal band horizontal division <  nucleus of the diagonal band  <  substantia innominata  < basal forebrain
+lateral group of nuclei dorsal division,106,4,0.0484,1,lateral group of nuclei dorsal division <  lateral group of nuclei  < dorsal thalamus
+postcentral gyrus bank of the central sulcus,4,1,0.0506,1,postcentral gyrus bank of the central sulcus <  postcentral gyrus  < parietal lobe
+superior temporal gyrus lateral bank of gyrus,4,1,0.0506,1,superior temporal gyrus lateral bank of gyrus <  superior temporal gyrus  < temporal lobe
+supraoptic nucleus,328,8,0.0631,1,supraoptic nucleus < anterior hypothalamic region
+lingual gyrus striate,71,3,0.0639,1,lingual gyrus striate <  lingual gyrus  < occipital lobe
+V lateral hemisphere,130,4,0.0877,1,V lateral hemisphere <  V  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+V,83,3,0.092,1,V <  anterior lobe of the vermis  <  vermis  < cerebellar cortex
+cuneus striate,87,3,0.102,1,cuneus striate <  cuneus  < occipital lobe
+IV,94,3,0.122,1,IV <  anterior lobe of the vermis  <  vermis  < cerebellar cortex
+substantia nigra pars compacta,205,5,0.126,1,substantia nigra pars compacta < substantia nigra
+pontine nuclei,158,4,0.148,1,pontine nuclei < basal part of pons
+fusiform gyrus lateral bank of gyrus,13,1,0.155,1,fusiform gyrus lateral bank of gyrus <  fusiform gyrus  < temporal lobe
+VIIIB lateral hemisphere,1075,18,0.156,1,VIIIB lateral hemisphere <  VIIIB  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+superior rostral gyrus,108,3,0.163,1,superior rostral gyrus < frontal lobe
+locus ceruleus,174,4,0.188,1,locus ceruleus < pontine tegmentum
+parahippocampal gyrus lateral bank of gyrus,16,1,0.188,1,parahippocampal gyrus lateral bank of gyrus <  parahippocampal gyrus  < limbic lobe
+fusiform gyrus bank of cos,17,1,0.198,1,fusiform gyrus bank of cos <  fusiform gyrus  < temporal lobe
+IX paravermis,119,3,0.199,1,IX paravermis <  IX  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+dentate gyrus,918,15,0.207,1,dentate gyrus <  hippocampal formation  < limbic lobe
+CA1 field,192,4,0.236,1,CA1 field <  hippocampal formation  < limbic lobe
+preoptic region,76,2,0.257,1,preoptic region < hypothalamus
+globus pallidus internal segment,137,3,0.26,1,globus pallidus internal segment <  globus pallidus  < basal ganglia
+paraventricular nucleus of the hypothalamus,77,2,0.261,1,paraventricular nucleus of the hypothalamus < anterior hypothalamic region
+superior colliculus,27,1,0.296,1,superior colliculus < midbrain tectum
+parolfactory gyri,85,2,0.3,1,parolfactory gyri < frontal lobe
+VIIIB paravermis,33,1,0.348,1,VIIIB paravermis <  VIIIB  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+basolateral nucleus,34,1,0.357,1,basolateral nucleus < amygdala
+corpus callosum,1570,22,0.373,1,corpus callosum < telencephalic commissures
+inferior temporal gyrus lateral bank of gyrus,39,1,0.397,1,inferior temporal gyrus lateral bank of gyrus <  inferior temporal gyrus  < temporal lobe
+temporal pole superior aspect,39,1,0.397,1,temporal pole superior aspect <  temporal pole  < temporal lobe
+supramarginal gyrus superior bank of gyrus,108,2,0.407,1,supramarginal gyrus superior bank of gyrus <  supramarginal gyrus  <  inferior parietal lobule  < parietal lobe
+CA4 field,188,3,0.438,1,CA4 field <  hippocampal formation  < limbic lobe
+medial geniculate complex,45,1,0.443,1,medial geniculate complex < dorsal thalamus
+principal sensory nucleus of trigeminal nerve,118,2,0.451,1,principal sensory nucleus of trigeminal nerve <  trigeminal nuclei  < pontine tegmentum
+subthalamic nucleus,267,4,0.452,1,subthalamic nucleus < subthalamus
+septal nuclei,47,1,0.457,1,septal nuclei < basal forebrain
+central nucleus,49,1,0.471,1,central nucleus < amygdala
+postcentral gyrus superior lateral aspect of gyrus,52,1,0.491,1,postcentral gyrus superior lateral aspect of gyrus <  postcentral gyrus  < parietal lobe
+body of caudate nucleus,56,1,0.517,1,body of the caudate nucleus  <  caudate nucleus  <  striatum  < basal ganglia
+lateral group of nuclei ventral division,56,1,0.517,1,lateral group of nuclei ventral division <  lateral group of nuclei  < dorsal thalamus
+VI paravermis,62,1,0.553,1,VI paravermis <  VI  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+VIIB,224,3,0.554,1,VIIB <  posterior lobe of the vermis  <  vermis  < cerebellar cortex
+medial mammillary nucleus,235,3,0.586,1,medial mammillary nucleus <  mammillary body  < mammillary region
+inferior olivary complex,243,3,0.609,1,inferior olivary complex <  myelencephalon  < gray matter
+IX,171,2,0.65,1,IX <  posterior lobe of the vermis  <  vermis  < cerebellar cortex
+abducens nucleus,175,2,0.662,1,abducens nucleus < pontine tegmentum
+reticular nucleus of thalamus,267,3,0.672,1,reticular nucleus of thalamus < ventral thalamus
+VIIIA,86,1,0.673,1,VIIIA <  posterior lobe of the vermis  <  vermis  < cerebellar cortex
+lateral parabrachial nucleus,88,1,0.681,1,lateral parabrachial nucleus < pontine tegmentum
+ventromedial hypothalamic nucleus,88,1,0.681,1,ventromedial hypothalamic nucleus < tuberal region
+bed nucleus of stria terminalis,93,1,0.702,1,bed nucleus of stria terminalis <  substantia innominata  < basal forebrain
+dorsal motor nucleus of the vagus,93,1,0.702,1,dorsal motor nucleus of the vagus <  myelencephalon  < gray matter
+dentate nucleus,95,1,0.709,1,dentate nucleus < cerebellar nuclei
+lateral mammillary nucleus,374,4,0.713,1,lateral mammillary nucleus <  mammillary body  < mammillary region
+VIIIA lateral hemisphere,99,1,0.724,1,VIIIA lateral hemisphere <  VIIIA  <  Posterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+putamen,101,1,0.731,1,putamen <  striatum  < basal ganglia
+VI,103,1,0.738,1,VI <  posterior lobe of the vermis  <  vermis  < cerebellar cortex
+claustrum,226,2,0.791,1,claustrum < cerebral nuclei
+basal nucleus of meynert,253,2,0.84,1,basal nucleus of meynert <  substantia innominata  < basal forebrain
+subcuneiform nucleus,254,2,0.842,1,subcuneiform nucleus < midbrain reticular formation
+substantia nigra pars reticulata,261,2,0.853,1,substantia nigra pars reticulata < substantia nigra
+globose nucleus,366,3,0.854,1,globose nucleus < cerebellar nuclei
+zona incerta,569,5,0.861,1,zona incerta <  ventral thalamus  < thalamus
+lateral tuberal nucleus,152,1,0.862,1,lateral tuberal nucleus < tuberal region
+central glial substance,2509,27,0.866,1,central glial substance <  myelencephalon  < gray matter
+globus pallidus external segment,484,4,0.873,1,globus pallidus external segment <  globus pallidus  < basal ganglia
+superior olivary complex,166,1,0.885,1,superior olivary complex < pontine tegmentum
+hypoglossal nucleus,184,1,0.909,1,hypoglossal nucleus <  myelencephalon  < gray matter
+CA2 field,190,1,0.916,1,CA2 field <  hippocampal formation  < limbic lobe
+caudal group of intralaminar nuclei,201,1,0.927,1,caudal group of intralaminar nuclei < dorsal thalamus
+IV lateral hemisphere,342,2,0.937,1,IV lateral hemisphere <  IV  <  Anterior Lobe  <  cerebellar hemispheres  < cerebellar cortex
+motor nucleus of trigeminal nerve,385,2,0.96,1,motor nucleus of trigeminal nerve <  trigeminal nuclei  < pontine tegmentum
+cuneate nucleus,331,1,0.987,1,cuneate nucleus <  myelencephalon  < gray matter
+oculomotor nuclear complex,366,1,0.992,1,oculomotor nuclear complex < midbrain tegmentum
+amygdalohippocampal transition zone,92,NA,NA,NA,amygdalohippocampal transition zone <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter
+angular gyrus superior bank of gyrus,8,NA,NA,NA,angular gyrus superior bank of gyrus <  angular gyrus  <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+anterior group of nuclei,16,NA,NA,NA,anterior group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter
+anterior orbital gyrus,33,NA,NA,NA,anterior orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+arcuate nucleus of medulla,38,NA,NA,NA,arcuate nucleus of medulla <  myelencephalon  < gray matter
+basomedial nucleus,48,NA,NA,NA,basomedial nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter
+central gray substance of midbrain,4,NA,NA,NA,central gray substance of midbrain <  midbrain tegmentum  <  mesencephalon  < gray matter
+central medullary reticular group,62,NA,NA,NA,central medullary reticular group <  medullary reticular formation  <  myelencephalon  < gray matter
+cingulate gyrus frontal part superior bank of gyrus,1,NA,NA,NA,cingulate gyrus frontal part superior bank of gyrus <  cingulate gyrus frontal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+cingulate gyrus parietal part inferior bank of gyrus,4,NA,NA,NA,cingulate gyrus parietal part inferior bank of gyrus <  cingulate gyrus parietal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+cingulate gyrus parietal part superior bank of gyrus,2,NA,NA,NA,cingulate gyrus parietal part superior bank of gyrus <  cingulate gyrus parietal part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+cingulate gyrus retrosplenial part superior bank of gyrus,50,NA,NA,NA,cingulate gyrus retrosplenial part superior bank of gyrus <  cingulate gyrus retrosplenial part  <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+cochlear nuclei,44,NA,NA,NA,cochlear nuclei <  myelencephalon  < gray matter
+cortico-medial group,21,NA,NA,NA,cortico-medial group <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter
+Crus I lateral hemisphere,13,NA,NA,NA,Crus I lateral hemisphere <  crus I  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+Crus I paravermis,12,NA,NA,NA,Crus I paravermis <  crus I  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+Crus II lateral hemisphere,99,NA,NA,NA,Crus II lateral hemisphere <  crus II  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+Crus II paravermis,91,NA,NA,NA,Crus II paravermis <  crus II  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+cuneiform nucleus,42,NA,NA,NA,cuneiform nucleus <  midbrain reticular formation  <  midbrain tegmentum  <  mesencephalon  < gray matter
+cuneus peristriate,10,NA,NA,NA,cuneus peristriate <  cuneus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+dorsomedial hypothalamic nucleus,21,NA,NA,NA,dorsomedial hypothalamic nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter
+facial motor nucleus,168,NA,NA,NA,facial motor nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter
+frontal operculum,3,NA,NA,NA,frontal operculum <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+fusiform gyrus bank of the its,2,NA,NA,NA,fusiform gyrus bank of the its <  fusiform gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+gigantocellular group,13,NA,NA,NA,gigantocellular group <  medullary reticular formation  <  myelencephalon  < gray matter
+gyrus rectus,4,NA,NA,NA,gyrus rectus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+head of caudate nucleus,63,NA,NA,NA,head of caudate nucleus <  head of the caudate nucleus  <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter
+Heschl's gyrus,7,NA,NA,NA,Heschl's gyrus <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+III,50,NA,NA,NA,III <  anterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+inferior colliculus,25,NA,NA,NA,inferior colliculus <  midbrain tectum  <  mesencephalon  < gray matter
+inferior frontal gyrus opercular part,13,NA,NA,NA,inferior frontal gyrus opercular part <  inferior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+inferior frontal gyrus orbital part,6,NA,NA,NA,inferior frontal gyrus orbital part <  inferior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+inferior frontal gyrus triangular part,7,NA,NA,NA,inferior frontal gyrus triangular part <  inferior frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+inferior occipital gyrus inferior bank of gyrus,2,NA,NA,NA,inferior occipital gyrus inferior bank of gyrus <  inferior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+inferior occipital gyrus superior bank of gyrus,22,NA,NA,NA,inferior occipital gyrus superior bank of gyrus <  inferior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+inferior rostral gyrus,3,NA,NA,NA,inferior rostral gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+inferior temporal gyrus bank of the its,2,NA,NA,NA,inferior temporal gyrus bank of the its <  inferior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+IV paravermis,40,NA,NA,NA,IV paravermis <  IV  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+lateral hypothalamic area anterior region,40,NA,NA,NA,lateral hypothalamic area anterior region <  anterior hypothalamic region  <  hypothalamus  <  diencephalon  < gray matter
+lateral hypothalamic area mammillary region,15,NA,NA,NA,lateral hypothalamic area mammillary region <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter
+lateral hypothalamic area tuberal region,20,NA,NA,NA,lateral hypothalamic area tuberal region <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter
+lateral medullary reticular group,47,NA,NA,NA,lateral medullary reticular group <  medullary reticular formation  <  myelencephalon  < gray matter
+lateral nucleus,99,NA,NA,NA,lateral nucleus <  amygdala  <  cerebral nuclei  <  telencephalon  < gray matter
+lateral orbital gyrus,2,NA,NA,NA,lateral orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+lingual gyrus peristriate,10,NA,NA,NA,lingual gyrus peristriate <  lingual gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+medial group of nuclei,10,NA,NA,NA,medial group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter
+medial orbital gyrus,3,NA,NA,NA,medial orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+medial parabrachial nucleus,52,NA,NA,NA,medial parabrachial nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter
+middle frontal gyrus inferior bank of gyrus,5,NA,NA,NA,middle frontal gyrus inferior bank of gyrus <  middle frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+middle frontal gyrus superior bank of gyrus,1,NA,NA,NA,middle frontal gyrus superior bank of gyrus <  middle frontal gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+nucleus accumbens,87,NA,NA,NA,nucleus accumbens <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter
+nucleus of the diagonal band vertical division,113,NA,NA,NA,nucleus of the diagonal band vertical division <  nucleus of the diagonal band  <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter
+nucleus subceruleus,14,NA,NA,NA,nucleus subceruleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter
+occipito-temporal gyrus inferior bank of gyrus,1,NA,NA,NA,occipito-temporal gyrus inferior bank of gyrus <  occipito-temporal gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+occipito-temporal gyrus superior bank of gyrus,1,NA,NA,NA,occipito-temporal gyrus superior bank of gyrus <  occipito-temporal gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+olfactory tubercle,34,NA,NA,NA,olfactory tubercle <  substantia innominata  <  basal forebrain  <  cerebral nuclei  <  telencephalon  < gray matter
+paracentral lobule anterior part inferior bank of gyrus,5,NA,NA,NA,paracentral lobule anterior part inferior bank of gyrus <  paracentral lobule anterior part  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+paracentral lobule anterior part superior bank of gyrus,28,NA,NA,NA,paracentral lobule anterior part superior bank of gyrus <  paracentral lobule anterior part  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+parahippocampal gyrus bank of the cos,2,NA,NA,NA,parahippocampal gyrus bank of the cos <  parahippocampal gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+perifornical nucleus,142,NA,NA,NA,perifornical nucleus <  tuberal region  <  hypothalamus  <  diencephalon  < gray matter
+planum polare,2,NA,NA,NA,planum polare <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+planum temporale,19,NA,NA,NA,planum temporale <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+pontine raphe nucleus,12,NA,NA,NA,pontine raphe nucleus <  pontine tegmentum  <  pons  <  metencephalon  < gray matter
+postcentral gyrus bank of the posterior central sulcus,15,NA,NA,NA,postcentral gyrus bank of the posterior central sulcus <  postcentral gyrus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+postcentral gyrus inferior lateral aspect of gyrus,6,NA,NA,NA,postcentral gyrus inferior lateral aspect of gyrus <  postcentral gyrus  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+posterior group of nuclei,25,NA,NA,NA,posterior group of nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter
+posterior hypothalamic area,17,NA,NA,NA,posterior hypothalamic area <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter
+posterior orbital gyrus,18,NA,NA,NA,posterior orbital gyrus <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+precentral gyrus bank of the central sulcus,10,NA,NA,NA,precentral gyrus bank of the central sulcus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+precentral gyrus bank of the precentral sulcus,3,NA,NA,NA,precentral gyrus bank of the precentral sulcus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+precentral gyrus inferior lateral aspect of gyrus,10,NA,NA,NA,precentral gyrus inferior lateral aspect of gyrus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+precentral gyrus superior lateral aspect of gyrus,12,NA,NA,NA,precentral gyrus superior lateral aspect of gyrus <  precentral gyrus  <  frontal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+raphe nuclei of medulla,9,NA,NA,NA,raphe nuclei of medulla <  myelencephalon  < gray matter
+red nucleus,42,NA,NA,NA,red nucleus <  midbrain tegmentum  <  mesencephalon  < gray matter
+rostral group of intralaminar nuclei,32,NA,NA,NA,rostral group of intralaminar nuclei <  dorsal thalamus  <  thalamus  <  diencephalon  < gray matter
+short insular gyri,9,NA,NA,NA,short insular gyri <  insula  <  cerebral cortex  <  telencephalon  < gray matter
+spinal trigeminal nucleus,11,NA,NA,NA,spinal trigeminal nucleus <  myelencephalon  < gray matter
+subcallosal cingulate gyrus,21,NA,NA,NA,subcallosal cingulate gyrus <  cingulate gyrus  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+subiculum,23,NA,NA,NA,subiculum <  hippocampal formation  <  limbic lobe  <  cerebral cortex  <  telencephalon  < gray matter
+superior occipital gyrus inferior bank of gyrus,22,NA,NA,NA,superior occipital gyrus inferior bank of gyrus <  superior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+superior occipital gyrus superior bank of gyrus,2,NA,NA,NA,superior occipital gyrus superior bank of gyrus <  superior occipital gyrus  <  occipital lobe  <  cerebral cortex  <  telencephalon  < gray matter
+superior parietal lobule inferior bank of gyrus,3,NA,NA,NA,superior parietal lobule inferior bank of gyrus <  superior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+superior temporal gyrus inferior bank of gyrus,1,NA,NA,NA,superior temporal gyrus inferior bank of gyrus <  superior temporal gyrus  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+supramammillary nucleus,82,NA,NA,NA,supramammillary nucleus <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter
+supramarginal gyrus inferior bank of gyrus,9,NA,NA,NA,supramarginal gyrus inferior bank of gyrus <  supramarginal gyrus  <  inferior parietal lobule  <  parietal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+tail of caudate nucleus,57,NA,NA,NA,tail of caudate nucleus <  tail of the caudate nucleus  <  caudate nucleus  <  striatum  <  basal ganglia  <  cerebral nuclei  <  telencephalon  < gray matter
+temporal pole inferior aspect,6,NA,NA,NA,temporal pole inferior aspect <  temporal pole  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+temporal pole medial aspect,101,NA,NA,NA,temporal pole medial aspect <  temporal pole  <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+transverse gyri,11,NA,NA,NA,transverse gyri <  temporal lobe  <  cerebral cortex  <  telencephalon  < gray matter
+tuberomammillary nucleus,68,NA,NA,NA,tuberomammillary nucleus <  mammillary region  <  hypothalamus  <  diencephalon  < gray matter
+V paravermis,10,NA,NA,NA,V paravermis <  V  <  Anterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+ventral tegmental area,6,NA,NA,NA,ventral tegmental area <  midbrain tegmentum  <  mesencephalon  < gray matter
+vestibular nuclei,16,NA,NA,NA,vestibular nuclei <  myelencephalon  < gray matter
+VI lateral hemisphere,31,NA,NA,NA,VI lateral hemisphere <  VI  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+VIIAt,71,NA,NA,NA,VIIAt <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+VIIB lateral hemisphere,23,NA,NA,NA,VIIB lateral hemisphere <  VIIB  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+VIIB paravermis,122,NA,NA,NA,VIIB paravermis <  VIIB  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+VIIIA paravermis,56,NA,NA,NA,VIIIA paravermis <  VIIIA  <  Posterior Lobe  <  cerebellar hemispheres  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
+VIIIB,220,NA,NA,NA,VIIIB <  posterior lobe of the vermis  <  vermis  <  cerebellar cortex  <  cerebellum  <  metencephalon  < gray matter
