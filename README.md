@@ -2,7 +2,7 @@
 
 # R
 - Contains all the R scripts created to perform the meta-analyses
-- Main script to call is ##Run_meta_analysis_script.R##. It will call the other scripts in order. 
+- Main script to call is Run_meta_analysis_script.R. It will call the other scripts in order. 
 
 # Raw_Data
 - Contains all the raw data obtained from:
