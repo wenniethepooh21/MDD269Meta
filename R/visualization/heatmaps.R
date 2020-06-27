@@ -1,7 +1,7 @@
 library(cowplot)
 library(ggplot2)
 library(gridExtra)
-### This script draws the heatmaps showing the expression levels of each top gene across all brain regions for both sexes
+### This script draws the heatmaps showing the expression levels of each top gene across all brain regions for both sexes (Called in the Labonte/Ramaker/Ding_heatmaps.R)
 
 # This function draws the heatmap of both sexes and combines them into one plot
 # arguments: male and female expression data (dataframe), brain regions used in each sex (list), gene_symbols used in each sex (list)
@@ -31,8 +31,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
     labs(x=NULL) +
     scale_fill_distiller(limits = c(abs_bound*-1, abs_bound),
                                     palette = "RdBu") +
-    # scale_fill_gradientn(limits = c(abs_bound*-1, abs_bound),
-    # colors = c("darkblue", "blue", "white", "red", "darkred")) +
+
     ylab('') +
     ggtitle("Male") +
     theme(
@@ -48,8 +47,7 @@ drawExpressionHeat <- function(dataset_male, dataset_female, male_regions, male_
     labs(x=NULL, fill = "signed log(p_value)") +
     scale_fill_distiller(limits = c(abs_bound*-1, abs_bound),
                          palette = "RdBu") +
-    # scale_fill_gradientn(limits = c(abs_bound*-1, abs_bound),
-    # colors = c("darkblue", "blue", "white", "red", "darkred")) +
+
     ylab('') +
     ggtitle("Female")+
     theme(

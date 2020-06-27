@@ -6,12 +6,12 @@ library(here)
 library(readr)
 library(dplyr)
 library(tidyr)
-#This script creates a heatmap showing the direction of expression of the top 11 genes in the Ramaker raw results
+#This script creates a heatmap showing the direction of expression of the top 12 genes in the Ramaker raw results
 drawRamaker <- function() {
-  top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A") 
+  top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A","ZNF184") 
   
   #read in Ramaker data
-  Ramaker <- read_csv(here("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTableMagma.csv"))
+  Ramaker <- read_csv(here("Processed_Data/RamakerEtAl/CombinedCompleteFemaleMaleRamakerTable.csv"))
   Ramaker %<>% filter(gene_symbol %in% top_genes)
   Ramaker %<>% rowwise() %>% mutate(target_region = if_else(target_region == "AnCg", "ACC", target_region),
                                     expression_direction = sign(t)*log10(P.Value)*-1)
@@ -19,8 +19,8 @@ drawRamaker <- function() {
   Ramaker_female <- Ramaker %>% filter(sex == "female")
   
   #arrange these genes with significant ones together 
-  Ramaker_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))))
-  Ramaker_female %<>% mutate(gene_symbol = factor(gene_symbol, levels = rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))))
+  Ramaker_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA","ZNF184"))))
+  Ramaker_female %<>% mutate(gene_symbol = factor(gene_symbol, levels = rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA","ZNF184"))))
   
   ramaker_male_regions <- Ramaker_male$target_region
   ramaker_male_symbol <- Ramaker_male$gene_symbol
@@ -38,7 +38,7 @@ drawRamaker <- function() {
   title <- ggdraw() + draw_label("Ramaker, et al.", fontface = "bold",size = 20, hjust = 0.35)
   # plot heatmap
   ramaker_heat <- plot_grid(title, Ramaker_plots,ncol = 1, rel_heights = c(0.1, 1))
-  ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Ramaker_expression_heatmap.png'), dpi=300, width=12, height=8)
+  ggsave(filename = here('Results/Meta_Analysis_Results/Heatmaps/top_genes_Ramaker_expression_heatmap.png'), dpi=300, width=12, height=8)
   return(ramaker_heat)
   
 }

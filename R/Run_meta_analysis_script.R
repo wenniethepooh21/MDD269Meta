@@ -5,9 +5,9 @@ detach("package:here", unload=TRUE)
 setwd('../../../school/thesis/')
 library(here)
 
-detach("package:here", unload=TRUE)
-setwd('../../Thesis/Datas/MDD44Characterize/')
-library(here)
+# detach("package:here", unload=TRUE)
+# setwd('../../Thesis/Datas/MDD44Characterize/')
+# library(here)
 
 #1. run the study-specific analyses (pre-processing included)
 source(here("R/dataset_parsers/RamakerEtAl.R"))
@@ -34,4 +34,4 @@ source(here("R/meta_analyses/Wilkoxon_Test.R")) #-- side analysis
 #view the final product online in google drive! 
 
 #Create heatmaps for visualization! 
-source(here("R/visualization/combine_heatmaps.R")) #generates a plot of the combined transcriptomic heatmaps (top 11 gene expressions)
+source(here("R/visualization/combine_heatmaps.R")) #generates a plot of the combined transcriptomic heatmaps (top 12 gene expressions)

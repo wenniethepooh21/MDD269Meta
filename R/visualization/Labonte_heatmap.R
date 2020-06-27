@@ -7,12 +7,12 @@ library(readr)
 library(dplyr)
 library(tidyr)
 library(magrittr)
-#This script creates a heatmap showing the direction of expression of the top 11 genes in the Labonte raw results
+#This script creates a heatmap showing the direction of expression of the top 12 genes in the Labonte raw results
 drawLabonte <- function() {
-  top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A") 
+  top_genes <- c("MANEA","UBE2M","CKB","ITPR3","SPRY2","SAMD5","TMEM106B","ZC3H7B","LST1","ASXL3","HSPA1A","ZNF184") 
   
   #read in Labonte data
-  Labonte <- read_csv(here("Processed_Data/LabonteEtAl/CompleteLabonteTableMagma.csv"))
+  Labonte <- read_csv(here("Processed_Data/LabonteEtAl/CompleteLabonteTable.csv"))
   Labonte %<>% filter(gene_symbol %in% top_genes)
   Labonte %<>% rowwise() %>% mutate(brain_region = if_else(brain_region == "Nac", "nAcc", 
                                                   if_else(brain_region == "Subic", "Sub", 
@@ -24,8 +24,8 @@ drawLabonte <- function() {
   
   
   #arrange these genes with significant ones together 
-  Labonte_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))))
-  Labonte_female %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA"))))
+  Labonte_male %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA","ZNF184"))))
+  Labonte_female %<>% mutate(gene_symbol = factor(gene_symbol, levels=rev(c("HSPA1A","ZC3H7B", "ITPR3", "UBE2M", "CKB", "SAMD5", "SPRY2", "TMEM106B", "LST1","ASXL3", "MANEA","ZNF184"))))
   
   labonte_male_regions <- Labonte_male$brain_region
   labonte_male_symbol <- Labonte_male$gene_symbol
@@ -43,6 +43,6 @@ drawLabonte <- function() {
   title <- ggdraw() + draw_label("Labonté, et al.", fontface = "bold",size = 20)
   # plot heatmap
   labonte_heat <- plot_grid(title, labonte_plots,ncol = 1,rel_heights = c(0.1, 1)) 
-  ggsave(filename = here('Processed_Data/Meta_Analysis_Results/Heatmaps/top_genes_Labonte_expression_heatmap.png'), dpi=300, width=12, height=8)
+  ggsave(filename = here('Results/Meta_Analysis_Results/Heatmaps/top_genes_Labonte_expression_heatmap.png'), dpi=300, width=12, height=8)
   return(labonte_heat)
 }

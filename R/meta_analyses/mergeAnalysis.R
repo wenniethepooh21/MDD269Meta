@@ -9,9 +9,9 @@ library(here)
 #This function merges the study-specific meta-analysis results into one table filtered for the 269 genes
 mergeMetaStudies <- function (H, L, Ldir, D, Ddir, R, Rdir) {
   #All studies were used
-  merged_directions <- H %>% left_join(R %>% select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker.Gene' = 'gene_symbol'))
-  merged_directions %<>% left_join(L %>% select(gene_symbol, LabonteDir= Ldir),by = c('Labonte.Gene' = 'gene_symbol'))
-  merged_directions %<>% left_join( D%>% select(gene_symbol, DingDir= Ddir),by = c('Ding.Gene' = 'gene_symbol'))
+  merged_directions <- H %>% left_join(R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker.Gene' = 'gene_symbol'))
+  merged_directions %<>% left_join(L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte.Gene' = 'gene_symbol'))
+  merged_directions %<>% left_join( D%>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding.Gene' = 'gene_symbol'))
   
   #Label which genes Ding filtered out due to low expression and variance
   merged_directions %<>% mutate(DingDir = ifelse(Ding.Gene == "unused", "Filtered_Out", DingDir))
@@ -47,8 +47,7 @@ mergeMetaStudies <- function (H, L, Ldir, D, Ddir, R, Rdir) {
   merged_p <- bind_rows(L, D, R)
 
   #merge two datasets together
-  #merged_directions %<>% select(-Updated_Gene_Names, -`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
-  merged_directions %<>% select(-`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
+  merged_directions %<>% dplyr::select(-`Match Across Studies?`,-Ramaker.Gene, -Labonte.Gene, - Ding.Gene)
   
   merged_p %<>% mutate(gene_symbol = gsub("C([X0-9]+)ORF([0-9]+)", "C\\1orf\\2", gene_symbol))
   
@@ -88,7 +87,7 @@ MetaAnalysis <- function(merged_table){
   #copy the values from DCDC1 to DCDC5 (same gene.. but have different p values for Howard)
   keep <- full_table %>% filter(gene_symbol == "DCDC1")
   keep_index <- keep[-c(1:6)]
-  dcdc5 <- full_table %>% filter(gene_symbol == "DCDC5") %>% select(1:6) %>% cbind(keep_index)
+  dcdc5 <- full_table %>% filter(gene_symbol == "DCDC5") %>% dplyr::select(1:6) %>% cbind(keep_index)
   full_table %<>% filter(gene_symbol != "DCDC5")
   full_table %<>% rbind(dcdc5) 
   
@@ -114,8 +113,8 @@ MetaAnalysis <- function(merged_table){
 #This function calculates combines the calculated empirical p-values of each gene across the studies to determine the meta-empirical p-value or the meta percentile rank
 GenomeRank <- function(merged_table) {
   
-  merged_p <- merged_table %>% select(gene_symbol, min_p_across_regions, meta_Down, meta_Up)
-  merged_directions <- merged_table %>% select(gene_symbol, Howard_pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
+  merged_p <- merged_table %>% dplyr::select(gene_symbol, min_p_across_regions, meta_Down, meta_Up)
+  merged_directions <- merged_table %>% dplyr::select(gene_symbol, Howard_pvalue, gene_name, RamakerDir, LabonteDir, DingDir)
   
   #get just minp and the two one-sided meta p-values for each row
   meta_merged_p <- merged_p %>% group_by(gene_symbol) %>% summarize(list_of_meta_higher_in_MDD_genome_percentile_rank = list(meta_Up), 
@@ -167,13 +166,13 @@ GenomeRank <- function(merged_table) {
 mergeMagmaMetaRank<- function(m, L, Ldir, D, Ddir, R, Rdir, analysis){
   
   #All studies were used
-  merged_directions <- left_join(m, R %>% select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker_genes' = 'gene_symbol'))
-  merged_directions %<>% left_join(L %>% select(gene_symbol, LabonteDir= Ldir),by = c('Labonte_genes' = 'gene_symbol'))
-  merged_directions %<>% left_join(D %>% select(gene_symbol, DingDir= Ddir),by = c('Ding_genes' = 'gene_symbol')) %>% select(-Previous_Symbol, - Updated_Symbol, - Labonte_genes, - Ding_genes, -Ramaker_genes) %>% distinct()
+  merged_directions <- left_join(m, R %>% dplyr::select(gene_symbol, RamakerDir = Rdir), by = c('Ramaker_genes' = 'gene_symbol'))
+  merged_directions %<>% left_join(L %>% dplyr::select(gene_symbol, LabonteDir= Ldir),by = c('Labonte_genes' = 'gene_symbol'))
+  merged_directions %<>% left_join(D %>% dplyr::select(gene_symbol, DingDir= Ddir),by = c('Ding_genes' = 'gene_symbol')) %>% dplyr::select(-Previous_Symbol, - Updated_Symbol, - Labonte_genes, - Ding_genes, -Ramaker_genes) %>% distinct()
   
-  Labonte <- left_join(m %>% select(gene_symbol,Labonte_genes) %>% na.omit() , L, by = c('Labonte_genes' = 'gene_symbol')) %>% select(-Labonte_genes) %>% distinct() %>% filter(!is.na(meta_p))
-  Ding <- left_join(m %>% select(gene_symbol,Ding_genes), D, by = c('Ding_genes' = 'gene_symbol')) %>% select(-Ding_genes) %>% distinct() %>% filter(!is.na(meta_p))
-  Ramaker <- left_join(m %>% select(gene_symbol,Ramaker_genes), R, by = c('Ramaker_genes' = 'gene_symbol')) %>% select(-Ramaker_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Labonte <- left_join(m %>% dplyr::select(gene_symbol,Labonte_genes) %>% na.omit() , L, by = c('Labonte_genes' = 'gene_symbol')) %>% dplyr::select(-Labonte_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Ding <- left_join(m %>% dplyr::select(gene_symbol,Ding_genes), D, by = c('Ding_genes' = 'gene_symbol')) %>% dplyr::select(-Ding_genes) %>% distinct() %>% filter(!is.na(meta_p))
+  Ramaker <- left_join(m %>% dplyr::select(gene_symbol,Ramaker_genes), R, by = c('Ramaker_genes' = 'gene_symbol')) %>% dplyr::select(-Ramaker_genes) %>% distinct() %>% filter(!is.na(meta_p))
   
   merged_p <- bind_rows(Labonte, Ding, Ramaker)
   
@@ -181,9 +180,9 @@ mergeMagmaMetaRank<- function(m, L, Ldir, D, Ddir, R, Rdir, analysis){
   merged_table %<>% mutate(Howard_pvalue = NA, gene_name = NA)
   
   if(analysis == "meta") {
-    merged_table %<>% MetaAnalysis() %>% select(-Howard_pvalue, -gene_name)
+    merged_table %<>% MetaAnalysis() %>% dplyr::select(-Howard_pvalue, -gene_name)
   } else {
-    merged_table %<>% GenomeRank() %>% select(-Howard_pvalue, -gene_name)
+    merged_table %<>% GenomeRank() %>% dplyr::select(-Howard_pvalue, -gene_name)
   }
   return(merged_table)
   

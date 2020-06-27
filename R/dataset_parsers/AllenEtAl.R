@@ -27,14 +27,14 @@ brain_expression <- max_four_donors_reannotated %>% filter(gene_symbol %in% howa
 howard %<>% dplyr::select(gene_symbol, gene_name)
 
 Howard_Table <- howard %>% left_join(brain_expression %>% dplyr::select(gene_symbol, structure_name), by = c('gene_symbol' = 'gene_symbol'))
-Howard_Table %<>% rename(brain_region = structure_name)
+Howard_Table %<>% dplyr::rename(brain_region = structure_name)
 
 Howard_Table %>% filter(is.na(brain_region))
 #found 3 missing genes = PQLC2L, PRR34, C7orf72 update manually, C7orf72 is not found
 #PRR34 has an old gene symbol = C22orf26 found in the expression matrix, add it in
-Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PRR34", max_four_donors_reannotated %>% filter(gene_symbol == "C22orf26") %>% select(structure_name) %>% as.character(), brain_region))
+Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PRR34", max_four_donors_reannotated %>% filter(gene_symbol == "C22orf26") %>% dplyr::select(structure_name) %>% as.character(), brain_region))
 #PQLC2L old gene symbol is C3orf55
-Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PQLC2L", max_four_donors_reannotated %>% filter(gene_symbol == "C3orf55") %>% select(structure_name) %>% as.character(), brain_region))
+Howard_Table %<>% mutate(brain_region = if_else(gene_symbol == "PQLC2L", max_four_donors_reannotated %>% filter(gene_symbol == "C3orf55") %>% dplyr::select(structure_name) %>% as.character(), brain_region))
 
 #Map brain structures to ambiguous brain regions 
 # Full list of enclosing brain regions
@@ -45,7 +45,7 @@ Howard_Table %<>% left_join(enclosing_regions, by = c('brain_region' = 'brain_re
 #slimmed list of enclosing brain regions
 brain_slim <- read_csv(here("Processed_Data/AllenEtAl/brain_regions_slim.csv"))
 Howard_Table %<>% left_join(brain_slim, by = c('brain_region' = 'BrainRegion'))
-Howard_Table %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% rename(slim_region_location = location)
+Howard_Table %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% dplyr::rename(slim_region_location = location)
 
 Howard_Table %>% write_csv(here("Processed_Data/HowardEtAl/HowardRegions_four.csv"))
 
@@ -67,7 +67,7 @@ tissue_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeo
 tissue_expected_probs %<>% arrange(hypergeometric_p,-sample_tissue_count)
 tissue_expected_probs %<>% left_join(brain_slim, by = c('structure_name'='BrainRegion')) %>% ungroup()
 tissue_expected_probs %<>% left_join(enclosing_regions, by = c('structure_name' = 'brain_region'))%>% ungroup()
-tissue_expected_probs %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% rename(enclosing_regions = location)
+tissue_expected_probs %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% dplyr::rename(enclosing_regions = location)
 
 tissue_expected_probs$hypergeometric_p <- signif(as.numeric(tissue_expected_probs$hypergeometric_p),digits=3)
 tissue_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(tissue_expected_probs$corrected_hypergeometric_p),digits=3)
@@ -95,10 +95,10 @@ if(nrow(region) != 0) {
 }
 #create the google worksheet
 region <- sheets_create("tissue_hyper_expected_four",sheets = c('hypergeometric_brain_regions'))
-sheets_write(tissue_expected_probs %>% select(-region_location), region,  sheet = "hypergeometric_brain_regions")
+sheets_write(tissue_expected_probs %>% dplyr::select(-region_location), region,  sheet = "hypergeometric_brain_regions")
 
 drive_mv(file = "tissue_hyper_expected_four", path = "~/Thesis/Manuscript/Supplement_Tables/") 
 } else {
   write_csv(tissue_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
-  write_csv(tissue_expected_probs %>% select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
+  write_csv(tissue_expected_probs %>% dplyr::select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
 }
