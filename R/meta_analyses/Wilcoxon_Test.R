@@ -19,7 +19,7 @@ runWilcox <- function(table,howard_genes){
 }
 
 ############################################################################################################################################################
-################ WILKOXON RANK SUM TEST ON THE SEXINTERACTION ANALYSES VS FULL & CORTICAL META-ANALYSES ############################
+################ WILKOXON RANK SUM TEST ON THE SEXINTERACTION ANALYSES VS FULL & CORTICAL META-ANALYSES plot top genes ############################
 
 full <- read_csv(here('Results', 'Tables', 'Meta_Analysis', "Full_Meta_Analysis.csv"))
 cortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Cortical_Meta_Analysis.csv'))
@@ -27,14 +27,13 @@ SI_Full <- read_csv(here('Results', 'Tables', 'Meta_Analysis','Sex_interaction_F
 SI_Cortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis.csv'))
 
 #compare full with full
-full_wilkoxon <- full %>% filter(Corrected_p < 0.05) %>% mutate(group = "meta") %>% select(group, Corrected_p)
+full_wilkoxon <- full %>% filter(Corrected_p < 0.05) %>% mutate(group = "meta") %>% select(group, meta)
 SI_Full_wilkoxon <- SI_Full %>% filter(Corrected_p < 0.05) %>% mutate(group = "SI") %>% select(group, Corrected_p)
 
 table_full <- rbind(full_wilkoxon, SI_Full_wilkoxon)
 
 boxplot(Corrected_p ~ group, data = table_full)
 
-wilcox.test(Corrected_p ~ group, alternative = "two.sided", paired = FALSE, mu = 0, data = table_full)
 
 #compare cortical with cortical 
 cortical_wilkoxon <- cortical %>% filter(Corrected_p < 0.05) %>% mutate(group = "meta") %>% select(group, Corrected_p)
@@ -44,30 +43,37 @@ table_cortical <- rbind(cortical_wilkoxon, SI_cortical_wilkoxon)
 
 boxplot(Corrected_p ~ group, data = table_cortical)
 
-wilcox.test(Corrected_p ~ group, alternative = "two.sided", paired = FALSE, mu = 0, data = table_cortical)
-
-
 #compare SI will meta
 combined_table <- rbind(table_full,table_cortical)
-boxplot(Corrected_p ~ group, data = combined_table)
-wilcox.test(Corrected_p ~ group, alternative = "two.sided", paired = FALSE, mu = 0, data = combined_table)
+boxplot(meta_p ~ group, data = combined_table)
 
-####### PAIRED ########
+########################################################################################################################################################
+###################################################################### PAIRED 269 genes ################################################################
 full <- read_csv(here('Results', 'Tables', 'Meta_Analysis', "Full_Meta_Analysis.csv"))
 cortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Cortical_Meta_Analysis.csv'))
 SI_Full <- read_csv(here('Results', 'Tables', 'Meta_Analysis','Sex_interaction_Full_Meta_Analysis.csv'))
 SI_Cortical <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis.csv'))
 
-full %<>% select(gene_symbol, Corrected_p)
-cortical %<>% select(gene_symbol, Corrected_p)
-SI_Full %<>% select(gene_symbol, Corrected_p)
-SI_Cortical %<>% select(gene_symbol, Corrected_p)
+full %<>% select(gene_symbol, meta_p)
+cortical %<>% select(gene_symbol, meta_p)
+SI_Full %<>% select(gene_symbol, meta_p)
+SI_Cortical %<>% select(gene_symbol, meta_p)
+
 
 full_analysis <- full %>% inner_join(SI_Full, by = c('gene_symbol' = 'gene_symbol'))
-wilcox.test(full_analysis$Corrected_p.x, full_analysis$Corrected_p.y, paired=TRUE)
+wilcox.test(full_analysis$meta_p.x, full_analysis$meta_p.y, paired=TRUE)
+
+plot <- full %>% mutate(group = "meta") %>% select(-gene_symbol)
+full_table <- rbind(plot, SI_Full %>% mutate(group = "SI")%>% select(-gene_symbol))
+boxplot(meta_p ~ group, data = full_table)
 
 cortical_analysis <- cortical %>% inner_join(SI_Cortical, by = c('gene_symbol' = 'gene_symbol'))
-wilcox.test(cortical_analysis$Corrected_p.x, cortical_analysis$Corrected_p.y, paired=TRUE)
+wilcox.test(cortical_analysis$meta_p.x, cortical_analysis$meta_p.y, paired=TRUE)
+plot_c <- cortical %>% mutate(group = "meta") %>% select(-gene_symbol)
+cortical_table <- rbind(plot_c, SI_Cortical %>% mutate(group = "SI")%>% select(-gene_symbol))
+boxplot(meta_p ~ group, data = cortical_table)
+
+
 
 
 
