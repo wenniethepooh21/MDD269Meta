@@ -12,3 +12,16 @@ get_max_expression <-function(full_expression_matrix, key.col, group.col) {
   return(max_expression)
 }
 
+
+
+get_z_score <- function(full_expression_matrix) {
+  gene_means <- full_expression_matrix %>% mutate(avg = rowMeans(select(., -mouse_gene))) %>% select(mouse_gene,avg)
+  gene_sd <- full_expression_matrix %>% mutate(sd = apply(select(.,-mouse_gene), 1, sd)) %>% select(mouse_gene, sd)
+  
+  data <- inner_join(gene_means,gene_sd)
+  
+  z_score_table <- max_expression <- get_max_expression(full_expression_matrix, "cell_type_taxon","mouse_gene")
+  z_score_table %<>% inner_join(data)
+  z_score_table %<>% rowwise() %>% mutate(zscore = (expression_levels - avg)/sd)
+  return(z_score_table)
+}

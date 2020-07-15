@@ -26,6 +26,7 @@ fullDing_flipped <- read_csv(here("Processed_Data/DingEtAl/FullDingTableMagma_fl
 corticalDing_flipped <- read_csv(here("Processed_Data/DingEtAl/CorticalDingTableMagma_flipped.csv"))
 subcorticalDing_flipped <- read_csv(here("Processed_Data/DingEtAl/SubcorticalDingTableMagma_flipped.csv"))
 
+
 fullRamaker <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTableMagma.csv"))
 femaleRamaker <- read_csv(here("Processed_Data/RamakerEtAl/FemaleRamakerTableMagma.csv"))
 maleRamaker <- read_csv(here("Processed_Data/RamakerEtAl/MaleRamakerTableMagma.csv"))
@@ -35,6 +36,7 @@ fullRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/FullRamakerTabl
 corticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerTableMagma_flipped.csv"))
 subcorticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTableMagma_flipped.csv"))
 
+
 #read in the equivalent Howard genes used in each transcriptomic study
 Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
 
@@ -42,7 +44,7 @@ Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
 DE_Prior <- read_tsv(here("Raw_Data/CrowEtAl/pnas.1802973116.sd02.txt"))
 DE_Prior$DE_Prior_Rank <- signif(as.numeric(DE_Prior$DE_Prior_Rank),digits=3)
 #Read in the associated transcriptomic cell types and brain regions that maximally expressed each Howard gene
-Howard_Polygenics <- read_csv(here("Processed_Data/HowardEtAl/HowardRegionsPolygenicCellTypes_four.csv"))
+Howard_Polygenics <- read_csv(here("Processed_Data/HowardEtAl/HowardRegionsPolygenicCellTypesZScore_four.csv"))
 
 # Column names - for the direction of expression in each brain region
 fullLabonteDir <- "female_Anterior_Insula_female_BA11_female_BA25_female_BA8/9_female_Nac_female_Subic_male_Anterior_Insula_male_BA11_male_BA25_male_BA8/9_male_Nac_male_Subic"
@@ -104,10 +106,31 @@ mergeMagmaMetaRank(magma, subcorticalLabonte_flipped, subcorticalLabonteDir, sub
 mergeMagmaMetaRank(magma, subcorticalLabonte_flipped, subcorticalLabonteDir, subcorticalDing_flipped, subcorticalDingDir, subcorticalRamaker_flipped, subcorticalRamakerDir,"rank") %>% write_csv(here("Processed_Data/Meta_Analysis_Results/MAGMA/SISubcorticalTableMetaMagmaRank.csv"))
 
 #-----------------------------------------------------------------------------------------
+# Get min p values
+# Combine study-specific meta-analysis
+full_p <- rbind(fullLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                     fullRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+female_p <- rbind(femaleLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), femaleDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                femaleRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+male_p <- rbind(maleLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), maleDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                maleRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+cortical_p <- rbind(corticalLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                corticalRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+subcortical_p <- rbind(subcorticalLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                subcorticalRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+full_p_flip <- rbind(fullLabonte_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                fullRamaker_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+cortical_p_flip <- rbind(corticalLabonte_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                    corticalRamaker_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+subcortical_p_flip <- rbind(subcorticalLabonte_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                       subcorticalRamaker_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+
+
+#-----------------------------------------------------------------------------------------
 #Perform meta-analysis on the 269 GWAS identified depression genes
 #full analysis
 fullTable <- mergeMetaStudies(Howard, fullLabonte, fullLabonteDir, fullDing, fullDingDir, fullRamaker, fullRamakerDir)
-fullTable %<>% MetaAnalysis()
+fullTable %<>% MetaAnalysis(full_p)
 fullTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #fullTable %<>% left_join(Howard_Polygenics %>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 fullTable %<>% left_join(Howard_Polygenics %>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
@@ -115,7 +138,7 @@ fullTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 #Female analysis
 femaleTable <- mergeMetaStudies(Howard,femaleLabonte, femaleLabonteDir, femaleDing, femaleDingDir, femaleRamaker, femaleRamakerDir)
-femaleTable %<>% MetaAnalysis()
+femaleTable %<>% MetaAnalysis(female_p)
 femaleTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #femaleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 femaleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
@@ -123,7 +146,7 @@ femaleTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 #male analysis
 maleTable <- mergeMetaStudies(Howard, maleLabonte, maleLabonteDir,maleDing, maleDingDir, maleRamaker, maleRamakerDir)
-maleTable %<>% MetaAnalysis()
+maleTable %<>% MetaAnalysis(male_p)
 maleTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #maleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 maleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
@@ -131,7 +154,7 @@ maleTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 # #cortical analysis
 corticalTable <- mergeMetaStudies(Howard, corticalLabonte, corticalLabonteDir, corticalDing, corticalDingDir, corticalRamaker, corticalRamakerDir)
-corticalTable %<>% MetaAnalysis()
+corticalTable %<>% MetaAnalysis(cortical_p)
 corticalTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #corticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 corticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
@@ -139,7 +162,7 @@ corticalTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 # subcortical analysis
 subcorticalTable <- mergeMetaStudies(Howard, subcorticalLabonte, subcorticalLabonteDir, subcorticalDing, subcorticalDingDir, subcorticalRamaker, subcorticalRamakerDir)
-subcorticalTable %<>% MetaAnalysis()
+subcorticalTable %<>% MetaAnalysis(subcortical_p)
 subcorticalTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #csuborticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 subcorticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
@@ -147,21 +170,21 @@ subcorticalTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 #Sex-interaction analyses
 fullTable_Flip <- mergeMetaStudies(Howard, fullLabonte_flipped, fullLabonteDir, fullDing_flipped, fullDingDir, fullRamaker_flipped, fullRamakerDir)
-fullTable_Flip %<>% MetaAnalysis()
+fullTable_Flip %<>% MetaAnalysis(full_p_flip)
 fullTable_Flip %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #fullTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 fullTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select( -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 fullTable_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 corticalTable_Flip <- mergeMetaStudies(Howard, corticalLabonte_flipped, corticalLabonteDir, corticalDing_flipped, corticalDingDir, corticalRamaker_flipped, corticalRamakerDir)
-corticalTable_Flip %<>% MetaAnalysis()
+corticalTable_Flip %<>% MetaAnalysis(cortical_p_flip)
 corticalTable_Flip %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #corticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 corticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 corticalTable_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 subcorticalTable_Flip <- mergeMetaStudies(Howard, subcorticalLabonte_flipped, subcorticalLabonteDir, subcorticalDing_flipped, subcorticalDingDir, subcorticalRamaker_flipped, subcorticalRamakerDir)
-subcorticalTable_Flip %<>% MetaAnalysis()
+subcorticalTable_Flip %<>% MetaAnalysis(subcortical_p_flip)
 subcorticalTable_Flip %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #subcorticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
 subcorticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
