@@ -1,13 +1,7 @@
 
 #### General Script to run all meta-analysis to prioritize the 269 genes and identify which cell-type taxon and brain regions most highly express each gene 
 #set the current working directory
-detach("package:here", unload=TRUE)
-setwd('../../../school/thesis/')
 library(here)
-
-# detach("package:here", unload=TRUE)
-# setwd('../../Thesis/Datas/MDD44Characterize/')
-# library(here)
 
 #1. run the study-specific analyses (pre-processing included)
 source(here("R/dataset_parsers/RamakerEtAl.R"))
@@ -29,7 +23,7 @@ source(here("R/dataset_parsers/Howard_max_celltypes_regions.R"))
 
 #run overall meta-analysis combining the results from the study-specific meta-analyses
 source(here("R/meta_analyses/mergeMetaOnSlims.R"))
-source(here("R/meta_analyses/Wilkoxon_Test.R")) #-- side analysis 
+source(here("R/meta_analyses/Wilcoxon_Test.R")) #-- side analysis 
 
 #view the final product online in google drive! 
 

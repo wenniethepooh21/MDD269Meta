@@ -56,7 +56,7 @@ mergeMetaStudies <- function (H, L, Ldir, D, Ddir, R, Rdir) {
 }
 
 #This function takes the merged study-specific meta-analysis results and performes our meta-analysis combined using Fisher's method 
-MetaAnalysis <- function(merged_table,minp_table){
+MetaAnalysis <- function(merged_table,minp_table=FALSE){
   
   #get just minp and the two one-sided meta p-values for each row
   merged_p <- merged_table %>% dplyr::select(gene_symbol, min_p_across_regions, meta_lower_in_MDD_pvalue, meta_higher_in_MDD_pvalue)
@@ -65,8 +65,10 @@ MetaAnalysis <- function(merged_table,minp_table){
   meta_merged_p <- merged_p %>% group_by(gene_symbol) %>% summarize(list_of_meta_higher_in_MDD_pvalue = list(meta_higher_in_MDD_pvalue), 
                                                                     list_of_meta_lower_in_MDD_pvalue = list(meta_lower_in_MDD_pvalue), count_of_pvalues=n())
   min_p <- merged_p %>% group_by(gene_symbol) %>% summarize(minp = min(min_p_across_regions))
-  min_p %<>% left_join(minp_table, by = c('gene_symbol' = 'gene_symbol', 'minp' = 'min_p_across_regions'))
   
+  if(minp_table!=FALSE) {
+    min_p %<>% left_join(minp_table, by = c('gene_symbol' = 'gene_symbol', 'minp' = 'min_p_across_regions'))
+  }
   #had trouble doing this with if_else
   twoOrMore <- meta_merged_p %>% filter(count_of_pvalues > 1) %>% rowwise() %>% 
     mutate(meta_meta_higher_in_MDD_pvalue = sumlog(c(list_of_meta_higher_in_MDD_pvalue))$p,
@@ -84,7 +86,7 @@ MetaAnalysis <- function(merged_table,minp_table){
   
   meta_merged_p %<>% mutate(meta_direction_val= if_else(meta_meta_higher_in_MDD_pvalue < meta_meta_lower_in_MDD_pvalue, meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue))
   meta_merged_p %<>% rowwise() %>% mutate(signed_log_p = sign(meta_direction_val)*log10(as.numeric(meta_p))*-1)
-  meta_merged_p %<>% select(-meta_direction_val)
+  meta_merged_p %<>% dplyr::select(-meta_direction_val)
   
   full_table <- inner_join(meta_merged_p,min_p)
   full_table <- left_join(merged_directions,full_table) %>% distinct()

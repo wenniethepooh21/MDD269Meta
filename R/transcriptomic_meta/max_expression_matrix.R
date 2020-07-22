@@ -15,8 +15,8 @@ get_max_expression <-function(full_expression_matrix, key.col, group.col) {
 
 
 get_z_score <- function(full_expression_matrix) {
-  gene_means <- full_expression_matrix %>% mutate(avg = rowMeans(select(., -mouse_gene))) %>% select(mouse_gene,avg)
-  gene_sd <- full_expression_matrix %>% mutate(sd = apply(select(.,-mouse_gene), 1, sd)) %>% select(mouse_gene, sd)
+  gene_means <- full_expression_matrix %>% mutate(avg = rowMeans(dplyr::select(., -mouse_gene))) %>% dplyr::select(mouse_gene,avg)
+  gene_sd <- full_expression_matrix %>% mutate(sd = apply(dplyr::select(.,-mouse_gene), 1, sd)) %>% dplyr::select(mouse_gene, sd)
   
   data <- inner_join(gene_means,gene_sd)
   

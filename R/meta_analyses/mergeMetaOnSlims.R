@@ -108,22 +108,22 @@ mergeMagmaMetaRank(magma, subcorticalLabonte_flipped, subcorticalLabonteDir, sub
 #-----------------------------------------------------------------------------------------
 # Get min p values
 # Combine study-specific meta-analysis
-full_p <- rbind(fullLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                     fullRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-female_p <- rbind(femaleLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), femaleDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                femaleRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-male_p <- rbind(maleLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), maleDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                maleRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-cortical_p <- rbind(corticalLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                corticalRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-subcortical_p <- rbind(subcorticalLabonte %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                subcorticalRamaker %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-full_p_flip <- rbind(fullLabonte_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                fullRamaker_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-cortical_p_flip <- rbind(corticalLabonte_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                    corticalRamaker_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-subcortical_p_flip <- rbind(subcorticalLabonte_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                       subcorticalRamaker_flipped %>% select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+full_p <- rbind(fullLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                     fullRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+female_p <- rbind(femaleLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), femaleDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                femaleRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+male_p <- rbind(maleLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), maleDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                maleRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+cortical_p <- rbind(corticalLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                corticalRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+subcortical_p <- rbind(subcorticalLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                subcorticalRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+full_p_flip <- rbind(fullLabonte_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                fullRamaker_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+cortical_p_flip <- rbind(corticalLabonte_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                    corticalRamaker_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+subcortical_p_flip <- rbind(subcorticalLabonte_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
+                       subcorticalRamaker_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
 
 
 #-----------------------------------------------------------------------------------------

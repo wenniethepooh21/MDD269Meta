@@ -1,7 +1,7 @@
 cns_cell_type_taxon,genome_cell_count,sample_cell_count,hypergeometric_p,corrected_hypergeometric_p
-Cholinergic and monoaminergic neurons,5546,76,7.85e-6,3.06e-4
-Telencephalon projecting excitatory neurons,1362,22,0.00333,0.13
-Hindbrain neurons,2388,30,0.0218,0.851
+Cholinergic and monoaminergic neurons,5546,76,7.85e-6,2.98e-4
+Telencephalon projecting excitatory neurons,1362,22,0.00333,0.126
+Hindbrain neurons,2388,30,0.0218,0.829
 Non-glutamatergic neuroblasts,215,5,0.038,1
 Spinal cord inhibitory neurons,397,7,0.0555,1
 Telencephalon projecting inhibitory neurons,364,5,0.203,1
