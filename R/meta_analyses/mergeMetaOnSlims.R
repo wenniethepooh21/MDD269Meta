@@ -133,7 +133,7 @@ fullTable <- mergeMetaStudies(Howard, fullLabonte, fullLabonteDir, fullDing, ful
 fullTable %<>% MetaAnalysis(full_p)
 fullTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #fullTable %<>% left_join(Howard_Polygenics %>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-fullTable %<>% left_join(Howard_Polygenics %>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+fullTable %<>% left_join(Howard_Polygenics %>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 fullTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 #Female analysis
@@ -141,7 +141,7 @@ femaleTable <- mergeMetaStudies(Howard,femaleLabonte, femaleLabonteDir, femaleDi
 femaleTable %<>% MetaAnalysis(female_p)
 femaleTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #femaleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-femaleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+femaleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 femaleTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 #male analysis
@@ -149,7 +149,7 @@ maleTable <- mergeMetaStudies(Howard, maleLabonte, maleLabonteDir,maleDing, male
 maleTable %<>% MetaAnalysis(male_p)
 maleTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #maleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-maleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+maleTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 maleTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 # #cortical analysis
@@ -157,7 +157,7 @@ corticalTable <- mergeMetaStudies(Howard, corticalLabonte, corticalLabonteDir, c
 corticalTable %<>% MetaAnalysis(cortical_p)
 corticalTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #corticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-corticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+corticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 corticalTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 # subcortical analysis
@@ -165,7 +165,7 @@ subcorticalTable <- mergeMetaStudies(Howard, subcorticalLabonte, subcorticalLabo
 subcorticalTable %<>% MetaAnalysis(subcortical_p)
 subcorticalTable %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #csuborticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-subcorticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+subcorticalTable %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 subcorticalTable %<>% mutate_all(replace_na, replace = "Not_Available")
 
 #Sex-interaction analyses
@@ -173,21 +173,21 @@ fullTable_Flip <- mergeMetaStudies(Howard, fullLabonte_flipped, fullLabonteDir, 
 fullTable_Flip %<>% MetaAnalysis(full_p_flip)
 fullTable_Flip %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name'))
 #fullTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-fullTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select( -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+fullTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select( -mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 fullTable_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 corticalTable_Flip <- mergeMetaStudies(Howard, corticalLabonte_flipped, corticalLabonteDir, corticalDing_flipped, corticalDingDir, corticalRamaker_flipped, corticalRamakerDir)
 corticalTable_Flip %<>% MetaAnalysis(cortical_p_flip)
 corticalTable_Flip %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #corticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-corticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+corticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 corticalTable_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 subcorticalTable_Flip <- mergeMetaStudies(Howard, subcorticalLabonte_flipped, subcorticalLabonteDir, subcorticalDing_flipped, subcorticalDingDir, subcorticalRamaker_flipped, subcorticalRamakerDir)
 subcorticalTable_Flip %<>% MetaAnalysis(subcortical_p_flip)
 subcorticalTable_Flip %<>% left_join(DE_Prior %>% dplyr::select(Gene_Name, DE_Prior_Rank), by = c('gene_symbol' = 'Gene_Name')) 
 #subcorticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-Updated_Gene_Names, -mouseGene), by = c('gene_symbol' = 'gene_symbol'))
-subcorticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol'))
+subcorticalTable_Flip %<>% left_join(Howard_Polygenics%>% dplyr::select(-mouseGene), by = c('gene_symbol' = 'gene_symbol', 'gene_name'='gene_name'))
 subcorticalTable_Flip %<>% mutate_all(replace_na, replace = "Not_Available")
 
 
