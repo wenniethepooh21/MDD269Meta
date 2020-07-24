@@ -10,7 +10,7 @@ source(here("R/dataset_parsers/LabonteEtAl.R"))
 
 
 #2. run pre=processing of the Howard GWAS gene-symbol matching 
-source(here("R/dataset_parsers/HowardEtAl.R"))
+# source(here("R/dataset_parsers/HowardEtAl.R")) #Do not re-run, gene symbols may be out of date if re-ran and will get missing gene names
 
 # Identify which brain region maximally express each gene
 source(here("R/dataset_parsers/AllenEtAl.R"))

@@ -1,4 +1,4 @@
-gene_symbol,RamakerDir,LabonteDir,DingDir,meta_meta_higher_in_MDD_pvalue,meta_meta_lower_in_MDD_pvalue,meta_direction,meta_p,signed_log_p,minp,Corrected_p,Bonferroni_meta_p
+gene_symbol,RamakerDir,LabonteDir,DingDir,meta_meta_higher_in_MDD_pvalue,meta_meta_lower_in_MDD_pvalue,meta_direction,meta_p,signed_log_meta,minp,Corrected_p,Bonferroni_meta_p
 GALNT15,-++-+-,-+++++++-++-,++--+-++,4.944191756718968e-27,0.9999999758487451,+,9.89e-27,26.004874698147262,2.81e-5,2.6599999999999998e-24,1.74e-22
 GALNT15,-++-+-,-+++++++-++-,+++-++++,4.944191756718968e-27,0.9999999758487451,+,9.89e-27,26.004874698147262,2.81e-5,2.6599999999999998e-24,1.74e-22
 GALNT15,-++-+-,-+++++++-++-,--++++++,4.944191756718968e-27,0.9999999758487451,+,9.89e-27,26.004874698147262,2.81e-5,2.6599999999999998e-24,1.74e-22

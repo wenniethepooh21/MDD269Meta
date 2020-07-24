@@ -85,7 +85,7 @@ MetaAnalysis <- function(merged_table,minp_table=FALSE){
   meta_merged_p %<>% rowwise() %>% mutate(meta_direction = if_else(meta_meta_higher_in_MDD_pvalue < meta_meta_lower_in_MDD_pvalue, '+', '-'), meta_p = if_else(2 * min(meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue) > 1, 1, 2 * min(meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue)))
   
   meta_merged_p %<>% mutate(meta_direction_val= if_else(meta_meta_higher_in_MDD_pvalue < meta_meta_lower_in_MDD_pvalue, meta_meta_higher_in_MDD_pvalue, meta_meta_lower_in_MDD_pvalue))
-  meta_merged_p %<>% rowwise() %>% mutate(signed_log_p = sign(meta_direction_val)*log10(as.numeric(meta_p))*-1)
+  meta_merged_p %<>% rowwise() %>% mutate(signed_log_meta = sign(meta_direction_val)*log10(as.numeric(meta_p))*-1)
   meta_merged_p %<>% dplyr::select(-meta_direction_val)
   
   full_table <- inner_join(meta_merged_p,min_p)

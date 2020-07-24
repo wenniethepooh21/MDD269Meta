@@ -1,4 +1,4 @@
-gene_symbol,RamakerDir,LabonteDir,DingDir,meta_meta_higher_in_MDD_pvalue,meta_meta_lower_in_MDD_pvalue,meta_direction,meta_p,signed_log_p,minp,Corrected_p,Bonferroni_meta_p
+gene_symbol,RamakerDir,LabonteDir,DingDir,meta_meta_higher_in_MDD_pvalue,meta_meta_lower_in_MDD_pvalue,meta_direction,meta_p,signed_log_meta,minp,Corrected_p,Bonferroni_meta_p
 NR4A1,---,------,-++-,0.9692235785730798,4.064994127507939e-12,-,8.13e-12,11.089910081808819,7.75511e-5,2.19e-9,1.43e-7
 NPAS4,+--,------,+++-,0.6383879503417906,6.272676915624689e-12,-,1.25e-11,10.901517085262716,2.11793e-4,3.37e-9,2.21e-7
 DUSP5,++-,------,+-+-,0.4562711954886879,2.7255709826006197e-10,-,5.45e-10,9.263512507405311,2.21995e-4,1.47e-7,9.6e-6

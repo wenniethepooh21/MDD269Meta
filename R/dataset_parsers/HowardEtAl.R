@@ -3,6 +3,7 @@ library(magrittr)
 library(mygene)
 library(dplyr)
 library(here)
+library(readxl)
 #Using Howard 102 gene list 
 
 #Import the Howard data 
@@ -20,11 +21,5 @@ Howard_Table <- Howard %>% left_join(full_gene_names, by = c('gene_symbol' = 'qu
 Howard_Table %<>% dplyr::rename(gene_name = name)
 #do these manually
 Howard_Table %>% filter(is.na(gene_name))
-  # Howard_Table %>% mutate(gene_name = if_else(gene_symbol == "C16orf45", "BMERB Domain Containing 1", gene_name))
-  # Howard_Table %>% mutate(gene_name = if_else(gene_symbol == "C16orf45", "BMERB Domain Containing 1", gene_name))
-  # Howard_Table %>% mutate(gene_name = if_else(gene_symbol == "C16orf45", "BMERB Domain Containing 1", gene_name))
-  # Howard_Table %>% mutate(gene_name = if_else(gene_symbol == "C16orf45", "BMERB Domain Containing 1", gene_name))
-  # Howard_Table %>% mutate(gene_name = if_else(gene_symbol == "C16orf45", "BMERB Domain Containing 1", gene_name))
-  # Howard_Table %>% mutate(gene_name = if_else(gene_symbol == "C16orf45", "BMERB Domain Containing 1", gene_name))
 Howard_Table %>% write_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
 
