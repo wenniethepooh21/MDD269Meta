@@ -23,6 +23,7 @@ source(here("R/dataset_parsers/Howard_max_celltypes_regions.R"))
 
 #run overall meta-analysis combining the results from the study-specific meta-analyses
 source(here("R/meta_analyses/mergeMetaOnSlims.R"))
+# source(here("R/meta_analyses/upload_to_google_sheets.R")) #uploades the tables to google drive
 source(here("R/meta_analyses/Wilcoxon_Test.R")) #-- side analysis 
 
 #view the final product online in google drive! 
