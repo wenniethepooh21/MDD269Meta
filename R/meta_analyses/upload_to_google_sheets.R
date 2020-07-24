@@ -81,9 +81,9 @@ sheet_write(fullTable_Flip  %>% dplyr::select(gene_symbol, Howard_pvalue, gene_n
 sheet_write(corticalTable_Flip  %>% dplyr::select(gene_symbol, Howard_pvalue, gene_name,RamakerDir, LabonteDir, DingDir,  meta_direction,min_p_study, meta_p, signed_log_meta, Bonferroni_meta_p, slim_region_location, cell_type_taxon,cell_type_taxon_zscore, DE_Prior_Rank), ma, 'Sex_interaction_Cortical_Meta_Analysis')
 sheet_write(subcorticalTable_Flip  %>% dplyr::select(gene_symbol, Howard_pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction,min_p_study, meta_p, signed_log_meta, Bonferroni_meta_p, slim_region_location, cell_type_taxon,cell_type_taxon_zscore, DE_Prior_Rank), ma, 'Sex_interaction_Subcortical_Meta_Analysis')
 
-drive_mv(file = "Official_Meta_Analysis", path = "~/Thesis/Manuscript/gs_tables/Slim_Tables/")  # move Sheets file
+drive_mv(file = "Official_Meta_Analysis", path = "~/Thesis/Manuscript/gs_tables/Meta_Analysis_Slim_Tables/")  # move Sheets file
 
-mar <- drive_get("Thesis/Manuscript/gs_tables/Slim_Tables/Official_Genome_Percentile_Rank")
+mar <- drive_get("Thesis/Manuscript/gs_tables/Meta_Analysis_Slim_Tables/Official_Genome_Percentile_Rank")
 if(nrow(mar) != 0) {
   drive_rm(mar)
 }
@@ -98,5 +98,5 @@ sheet_write(fullTableRank_Flip  %>% dplyr::select(gene_symbol, Howard_pvalue, ge
 sheet_write(corticalTableRank_Flip  %>% dplyr::select(gene_symbol, Howard_pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, 'Sex_interaction_Cortical_Meta_Analysis_Rank')
 sheet_write(subcorticalTableRank_Flip  %>% dplyr::select(gene_symbol, Howard_pvalue, gene_name,RamakerDir, LabonteDir, DingDir, meta_direction, meta_empirical_p, Bonferroni_meta_empirical_p, slim_region_location, cell_type_taxon, DE_Prior_Rank), mar, 'Sex_interaction_Subcortical_Meta_Analysis_Rank')
 
-drive_mv(file = "Official_Genome_Percentile_Rank", path = "~/Thesis/Manuscript/gs_tables/Slim_Tables/")  # move Sheets file
+drive_mv(file = "Official_Genome_Percentile_Rank", path = "~/Thesis/Manuscript/gs_tables/Meta_Analysis_Slim_Tables/")  # move Sheets file
 
