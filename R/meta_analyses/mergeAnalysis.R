@@ -5,6 +5,34 @@ library(dplyr)
 library(tidyr)
 library(here)
 
+#This function identifies the list of p-values for each 269 genes that exist in the given study (used for min_p study analysis)
+get_p <- function(howard_df, study_df, study_name){
+  study_col <- paste0(study_name,'.Gene')
+  output_df <- howard_df %>% dplyr::select(gene_symbol, study_col) %>% 
+    left_join(study_df %>% dplyr::select(gene_symbol, min_p_across_regions), by = setNames('gene_symbol', study_col)) %>% 
+    mutate(min_p_study = study_name) %>% dplyr::select(-study_col) %>% na.omit() 
+  
+  return (output_df)
+}
+
+###########ToO USE? REFERENCE IN MERGEMETAONSLIMS
+##########3
+#This function determines if there are any gene:min_p combinations that are the same between studies and updates the min_p_study column if so 
+get_min_study <- function(p_table) {
+  studies_list <- p_table %>% dplyr::select(min_p_study) %>% distinct()
+  num_studies <- studies_list %>% nrow() 
+  study <- studies_list %>% pull()
+  num_studies_df <- p_table %>% group_by(gene_symbol, min_p_across_regions) %>% summarize(count = n()) %>% arrange(-count)
+  unique_studies <- num_studies_df %>% filter(count == 1) %>% left_join(p_table, by = c('gene_symbol' = 'gene_symbol', 'min_p_across_regions' = 'min_p_across_regions'))
+  num_duplicates <- nrow(num_studies_df %>% filter(count > 1))
+  if(num_duplicates > 0) {
+    num_studies_df %<>% left_join(unique_studies)
+    num_studies_df %<>% mutate(min_p_study = if_else(count == num_studies, paste(study, collapse = ' '), if_else(count == 1, min_p_study, "multiple studies") ))
+  }
+
+  return(num_studies_df)
+}
+
 
 #This function merges the study-specific meta-analysis results into one table filtered for the 269 genes
 mergeMetaStudies <- function (H, L, Ldir, D, Ddir, R, Rdir) {
