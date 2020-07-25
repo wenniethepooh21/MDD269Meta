@@ -104,23 +104,45 @@ mergeMagmaMetaRank(magma, subcorticalLabonte_flipped, subcorticalLabonteDir, sub
 #-----------------------------------------------------------------------------------------
 # Get min p values
 # Combine study-specific meta-analysis
-full_p <- rbind(fullLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                     fullRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-female_p <- rbind(femaleLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), femaleDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                femaleRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-male_p <- rbind(maleLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), maleDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                maleRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-cortical_p <- rbind(corticalLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                corticalRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-subcortical_p <- rbind(subcorticalLabonte %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                subcorticalRamaker %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-full_p_flip <- rbind(fullLabonte_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), fullDing_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                fullRamaker_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-cortical_p_flip <- rbind(corticalLabonte_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), corticalDing_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                    corticalRamaker_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
-subcortical_p_flip <- rbind(subcorticalLabonte_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Labonte'), subcorticalDing_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ding'),
-                       subcorticalRamaker_flipped %>% dplyr::select(gene_symbol, min_p_across_regions) %>% mutate(min_p_study = 'Ramaker')) 
+full_lab <- get_p(Howard, fullLabonte, 'Labonte')
+full_ding <- get_p(Howard, fullDing, 'Ding')
+full_ramaker <- get_p(Howard, fullRamaker, 'Ramaker')
+full_p <- rbind(full_lab, full_ding, full_ramaker)
 
+female_lab <- get_p(Howard, femaleLabonte, 'Labonte')
+female_ding <- get_p(Howard, femaleDing, 'Ding')
+female_ramaker <- get_p(Howard, femaleRamaker, 'Ramaker')
+female_p <- rbind(female_lab, female_ding, female_ramaker)
+
+male_lab <- get_p(Howard, maleLabonte, 'Labonte')
+male_ding <- get_p(Howard, maleDing, 'Ding')
+male_ramaker <- get_p(Howard, maleRamaker, 'Ramaker')
+male_p <- rbind(male_lab, male_ding, male_ramaker)
+
+cortical_lab <- get_p(Howard, corticalLabonte, 'Labonte')
+cortical_ding <- get_p(Howard, corticalDing, 'Ding')
+cortical_ramaker <- get_p(Howard, corticalRamaker, 'Ramaker')
+cortical_p <- rbind(cortical_lab, cortical_ding, cortical_ramaker)
+
+subcortical_lab <- get_p(Howard, subcorticalLabonte, 'Labonte')
+subcortical_ding <- get_p(Howard, subcorticalDing, 'Ding')
+subcortical_ramaker <- get_p(Howard, subcorticalRamaker, 'Ramaker')
+subcortical_p <- rbind(subcortical_lab, subcortical_ding, subcortical_ramaker)
+
+full_flip_lab <- get_p(Howard, fullLabonte_flipped, 'Labonte')
+full_flip_ding <- get_p(Howard, fullDing_flipped, 'Ding')
+full_flip_ramaker <- get_p(Howard, fullRamaker_flipped, 'Ramaker')
+full_p_flip <- rbind(full_flip_lab, full_flip_ding, full_flip_ramaker)
+
+cortical_flip_lab <- get_p(Howard, corticalLabonte_flipped, 'Labonte')
+cortical_flip_ding <- get_p(Howard, corticalDing_flipped, 'Ding')
+cortical_flip_ramaker <- get_p(Howard, corticalRamaker_flipped, 'Ramaker')
+cortical_p_flip <- rbind(cortical_flip_lab, cortical_flip_ding, cortical_flip_ramaker)
+
+subcortical_flip_lab <- get_p(Howard, subcorticalLabonte_flipped, 'Labonte')
+subcortical_flip_ding <- get_p(Howard, subcorticalDing_flipped, 'Ding')
+subcortical_flip_ramaker <- get_p(Howard, subcorticalRamaker_flipped, 'Ramaker')
+subcortical_p_flip <- rbind(subcortical_flip_lab, subcortical_flip_ding, subcortical_flip_ramaker)
 
 #-----------------------------------------------------------------------------------------
 #Perform meta-analysis on the 269 GWAS identified depression genes
