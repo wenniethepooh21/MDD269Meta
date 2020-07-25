@@ -7,23 +7,23 @@ library(googledrive)
 library(googlesheets4)
 
 
-full <- read_csv(fullTable, here('Results', 'Tables', 'Meta_Analysis', "Full_Meta_Analysis.csv"))
-female <- read_csv(femaleTable, here('Results', 'Tables', 'Meta_Analysis', 'Female_Meta_Analysis.csv'))
-male <- read_csv(maleTable, here('Results', 'Tables', 'Meta_Analysis', 'Male_Meta_Analysis.csv'))
-cortical <- read_csv(corticalTable, here('Results', 'Tables', 'Meta_Analysis', 'Cortical_Meta_Analysis.csv'))
-subcortical <- read_csv(subcorticalTable, here('Results', 'Tables', 'Meta_Analysis', 'Subcortical_Meta_Analysis.csv'))
-si_full <- read_csv(fullTable_Flip, here('Results', 'Tables', 'Meta_Analysis','Sex_interaction_Full_Meta_Analysis.csv'))
-si_cortical <- read_csv(corticalTable_Flip, here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis.csv'))
-si_subcortical <- read_csv(subcorticalTable_Flip, here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Subcortical_Meta_Analysis.csv'))
+fullTable <- read_csv( here('Results', 'Tables', 'Meta_Analysis', "Full_Meta_Analysis.csv"))
+femaleTable <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Female_Meta_Analysis.csv'))
+maleTable <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Male_Meta_Analysis.csv'))
+corticalTable <- read_csv( here('Results', 'Tables', 'Meta_Analysis', 'Cortical_Meta_Analysis.csv'))
+subcorticalTable <- read_csv( here('Results', 'Tables', 'Meta_Analysis', 'Subcortical_Meta_Analysis.csv'))
+fullTable_Flip <- read_csv(here('Results', 'Tables', 'Meta_Analysis','Sex_interaction_Full_Meta_Analysis.csv'))
+corticalTable_Flip <- read_csv( here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Cortical_Meta_Analysis.csv'))
+subcorticalTable_Flip <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Sex_interaction_Subcortical_Meta_Analysis.csv'))
 
-full_rank <- read_csv(fullTableRank, here('Results', 'Tables', 'Genome_Percentile_Rank', "Full_Meta_Analysis_Rank.csv"))
-female_rank <- read_csv(femaleTableRank, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Female_Meta_Analysis_Rank.csv'))
-male_rank <- read_csv(maleTableRank, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Male_Meta_Analysis_Rank.csv'))
-cortical_rank <- read_csv(corticalTableRank, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Cortical_Meta_Analysis_Rank.csv'))
-subcortical_rank <- read_csv(subcorticalTableRank, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Subcortical_Meta_Analysis_Rank.csv'))
-si_full_rank <- read_csv(fullTableRank_Flip, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Sex_interaction_Full_Meta_Analysis_Rank.csv'))
-si_cortical_rank <- read_csv(corticalTableRank_Flip, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Sex_interaction_Cortical_Meta_Analysis_Rank.csv'))
-si_subcortical_rank <- read_csv(subcorticalTableRank_Flip, here('Results', 'Tables', 'Genome_Percentile_Rank', 'Sex_interaction_Subcortical_Meta_Analysis_Rank.csv'))
+fullTableRank <- read_csv( here('Results', 'Tables', 'Genome_Percentile_Rank', "Full_Meta_Analysis_Rank.csv"))
+femaleTableRank <- read_csv(here('Results', 'Tables', 'Genome_Percentile_Rank', 'Female_Meta_Analysis_Rank.csv'))
+maleTableRank <- read_csv(here('Results', 'Tables', 'Genome_Percentile_Rank', 'Male_Meta_Analysis_Rank.csv'))
+corticalTableRank <- read_csv(here('Results', 'Tables', 'Genome_Percentile_Rank', 'Cortical_Meta_Analysis_Rank.csv'))
+subcorticalTableRank <- read_csv( here('Results', 'Tables', 'Genome_Percentile_Rank', 'Subcortical_Meta_Analysis_Rank.csv'))
+fullTableRank_Flip <- read_csv( here('Results', 'Tables', 'Genome_Percentile_Rank', 'Sex_interaction_Full_Meta_Analysis_Rank.csv'))
+corticalTableRank_Flip <- read_csv(here('Results', 'Tables', 'Genome_Percentile_Rank', 'Sex_interaction_Cortical_Meta_Analysis_Rank.csv'))
+subcorticalTableRank_Flip <- read_csv( here('Results', 'Tables', 'Genome_Percentile_Rank', 'Sex_interaction_Subcortical_Meta_Analysis_Rank.csv'))
 
 
 #FULL DATA SHEETS
@@ -66,7 +66,7 @@ sheet_write(subcorticalTableRank_Flip, mar, 'Sex_interaction_Subcortical_Meta_An
 drive_mv(file = "Genome_Percentile_Rank", path = "~/Thesis/Manuscript/gs_tables/Meta_Analysis_Full_Tables/")  # move Sheets file
 
 
-ma <- drive_get("~/Thesis/Manuscript/gs_tables/Slim_Tables/Official_Meta_Analysis")
+ma <- drive_get("~/Thesis/Manuscript/gs_tables/Meta_Analysis_Slim_Tables/Official_Meta_Analysis")
 if(nrow(ma) != 0) {
   drive_rm(ma)
 }
