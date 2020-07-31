@@ -3,7 +3,6 @@ library(readr)
 library(magrittr)
 library(dplyr)
 
-use_gdrive <- FALSE
 #This script aims to identify the brain region that maximally expresses the 269 genes 
 
 #Read in the gene expression data in the brain 
@@ -72,33 +71,6 @@ tissue_expected_probs %<>% mutate(location = if_else(is.na(location), region_loc
 tissue_expected_probs$hypergeometric_p <- signif(as.numeric(tissue_expected_probs$hypergeometric_p),digits=3)
 tissue_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(tissue_expected_probs$corrected_hypergeometric_p),digits=3)
 
-if (use_gdrive == TRUE) {
-#upload to google drive
-library(googlesheets4)
-library(googledrive)
-sheets_auth(token = drive_token())
+write_csv(tissue_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
+write_csv(tissue_expected_probs %>% dplyr::select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
 
-region <- drive_get("~/Thesis/Manuscript/Supplement_Tables/tissue_hyper_expected_four_full")
-if(nrow(region) != 0) {
-  drive_rm(region)
-}
-#create the google worksheet
-region <- sheets_create("tissue_hyper_expected_four_full",sheets = c('hypergeometric_brain_regions'))
-sheets_write(tissue_expected_probs, region,  sheet = "hypergeometric_brain_regions")
-
-drive_mv(file = "tissue_hyper_expected_four_full", path = "~/Thesis/Manuscript/Supplement_Tables/")  # move Sheets file
-
-###### SLIMMED
-region <- drive_get("~/Thesis/Manuscript/Supplement_Tables/tissue_hyper_expected_four")
-if(nrow(region) != 0) {
-  drive_rm(region)
-}
-#create the google worksheet
-region <- sheets_create("tissue_hyper_expected_four",sheets = c('hypergeometric_brain_regions'))
-sheets_write(tissue_expected_probs %>% dplyr::select(-region_location), region,  sheet = "hypergeometric_brain_regions")
-
-drive_mv(file = "tissue_hyper_expected_four", path = "~/Thesis/Manuscript/Supplement_Tables/") 
-} else {
-  write_csv(tissue_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
-  write_csv(tissue_expected_probs %>% dplyr::select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
-}
