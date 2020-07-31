@@ -21,7 +21,7 @@ getExpressionHeat <- function() {
             align = "h", 
             rel_widths = c(1, 1.3))
   
-  ggsave(filename = here('Results/Meta_Analysis_Results/Heatmaps/combined_transcriptomic_heatmaps.png'), dpi=300, width=15.5, height=8)
+  ggsave(filename = here('Results/Heatmaps/combined_transcriptomic_heatmaps.png'), dpi=300, width=15.5, height=8)
   
   return(combined)
 }
