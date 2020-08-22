@@ -1,4 +1,31 @@
 gene_symbol,mouseGene,cns_cell_type_taxon,cell_type_taxon
+HIST1H3J,Hist1h3g,Non-glutamatergic neuroblasts,Non-glutamatergic neuroblasts
+HIST1H1B,NA,NA,NA
+OR2B2,Olfr1359,Hindbrain neurons,Hindbrain neurons
+ZSCAN26,Zscan26,Hindbrain neurons,Hindbrain neurons
+HIST1H2AL,Hist1h2ae,Non-glutamatergic neuroblasts,Non-glutamatergic neuroblasts
+HIST1H4L,Hist1h4n,Enteric glia,Enteric neurons
+HIST1H3I,Hist1h3e,Satellite glia,Satellite glia
+PAX5,Pax5,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
+PROX2,Prox2,Olfactory ensheathing cells,Olfactory ensheathing cells
+OR12D3,Olfr109,Gene detected; No expression measured,Gene detected; No expression measured
+ANKK1,Ankk1,Ependymal cells,Ependymal cells
+TYR,Tyr,Spinal cord inhibitory neurons,Spinal cord inhibitory neurons
+PQLC2L,NA,NA,NA
+BTN1A1,Btn1a1,Di- and mesencephalon inhibitory neurons,Di- and mesencephalon inhibitory neurons
+PRR34,NA,NA,NA
+HIST1H2BO,Hist1h2bp,Ependymal cells,Ependymal cells
+SLC17A3,Slc17a3,Telencephalon projecting excitatory neurons,Telencephalon projecting excitatory neurons
+HSPE1-MOB4,NA,NA,NA
+C3orf84,BC048562,Telencephalon projecting inhibitory neurons,Telencephalon projecting inhibitory neurons
+PSORS1C2,Psors1c2,Vascular endothelial cells,Vascular endothelial cells
+ACTL8,NA,NA,NA
+SLC44A4,Slc44a4,Subcommissural organ hypendymal cells,Subcommissural organ hypendymal cells
+C7orf72,4930415F15Rik,Ependymal cells,Peripheral sensory non-peptidergic neurons
+OTX2,Otx2,Choroid epithelial cells,Choroid epithelial cells
+MYBPC3,Mybpc3,Cerebellum neurons,Cerebellum neurons
+SIM1,Sim1,Peptidergic neurons,Peptidergic neurons
+ITGB6,Itgb6,Choroid epithelial cells,Enteric neurons
 SORCS3,Sorcs3,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 RBFOX1,Rbfox1,Telencephalon projecting excitatory neurons,Peripheral sensory non-peptidergic neurons
 GRM5,Grm5,Spinal cord inhibitory neurons,Spinal cord inhibitory neurons
@@ -6,7 +33,6 @@ HIST1H2BN,Hist1h2bm,Non-glutamatergic neuroblasts,Non-glutamatergic neuroblasts
 SHISA9,Shisa9,Glutamatergic neuroblasts,Glutamatergic neuroblasts
 TCF4,Tcf4,Telencephalon inhibitory interneurons,Telencephalon inhibitory interneurons
 NEGR1,Negr1,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
-HIST1H3J,Hist1h3g,Non-glutamatergic neuroblasts,Non-glutamatergic neuroblasts
 DENND1A,Dennd1a,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 DCC,Dcc,Telencephalon projecting inhibitory neurons,Telencephalon projecting inhibitory neurons
 RSRC1,Rsrc1,Di- and mesencephalon excitatory neurons,Sympathetic cholinergic neurons
@@ -15,7 +41,6 @@ TMEM161B,Tmem161b,Hindbrain neurons,Hindbrain neurons
 DRD2,Drd2,Telencephalon projecting inhibitory neurons,Telencephalon projecting inhibitory neurons
 PGBD1,Pgbd1,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 ZKSCAN4,NA,NA,NA
-HIST1H1B,NA,NA,NA
 ERBB4,Erbb4,Telencephalon inhibitory interneurons,Telencephalon inhibitory interneurons
 ZKSCAN8,Zkscan8,Hindbrain neurons,Hindbrain neurons
 BTN3A2,NA,NA,NA
@@ -28,19 +53,15 @@ OLFM4,Olfm4,Peptidergic neurons,Peptidergic neurons
 GRM8,Grm8,Hindbrain neurons,Hindbrain neurons
 ZNF165,NA,NA,NA
 LRFN5,Lrfn5,Di- and mesencephalon excitatory neurons,Peripheral sensory non-peptidergic neurons
-OR2B2,Olfr1359,Hindbrain neurons,Hindbrain neurons
 HIST1H2BL,Hist1h2bj,Non-glutamatergic neuroblasts,Non-glutamatergic neuroblasts
 ZCCHC7,Zcchc7,Hindbrain neurons,Hindbrain neurons
 B3GALTL,B3galtl,NA,NA
 BTN2A1,NA,NA,NA
-ZSCAN26,Zscan26,Hindbrain neurons,Hindbrain neurons
 RERE,Rere,Cholinergic and monoaminergic neurons,Sympathetic cholinergic neurons
 CDH13,Cdh13,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 ASTN2,Astn2,Glutamatergic neuroblasts,Enteric neurons
 CACNA1E,Cacna1e,Telencephalon projecting excitatory neurons,Telencephalon projecting excitatory neurons
-HIST1H2AL,Hist1h2ae,Non-glutamatergic neuroblasts,Non-glutamatergic neuroblasts
 HLA-B,NA,NA,NA
-HIST1H4L,Hist1h4n,Enteric glia,Enteric neurons
 ZSCAN12,Zscan12,Subcommissural organ hypendymal cells,Sympathetic cholinergic neurons
 CHD6,Chd6,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 CTNNA3,Ctnna3,Schwann cells,Schwann cells
@@ -55,16 +76,12 @@ YLPM1,Ylpm1,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic 
 PCDH9,Pcdh9,Oligodendrocytes,Oligodendrocytes
 ZNF445,Zfp445,Ependymal cells,Enteric neurons
 ZKSCAN7,Zkscan7,Hindbrain neurons,Hindbrain neurons
-HIST1H3I,Hist1h3e,Satellite glia,Satellite glia
 LIN28B,Lin28b,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
-PAX5,Pax5,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
-PROX2,Prox2,Olfactory ensheathing cells,Olfactory ensheathing cells
 FAM172A,Fam172a,Oligodendrocytes,Peripheral sensory non-peptidergic neurons
 CELF4,Celf4,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 DLST,Dlst,Hindbrain neurons,Peripheral sensory neurofilament neurons
 NRG1,NA,NA,NA
 SGCZ,Sgcz,Cholinergic and monoaminergic neurons,Enteric neurons
-OR12D3,Olfr109,Gene detected; No expression measured,Gene detected; No expression measured
 RAB27B,Rab27b,Cholinergic and monoaminergic neurons,Peripheral sensory non-peptidergic neurons
 IGSF6,Igsf6,Perivascular macrophages,Perivascular macrophages
 GPC6,Gpc6,Hindbrain neurons,Enteric neurons
@@ -81,14 +98,10 @@ XRCC3,Xrcc3,Oligodendrocytes,Oligodendrocytes
 SOX5,Sox5,Telencephalon projecting excitatory neurons,Telencephalon projecting excitatory neurons
 CNTNAP5,Cntnap5a,Hindbrain neurons,Enteric neurons
 SEMA6D,Sema6d,Hindbrain neurons,Sympathetic cholinergic neurons
-ANKK1,Ankk1,Ependymal cells,Ependymal cells
 ZFHX4,Zfhx4,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 LST1,NA,NA,NA
 PRSS16,Prss16,Telencephalon projecting excitatory neurons,Sympathetic noradrenergic neurons
-TYR,Tyr,Spinal cord inhibitory neurons,Spinal cord inhibitory neurons
 RFWD2,Rfwd2,Hindbrain neurons,Peripheral sensory neurofilament neurons
-PQLC2L,NA,NA,NA
-BTN1A1,Btn1a1,Di- and mesencephalon inhibitory neurons,Di- and mesencephalon inhibitory neurons
 DCDC1,NA,NA,NA
 ZDHHC21,Zdhhc21,Hindbrain neurons,Peripheral sensory neurofilament neurons
 TTC12,Ttc12,Ependymal cells,Ependymal cells
@@ -123,7 +136,6 @@ FCF1,Fcf1,Cholinergic and monoaminergic neurons,Sympathetic noradrenergic neuron
 SORBS3,Sorbs3,Choroid epithelial cells,Choroid epithelial cells
 PCDHA2,Pcdha2,Spinal cord inhibitory neurons,Spinal cord inhibitory neurons
 PCDHA1,Pcdha1,Telencephalon inhibitory interneurons,Sympathetic cholinergic neurons
-PRR34,NA,NA,NA
 SCYL1,Scyl1,Hindbrain neurons,Sympathetic cholinergic neurons
 MR1,Mr1,Choroid epithelial cells,Choroid epithelial cells
 BTN3A3,NA,NA,NA
@@ -133,7 +145,6 @@ CTNND1,Ctnnd1,Pericytes,Peripheral sensory non-peptidergic neurons
 HSPA1A,Hspa1a,Enteric glia,Enteric glia
 ASCC3,Ascc3,Cholinergic and monoaminergic neurons,Enteric neurons
 ELAVL2,Elavl2,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
-HIST1H2BO,Hist1h2bp,Ependymal cells,Ependymal cells
 RPS6KL1,Rps6kl1,Cholinergic and monoaminergic neurons,Sympathetic noradrenergic neurons
 PCDHA3,Pcdha3,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 TRMT10C,Trmt10c,Schwann cells,Sympathetic noradrenergic neurons
@@ -149,20 +160,17 @@ GPC5,Gpc5,Astrocytes,Peripheral sensory non-peptidergic neurons
 IQCJ-SCHIP1,Gm21949,NA,NA
 TCAIM,Tcaim,Cholinergic and monoaminergic neurons,Peripheral sensory neurofilament neurons
 TMX2,Tmx2,Cholinergic and monoaminergic neurons,Sympathetic noradrenergic neurons
-SLC17A3,Slc17a3,Telencephalon projecting excitatory neurons,Telencephalon projecting excitatory neurons
 MED19,Med19,Ependymal cells,Sympathetic cholinergic neurons
 ZNF638,Zfml,NA,NA
 CDH22,Cdh22,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 GRIK5,Grik5,Telencephalon projecting excitatory neurons,Telencephalon projecting excitatory neurons
 HARS,Hars,Cholinergic and monoaminergic neurons,Sympathetic noradrenergic neurons
-HSPE1-MOB4,NA,NA,NA
 EP300,Ep300,Cholinergic and monoaminergic neurons,Enteric neurons
 HLA-DQB1,H2-Ab1,Oligodendrocytes,Oligodendrocytes
 PCNP,Pcnp,Cholinergic and monoaminergic neurons,Enteric neurons
 ZHX3,Zhx3,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 BCHE,Bche,Cholinergic and monoaminergic neurons,Enteric neurons
 CRB1,Crb1,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
-C3orf84,BC048562,Telencephalon projecting inhibitory neurons,Telencephalon projecting inhibitory neurons
 MICB,Mill2,Pericytes,Sympathetic noradrenergic neurons
 SLC30A9,Slc30a9,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 MARK3,Mark3,Hindbrain neurons,Peripheral sensory neurofilament neurons
@@ -170,7 +178,6 @@ FHIT,Fhit,Choroid epithelial cells,Choroid epithelial cells
 MARCH10,March10,Ependymal cells,Ependymal cells
 CDK14,Cdk14,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 PLCG1,Plcg1,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
-PSORS1C2,Psors1c2,Vascular endothelial cells,Vascular endothelial cells
 AP3B1,Ap3b1,Choroid epithelial cells,Sympathetic noradrenergic neurons
 POGZ,Pogz,Cholinergic and monoaminergic neurons,Enteric neurons
 TRAF3,Traf3,Hindbrain neurons,Hindbrain neurons
@@ -199,7 +206,6 @@ TMEM258,Tmem258,Oligodendrocytes,Sympathetic noradrenergic neurons
 TAL1,Tal1,Di- and mesencephalon inhibitory neurons,Di- and mesencephalon inhibitory neurons
 NICN1,Nicn1,Cholinergic and monoaminergic neurons,Sympathetic noradrenergic neurons
 HLA-DQA1,H2-Aa,Perivascular macrophages,Perivascular macrophages
-ACTL8,NA,NA,NA
 MOB4,Mob4,Cholinergic and monoaminergic neurons,Sympathetic noradrenergic neurons
 CCDC36,Ccdc36,Spinal cord inhibitory neurons,Spinal cord inhibitory neurons
 PCDHA6,Pcdha6,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
@@ -209,13 +215,10 @@ MAP9,Map9,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic ne
 FNIP2,Fnip2,Enteric glia,Sympathetic cholinergic neurons
 RBMS3,Rbms3,Cholinergic and monoaminergic neurons,Enteric neurons
 PLCL1,Plcl1,Oligodendrocytes,Oligodendrocytes
-SLC44A4,Slc44a4,Subcommissural organ hypendymal cells,Subcommissural organ hypendymal cells
 LTBP3,Ltbp3,Choroid epithelial cells,Choroid epithelial cells
 SPRY2,Spry2,Enteric glia,Enteric neurons
-C7orf72,4930415F15Rik,Ependymal cells,Peripheral sensory non-peptidergic neurons
 HTT,Htt,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 UBE2M,Ube2m,Cholinergic and monoaminergic neurons,Peripheral sensory neurofilament neurons
-OTX2,Otx2,Choroid epithelial cells,Choroid epithelial cells
 BAG5,Bag5,Schwann cells,Sympathetic cholinergic neurons
 CDH9,Cdh9,Dentate gyrus granule neurons,Dentate gyrus granule neurons
 LPIN3,Lpin3,Vascular and leptomeningeal cells,Vascular and leptomeningeal cells
@@ -230,9 +233,7 @@ EYS,NA,NA,NA
 STAU1,Stau1,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 HARS2,Hars2,Cholinergic and monoaminergic neurons,Cholinergic and monoaminergic neurons
 BAD,Bad,Spinal cord inhibitory neurons,Sympathetic cholinergic neurons
-MYBPC3,Mybpc3,Cerebellum neurons,Cerebellum neurons
 ETFDH,Etfdh,Choroid epithelial cells,Sympathetic cholinergic neurons
-SIM1,Sim1,Peptidergic neurons,Peptidergic neurons
 FH,Fh1,Hindbrain neurons,Sympathetic cholinergic neurons
 ANKS1B,Anks1b,Oligodendrocytes,Oligodendrocytes
 ITPR3,Itpr3,Satellite glia,Satellite glia
@@ -247,7 +248,6 @@ MANEA,Manea,Hindbrain neurons,Hindbrain neurons
 ARHGEF25,Arhgef25,Telencephalon projecting excitatory neurons,Peripheral sensory neurofilament neurons
 VPS41,Vps41,Cholinergic and monoaminergic neurons,Peripheral sensory neurofilament neurons
 ATP1A3,Atp1a3,Hindbrain neurons,Hindbrain neurons
-ITGB6,Itgb6,Choroid epithelial cells,Enteric neurons
 ASXL3,Asxl3,Cholinergic and monoaminergic neurons,Peripheral sensory non-peptidergic neurons
 ANKHD1,Ankhd1,Hindbrain neurons,Enteric neurons
 PCDHA7,Pcdha7,Hindbrain neurons,Hindbrain neurons

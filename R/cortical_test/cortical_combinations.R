@@ -12,6 +12,7 @@ ramaker_magma <- magma_genes %>% select(Ramaker_genes) %>% distinct() %>% na.omi
 
 
 Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
+Howard %<>% dplyr::rename(Howard_pvalue = Howard.pvalue)
 
 Labonte_table <- read_csv(here("Processed_Data/LabonteEtAl/CompleteLabonteTable.csv"))
 Labonte_cortical <- Labonte_table %>% filter(brain_region != "Nac") %>% filter( brain_region != "Subic") %>% dplyr::select(brain_region)%>% distinct() %>%pull()

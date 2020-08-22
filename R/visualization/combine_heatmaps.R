@@ -20,4 +20,4 @@ combined <- plot_grid(
   labels = 'AUTO')
 
 dir.create(here('Results/Meta_Analysis_Results/Heatmaps'), recursive = TRUE)
-ggsave(filename = here('Results/Heatmaps/combined_all_heatmaps.png'), dpi=300, width=22, height=8)
+ggsave(filename = here('Results/Heatmaps/combined_all_heatmaps_2.png'), dpi=300, width=22, height=8)
