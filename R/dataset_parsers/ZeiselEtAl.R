@@ -1,3 +1,4 @@
+library(readr)
 library(loomR)
 library(dplyr)
 library(homologene)
@@ -65,7 +66,7 @@ dub_mouse_gene %<>% ungroup() %>% dplyr::select(mouseGene) %>% pull()
 max_cell_types %>% filter(mouse_gene %in% dub_mouse_gene)
 # assign OR2B2 to Olfr1359
 howard_mouse_genes %<>% mutate(mouseGene = if_else(gene_symbol_upper == "OR2B2", "Olfr1359", mouseGene))
-
+howard_mouse_genes$mouseGene %>% unique() %>% length()
 
 Howard_Table <- howard %>% mutate(gene_symbol_upper = toupper(gene_symbol))
 Howard_Table %<>% left_join(howard_mouse_genes %>% dplyr::select(gene_symbol_upper, mouseGene), by = c('gene_symbol_upper' = 'gene_symbol_upper'))
