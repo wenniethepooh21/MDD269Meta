@@ -108,10 +108,13 @@ for (i in 1:nrow(combined_df)){
 }
  
 #import the meta-analysis files
- 
- 
- 
- 
- 
- 
- 
+combined <- NULL
+for (i in 1:nrow(combined_df)){
+  file_name <- paste0('cortical_combinations_run_',i,'.csv')
+  z <- read_csv(here('Results/cortical_combinations',file_name))
+  z %<>% filter(Bonferroni_meta_p < 0.05)
+  z %<>% mutate(iteration = i)
+  combined %<>% bind_rows(z)
+}
+#counts of runs with more than one hit
+combined %>% group_by(iteration) %>% count() %>% group_by(n) %>% count()
