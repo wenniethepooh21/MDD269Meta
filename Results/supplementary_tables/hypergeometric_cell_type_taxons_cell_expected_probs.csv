@@ -1,7 +1,7 @@
 cell_type_taxon,genome_cell_count,sample_cell_count,hypergeometric_p,corrected_hypergeometric_p
-Cholinergic and monoaminergic neurons,1791,37,5.78e-7,2.2e-5
-Enteric neurons,1919,32,2.29e-4,0.0087
-Non-glutamatergic neuroblasts,132,5,0.00565,0.215
+Cholinergic and monoaminergic neurons,1791,37,5.78e-7,2.26e-5
+Enteric neurons,1919,32,2.29e-4,0.00893
+Non-glutamatergic neuroblasts,132,5,0.00565,0.22
 Spinal cord inhibitory neurons,230,5,0.0483,1
 Hindbrain neurons,1161,15,0.0748,1
 Telencephalon projecting excitatory neurons,761,10,0.12,1
@@ -29,10 +29,11 @@ Glutamatergic neuroblasts,193,1,0.811,1
 Schwann cells,384,2,0.843,1
 Peripheral sensory peptidergic neurons,386,2,0.845,1
 Ependymal cells,1537,10,0.852,1
+Vascular endothelial cells,338,1,0.946,1
 Microglia,355,1,0.954,1
 Peripheral sensory non-peptidergic neurons,2407,13,0.976,1
 Pericytes,466,1,0.982,1
-Vascular endothelial cells,4903,2,1,1
+Gene detected; No expression measured,4565,1,1,NA
 Astrocytes,174,NA,NA,NA
 Dentate gyrus radial glia-like cells,105,NA,NA,NA
 Di- and mesencephalon excitatory neurons,288,NA,NA,NA

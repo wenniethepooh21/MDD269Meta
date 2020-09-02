@@ -6,6 +6,91 @@ library(here)
 library(googledrive)
 library(googlesheets4)
 
+##############UPLOAD BRAIN REGION TO GOOGLE SHEETS 
+tissue_expected_probs_full <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
+tissue_expected_probs_slim <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
+
+gs4_auth(token = drive_token())
+
+region <- drive_get("~/Thesis/Manuscript/gs_tables/Hypergeometric/tissue_hyper_expected_four_full_new")
+if(nrow(region) != 0) {
+  drive_rm(region)
+}
+#create the google worksheet
+region <- gs4_create("tissue_hyper_expected_four_full_new",sheets = c('hypergeometric_brain_regions'))
+sheet_write(tissue_expected_probs_full, region,  sheet = "hypergeometric_brain_regions")
+
+drive_mv(file = "tissue_hyper_expected_four_full_new", path = "~/Thesis/Manuscript/gs_tables/Hypergeometric/")  # move Sheets file
+
+###### SLIMMED
+region <- drive_get("~/Thesis/Manuscript/gs_tables/Hypergeometric/tissue_hyper_expected_four")
+if(nrow(region) != 0) {
+  drive_rm(region)
+}
+#create the google worksheet
+region <- gs4_create("tissue_hyper_expected_four",sheets = c('hypergeometric_brain_regions'))
+sheet_write(tissue_expected_probs_slim, region,  sheet = "hypergeometric_brain_regions")
+
+drive_mv(file = "tissue_hyper_expected_four", path = "~/Thesis/Manuscript/gs_tables/Hypergeometric/") 
+
+
+######## UPLOAD CELL TYPES TO GOOGLE SHEETS" 
+
+cell_expected_probs <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_cell_type_taxons_cell_expected_probs.csv'))
+
+gs4_auth(token = drive_token())
+
+cells <- drive_get("~/Thesis/Manuscript/gs_tables/Hypergeometric/cell_hyper_expected")
+if(nrow(cells) != 0) {
+  drive_rm(cells)
+}
+
+#create the google worksheet
+cells <- gs4_create("cell_hyper_expected",sheets = c('hypergeometric_cell_type_taxons'))
+sheet_write(cell_expected_probs, cells,  sheet = "hypergeometric_cell_type_taxons")
+
+drive_mv(file = "cell_hyper_expected", path = "~/Thesis/Manuscript/gs_tables/Hypergeometric/")  # move Sheets file
+
+####### UPLOAD CNS CELL TYPES TO GOOGLE SHEETS
+
+cns_cell_expected_probs <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_cns_cell_type_taxons_cell_expected_probs.csv'))
+
+gs4_auth(token = drive_token())
+
+cells <- drive_get("~/Thesis/Manuscript/gs_tables/Hypergeometric/cns_cell_hyper_expected")
+if(nrow(cells) != 0) {
+  drive_rm(cells)
+}
+
+#create the google worksheet
+cells <- gs4_create("cns_cell_hyper_expected",sheets = c('hypergeometric_cns_cell_type_taxons'))
+sheet_write(cns_cell_expected_probs, cells,  sheet = "hypergeometric_cns_cell_type_taxons")
+
+drive_mv(file = "cns_cell_hyper_expected", path = "~/Thesis/Manuscript/gs_tables/Hypergeometric/")  # move Sheets file
+
+
+###### UPLOAD CHOLINERGIC AND MONOAMINERGIC AND ENTERIC NEURONS ANALYSIS USING 265 
+#upload to google drive
+cell_expected_probs <- read_csv(here("Results/supplementary_tables/hypergeometric_cell_type_taxon_265.csv"))
+cell_expected_probs_ent_chol <- read_csv(here("Results/supplementary_tables/hypergeometric_cell_type_taxon_265_chol_ent.csv"))
+
+gs4_auth(token = drive_token())
+cells_265 <- drive_get("~/Thesis/Manuscript/Supplement_Tables/hypergeometric_cell_type_taxa_265")
+if(nrow(cells_265) != 0) {
+  drive_rm(cells_265)
+}
+#create the google worksheet
+cells_265 <- gs4_create("hypergeometric_cell_type_taxa_265",sheets = c('hypergeometric_cell_type_taxons_265', 'hypergeometric_cell_type_taxons_265_enteric_cholinergic_neurons'))
+sheet_write(cell_expected_probs, cells_265,  sheet = "hypergeometric_cell_type_taxons_265")
+sheet_write(cell_expected_probs_ent_chol, cells_265,  sheet = "hypergeometric_cell_type_taxons_265_enteric_cholinergic_neurons")
+
+drive_mv(file = "hypergeometric_cell_type_taxa_265", path = "~/Thesis/Manuscript/Supplement_Tables/")  # move Sheets file
+
+
+
+
+
+######UPLOAD META=ANALYSES TO GOOGLE SHEETS##########
 
 fullTable <- read_csv( here('Results', 'Tables', 'Meta_Analysis', "Full_Meta_Analysis.csv"))
 femaleTable <- read_csv(here('Results', 'Tables', 'Meta_Analysis', 'Female_Meta_Analysis.csv'))

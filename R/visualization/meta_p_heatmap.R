@@ -65,6 +65,6 @@ drawMetaHeat <- function() {
   title <- ggdraw() + draw_label("Meta p-values of Top 12 Genes", fontface = "bold",size = 20, hjust = 0.4,vjust = 0.5)
   full_meta_plot <- plot_grid(title, meta_plot,ncol = 1, rel_heights = c(0.1, 1), rel_widths = c(1,0.5))
   
-  ggsave(filename = here('Results/Meta_Analysis_Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
+  ggsave(filename = here('Results/Heatmaps/top_genes_meta_p_heatmap.png'), dpi=300, width=8, height=8)
   return(full_meta_plot)
 }

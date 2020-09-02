@@ -12,6 +12,7 @@ ramaker_magma <- magma_genes %>% select(Ramaker_genes) %>% distinct() %>% na.omi
 
 
 Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
+Howard %<>% dplyr::rename(Howard_pvalue = Howard.pvalue)
 
 Labonte_table <- read_csv(here("Processed_Data/LabonteEtAl/CompleteLabonteTable.csv"))
 Labonte_cortical <- Labonte_table %>% filter(brain_region != "Nac") %>% filter( brain_region != "Subic") %>% dplyr::select(brain_region)%>% distinct() %>%pull()
@@ -103,7 +104,7 @@ for (i in 1:nrow(combined_df)){
   corticalTable <- mergeMetaStudies(Howard, labonte_summary_table, labonte_dir, ding_summary_table, ding_dir, ramaker_summary_table, ramaker_united_colname)
   corticalTable %<>% MetaAnalysis()
   
-  corticalTable %>% write_csv(here('Results/Meta_Analysis_Results/cortical_combinations',file_name))
+  corticalTable %>% write_csv(here('Results/cortical_combinations',file_name))
 }
  
 #import the meta-analysis files

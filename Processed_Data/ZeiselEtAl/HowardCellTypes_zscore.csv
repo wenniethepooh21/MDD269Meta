@@ -1,270 +1,270 @@
-gene_symbol,mouseGene,cns_cell_type_taxon,cns_cell_type_taxon_zscore,cell_type_taxon,cell_type_taxon_zscore
-SORCS3,Sorcs3,Cholinergic and monoaminergic neurons,4.418923587847849,Cholinergic and monoaminergic neurons,4.662445458342446
-RBFOX1,Rbfox1,Telencephalon projecting excitatory neurons,3.0078269710318803,Peripheral sensory non-peptidergic neurons,3.4888825830281727
-GRM5,Grm5,Spinal cord inhibitory neurons,2.454085802513868,Spinal cord inhibitory neurons,2.6907056777542357
-HIST1H2BN,Hist1h2bm,Non-glutamatergic neuroblasts,4.202533347050207,Non-glutamatergic neuroblasts,4.231013344439684
-SHISA9,Shisa9,Glutamatergic neuroblasts,3.686619859953867,Glutamatergic neuroblasts,3.552971610977709
-TCF4,Tcf4,Telencephalon inhibitory interneurons,4.008405175474699,Telencephalon inhibitory interneurons,3.7738830745932255
-NEGR1,Negr1,Cholinergic and monoaminergic neurons,3.5548221565057228,Cholinergic and monoaminergic neurons,3.43387497988335
-HIST1H3J,Hist1h3g,Non-glutamatergic neuroblasts,4.308016223743286,Non-glutamatergic neuroblasts,4.706910901632199
-DENND1A,Dennd1a,Cholinergic and monoaminergic neurons,2.8739672957226077,Cholinergic and monoaminergic neurons,2.8487678580446105
-DCC,Dcc,Telencephalon projecting inhibitory neurons,3.586916901899631,Telencephalon projecting inhibitory neurons,3.868508364750955
-RSRC1,Rsrc1,Di- and mesencephalon excitatory neurons,2.622086868798218,Sympathetic cholinergic neurons,4.674230248907059
-TENM2,Tenm2,Cholinergic and monoaminergic neurons,3.090930889102557,Cholinergic and monoaminergic neurons,3.3545566079370843
-TMEM161B,Tmem161b,Hindbrain neurons,3.2283687681935764,Hindbrain neurons,3.257053816998276
-DRD2,Drd2,Telencephalon projecting inhibitory neurons,5.032653176392338,Telencephalon projecting inhibitory neurons,5.488791609416233
-PGBD1,Pgbd1,Cholinergic and monoaminergic neurons,2.541245286800139,Cholinergic and monoaminergic neurons,2.679368488832065
-ZKSCAN4,NA,NA,NA,NA,NA
-HIST1H1B,NA,NA,NA,NA,NA
-ERBB4,Erbb4,Telencephalon inhibitory interneurons,4.383708114368049,Telencephalon inhibitory interneurons,4.76943202691819
-ZKSCAN8,Zkscan8,Hindbrain neurons,4.019435449227566,Hindbrain neurons,4.109625981317744
-BTN3A2,NA,NA,NA,NA,NA
-PCLO,Pclo,Cholinergic and monoaminergic neurons,3.110313678626799,Cholinergic and monoaminergic neurons,3.0594309138565974
-ZSCAN16,NA,NA,NA,NA,NA
-ZSCAN9,NA,NA,NA,NA,NA
-TMEM106B,Tmem106b,Cholinergic and monoaminergic neurons,3.2540560001794496,Cholinergic and monoaminergic neurons,3.2684169734652144
-MEF2C,Mef2c,Telencephalon projecting excitatory neurons,5.2629976262473015,Telencephalon projecting excitatory neurons,5.728763059646272
-OLFM4,Olfm4,Peptidergic neurons,4.173719229252204,Peptidergic neurons,4.564912324119997
-GRM8,Grm8,Hindbrain neurons,4.993454045583073,Hindbrain neurons,5.109862863663732
-ZNF165,NA,NA,NA,NA,NA
-LRFN5,Lrfn5,Di- and mesencephalon excitatory neurons,2.2127027690198044,Peripheral sensory non-peptidergic neurons,2.4375538501425873
-OR2B2,Olfr1359,Hindbrain neurons,5.57048499058233,Hindbrain neurons,6.084869844593311
-HIST1H2BL,Hist1h2bj,Non-glutamatergic neuroblasts,3.584072117181301,Non-glutamatergic neuroblasts,3.575861374708586
-ZCCHC7,Zcchc7,Hindbrain neurons,3.4413906947050363,Hindbrain neurons,3.139014412375232
-B3GALTL,B3galtl,NA,NA,NA,NA
-BTN2A1,NA,NA,NA,NA,NA
-ZSCAN26,Zscan26,Hindbrain neurons,4.016017531848904,Hindbrain neurons,3.8945387639137663
-RERE,Rere,Cholinergic and monoaminergic neurons,4.012144749811028,Sympathetic cholinergic neurons,2.9704225558353277
-CDH13,Cdh13,Cholinergic and monoaminergic neurons,5.0996074260216036,Cholinergic and monoaminergic neurons,5.542028849778085
-ASTN2,Astn2,Glutamatergic neuroblasts,2.8482695267151734,Enteric neurons,2.5299079416329726
-CACNA1E,Cacna1e,Telencephalon projecting excitatory neurons,2.9395744109591893,Telencephalon projecting excitatory neurons,3.1116806188914485
-HIST1H2AL,Hist1h2ae,Non-glutamatergic neuroblasts,4.367242953769071,Non-glutamatergic neuroblasts,4.728757150097123
-HLA-B,NA,NA,NA,NA,NA
-HIST1H4L,Hist1h4n,Enteric glia,4.462029886359428,Enteric neurons,5.673660369801971
-ZSCAN12,Zscan12,Subcommissural organ hypendymal cells,2.5187953048284903,Sympathetic cholinergic neurons,3.5177653457115152
-CHD6,Chd6,Cholinergic and monoaminergic neurons,3.311700087098231,Cholinergic and monoaminergic neurons,3.192077774289475
-CTNNA3,Ctnna3,Schwann cells,4.053100934715032,Schwann cells,4.058764049859669
-METTL9,Mettl9,Schwann cells,3.2002380803631016,Schwann cells,3.079765302432679
-MEGF11,Megf11,Oligodendrocyte precursor cells,2.900851605202404,Oligodendrocyte precursor cells,3.173409143254778
-ZSCAN31,NA,NA,NA,NA,NA
-ZNF197,NA,NA,NA,NA,NA
-KLC1,Klc1,Cholinergic and monoaminergic neurons,3.5381071203272434,Sympathetic cholinergic neurons,2.9808618394072504
-ZNF660,LOC102639251,NA,NA,NA,NA
-SPPL3,Sppl3,Cholinergic and monoaminergic neurons,3.652369847759902,Peripheral sensory neurofilament neurons,2.355248575053177
-YLPM1,Ylpm1,Cholinergic and monoaminergic neurons,2.781221417918884,Cholinergic and monoaminergic neurons,2.7439873558612127
-PCDH9,Pcdh9,Oligodendrocytes,3.701406322024853,Oligodendrocytes,3.8483581563768183
-ZNF445,Zfp445,Ependymal cells,2.52523202936322,Enteric neurons,2.8203948660651594
-ZKSCAN7,Zkscan7,Hindbrain neurons,4.767439928320757,Hindbrain neurons,4.645409881821652
-HIST1H3I,Hist1h3e,Satellite glia,3.0188723698569038,Satellite glia,3.248446352908041
-LIN28B,Lin28b,Cholinergic and monoaminergic neurons,4.065155488383011,Cholinergic and monoaminergic neurons,3.595612274128214
-PAX5,Pax5,Cholinergic and monoaminergic neurons,5.007743372382887,Cholinergic and monoaminergic neurons,5.4688657567804535
-PROX2,Prox2,Olfactory ensheathing cells,4.2203609130578075,Olfactory ensheathing cells,4.2891980492012065
-FAM172A,Fam172a,Oligodendrocytes,2.5448834370784756,Peripheral sensory non-peptidergic neurons,2.6822191998906417
-CELF4,Celf4,Cholinergic and monoaminergic neurons,3.775802055977841,Cholinergic and monoaminergic neurons,3.4823876262430105
-DLST,Dlst,Hindbrain neurons,3.7250163452487177,Peripheral sensory neurofilament neurons,4.185629727771965
-NRG1,NA,NA,NA,NA,NA
-SGCZ,Sgcz,Cholinergic and monoaminergic neurons,3.4928889473167484,Enteric neurons,2.9959424571022217
-OR12D3,Olfr109,Gene detected; No expression measured,NaN,Vascular endothelial cells,NaN
-RAB27B,Rab27b,Cholinergic and monoaminergic neurons,4.792705734373194,Peripheral sensory non-peptidergic neurons,5.279579248332387
-IGSF6,Igsf6,Perivascular macrophages,5.211068312038127,Perivascular macrophages,5.693209474470331
-GPC6,Gpc6,Hindbrain neurons,2.5327713076320824,Enteric neurons,5.316937316836508
-PAX6,Pax6,Subcommissural organ hypendymal cells,3.5704000468316406,Subcommissural organ hypendymal cells,3.8797511520449475
-SGIP1,Sgip1,Cholinergic and monoaminergic neurons,2.6056229025415756,Enteric neurons,3.3600428279967978
-KDM3A,Kdm3a,Ependymal cells,3.9812811326554503,Ependymal cells,3.5990771850334506
-C16orf45,2900011O08Rik,Cholinergic and monoaminergic neurons,2.843249671301124,Cholinergic and monoaminergic neurons,2.312488113783387
-DCDC5,Dcdc5,NA,NA,NA,NA
-ESR2,Esr2,Cholinergic and monoaminergic neurons,5.536914151867523,Cholinergic and monoaminergic neurons,5.660132718338363
-LRP1B,Lrp1b,Dentate gyrus granule neurons,2.8714358282370793,Dentate gyrus granule neurons,3.1466440188553597
-EMILIN3,Emilin3,Hindbrain neurons,4.923899941766098,Peripheral sensory peptidergic neurons,3.998151794001
-TRMT61A,Trmt61a,Telencephalon projecting excitatory neurons,2.5921842581550187,Sympathetic cholinergic neurons,4.172737284565682
-XRCC3,Xrcc3,Oligodendrocytes,3.646069962472225,Oligodendrocytes,3.9863850444925983
-SOX5,Sox5,Telencephalon projecting excitatory neurons,3.005735191115459,Telencephalon projecting excitatory neurons,3.232858815629305
-CNTNAP5,Cntnap5a,Hindbrain neurons,2.2533688616140424,Enteric neurons,2.758911035384955
-SEMA6D,Sema6d,Hindbrain neurons,2.92414767067453,Sympathetic cholinergic neurons,3.0507872490881964
-ANKK1,Ankk1,Ependymal cells,4.871969496187439,Ependymal cells,5.14854861636551
-ZFHX4,Zfhx4,Cholinergic and monoaminergic neurons,4.595602793667691,Cholinergic and monoaminergic neurons,4.2295319957682205
-LST1,NA,NA,NA,NA,NA
-PRSS16,Prss16,Telencephalon projecting excitatory neurons,4.03171025588552,Sympathetic noradrenergic neurons,4.251602260465409
-TYR,Tyr,Spinal cord inhibitory neurons,5.078941244810431,Spinal cord inhibitory neurons,5.438958200480142
-RFWD2,Rfwd2,Hindbrain neurons,2.963575338635961,Peripheral sensory neurofilament neurons,2.974256842664624
-PQLC2L,NA,NA,NA,NA,NA
-BTN1A1,Btn1a1,Di- and mesencephalon inhibitory neurons,3.975287224446475,Di- and mesencephalon inhibitory neurons,4.339403393596266
-DCDC1,NA,NA,NA,NA,NA
-ZDHHC21,Zdhhc21,Hindbrain neurons,3.49567526804951,Peripheral sensory neurofilament neurons,2.8239294632242378
-TTC12,Ttc12,Ependymal cells,5.463137666414453,Ependymal cells,5.779216362024193
-SDK1,Sdk1,Cholinergic and monoaminergic neurons,2.7236469359074515,Peripheral sensory peptidergic neurons,2.6667193949713934
-APOPT1,Apopt1,Telencephalon projecting excitatory neurons,2.7324032679198273,Sympathetic cholinergic neurons,3.8691934383210813
-VRK2,Vrk2,Microglia,3.9224104495646577,Microglia,4.241115310189623
-CABP1,NA,NA,NA,NA,NA
-ZKSCAN3,Zkscan3,Choroid epithelial cells,2.9787445727687754,Enteric neurons,3.0251622222718706
-SAMD5,Samd5,Di- and mesencephalon inhibitory neurons,2.3166362779429126,Enteric neurons,3.410992243244595
-ADCK3,Adck3,Hindbrain neurons,2.9599832476406513,Sympathetic noradrenergic neurons,3.1091689554460458
-DENND1B,Dennd1b,Hindbrain neurons,3.4186092171911526,Hindbrain neurons,2.846990564612804
-TAOK3,Taok3,Cholinergic and monoaminergic neurons,2.87097751733794,Peripheral sensory non-peptidergic neurons,2.7106915195600743
-HS6ST3,Hs6st3,Spinal cord inhibitory neurons,3.972619524376286,Spinal cord inhibitory neurons,3.858130196873834
-MYRF,Myrf,Oligodendrocytes,5.509000286621196,Oligodendrocytes,6.01454099812577
-RTN1,Rtn1,Cholinergic and monoaminergic neurons,3.3682122135607044,Sympathetic noradrenergic neurons,4.274374763046206
-PSORS1C1,NA,NA,NA,NA,NA
-CKB,Ckb,Subcommissural organ hypendymal cells,2.3386905868445473,Peripheral sensory neurofilament neurons,2.223311466549595
-SF3B1,Sf3b1,Telencephalon projecting excitatory neurons,1.959653736861694,Enteric neurons,2.760255853619202
-FADS2,Fads2,Satellite glia,4.9914512447236,Satellite glia,5.306367882481892
-GTF2IRD1,Gtf2ird1,Choroid epithelial cells,2.2685867220929037,Enteric neurons,3.4576699180465136
-NRD1,Nrd1,Cholinergic and monoaminergic neurons,2.9946403925586607,Enteric neurons,2.598478084886641
-ZC3H7B,Zc3h7b,Cholinergic and monoaminergic neurons,3.7744432112083293,Sympathetic cholinergic neurons,2.366032883860832
-AREL1,Arel1,Telencephalon projecting inhibitory neurons,3.741358699753207,Sympathetic noradrenergic neurons,3.699400438357838
-RANGAP1,Rangap1,Cholinergic and monoaminergic neurons,3.8658960297296314,Cholinergic and monoaminergic neurons,2.6446589021092666
-ZNF184,Zfp184,Non-glutamatergic neuroblasts,3.293339838158762,Non-glutamatergic neuroblasts,3.2835188009787593
-ZDHHC5,Zdhhc5,Cholinergic and monoaminergic neurons,2.985796489079169,Sympathetic cholinergic neurons,3.211002869215201
-HIST1H2BF,Hist1h2be,Ependymal cells,4.145639488422008,Ependymal cells,3.2800031100777303
-FAM120A,Fam120a,Cholinergic and monoaminergic neurons,3.3509861426546395,Enteric neurons,2.574437045143413
-KIF15,Kif15,Oligodendrocyte precursor cells,5.228391616230701,Oligodendrocyte precursor cells,5.641127141075117
-NKAPL,Nkapl,Ependymal cells,4.893060335125251,Ependymal cells,5.082712117253391
-FCF1,Fcf1,Cholinergic and monoaminergic neurons,1.8246813618640108,Sympathetic noradrenergic neurons,4.460507439182285
-SORBS3,Sorbs3,Choroid epithelial cells,2.449847910564233,Choroid epithelial cells,2.6913439860495396
-PCDHA2,Pcdha2,Spinal cord inhibitory neurons,3.62381760574292,Spinal cord inhibitory neurons,3.874574471257137
-PCDHA1,Pcdha1,Telencephalon inhibitory interneurons,3.4184367827858586,Sympathetic cholinergic neurons,4.877903136476645
-PRR34,NA,NA,NA,NA,NA
-SCYL1,Scyl1,Hindbrain neurons,3.09359475213099,Sympathetic cholinergic neurons,2.969966631719464
-MR1,Mr1,Choroid epithelial cells,3.6055067653805524,Choroid epithelial cells,3.9352029346417003
-BTN3A3,NA,NA,NA,NA,NA
-TCTEX1D1,Tctex1d1,Ependymal cells,5.4902135194615935,Ependymal cells,5.78194929693987
-CELF2,Celf2,Telencephalon projecting excitatory neurons,3.19408551876449,Telencephalon projecting excitatory neurons,3.4596874933258435
-CTNND1,Ctnnd1,Pericytes,3.1443605015955427,Peripheral sensory non-peptidergic neurons,3.0418119339399783
-HSPA1A,Hspa1a,Enteric glia,5.257069238079141,Enteric glia,5.186415124502577
-ASCC3,Ascc3,Cholinergic and monoaminergic neurons,2.9040663019586153,Enteric neurons,2.8330673764005976
-ELAVL2,Elavl2,Cholinergic and monoaminergic neurons,4.491244082460897,Cholinergic and monoaminergic neurons,3.9561179634401658
-HIST1H2BO,Hist1h2bp,Ependymal cells,4.294151424212029,Ependymal cells,4.479460941364281
-RPS6KL1,Rps6kl1,Cholinergic and monoaminergic neurons,2.177598139803191,Sympathetic noradrenergic neurons,3.200113591921569
-PCDHA3,Pcdha3,Cholinergic and monoaminergic neurons,3.825201835830157,Cholinergic and monoaminergic neurons,3.7661297779055722
-TRMT10C,Trmt10c,Schwann cells,2.5097774413031697,Sympathetic noradrenergic neurons,3.9272644364126426
-ABT1,Abt1,Schwann cells,4.934274051805964,Sympathetic cholinergic neurons,3.5276367744557566
-SCAI,Scai,Cholinergic and monoaminergic neurons,2.9466048143660193,Cholinergic and monoaminergic neurons,3.1751964107489736
-FADS1,Fads1,Satellite glia,3.133854096966182,Satellite glia,2.6416153822352157
-CTTNBP2,Cttnbp2,Telencephalon projecting excitatory neurons,2.608855628366845,Telencephalon projecting excitatory neurons,2.85629697658472
-KMT2A,Kmt2a,Cholinergic and monoaminergic neurons,3.7873018038979445,Cholinergic and monoaminergic neurons,3.1774507047387925
-BEND4,Bend4,Cholinergic and monoaminergic neurons,4.229900465209126,Cholinergic and monoaminergic neurons,3.215836960242701
-ESRRG,Esrrg,Hindbrain neurons,5.4018209318601835,Hindbrain neurons,5.834669324454488
-BAZ2B,Baz2b,Cholinergic and monoaminergic neurons,3.005426325583249,Enteric neurons,3.1350987474517584
-GPC5,Gpc5,Astrocytes,3.271976383088064,Peripheral sensory non-peptidergic neurons,4.298454327699855
-IQCJ-SCHIP1,Gm21949,NA,NA,NA,NA
-TCAIM,Tcaim,Cholinergic and monoaminergic neurons,4.401689380194849,Peripheral sensory neurofilament neurons,3.068880583914486
-TMX2,Tmx2,Cholinergic and monoaminergic neurons,3.219004849371283,Sympathetic noradrenergic neurons,3.3197524529927267
-SLC17A3,Slc17a3,Telencephalon projecting excitatory neurons,4.857021610270975,Telencephalon projecting excitatory neurons,5.305644555343242
-MED19,Med19,Ependymal cells,2.205779604678651,Sympathetic cholinergic neurons,2.756657201843292
-ZNF638,Zfml,NA,NA,NA,NA
-CDH22,Cdh22,Cholinergic and monoaminergic neurons,4.412509555546716,Cholinergic and monoaminergic neurons,4.792932293888372
-GRIK5,Grik5,Telencephalon projecting excitatory neurons,2.8686453598307047,Telencephalon projecting excitatory neurons,2.6693395244776763
-HARS,Hars,Cholinergic and monoaminergic neurons,3.1938081342906997,Sympathetic noradrenergic neurons,3.509874658536317
-HSPE1-MOB4,NA,NA,NA,NA,NA
-EP300,Ep300,Cholinergic and monoaminergic neurons,3.2082880328174532,Enteric neurons,3.8584733434635714
-HLA-DQB1,H2-Ab1,Oligodendrocytes,5.075956865787276,Oligodendrocytes,5.454951552143862
-PCNP,Pcnp,Cholinergic and monoaminergic neurons,3.7753149474918635,Enteric neurons,4.1239642306609365
-ZHX3,Zhx3,Cholinergic and monoaminergic neurons,2.8581373318210623,Cholinergic and monoaminergic neurons,2.1401842953154913
-BCHE,Bche,Cholinergic and monoaminergic neurons,3.654953925047287,Enteric neurons,4.873766002284166
-CRB1,Crb1,Cholinergic and monoaminergic neurons,4.9747767382553665,Cholinergic and monoaminergic neurons,5.416216054030201
-C3orf84,BC048562,Telencephalon projecting inhibitory neurons,4.070454328297064,Telencephalon projecting inhibitory neurons,4.45555292702574
-MICB,Mill2,Pericytes,3.4019557247919936,Sympathetic noradrenergic neurons,4.632958257164159
-SLC30A9,Slc30a9,Cholinergic and monoaminergic neurons,4.206048287649647,Cholinergic and monoaminergic neurons,2.5382622901751373
-MARK3,Mark3,Hindbrain neurons,2.4497116993310506,Peripheral sensory neurofilament neurons,2.2782807775534404
-FHIT,Fhit,Choroid epithelial cells,5.467281677971207,Choroid epithelial cells,5.608489015487486
-MARCH10,March10,Ependymal cells,5.535097428321542,Ependymal cells,5.901340269458768
-CDK14,Cdk14,Cholinergic and monoaminergic neurons,3.6153264387844253,Cholinergic and monoaminergic neurons,3.2381711504991384
-PLCG1,Plcg1,Cholinergic and monoaminergic neurons,2.798530129431924,Cholinergic and monoaminergic neurons,2.6418374467749897
-PSORS1C2,Psors1c2,Vascular endothelial cells,4.617194135610845,Vascular endothelial cells,5.046834669878599
-AP3B1,Ap3b1,Choroid epithelial cells,2.828889609532465,Sympathetic noradrenergic neurons,2.4168207518985763
-POGZ,Pogz,Cholinergic and monoaminergic neurons,2.69090360960431,Enteric neurons,2.557941991387113
-TRAF3,Traf3,Hindbrain neurons,3.268118984896106,Hindbrain neurons,2.9800683009022957
-CSMD1,Csmd1,Telencephalon projecting excitatory neurons,3.001688431109492,Peripheral sensory non-peptidergic neurons,3.5462305489749233
-TMEM67,Tmem67,Ependymal cells,4.928432608984981,Ependymal cells,5.195202959047702
-PCDHA4,Pcdha4,Telencephalon inhibitory interneurons,3.265070211556043,Enteric neurons,4.166403838091548
-TOPAZ1,Topaz1,Hindbrain neurons,3.822176809573427,Peripheral sensory non-peptidergic neurons,4.723090994996529
-PMFBP1,Pmfbp1,Cholinergic and monoaminergic neurons,3.6321168649962594,Peripheral sensory neurofilament neurons,5.3236459904896645
-CNTN5,Cntn5,Telencephalon projecting inhibitory neurons,3.0373482022622316,Enteric neurons,4.747849988011078
-INPP4B,Inpp4b,Cholinergic and monoaminergic neurons,2.8525342308945127,Cholinergic and monoaminergic neurons,3.1068611992075725
-ZNF322,Zfp322a,Cholinergic and monoaminergic neurons,3.004075099577716,Cholinergic and monoaminergic neurons,2.883764544815015
-ASIC2,Asic2,Cholinergic and monoaminergic neurons,4.8249756853192265,Peripheral sensory non-peptidergic neurons,3.6780005922253745
-PLA2R1,Pla2r1,Vascular smooth muscle cells,4.205599770897505,Vascular smooth muscle cells,3.975820095901311
-CHMP3,Chmp3,Cholinergic and monoaminergic neurons,3.7682883149524877,Sympathetic cholinergic neurons,3.2308392310344725
-SOX6,Sox6,Oligodendrocyte precursor cells,3.4578398948268605,Oligodendrocyte precursor cells,3.772438087242712
-PCDHA5,Pcdha5,Telencephalon projecting excitatory neurons,3.0930143251229474,Telencephalon projecting excitatory neurons,3.153738008492431
-FANCL,Fancl,Choroid epithelial cells,3.131414372900498,Sympathetic noradrenergic neurons,3.6759759913453025
-ZNF35,Zfp105,Subcommissural organ hypendymal cells,2.0064765792570096,Sympathetic cholinergic neurons,2.429418161074463
-TMEM42,Tmem42,Telencephalon projecting excitatory neurons,3.8756628310058265,Peripheral sensory non-peptidergic neurons,2.8521207670855606
-KIAA1143,1110059G10Rik,Telencephalon projecting excitatory neurons,2.2437739629381532,Sympathetic noradrenergic neurons,3.1090985223181664
-C11orf31,2700094K13Rik,Telencephalon inhibitory interneurons,2.4749246859467955,Sympathetic cholinergic neurons,2.470813788207642
-ACVR1B,Acvr1b,Cholinergic and monoaminergic neurons,3.249652636863339,Cholinergic and monoaminergic neurons,3.232019387516161
-ZNF501,NA,NA,NA,NA,NA
-RFTN2,Rftn2,Enteric glia,3.0722889424294415,Enteric glia,3.2822643610857543
-TMEM258,Tmem258,Oligodendrocytes,2.459014482437353,Sympathetic noradrenergic neurons,4.056334433001442
-TAL1,Tal1,Di- and mesencephalon inhibitory neurons,4.975227849010965,Di- and mesencephalon inhibitory neurons,5.430652217807714
-NICN1,Nicn1,Cholinergic and monoaminergic neurons,3.719926010523745,Sympathetic noradrenergic neurons,2.487232597657263
-HLA-DQA1,H2-Aa,Perivascular macrophages,4.9969863441118765,Perivascular macrophages,5.004297575730228
-ACTL8,NA,NA,NA,NA,NA
-MOB4,Mob4,Cholinergic and monoaminergic neurons,3.753199458504128,Sympathetic noradrenergic neurons,2.8201520408884164
-CCDC36,Ccdc36,Spinal cord inhibitory neurons,2.7474460497711863,Spinal cord inhibitory neurons,2.8907380012307833
-PCDHA6,Pcdha6,Cholinergic and monoaminergic neurons,4.778944347756955,Cholinergic and monoaminergic neurons,5.121421419747059
-STK19,Stk19,Telencephalon projecting excitatory neurons,2.4123447548023265,Sympathetic cholinergic neurons,3.4570141364756366
-RHOA,Rhoa,Enteric glia,2.303051520510852,Sympathetic noradrenergic neurons,2.689180598199448
-MAP9,Map9,Cholinergic and monoaminergic neurons,3.4419133518726777,Cholinergic and monoaminergic neurons,2.8138816002926714
-FNIP2,Fnip2,Enteric glia,2.550766810658045,Sympathetic cholinergic neurons,2.745570298068657
-RBMS3,Rbms3,Cholinergic and monoaminergic neurons,4.588255112198706,Enteric neurons,3.2617952846436955
-PLCL1,Plcl1,Oligodendrocytes,3.7423122993116427,Oligodendrocytes,3.5006278468571974
-SLC44A4,Slc44a4,Subcommissural organ hypendymal cells,5.3626691488044065,Subcommissural organ hypendymal cells,5.854082300256741
-LTBP3,Ltbp3,Choroid epithelial cells,4.669197165029076,Choroid epithelial cells,4.406273159831455
-SPRY2,Spry2,Enteric glia,4.119707941275676,Enteric neurons,3.4777400725076277
-C7orf72,4930415F15Rik,Ependymal cells,4.240855114208315,Peripheral sensory non-peptidergic neurons,4.43276936085343
-HTT,Htt,Cholinergic and monoaminergic neurons,3.055147783785664,Cholinergic and monoaminergic neurons,2.6369833531981537
-UBE2M,Ube2m,Cholinergic and monoaminergic neurons,3.2298767084749174,Peripheral sensory neurofilament neurons,3.1774312269496643
-OTX2,Otx2,Choroid epithelial cells,5.199149735657244,Choroid epithelial cells,5.677835622855833
-BAG5,Bag5,Schwann cells,4.74994301763411,Sympathetic cholinergic neurons,3.083996598014818
-CDH9,Cdh9,Dentate gyrus granule neurons,4.000785869807903,Dentate gyrus granule neurons,3.5324392149175576
-LPIN3,Lpin3,Vascular and leptomeningeal cells,4.958939788030517,Vascular and leptomeningeal cells,5.397371435263531
-EPHB2,Ephb2,Enteric glia,3.3477222573409082,Enteric glia,3.171032180337939
-HMGN4,NA,NA,NA,NA,NA
-PPP6C,Ppp6c,Cholinergic and monoaminergic neurons,3.92426142099383,Sympathetic cholinergic neurons,2.944325224549538
-NOX4,Nox4,Spinal cord inhibitory neurons,3.064614860569453,Enteric neurons,4.556380090655754
-PRR16,Prr16,Spinal cord excitatory neurons,3.139424214286695,Spinal cord excitatory neurons,2.862950658370972
-EXT1,Ext1,Ependymal cells,3.7339778858032204,Ependymal cells,3.69044701771994
-MGAT4C,Mgat4c,Cholinergic and monoaminergic neurons,4.24420568019863,Cholinergic and monoaminergic neurons,3.6605338944323056
-EYS,NA,NA,NA,NA,NA
-STAU1,Stau1,Cholinergic and monoaminergic neurons,3.643721877142013,Cholinergic and monoaminergic neurons,2.279574288965244
-HARS2,Hars2,Cholinergic and monoaminergic neurons,2.575528511390878,Cholinergic and monoaminergic neurons,2.17146476079399
-BAD,Bad,Spinal cord inhibitory neurons,2.001962920779586,Sympathetic cholinergic neurons,4.2364150785401495
-MYBPC3,Mybpc3,Cerebellum neurons,5.326438046820434,Cerebellum neurons,5.815577997024964
-ETFDH,Etfdh,Choroid epithelial cells,3.6600326183908294,Sympathetic cholinergic neurons,4.0659370401472925
-SIM1,Sim1,Peptidergic neurons,5.56769688705994,Peptidergic neurons,6.081771755901998
-FH,Fh1,Hindbrain neurons,2.1607250056768046,Sympathetic cholinergic neurons,3.3943691131974423
-ANKS1B,Anks1b,Oligodendrocytes,3.4601668488702875,Oligodendrocytes,3.6275727547976864
-ITPR3,Itpr3,Satellite glia,3.937548573629339,Satellite glia,4.274375775947776
-RABEPK,Rabepk,Telencephalon inhibitory interneurons,1.9264424906740072,Sympathetic cholinergic neurons,3.303912312986824
-RHOBTB1,Rhobtb1,Pericytes,3.6627217371281993,Pericytes,3.7988713358833746
-BSN,Bsn,Telencephalon projecting excitatory neurons,3.408090035086775,Telencephalon projecting excitatory neurons,3.054860098348629
-RAB3B,Rab3b,Glutamatergic neuroblasts,3.4875003756541365,Sympathetic noradrenergic neurons,5.819800219034173
-ZNF536,Zfp536,Telencephalon inhibitory interneurons,2.7640261173291334,Telencephalon inhibitory interneurons,2.844776858133012
-TOP1,Top1,Telencephalon projecting excitatory neurons,2.3333260983212396,Enteric neurons,2.4582648590461824
-CAMKK2,Camkk2,Telencephalon projecting excitatory neurons,4.5524835413504405,Telencephalon projecting excitatory neurons,4.5679767589499995
-MANEA,Manea,Hindbrain neurons,3.673544987341728,Hindbrain neurons,3.8309135717487437
-ARHGEF25,Arhgef25,Telencephalon projecting excitatory neurons,3.0138327217111556,Peripheral sensory neurofilament neurons,2.868258433928747
-VPS41,Vps41,Cholinergic and monoaminergic neurons,3.229475220086102,Peripheral sensory neurofilament neurons,3.86058381099991
-ATP1A3,Atp1a3,Hindbrain neurons,4.243051251789838,Hindbrain neurons,4.615483499987703
-ITGB6,Itgb6,Choroid epithelial cells,5.1679564601594485,Enteric neurons,5.124205630118279
-ASXL3,Asxl3,Cholinergic and monoaminergic neurons,2.936612251608825,Peripheral sensory non-peptidergic neurons,3.941083427513784
-ANKHD1,Ankhd1,Hindbrain neurons,3.5279646443944497,Enteric neurons,3.3651804916050434
-PCDHA7,Pcdha7,Hindbrain neurons,3.156614313355862,Hindbrain neurons,3.4508304548566624
-PTPRS,Ptprs,Hindbrain neurons,3.5261806908340696,Hindbrain neurons,3.4168082771701336
-CCS,Ccs,Satellite glia,3.678422583558354,Sympathetic cholinergic neurons,3.029689694626917
-PHF2,Phf2,Cholinergic and monoaminergic neurons,2.846819869910913,Enteric neurons,3.3506924004079792
-IK,Ik,Cholinergic and monoaminergic neurons,2.607276741076835,Sympathetic cholinergic neurons,2.4871084999618294
-KYNU,Kynu,Vascular and leptomeningeal cells,3.6126472292571288,Peripheral sensory neurofilament neurons,5.618560841286913
-PPID,Ppid,Cholinergic and monoaminergic neurons,2.6029883576173134,Sympathetic noradrenergic neurons,4.0686069035054935
-FAM120AOS,NA,NA,NA,NA,NA
-ZMAT2,Zmat2,Telencephalon projecting excitatory neurons,2.9608676703205328,Sympathetic cholinergic neurons,3.38506255416219
-SERPING1,Serping1,Vascular and leptomeningeal cells,5.320116327516128,Vascular and leptomeningeal cells,4.137086952789171
-USP3,Usp3,Hindbrain neurons,2.6196521165660736,Enteric neurons,3.217976126183065
-CACNA2D1,Cacna2d1,Cholinergic and monoaminergic neurons,3.9587322716206113,Enteric neurons,2.704763780723634
-ANKHD1-EIF4EBP3,Ankhd1,Hindbrain neurons,3.5279646443944497,Enteric neurons,3.3651804916050434
-GINM1,Ginm1,Pericytes,2.4005145793267855,Sympathetic noradrenergic neurons,4.304448056652093
-C1QTNF7,C1qtnf7,Vascular smooth muscle cells,5.391183361669376,Sympathetic cholinergic neurons,5.948182330100132
-MIER1,Mier1,Pericytes,2.90738502916842,Enteric neurons,3.3065685684240504
-SLC4A9,Slc4a9,Hindbrain neurons,4.399068649735539,Hindbrain neurons,4.779840520430413
-PSEN2,Psen2,Cholinergic and monoaminergic neurons,4.519002399264019,Sympathetic cholinergic neurons,2.827859662426266
+gene_symbol,Updated_Gene_Names,mouseGene,cns_cell_type_taxon,cns_cell_type_taxon_zscore,cell_type_taxon,cell_type_taxon_zscore
+HIST1H3J,HIST1H3J,Hist1h3g,Non-glutamatergic neuroblasts,4.308016223743286,Non-glutamatergic neuroblasts,4.706910901632199
+HIST1H1B,HIST1H1B,NA,NA,NA,NA,NA
+OR2B2,OR2B2,Olfr1359,Hindbrain neurons,5.57048499058233,Hindbrain neurons,6.084869844593311
+ZSCAN26,ZSCAN26,Zscan26,Hindbrain neurons,4.016017531848904,Hindbrain neurons,3.8945387639137663
+HIST1H2AL,HIST1H2AL,Hist1h2ae,Non-glutamatergic neuroblasts,4.367242953769071,Non-glutamatergic neuroblasts,4.728757150097123
+HIST1H4L,HIST1H4L,Hist1h4n,Enteric glia,4.462029886359428,Enteric neurons,5.673660369801971
+HIST1H3I,HIST1H3I,Hist1h3e,Satellite glia,3.0188723698569038,Satellite glia,3.248446352908041
+PAX5,PAX5,Pax5,Cholinergic and monoaminergic neurons,5.007743372382887,Cholinergic and monoaminergic neurons,5.4688657567804535
+PROX2,PROX2,Prox2,Olfactory ensheathing cells,4.2203609130578075,Olfactory ensheathing cells,4.2891980492012065
+OR12D3,OR12D3,Olfr109,Gene detected; No expression measured,NaN,Gene detected; No expression measured,NaN
+ANKK1,ANKK1,Ankk1,Ependymal cells,4.871969496187439,Ependymal cells,5.14854861636551
+TYR,TYR,Tyr,Spinal cord inhibitory neurons,5.078941244810431,Spinal cord inhibitory neurons,5.438958200480142
+PQLC2L,PQLC2L,NA,NA,NA,NA,NA
+BTN1A1,BTN1A1,Btn1a1,Di- and mesencephalon inhibitory neurons,3.975287224446475,Di- and mesencephalon inhibitory neurons,4.339403393596266
+PRR34,PRR34,NA,NA,NA,NA,NA
+HIST1H2BO,HIST1H2BO,Hist1h2bp,Ependymal cells,4.294151424212029,Ependymal cells,4.479460941364281
+SLC17A3,SLC17A3,Slc17a3,Telencephalon projecting excitatory neurons,4.857021610270975,Telencephalon projecting excitatory neurons,5.305644555343242
+HSPE1-MOB4,HSPE1-MOB4,NA,NA,NA,NA,NA
+C3orf84,C3orf84,BC048562,Telencephalon projecting inhibitory neurons,4.070454328297064,Telencephalon projecting inhibitory neurons,4.45555292702574
+PSORS1C2,PSORS1C2,Psors1c2,Vascular endothelial cells,4.617194135610845,Vascular endothelial cells,5.046834669878599
+ACTL8,ACTL8,NA,NA,NA,NA,NA
+SLC44A4,SLC44A4,Slc44a4,Subcommissural organ hypendymal cells,5.3626691488044065,Subcommissural organ hypendymal cells,5.854082300256741
+C7orf72,SPATA48,4930415F15Rik,Ependymal cells,4.240855114208315,Peripheral sensory non-peptidergic neurons,4.43276936085343
+OTX2,OTX2,Otx2,Choroid epithelial cells,5.199149735657244,Choroid epithelial cells,5.677835622855833
+MYBPC3,MYBPC3,Mybpc3,Cerebellum neurons,5.326438046820434,Cerebellum neurons,5.815577997024964
+SIM1,SIM1,Sim1,Peptidergic neurons,5.56769688705994,Peptidergic neurons,6.081771755901998
+ITGB6,ITGB6,Itgb6,Choroid epithelial cells,5.1679564601594485,Enteric neurons,5.124205630118279
+SORCS3,SORCS3,Sorcs3,Cholinergic and monoaminergic neurons,4.418923587847849,Cholinergic and monoaminergic neurons,4.662445458342446
+RBFOX1,RBFOX1,Rbfox1,Telencephalon projecting excitatory neurons,3.0078269710318803,Peripheral sensory non-peptidergic neurons,3.4888825830281727
+GRM5,GRM5,Grm5,Spinal cord inhibitory neurons,2.454085802513868,Spinal cord inhibitory neurons,2.6907056777542357
+HIST1H2BN,HIST1H2BN,Hist1h2bm,Non-glutamatergic neuroblasts,4.202533347050207,Non-glutamatergic neuroblasts,4.231013344439684
+SHISA9,SHISA9,Shisa9,Glutamatergic neuroblasts,3.686619859953867,Glutamatergic neuroblasts,3.552971610977709
+TCF4,TCF4,Tcf4,Telencephalon inhibitory interneurons,4.008405175474699,Telencephalon inhibitory interneurons,3.7738830745932255
+NEGR1,NEGR1,Negr1,Cholinergic and monoaminergic neurons,3.5548221565057228,Cholinergic and monoaminergic neurons,3.43387497988335
+DENND1A,DENND1A,Dennd1a,Cholinergic and monoaminergic neurons,2.8739672957226077,Cholinergic and monoaminergic neurons,2.8487678580446105
+DCC,DCC,Dcc,Telencephalon projecting inhibitory neurons,3.586916901899631,Telencephalon projecting inhibitory neurons,3.868508364750955
+RSRC1,RSRC1,Rsrc1,Di- and mesencephalon excitatory neurons,2.622086868798218,Sympathetic cholinergic neurons,4.674230248907059
+TENM2,TENM2,Tenm2,Cholinergic and monoaminergic neurons,3.090930889102557,Cholinergic and monoaminergic neurons,3.3545566079370843
+TMEM161B,TMEM161B,Tmem161b,Hindbrain neurons,3.2283687681935764,Hindbrain neurons,3.257053816998276
+DRD2,DRD2,Drd2,Telencephalon projecting inhibitory neurons,5.032653176392338,Telencephalon projecting inhibitory neurons,5.488791609416233
+PGBD1,PGBD1,Pgbd1,Cholinergic and monoaminergic neurons,2.541245286800139,Cholinergic and monoaminergic neurons,2.679368488832065
+ZKSCAN4,ZKSCAN4,NA,NA,NA,NA,NA
+ERBB4,ERBB4,Erbb4,Telencephalon inhibitory interneurons,4.383708114368049,Telencephalon inhibitory interneurons,4.76943202691819
+ZKSCAN8,ZKSCAN8,Zkscan8,Hindbrain neurons,4.019435449227566,Hindbrain neurons,4.109625981317744
+BTN3A2,BTN3A2,NA,NA,NA,NA,NA
+PCLO,PCLO,Pclo,Cholinergic and monoaminergic neurons,3.110313678626799,Cholinergic and monoaminergic neurons,3.0594309138565974
+ZSCAN16,ZSCAN16,NA,NA,NA,NA,NA
+ZSCAN9,ZSCAN9,NA,NA,NA,NA,NA
+TMEM106B,TMEM106B,Tmem106b,Cholinergic and monoaminergic neurons,3.2540560001794496,Cholinergic and monoaminergic neurons,3.2684169734652144
+MEF2C,MEF2C,Mef2c,Telencephalon projecting excitatory neurons,5.2629976262473015,Telencephalon projecting excitatory neurons,5.728763059646272
+OLFM4,OLFM4,Olfm4,Peptidergic neurons,4.173719229252204,Peptidergic neurons,4.564912324119997
+GRM8,GRM8,Grm8,Hindbrain neurons,4.993454045583073,Hindbrain neurons,5.109862863663732
+ZNF165,ZNF165,NA,NA,NA,NA,NA
+LRFN5,LRFN5,Lrfn5,Di- and mesencephalon excitatory neurons,2.2127027690198044,Peripheral sensory non-peptidergic neurons,2.4375538501425873
+HIST1H2BL,HIST1H2BL,Hist1h2bj,Non-glutamatergic neuroblasts,3.584072117181301,Non-glutamatergic neuroblasts,3.575861374708586
+ZCCHC7,ZCCHC7,Zcchc7,Hindbrain neurons,3.4413906947050363,Hindbrain neurons,3.139014412375232
+B3GALTL,B3GLCT,B3galtl,NA,NA,NA,NA
+BTN2A1,BTN2A1,NA,NA,NA,NA,NA
+RERE,RERE,Rere,Cholinergic and monoaminergic neurons,4.012144749811028,Sympathetic cholinergic neurons,2.9704225558353277
+CDH13,CDH13,Cdh13,Cholinergic and monoaminergic neurons,5.0996074260216036,Cholinergic and monoaminergic neurons,5.542028849778085
+ASTN2,ASTN2,Astn2,Glutamatergic neuroblasts,2.8482695267151734,Enteric neurons,2.5299079416329726
+CACNA1E,CACNA1E,Cacna1e,Telencephalon projecting excitatory neurons,2.9395744109591893,Telencephalon projecting excitatory neurons,3.1116806188914485
+HLA-B,HLA-B,NA,NA,NA,NA,NA
+ZSCAN12,ZSCAN12,Zscan12,Subcommissural organ hypendymal cells,2.5187953048284903,Sympathetic cholinergic neurons,3.5177653457115152
+CHD6,CHD6,Chd6,Cholinergic and monoaminergic neurons,3.311700087098231,Cholinergic and monoaminergic neurons,3.192077774289475
+CTNNA3,CTNNA3,Ctnna3,Schwann cells,4.053100934715032,Schwann cells,4.058764049859669
+METTL9,METTL9,Mettl9,Schwann cells,3.2002380803631016,Schwann cells,3.079765302432679
+MEGF11,MEGF11,Megf11,Oligodendrocyte precursor cells,2.900851605202404,Oligodendrocyte precursor cells,3.173409143254778
+ZSCAN31,ZSCAN31,NA,NA,NA,NA,NA
+ZNF197,ZNF197,NA,NA,NA,NA,NA
+KLC1,KLC1,Klc1,Cholinergic and monoaminergic neurons,3.5381071203272434,Sympathetic cholinergic neurons,2.9808618394072504
+ZNF660,ZNF660,LOC102639251,NA,NA,NA,NA
+SPPL3,SPPL3,Sppl3,Cholinergic and monoaminergic neurons,3.652369847759902,Peripheral sensory neurofilament neurons,2.355248575053177
+YLPM1,YLPM1,Ylpm1,Cholinergic and monoaminergic neurons,2.781221417918884,Cholinergic and monoaminergic neurons,2.7439873558612127
+PCDH9,PCDH9,Pcdh9,Oligodendrocytes,3.701406322024853,Oligodendrocytes,3.8483581563768183
+ZNF445,ZNF445,Zfp445,Ependymal cells,2.52523202936322,Enteric neurons,2.8203948660651594
+ZKSCAN7,ZKSCAN7,Zkscan7,Hindbrain neurons,4.767439928320757,Hindbrain neurons,4.645409881821652
+LIN28B,LIN28B,Lin28b,Cholinergic and monoaminergic neurons,4.065155488383011,Cholinergic and monoaminergic neurons,3.595612274128214
+FAM172A,FAM172A,Fam172a,Oligodendrocytes,2.5448834370784756,Peripheral sensory non-peptidergic neurons,2.6822191998906417
+CELF4,CELF4,Celf4,Cholinergic and monoaminergic neurons,3.775802055977841,Cholinergic and monoaminergic neurons,3.4823876262430105
+DLST,DLST,Dlst,Hindbrain neurons,3.7250163452487177,Peripheral sensory neurofilament neurons,4.185629727771965
+NRG1,NRG1,NA,NA,NA,NA,NA
+SGCZ,SGCZ,Sgcz,Cholinergic and monoaminergic neurons,3.4928889473167484,Enteric neurons,2.9959424571022217
+RAB27B,RAB27B,Rab27b,Cholinergic and monoaminergic neurons,4.792705734373194,Peripheral sensory non-peptidergic neurons,5.279579248332387
+IGSF6,IGSF6,Igsf6,Perivascular macrophages,5.211068312038127,Perivascular macrophages,5.693209474470331
+GPC6,GPC6,Gpc6,Hindbrain neurons,2.5327713076320824,Enteric neurons,5.316937316836508
+PAX6,PAX6,Pax6,Subcommissural organ hypendymal cells,3.5704000468316406,Subcommissural organ hypendymal cells,3.8797511520449475
+SGIP1,SGIP1,Sgip1,Cholinergic and monoaminergic neurons,2.6056229025415756,Enteric neurons,3.3600428279967978
+KDM3A,KDM3A,Kdm3a,Ependymal cells,3.9812811326554503,Ependymal cells,3.5990771850334506
+C16orf45,C16orf45,2900011O08Rik,Cholinergic and monoaminergic neurons,2.843249671301124,Cholinergic and monoaminergic neurons,2.312488113783387
+DCDC5,DCDC1,Dcdc5,NA,NA,NA,NA
+ESR2,ESR2,Esr2,Cholinergic and monoaminergic neurons,5.536914151867523,Cholinergic and monoaminergic neurons,5.660132718338363
+LRP1B,LRP1B,Lrp1b,Dentate gyrus granule neurons,2.8714358282370793,Dentate gyrus granule neurons,3.1466440188553597
+EMILIN3,EMILIN3,Emilin3,Hindbrain neurons,4.923899941766098,Peripheral sensory peptidergic neurons,3.998151794001
+TRMT61A,TRMT61A,Trmt61a,Telencephalon projecting excitatory neurons,2.5921842581550187,Sympathetic cholinergic neurons,4.172737284565682
+XRCC3,XRCC3,Xrcc3,Oligodendrocytes,3.646069962472225,Oligodendrocytes,3.9863850444925983
+SOX5,SOX5,Sox5,Telencephalon projecting excitatory neurons,3.005735191115459,Telencephalon projecting excitatory neurons,3.232858815629305
+CNTNAP5,CNTNAP5,Cntnap5a,Hindbrain neurons,2.2533688616140424,Enteric neurons,2.758911035384955
+SEMA6D,SEMA6D,Sema6d,Hindbrain neurons,2.92414767067453,Sympathetic cholinergic neurons,3.0507872490881964
+ZFHX4,ZFHX4,Zfhx4,Cholinergic and monoaminergic neurons,4.595602793667691,Cholinergic and monoaminergic neurons,4.2295319957682205
+LST1,LST1,NA,NA,NA,NA,NA
+PRSS16,PRSS16,Prss16,Telencephalon projecting excitatory neurons,4.03171025588552,Sympathetic noradrenergic neurons,4.251602260465409
+RFWD2,COP1,Rfwd2,Hindbrain neurons,2.963575338635961,Peripheral sensory neurofilament neurons,2.974256842664624
+DCDC1,DCDC1,NA,NA,NA,NA,NA
+ZDHHC21,ZDHHC21,Zdhhc21,Hindbrain neurons,3.49567526804951,Peripheral sensory neurofilament neurons,2.8239294632242378
+TTC12,TTC12,Ttc12,Ependymal cells,5.463137666414453,Ependymal cells,5.779216362024193
+SDK1,SDK1,Sdk1,Cholinergic and monoaminergic neurons,2.7236469359074515,Peripheral sensory peptidergic neurons,2.6667193949713934
+APOPT1,APOPT1,Apopt1,Telencephalon projecting excitatory neurons,2.7324032679198273,Sympathetic cholinergic neurons,3.8691934383210813
+VRK2,VRK2,Vrk2,Microglia,3.9224104495646577,Microglia,4.241115310189623
+CABP1,CABP1,NA,NA,NA,NA,NA
+ZKSCAN3,ZKSCAN3,Zkscan3,Choroid epithelial cells,2.9787445727687754,Enteric neurons,3.0251622222718706
+SAMD5,SAMD5,Samd5,Di- and mesencephalon inhibitory neurons,2.3166362779429126,Enteric neurons,3.410992243244595
+ADCK3,COQ8A,Adck3,Hindbrain neurons,2.9599832476406513,Sympathetic noradrenergic neurons,3.1091689554460458
+DENND1B,DENND1B,Dennd1b,Hindbrain neurons,3.4186092171911526,Hindbrain neurons,2.846990564612804
+TAOK3,TAOK3,Taok3,Cholinergic and monoaminergic neurons,2.87097751733794,Peripheral sensory non-peptidergic neurons,2.7106915195600743
+HS6ST3,HS6ST3,Hs6st3,Spinal cord inhibitory neurons,3.972619524376286,Spinal cord inhibitory neurons,3.858130196873834
+MYRF,MYRF,Myrf,Oligodendrocytes,5.509000286621196,Oligodendrocytes,6.01454099812577
+RTN1,RTN1,Rtn1,Cholinergic and monoaminergic neurons,3.3682122135607044,Sympathetic noradrenergic neurons,4.274374763046206
+PSORS1C1,PSORS1C1,NA,NA,NA,NA,NA
+CKB,CKB,Ckb,Subcommissural organ hypendymal cells,2.3386905868445473,Peripheral sensory neurofilament neurons,2.223311466549595
+SF3B1,SF3B1,Sf3b1,Telencephalon projecting excitatory neurons,1.959653736861694,Enteric neurons,2.760255853619202
+FADS2,FADS2,Fads2,Satellite glia,4.9914512447236,Satellite glia,5.306367882481892
+GTF2IRD1,GTF2IRD1,Gtf2ird1,Choroid epithelial cells,2.2685867220929037,Enteric neurons,3.4576699180465136
+NRD1,NRDC,Nrd1,Cholinergic and monoaminergic neurons,2.9946403925586607,Enteric neurons,2.598478084886641
+ZC3H7B,ZC3H7B,Zc3h7b,Cholinergic and monoaminergic neurons,3.7744432112083293,Sympathetic cholinergic neurons,2.366032883860832
+AREL1,AREL1,Arel1,Telencephalon projecting inhibitory neurons,3.741358699753207,Sympathetic noradrenergic neurons,3.699400438357838
+RANGAP1,RANGAP1,Rangap1,Cholinergic and monoaminergic neurons,3.8658960297296314,Cholinergic and monoaminergic neurons,2.6446589021092666
+ZNF184,ZNF184,Zfp184,Non-glutamatergic neuroblasts,3.293339838158762,Non-glutamatergic neuroblasts,3.2835188009787593
+ZDHHC5,ZDHHC5,Zdhhc5,Cholinergic and monoaminergic neurons,2.985796489079169,Sympathetic cholinergic neurons,3.211002869215201
+HIST1H2BF,HIST1H2BF,Hist1h2be,Ependymal cells,4.145639488422008,Ependymal cells,3.2800031100777303
+FAM120A,FAM120A,Fam120a,Cholinergic and monoaminergic neurons,3.3509861426546395,Enteric neurons,2.574437045143413
+KIF15,KIF15,Kif15,Oligodendrocyte precursor cells,5.228391616230701,Oligodendrocyte precursor cells,5.641127141075117
+NKAPL,NKAPL,Nkapl,Ependymal cells,4.893060335125251,Ependymal cells,5.082712117253391
+FCF1,FCF1,Fcf1,Cholinergic and monoaminergic neurons,1.8246813618640108,Sympathetic noradrenergic neurons,4.460507439182285
+SORBS3,SORBS3,Sorbs3,Choroid epithelial cells,2.449847910564233,Choroid epithelial cells,2.6913439860495396
+PCDHA2,PCDHA2,Pcdha2,Spinal cord inhibitory neurons,3.62381760574292,Spinal cord inhibitory neurons,3.874574471257137
+PCDHA1,PCDHA1,Pcdha1,Telencephalon inhibitory interneurons,3.4184367827858586,Sympathetic cholinergic neurons,4.877903136476645
+SCYL1,SCYL1,Scyl1,Hindbrain neurons,3.09359475213099,Sympathetic cholinergic neurons,2.969966631719464
+MR1,MR1,Mr1,Choroid epithelial cells,3.6055067653805524,Choroid epithelial cells,3.9352029346417003
+BTN3A3,BTN3A3,NA,NA,NA,NA,NA
+TCTEX1D1,TCTEX1D1,Tctex1d1,Ependymal cells,5.4902135194615935,Ependymal cells,5.78194929693987
+CELF2,CELF2,Celf2,Telencephalon projecting excitatory neurons,3.19408551876449,Telencephalon projecting excitatory neurons,3.4596874933258435
+CTNND1,CTNND1,Ctnnd1,Pericytes,3.1443605015955427,Peripheral sensory non-peptidergic neurons,3.0418119339399783
+HSPA1A,HSPA1A,Hspa1a,Enteric glia,5.257069238079141,Enteric glia,5.186415124502577
+ASCC3,ASCC3,Ascc3,Cholinergic and monoaminergic neurons,2.9040663019586153,Enteric neurons,2.8330673764005976
+ELAVL2,ELAVL2,Elavl2,Cholinergic and monoaminergic neurons,4.491244082460897,Cholinergic and monoaminergic neurons,3.9561179634401658
+RPS6KL1,RPS6KL1,Rps6kl1,Cholinergic and monoaminergic neurons,2.177598139803191,Sympathetic noradrenergic neurons,3.200113591921569
+PCDHA3,PCDHA3,Pcdha3,Cholinergic and monoaminergic neurons,3.825201835830157,Cholinergic and monoaminergic neurons,3.7661297779055722
+TRMT10C,TRMT10C,Trmt10c,Schwann cells,2.5097774413031697,Sympathetic noradrenergic neurons,3.9272644364126426
+ABT1,ABT1,Abt1,Schwann cells,4.934274051805964,Sympathetic cholinergic neurons,3.5276367744557566
+SCAI,SCAI,Scai,Cholinergic and monoaminergic neurons,2.9466048143660193,Cholinergic and monoaminergic neurons,3.1751964107489736
+FADS1,FADS1,Fads1,Satellite glia,3.133854096966182,Satellite glia,2.6416153822352157
+CTTNBP2,CTTNBP2,Cttnbp2,Telencephalon projecting excitatory neurons,2.608855628366845,Telencephalon projecting excitatory neurons,2.85629697658472
+KMT2A,KMT2A,Kmt2a,Cholinergic and monoaminergic neurons,3.7873018038979445,Cholinergic and monoaminergic neurons,3.1774507047387925
+BEND4,BEND4,Bend4,Cholinergic and monoaminergic neurons,4.229900465209126,Cholinergic and monoaminergic neurons,3.215836960242701
+ESRRG,ESRRG,Esrrg,Hindbrain neurons,5.4018209318601835,Hindbrain neurons,5.834669324454488
+BAZ2B,BAZ2B,Baz2b,Cholinergic and monoaminergic neurons,3.005426325583249,Enteric neurons,3.1350987474517584
+GPC5,GPC5,Gpc5,Astrocytes,3.271976383088064,Peripheral sensory non-peptidergic neurons,4.298454327699855
+IQCJ-SCHIP1,IQCJ-SCHIP1,Gm21949,NA,NA,NA,NA
+TCAIM,TCAIM,Tcaim,Cholinergic and monoaminergic neurons,4.401689380194849,Peripheral sensory neurofilament neurons,3.068880583914486
+TMX2,TMX2,Tmx2,Cholinergic and monoaminergic neurons,3.219004849371283,Sympathetic noradrenergic neurons,3.3197524529927267
+MED19,MED19,Med19,Ependymal cells,2.205779604678651,Sympathetic cholinergic neurons,2.756657201843292
+ZNF638,ZNF638,Zfml,NA,NA,NA,NA
+CDH22,CDH22,Cdh22,Cholinergic and monoaminergic neurons,4.412509555546716,Cholinergic and monoaminergic neurons,4.792932293888372
+GRIK5,GRIK5,Grik5,Telencephalon projecting excitatory neurons,2.8686453598307047,Telencephalon projecting excitatory neurons,2.6693395244776763
+HARS,HARS,Hars,Cholinergic and monoaminergic neurons,3.1938081342906997,Sympathetic noradrenergic neurons,3.509874658536317
+EP300,EP300,Ep300,Cholinergic and monoaminergic neurons,3.2082880328174532,Enteric neurons,3.8584733434635714
+HLA-DQB1,HLA-DQB1,H2-Ab1,Oligodendrocytes,5.075956865787276,Oligodendrocytes,5.454951552143862
+PCNP,PCNP,Pcnp,Cholinergic and monoaminergic neurons,3.7753149474918635,Enteric neurons,4.1239642306609365
+ZHX3,ZHX3,Zhx3,Cholinergic and monoaminergic neurons,2.8581373318210623,Cholinergic and monoaminergic neurons,2.1401842953154913
+BCHE,BCHE,Bche,Cholinergic and monoaminergic neurons,3.654953925047287,Enteric neurons,4.873766002284166
+CRB1,CRB1,Crb1,Cholinergic and monoaminergic neurons,4.9747767382553665,Cholinergic and monoaminergic neurons,5.416216054030201
+MICB,MICB,Mill2,Pericytes,3.4019557247919936,Sympathetic noradrenergic neurons,4.632958257164159
+SLC30A9,SLC30A9,Slc30a9,Cholinergic and monoaminergic neurons,4.206048287649647,Cholinergic and monoaminergic neurons,2.5382622901751373
+MARK3,MARK3,Mark3,Hindbrain neurons,2.4497116993310506,Peripheral sensory neurofilament neurons,2.2782807775534404
+FHIT,FHIT,Fhit,Choroid epithelial cells,5.467281677971207,Choroid epithelial cells,5.608489015487486
+MARCH10,MARCH10,March10,Ependymal cells,5.535097428321542,Ependymal cells,5.901340269458768
+CDK14,CDK14,Cdk14,Cholinergic and monoaminergic neurons,3.6153264387844253,Cholinergic and monoaminergic neurons,3.2381711504991384
+PLCG1,PLCG1,Plcg1,Cholinergic and monoaminergic neurons,2.798530129431924,Cholinergic and monoaminergic neurons,2.6418374467749897
+AP3B1,AP3B1,Ap3b1,Choroid epithelial cells,2.828889609532465,Sympathetic noradrenergic neurons,2.4168207518985763
+POGZ,POGZ,Pogz,Cholinergic and monoaminergic neurons,2.69090360960431,Enteric neurons,2.557941991387113
+TRAF3,TRAF3,Traf3,Hindbrain neurons,3.268118984896106,Hindbrain neurons,2.9800683009022957
+CSMD1,CSMD1,Csmd1,Telencephalon projecting excitatory neurons,3.001688431109492,Peripheral sensory non-peptidergic neurons,3.5462305489749233
+TMEM67,TMEM67,Tmem67,Ependymal cells,4.928432608984981,Ependymal cells,5.195202959047702
+PCDHA4,PCDHA4,Pcdha4,Telencephalon inhibitory interneurons,3.265070211556043,Enteric neurons,4.166403838091548
+TOPAZ1,TOPAZ1,Topaz1,Hindbrain neurons,3.822176809573427,Peripheral sensory non-peptidergic neurons,4.723090994996529
+PMFBP1,PMFBP1,Pmfbp1,Cholinergic and monoaminergic neurons,3.6321168649962594,Peripheral sensory neurofilament neurons,5.3236459904896645
+CNTN5,CNTN5,Cntn5,Telencephalon projecting inhibitory neurons,3.0373482022622316,Enteric neurons,4.747849988011078
+INPP4B,INPP4B,Inpp4b,Cholinergic and monoaminergic neurons,2.8525342308945127,Cholinergic and monoaminergic neurons,3.1068611992075725
+ZNF322,ZNF322,Zfp322a,Cholinergic and monoaminergic neurons,3.004075099577716,Cholinergic and monoaminergic neurons,2.883764544815015
+ASIC2,ASIC2,Asic2,Cholinergic and monoaminergic neurons,4.8249756853192265,Peripheral sensory non-peptidergic neurons,3.6780005922253745
+PLA2R1,PLA2R1,Pla2r1,Vascular smooth muscle cells,4.205599770897505,Vascular smooth muscle cells,3.975820095901311
+CHMP3,CHMP3,Chmp3,Cholinergic and monoaminergic neurons,3.7682883149524877,Sympathetic cholinergic neurons,3.2308392310344725
+SOX6,SOX6,Sox6,Oligodendrocyte precursor cells,3.4578398948268605,Oligodendrocyte precursor cells,3.772438087242712
+PCDHA5,PCDHA5,Pcdha5,Telencephalon projecting excitatory neurons,3.0930143251229474,Telencephalon projecting excitatory neurons,3.153738008492431
+FANCL,FANCL,Fancl,Choroid epithelial cells,3.131414372900498,Sympathetic noradrenergic neurons,3.6759759913453025
+ZNF35,ZNF35,Zfp105,Subcommissural organ hypendymal cells,2.0064765792570096,Sympathetic cholinergic neurons,2.429418161074463
+TMEM42,TMEM42,Tmem42,Telencephalon projecting excitatory neurons,3.8756628310058265,Peripheral sensory non-peptidergic neurons,2.8521207670855606
+KIAA1143,KIAA1143,1110059G10Rik,Telencephalon projecting excitatory neurons,2.2437739629381532,Sympathetic noradrenergic neurons,3.1090985223181664
+C11orf31,SELENOH,2700094K13Rik,Telencephalon inhibitory interneurons,2.4749246859467955,Sympathetic cholinergic neurons,2.470813788207642
+ACVR1B,ACVR1B,Acvr1b,Cholinergic and monoaminergic neurons,3.249652636863339,Cholinergic and monoaminergic neurons,3.232019387516161
+ZNF501,ZNF501,NA,NA,NA,NA,NA
+RFTN2,RFTN2,Rftn2,Enteric glia,3.0722889424294415,Enteric glia,3.2822643610857543
+TMEM258,TMEM258,Tmem258,Oligodendrocytes,2.459014482437353,Sympathetic noradrenergic neurons,4.056334433001442
+TAL1,TAL1,Tal1,Di- and mesencephalon inhibitory neurons,4.975227849010965,Di- and mesencephalon inhibitory neurons,5.430652217807714
+NICN1,NICN1,Nicn1,Cholinergic and monoaminergic neurons,3.719926010523745,Sympathetic noradrenergic neurons,2.487232597657263
+HLA-DQA1,HLA-DQA1,H2-Aa,Perivascular macrophages,4.9969863441118765,Perivascular macrophages,5.004297575730228
+MOB4,MOB4,Mob4,Cholinergic and monoaminergic neurons,3.753199458504128,Sympathetic noradrenergic neurons,2.8201520408884164
+CCDC36,CCDC36,Ccdc36,Spinal cord inhibitory neurons,2.7474460497711863,Spinal cord inhibitory neurons,2.8907380012307833
+PCDHA6,PCDHA6,Pcdha6,Cholinergic and monoaminergic neurons,4.778944347756955,Cholinergic and monoaminergic neurons,5.121421419747059
+STK19,STK19,Stk19,Telencephalon projecting excitatory neurons,2.4123447548023265,Sympathetic cholinergic neurons,3.4570141364756366
+RHOA,RHOA,Rhoa,Enteric glia,2.303051520510852,Sympathetic noradrenergic neurons,2.689180598199448
+MAP9,MAP9,Map9,Cholinergic and monoaminergic neurons,3.4419133518726777,Cholinergic and monoaminergic neurons,2.8138816002926714
+FNIP2,FNIP2,Fnip2,Enteric glia,2.550766810658045,Sympathetic cholinergic neurons,2.745570298068657
+RBMS3,RBMS3,Rbms3,Cholinergic and monoaminergic neurons,4.588255112198706,Enteric neurons,3.2617952846436955
+PLCL1,PLCL1,Plcl1,Oligodendrocytes,3.7423122993116427,Oligodendrocytes,3.5006278468571974
+LTBP3,LTBP3,Ltbp3,Choroid epithelial cells,4.669197165029076,Choroid epithelial cells,4.406273159831455
+SPRY2,SPRY2,Spry2,Enteric glia,4.119707941275676,Enteric neurons,3.4777400725076277
+HTT,HTT,Htt,Cholinergic and monoaminergic neurons,3.055147783785664,Cholinergic and monoaminergic neurons,2.6369833531981537
+UBE2M,UBE2M,Ube2m,Cholinergic and monoaminergic neurons,3.2298767084749174,Peripheral sensory neurofilament neurons,3.1774312269496643
+BAG5,BAG5,Bag5,Schwann cells,4.74994301763411,Sympathetic cholinergic neurons,3.083996598014818
+CDH9,CDH9,Cdh9,Dentate gyrus granule neurons,4.000785869807903,Dentate gyrus granule neurons,3.5324392149175576
+LPIN3,LPIN3,Lpin3,Vascular and leptomeningeal cells,4.958939788030517,Vascular and leptomeningeal cells,5.397371435263531
+EPHB2,EPHB2,Ephb2,Enteric glia,3.3477222573409082,Enteric glia,3.171032180337939
+HMGN4,HMGN4,NA,NA,NA,NA,NA
+PPP6C,PPP6C,Ppp6c,Cholinergic and monoaminergic neurons,3.92426142099383,Sympathetic cholinergic neurons,2.944325224549538
+NOX4,NOX4,Nox4,Spinal cord inhibitory neurons,3.064614860569453,Enteric neurons,4.556380090655754
+PRR16,PRR16,Prr16,Spinal cord excitatory neurons,3.139424214286695,Spinal cord excitatory neurons,2.862950658370972
+EXT1,EXT1,Ext1,Ependymal cells,3.7339778858032204,Ependymal cells,3.69044701771994
+MGAT4C,MGAT4C,Mgat4c,Cholinergic and monoaminergic neurons,4.24420568019863,Cholinergic and monoaminergic neurons,3.6605338944323056
+EYS,EYS,NA,NA,NA,NA,NA
+STAU1,STAU1,Stau1,Cholinergic and monoaminergic neurons,3.643721877142013,Cholinergic and monoaminergic neurons,2.279574288965244
+HARS2,HARS2,Hars2,Cholinergic and monoaminergic neurons,2.575528511390878,Cholinergic and monoaminergic neurons,2.17146476079399
+BAD,BAD,Bad,Spinal cord inhibitory neurons,2.001962920779586,Sympathetic cholinergic neurons,4.2364150785401495
+ETFDH,ETFDH,Etfdh,Choroid epithelial cells,3.6600326183908294,Sympathetic cholinergic neurons,4.0659370401472925
+FH,FH,Fh1,Hindbrain neurons,2.1607250056768046,Sympathetic cholinergic neurons,3.3943691131974423
+ANKS1B,ANKS1B,Anks1b,Oligodendrocytes,3.4601668488702875,Oligodendrocytes,3.6275727547976864
+ITPR3,ITPR3,Itpr3,Satellite glia,3.937548573629339,Satellite glia,4.274375775947776
+RABEPK,RABEPK,Rabepk,Telencephalon inhibitory interneurons,1.9264424906740072,Sympathetic cholinergic neurons,3.303912312986824
+RHOBTB1,RHOBTB1,Rhobtb1,Pericytes,3.6627217371281993,Pericytes,3.7988713358833746
+BSN,BSN,Bsn,Telencephalon projecting excitatory neurons,3.408090035086775,Telencephalon projecting excitatory neurons,3.054860098348629
+RAB3B,RAB3B,Rab3b,Glutamatergic neuroblasts,3.4875003756541365,Sympathetic noradrenergic neurons,5.819800219034173
+ZNF536,ZNF536,Zfp536,Telencephalon inhibitory interneurons,2.7640261173291334,Telencephalon inhibitory interneurons,2.844776858133012
+TOP1,TOP1,Top1,Telencephalon projecting excitatory neurons,2.3333260983212396,Enteric neurons,2.4582648590461824
+CAMKK2,CAMKK2,Camkk2,Telencephalon projecting excitatory neurons,4.5524835413504405,Telencephalon projecting excitatory neurons,4.5679767589499995
+MANEA,MANEA,Manea,Hindbrain neurons,3.673544987341728,Hindbrain neurons,3.8309135717487437
+ARHGEF25,ARHGEF25,Arhgef25,Telencephalon projecting excitatory neurons,3.0138327217111556,Peripheral sensory neurofilament neurons,2.868258433928747
+VPS41,VPS41,Vps41,Cholinergic and monoaminergic neurons,3.229475220086102,Peripheral sensory neurofilament neurons,3.86058381099991
+ATP1A3,ATP1A3,Atp1a3,Hindbrain neurons,4.243051251789838,Hindbrain neurons,4.615483499987703
+ASXL3,ASXL3,Asxl3,Cholinergic and monoaminergic neurons,2.936612251608825,Peripheral sensory non-peptidergic neurons,3.941083427513784
+ANKHD1,ANKHD1,Ankhd1,Hindbrain neurons,3.5279646443944497,Enteric neurons,3.3651804916050434
+PCDHA7,PCDHA7,Pcdha7,Hindbrain neurons,3.156614313355862,Hindbrain neurons,3.4508304548566624
+PTPRS,PTPRS,Ptprs,Hindbrain neurons,3.5261806908340696,Hindbrain neurons,3.4168082771701336
+CCS,CCS,Ccs,Satellite glia,3.678422583558354,Sympathetic cholinergic neurons,3.029689694626917
+PHF2,PHF2,Phf2,Cholinergic and monoaminergic neurons,2.846819869910913,Enteric neurons,3.3506924004079792
+IK,IK,Ik,Cholinergic and monoaminergic neurons,2.607276741076835,Sympathetic cholinergic neurons,2.4871084999618294
+KYNU,KYNU,Kynu,Vascular and leptomeningeal cells,3.6126472292571288,Peripheral sensory neurofilament neurons,5.618560841286913
+PPID,PPID,Ppid,Cholinergic and monoaminergic neurons,2.6029883576173134,Sympathetic noradrenergic neurons,4.0686069035054935
+FAM120AOS,FAM120AOS,NA,NA,NA,NA,NA
+ZMAT2,ZMAT2,Zmat2,Telencephalon projecting excitatory neurons,2.9608676703205328,Sympathetic cholinergic neurons,3.38506255416219
+SERPING1,SERPING1,Serping1,Vascular and leptomeningeal cells,5.320116327516128,Vascular and leptomeningeal cells,4.137086952789171
+USP3,USP3,Usp3,Hindbrain neurons,2.6196521165660736,Enteric neurons,3.217976126183065
+CACNA2D1,CACNA2D1,Cacna2d1,Cholinergic and monoaminergic neurons,3.9587322716206113,Enteric neurons,2.704763780723634
+ANKHD1-EIF4EBP3,ANKHD1-EIF4EBP3,Ankhd1,Hindbrain neurons,3.5279646443944497,Enteric neurons,3.3651804916050434
+GINM1,GINM1,Ginm1,Pericytes,2.4005145793267855,Sympathetic noradrenergic neurons,4.304448056652093
+C1QTNF7,C1QTNF7,C1qtnf7,Vascular smooth muscle cells,5.391183361669376,Sympathetic cholinergic neurons,5.948182330100132
+MIER1,MIER1,Mier1,Pericytes,2.90738502916842,Enteric neurons,3.3065685684240504
+SLC4A9,SLC4A9,Slc4a9,Hindbrain neurons,4.399068649735539,Hindbrain neurons,4.779840520430413
+PSEN2,PSEN2,Psen2,Cholinergic and monoaminergic neurons,4.519002399264019,Sympathetic cholinergic neurons,2.827859662426266

@@ -35,7 +35,7 @@ subcorticalRamaker_flipped <- read_csv(here("Processed_Data/RamakerEtAl/Subcorti
 
 #read in the equivalent Howard genes used in each transcriptomic study
 Howard <- read_csv(here("Processed_Data/HowardEtAl/fullHowardTable.csv"))
-Howard %<>% rename("Howard.pvalue" = "Howard_pvalue")
+Howard %<>% rename("Howard_pvalue" = "Howard.pvalue")
 #read in the differentially expressed "prior ranking" for the genes identified in Crow, et al. 
 DE_Prior <- read_tsv(here("Raw_Data/CrowEtAl/pnas.1802973116.sd02.txt"))
 DE_Prior$DE_Prior_Rank <- signif(as.numeric(DE_Prior$DE_Prior_Rank),digits=3)
