@@ -4,8 +4,8 @@
 - Contains all the R scripts created to perform the meta-analyses
 - Main script to call is Run_meta_analysis_script.R. It will call the other scripts in order. 
 
-# Raw_Data
-- Contains all the raw data obtained from:
+# Raw_Data folder
+- Contains input data obtained from:
 
 * Ding, Y., Chang, L. C., Wang, X., Guilloux, J. P., Parrish, J., Oh, H., French, B. J., Lewis, D. A., Tseng, G. C., & Sibille, E. (2015). Molecular and Genetic Characterization of Depression: Overlap with other Psychiatric Disorders and Aging. Molecular neuropsychiatry, 1(1), 1–12. https://doi.org/10.1159/000369974
 
