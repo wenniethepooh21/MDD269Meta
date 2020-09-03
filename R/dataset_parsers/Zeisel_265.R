@@ -12,14 +12,20 @@ library(googlesheets4)
 table <- read_tsv(here('./Raw_Data/ZeiselEtAl/l5_all.agg.tab'), col_names = FALSE)
 descriptions <- table[29, 9:273]
 
+cluster_mapping_df <- table %>% filter(!is.na(X1) | X8 == 'ClusterName' | X8 == 'TaxonomyRank4')
+cluster_mapping <- cluster_mapping_df[1:2,-c(1:7)] %>% t() %>% as_tibble()
+cluster_mapping %<>% rename(ClusterName = V1, Taxon_Group = V2) %>% filter(ClusterName != 'ClusterName')
+
+
 table %<>% filter(!is.na(X1) | X8 == 'ClusterName')
 colnames(table) <- c(unlist(table[2,1:7]), unlist(table[1, 8:ncol(table)]))
-table <- table[-c(1,2),]
+# table <- table[-c(1,2),]
+
 
 # columns to drop
 table <- table[!is.na(names(table))]
 dropcols <- c('Accession', '_LogCV', '_LogMean', '_Selected', '_Total', '_Valid', 'ClusterName')
-table %<>% select(-one_of(dropcols))
+table %<>% select(-all_of(dropcols))
 
 #to change all but the 'Gene' column name into numeric type
 table[,2:length(colnames(table))] %<>% lapply(function(x) as.numeric(as.character(x)))
@@ -38,7 +44,7 @@ cell_type_info <- t(cell_type_info)
 colnames(cell_type_info) <- c('cluster_id', 'cluster_id')
 cell_type_info <- as_tibble(cell_type_info)
 cell_type_info %<>% rename(cluster_description = V2)
-
+cell_type_info %<>% left_join(cluster_mapping, by = c('cluster_id' = 'ClusterName'))
 # max_cell_types %<>% left_join(cell_type_info, by = c('cluster_id' = 'cluster_id'))
 # max_cell_types %<>% mutate(cluster_description = if_else(cluster_id == "Gene detected; No expression measured","Gene detected; No expression measured", cluster_description))
 max_cell_types %<>% rename(mouse_gene = Gene)
@@ -94,16 +100,7 @@ cell_expected_probs %<>% arrange(hypergeometric_p)
 cell_expected_probs$hypergeometric_p <- signif(as.numeric(cell_expected_probs$hypergeometric_p),digits=3)
 cell_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(cell_expected_probs$corrected_hypergeometric_p),digits=3)
 cell_expected_probs<-cell_type_info %>% left_join(cell_expected_probs, by = c('cluster_id' = 'cluster_id'))  %>% arrange(hypergeometric_p)
-#upload to google drive
-sheets_auth(token = drive_token())
+cell_expected_probs %>% write_csv(here("Results/supplementary_tables/hypergeometric_cell_type_taxon_265.csv"))
 
-cells <- drive_get("~/Thesis/Manuscript/Supplement_Tables/cell_hyper_expected_265")
-if(nrow(cells) != 0) {
-  drive_rm(cells)
-}
-#create the google worksheet
-cells <- sheets_create("cell_hyper_expected_265",sheets = c('hypergeometric_cell_type_taxons_265'))
-sheets_write(cell_expected_probs, cells,  sheet = "hypergeometric_cell_type_taxons_265")
-
-drive_mv(file = "cell_hyper_expected_265", path = "~/Thesis/Manuscript/Supplement_Tables/")  # move Sheets file
-
+cell_expected_probs_ent_chol <- cell_expected_probs %>% filter(Taxon %in% c('Enteric neurons', 'Cholinergic and monoaminergic neurons'))
+cell_expected_probs_ent_chol %>% write_csv(here("Results/supplementary_tables/hypergeometric_cell_type_taxon_265_chol_ent.csv"))
