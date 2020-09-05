@@ -73,8 +73,10 @@ Howard_Table %<>% left_join(howard_mouse_genes %>% dplyr::select(gene_symbol_upp
 Howard_Table %<>% left_join(cns_max_cell_types %>% dplyr::select(mouse_gene,cns_cell_type_taxon,cns_cell_type_taxon_zscore), by = c('mouseGene' = 'mouse_gene')) %>% distinct()
 Howard_Table %<>% left_join(max_cell_types %>% dplyr::select(mouse_gene, cell_type_taxon, cell_type_taxon_zscore), by = c('mouseGene' = 'mouse_gene'))
 Howard_Table %<>% dplyr::select(-gene_symbol_upper)
+Howard_Table$mouseGene %>% unique %>% length #includes NA
 
-Howard_Table %>% filter(is.na(cell_type_taxon_zscore))
+Howard_Table %>% filter(is.na(cell_type_taxon_zscore)) 
+Howard_Table %>% filter(!is.na(cell_type_taxon_zscore)) %>% arrange(cell_type_taxon_zscore)
 Howard_Table %>% write_csv(here("Processed_Data/ZeiselEtAl/HowardCellTypes_zscore.csv"))
 
 
