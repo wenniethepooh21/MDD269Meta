@@ -1,0 +1,270 @@
+gene_symbol,Updated_Gene_Names,mouseGene,cluster_id,cluster_description,Taxon
+HIST1H3J,HIST1H3J,Hist1h3g,ENTG1,"Enteric glia, proliferating",Enteric glia
+HIST1H1B,HIST1H1B,NA,NA,NA,NA
+OR2B2,OR2B2,Olfr1359,HBINH8,"Inhibitory neurons, hindbrain",Hindbrain neurons
+ZSCAN26,ZSCAN26,Zscan26,HBGLU4,"Excitatory neurons, hindbrain",Hindbrain neurons
+HIST1H2AL,HIST1H2AL,Hist1h2ae,ENTG1,"Enteric glia, proliferating",Enteric glia
+HIST1H4L,HIST1H4L,Hist1h4n,ENT8,"Intrinsic sensory neurons, enteric",Enteric neurons
+HIST1H3I,HIST1H3I,Hist1h3e,HYPEP8,"Peptidergic neurons, hypothalamus",Peptidergic neurons
+PAX5,PAX5,Pax5,MEINH13,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons
+PROX2,PROX2,Prox2,PSPEP1,"Peptidergicv (PEP2), DRG",Peripheral sensory peptidergic neurons
+OR12D3,OR12D3,Olfr109,Gene detected; No expression measured,NA,NA
+ANKK1,ANKK1,Ankk1,EPEN,Ependymal cells,Ependymal cells
+TYR,TYR,Tyr,SCINH6,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons
+PQLC2L,PQLC2L,NA,NA,NA,NA
+BTN1A1,BTN1A1,Btn1a1,HBINH6,"Inhibitory neurons, hindbrain",Hindbrain neurons
+PRR34,PRR34,NA,NA,NA,NA
+HIST1H2BO,HIST1H2BO,Hist1h2bp,MEINH1,"Inhibitory neurons, midbrain",Cerebellum neurons
+SLC17A3,SLC17A3,Slc17a3,TEGLU11,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+HSPE1-MOB4,HSPE1-MOB4,NA,NA,NA,NA
+C3orf84,C3orf84,BC048562,MSN1,"D1 medium spiny neurons, striatum",Telencephalon projecting inhibitory neurons
+PSORS1C2,PSORS1C2,Psors1c2,PER2,"Pericytes, possibly mixed with VENC",Pericytes
+ACTL8,ACTL8,NA,NA,NA,NA
+SLC44A4,SLC44A4,Slc44a4,TEGLU20,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+C7orf72,SPATA48,4930415F15Rik,PSPEP1,"Peptidergicv (PEP2), DRG",Peripheral sensory peptidergic neurons
+OTX2,OTX2,Otx2,MEINH10,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons
+MYBPC3,MYBPC3,Mybpc3,CBINH2,"Granular layer interneurons, cerebellum",Cerebellum neurons
+SIM1,SIM1,Sim1,HYPEP4,"Oxytocin-producing cells, hypothalamus",Peptidergic neurons
+ITGB6,ITGB6,Itgb6,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+SORCS3,SORCS3,Sorcs3,HBSER2,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons
+RBFOX1,RBFOX1,Rbfox1,HBGLU1,"Excitatory neurons, hindbrain",Di- and mesencephalon excitatory neurons
+GRM5,GRM5,Grm5,TEGLU16,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+HIST1H2BN,HIST1H2BN,Hist1h2bm,ENTG1,"Enteric glia, proliferating",Enteric glia
+SHISA9,SHISA9,Shisa9,TEINH12,"Non-border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+TCF4,TCF4,Tcf4,TEINH12,"Non-border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+NEGR1,NEGR1,Negr1,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+DENND1A,DENND1A,Dennd1a,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+DCC,DCC,Dcc,HBINH2,"Inhibitory neurons, hindbrain",Hindbrain neurons
+RSRC1,RSRC1,Rsrc1,SYCHO2,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+TENM2,TENM2,Tenm2,TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+TMEM161B,TMEM161B,Tmem161b,TECHO,"Cholinergic interneurons, telencephalon",Cholinergic and monoaminergic neurons
+DRD2,DRD2,Drd2,MEINH6,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons
+PGBD1,PGBD1,Pgbd1,ENT7,"Intrinsic sensory neurons, enteric",Enteric neurons
+ZKSCAN4,ZKSCAN4,NA,NA,NA,NA
+ERBB4,ERBB4,Erbb4,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ZKSCAN8,ZKSCAN8,Zkscan8,HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons
+BTN3A2,BTN3A2,NA,NA,NA,NA
+PCLO,PCLO,Pclo,TEINH12,"Non-border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+ZSCAN16,ZSCAN16,NA,NA,NA,NA
+ZSCAN9,ZSCAN9,NA,NA,NA,NA
+TMEM106B,TMEM106B,Tmem106b,MEGLU6,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons
+MEF2C,MEF2C,Mef2c,TEGLU9,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+OLFM4,OLFM4,Olfm4,HYPEP4,"Oxytocin-producing cells, hypothalamus",Peptidergic neurons
+GRM8,GRM8,Grm8,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ZNF165,ZNF165,NA,NA,NA,NA
+LRFN5,LRFN5,Lrfn5,TEGLU5,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+HIST1H2BL,HIST1H2BL,Hist1h2bj,ENT1,"Descending interneurons, enteric",Enteric neurons
+ZCCHC7,ZCCHC7,Zcchc7,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+B3GALTL,B3GLCT,B3galtl,NA,NA,NA
+BTN2A1,BTN2A1,NA,NA,NA,NA
+RERE,RERE,Rere,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+CDH13,CDH13,Cdh13,DECHO1,"Cholinergic neurons, septal nucleus, Meissnert and diagonal band",Cholinergic and monoaminergic neurons
+ASTN2,ASTN2,Astn2,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+CACNA1E,CACNA1E,Cacna1e,TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+HLA-B,HLA-B,NA,NA,NA,NA
+ZSCAN12,ZSCAN12,Zscan12,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+CHD6,CHD6,Chd6,DECHO1,"Cholinergic neurons, septal nucleus, Meissnert and diagonal band",Cholinergic and monoaminergic neurons
+CTNNA3,CTNNA3,Ctnna3,ENT4,"Excitatory neurons, enteric",Enteric neurons
+METTL9,METTL9,Mettl9,SATG1,"Satellite glia, proliferating",Satellite glia
+MEGF11,MEGF11,Megf11,DEGLU4,"Excitatory neurons, thalamus",Di- and mesencephalon excitatory neurons
+ZSCAN31,ZSCAN31,NA,NA,NA,NA
+ZNF197,ZNF197,NA,NA,NA,NA
+KLC1,KLC1,Klc1,PSNP4,"Non-peptidergic (NP2.1), DRG",Peripheral sensory non-peptidergic neurons
+ZNF660,ZNF660,LOC102639251,NA,NA,NA
+SPPL3,SPPL3,Sppl3,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+YLPM1,YLPM1,Ylpm1,HBINH2,"Inhibitory neurons, hindbrain",Hindbrain neurons
+PCDH9,PCDH9,Pcdh9,HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons
+ZNF445,ZNF445,Zfp445,HBINH1,"Inhibitory neurons, hindbrain",Di- and mesencephalon inhibitory neurons
+ZKSCAN7,ZKSCAN7,Zkscan7,HBINH3,"Inhibitory neurons, hindbrain",Hindbrain neurons
+LIN28B,LIN28B,Lin28b,HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons
+FAM172A,FAM172A,Fam172a,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+CELF4,CELF4,Celf4,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+DLST,DLST,Dlst,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+NRG1,NRG1,NA,NA,NA,NA
+SGCZ,SGCZ,Sgcz,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+RAB27B,RAB27B,Rab27b,PSNP3,"Non-peptidergic (NP1.2), DRG",Peripheral sensory non-peptidergic neurons
+IGSF6,IGSF6,Igsf6,PVM2,"Perivascular macrophages, activated",Perivascular macrophages
+GPC6,GPC6,Gpc6,ENT6,"Excitatory motor neurons, enteric",Enteric neurons
+PAX6,PAX6,Pax6,OBDOP1,"Dopaminergic periglomerular interneuron, olfactory bulb",Olfactory inhibitory neurons
+SGIP1,SGIP1,Sgip1,ENT1,"Descending interneurons, enteric",Enteric neurons
+KDM3A,KDM3A,Kdm3a,HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons
+C16orf45,C16orf45,2900011O08Rik,HYPEP6,"Orexin-producing neurons, hypothalamus",Cholinergic and monoaminergic neurons
+DCDC5,DCDC1,Dcdc5,NA,NA,NA
+ESR2,ESR2,Esr2,HBSER1,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons
+LRP1B,LRP1B,Lrp1b,SCINH6,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons
+EMILIN3,EMILIN3,Emilin3,OBINH5,"External plexiform layer interneuron, olfactory bulb",Olfactory inhibitory neurons
+TRMT61A,TRMT61A,Trmt61a,HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons
+XRCC3,XRCC3,Xrcc3,OBNBL1,"Neuroblasts, olfactory",Glutamatergic neuroblasts
+SOX5,SOX5,Sox5,TEGLU20,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+CNTNAP5,CNTNAP5,Cntnap5a,TEGLU5,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+SEMA6D,SEMA6D,Sema6d,HBGLU4,"Excitatory neurons, hindbrain",Hindbrain neurons
+ZFHX4,ZFHX4,Zfhx4,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+LST1,LST1,NA,NA,NA,NA
+PRSS16,PRSS16,Prss16,TEGLU13,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+RFWD2,COP1,Rfwd2,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+DCDC1,DCDC1,NA,NA,NA,NA
+ZDHHC21,ZDHHC21,Zdhhc21,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+TTC12,TTC12,Ttc12,EPEN,Ependymal cells,Ependymal cells
+SDK1,SDK1,Sdk1,HBCHO4,Afferent nuclei of cranial nerves III-V,Cholinergic and monoaminergic neurons
+APOPT1,APOPT1,Apopt1,SYCHO2,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+VRK2,VRK2,Vrk2,TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+CABP1,CABP1,NA,NA,NA,NA
+ZKSCAN3,ZKSCAN3,Zkscan3,HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons
+SAMD5,SAMD5,Samd5,ENT2,"Inhibitory motor neurons, enteric",Enteric neurons
+ADCK3,COQ8A,Adck3,SCGLU8,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons
+DENND1B,DENND1B,Dennd1b,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+TAOK3,TAOK3,Taok3,TEGLU16,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+HS6ST3,HS6ST3,Hs6st3,MEGLU11,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons
+MYRF,MYRF,Myrf,NFOL2,"Newly formed oligodendrocytes (NFOL), pons/medulla specific",Oligodendrocytes
+RTN1,RTN1,Rtn1,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+PSORS1C1,PSORS1C1,NA,NA,NA,NA
+CKB,CKB,Ckb,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+SF3B1,SF3B1,Sf3b1,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+FADS2,FADS2,Fads2,SATG1,"Satellite glia, proliferating",Satellite glia
+GTF2IRD1,GTF2IRD1,Gtf2ird1,HYPEP8,"Peptidergic neurons, hypothalamus",Peptidergic neurons
+NRD1,NRDC,Nrd1,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+ZC3H7B,ZC3H7B,Zc3h7b,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+AREL1,AREL1,Arel1,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+RANGAP1,RANGAP1,Rangap1,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+ZNF184,ZNF184,Zfp184,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ZDHHC5,ZDHHC5,Zdhhc5,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+HIST1H2BF,HIST1H2BF,Hist1h2be,PSNF3,"Neurofilament (NF2/3), DRG",Peripheral sensory neurofilament neurons
+FAM120A,FAM120A,Fam120a,HBGLU1,"Excitatory neurons, hindbrain",Di- and mesencephalon excitatory neurons
+KIF15,KIF15,Kif15,ENTG1,"Enteric glia, proliferating",Enteric glia
+NKAPL,NKAPL,Nkapl,EPEN,Ependymal cells,Ependymal cells
+FCF1,FCF1,Fcf1,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+SORBS3,SORBS3,Sorbs3,NFOL2,"Newly formed oligodendrocytes (NFOL), pons/medulla specific",Oligodendrocytes
+PCDHA2,PCDHA2,Pcdha2,TEINH10,"R-LM border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+PCDHA1,PCDHA1,Pcdha1,PSNF3,"Neurofilament (NF2/3), DRG",Peripheral sensory neurofilament neurons
+SCYL1,SCYL1,Scyl1,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+MR1,MR1,Mr1,EPEN,Ependymal cells,Ependymal cells
+BTN3A3,BTN3A3,NA,NA,NA,NA
+TCTEX1D1,TCTEX1D1,Tctex1d1,EPSC,"Ependymal cells, spinal cord",Ependymal cells
+CELF2,CELF2,Celf2,TEGLU16,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+CTNND1,CTNND1,Ctnnd1,PSPEP2,"Peptidergic (PEP1.3), DRG",Peripheral sensory peptidergic neurons
+HSPA1A,HSPA1A,Hspa1a,ENTG2,Enteric glia,Enteric glia
+ASCC3,ASCC3,Ascc3,HBGLU4,"Excitatory neurons, hindbrain",Hindbrain neurons
+ELAVL2,ELAVL2,Elavl2,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+RPS6KL1,RPS6KL1,Rps6kl1,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+PCDHA3,PCDHA3,Pcdha3,HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons
+TRMT10C,TRMT10C,Trmt10c,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+ABT1,ABT1,Abt1,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+SCAI,SCAI,Scai,TEINH12,"Non-border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+FADS1,FADS1,Fads1,ENTG6,Enteric glia,Enteric glia
+CTTNBP2,CTTNBP2,Cttnbp2,TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+KMT2A,KMT2A,Kmt2a,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+BEND4,BEND4,Bend4,TEINH11,"R-LM border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+ESRRG,ESRRG,Esrrg,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+BAZ2B,BAZ2B,Baz2b,HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons
+GPC5,GPC5,Gpc5,HBCHO4,Afferent nuclei of cranial nerves III-V,Cholinergic and monoaminergic neurons
+IQCJ-SCHIP1,IQCJ-SCHIP1,Gm21949,NA,NA,NA
+TCAIM,TCAIM,Tcaim,HBINH2,"Inhibitory neurons, hindbrain",Hindbrain neurons
+TMX2,TMX2,Tmx2,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+MED19,MED19,Med19,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+ZNF638,ZNF638,Zfml,NA,NA,NA
+CDH22,CDH22,Cdh22,HBCHO4,Afferent nuclei of cranial nerves III-V,Cholinergic and monoaminergic neurons
+GRIK5,GRIK5,Grik5,TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+HARS,HARS,Hars,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+EP300,EP300,Ep300,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+HLA-DQB1,HLA-DQB1,H2-Ab1,NFOL1,Newly formed oligodendrocytes (NFOL),Oligodendrocytes
+PCNP,PCNP,Pcnp,ENT2,"Inhibitory motor neurons, enteric",Enteric neurons
+ZHX3,ZHX3,Zhx3,TEINH12,"Non-border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+BCHE,BCHE,Bche,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+CRB1,CRB1,Crb1,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+MICB,MICB,Mill2,SYNOR3,"Noradrenergic neurons, sympathetic",Sympathetic noradrenergic neurons
+SLC30A9,SLC30A9,Slc30a9,DECHO1,"Cholinergic neurons, septal nucleus, Meissnert and diagonal band",Cholinergic and monoaminergic neurons
+MARK3,MARK3,Mark3,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+FHIT,FHIT,Fhit,CHOR,Chorid plexus epithelial cells,Choroid epithelial cells
+MARCH10,MARCH10,March10,EPEN,Ependymal cells,Ependymal cells
+CDK14,CDK14,Cdk14,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+PLCG1,PLCG1,Plcg1,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+AP3B1,AP3B1,Ap3b1,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+POGZ,POGZ,Pogz,HBGLU5,"Excitatory neurons, hindbrain",Hindbrain neurons
+TRAF3,TRAF3,Traf3,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+CSMD1,CSMD1,Csmd1,TEGLU13,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+TMEM67,TMEM67,Tmem67,EPEN,Ependymal cells,Ependymal cells
+PCDHA4,PCDHA4,Pcdha4,MEINH12,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons
+TOPAZ1,TOPAZ1,Topaz1,ENT1,"Descending interneurons, enteric",Enteric neurons
+PMFBP1,PMFBP1,Pmfbp1,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+CNTN5,CNTN5,Cntn5,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+INPP4B,INPP4B,Inpp4b,DECHO1,"Cholinergic neurons, septal nucleus, Meissnert and diagonal band",Cholinergic and monoaminergic neurons
+ZNF322,ZNF322,Zfp322a,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ASIC2,ASIC2,Asic2,PSNP2,"Non-peptidergic (NP1.1), DRG",Peripheral sensory non-peptidergic neurons
+PLA2R1,PLA2R1,Pla2r1,DETPH,"Neuroblast-like, habenula",Non-glutamatergic neuroblasts
+CHMP3,CHMP3,Chmp3,PSNP2,"Non-peptidergic (NP1.1), DRG",Peripheral sensory non-peptidergic neurons
+SOX6,SOX6,Sox6,TEINH21,"Sleep-active, long-range projection interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+PCDHA5,PCDHA5,Pcdha5,HBINH8,"Inhibitory neurons, hindbrain",Hindbrain neurons
+FANCL,FANCL,Fancl,HYPEP8,"Peptidergic neurons, hypothalamus",Peptidergic neurons
+ZNF35,ZNF35,Zfp105,HYPEP7,"Pmch neurons, hypothalamus",Cholinergic and monoaminergic neurons
+TMEM42,TMEM42,Tmem42,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+KIAA1143,KIAA1143,1110059G10Rik,HBGLU4,"Excitatory neurons, hindbrain",Hindbrain neurons
+C11orf31,SELENOH,2700094K13Rik,ENTG1,"Enteric glia, proliferating",Enteric glia
+ACVR1B,ACVR1B,Acvr1b,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ZNF501,ZNF501,NA,NA,NA,NA
+RFTN2,RFTN2,Rftn2,ENMFB,Enteric mesothelial fibroblasts,Enteric glia
+TMEM258,TMEM258,Tmem258,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+TAL1,TAL1,Tal1,MEINH14,"Inhibitory neurons, midbrain",Peptidergic neurons
+NICN1,NICN1,Nicn1,PSPEP1,"Peptidergicv (PEP2), DRG",Peripheral sensory peptidergic neurons
+HLA-DQA1,HLA-DQA1,H2-Aa,ABC,Vascular leptomeningeal cells,Vascular and leptomeningeal cells
+MOB4,MOB4,Mob4,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+CCDC36,CCDC36,Ccdc36,HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons
+PCDHA6,PCDHA6,Pcdha6,HBINH2,"Inhibitory neurons, hindbrain",Hindbrain neurons
+STK19,STK19,Stk19,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+RHOA,RHOA,Rhoa,ENTG1,"Enteric glia, proliferating",Enteric glia
+MAP9,MAP9,Map9,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+FNIP2,FNIP2,Fnip2,HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons
+RBMS3,RBMS3,Rbms3,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+PLCL1,PLCL1,Plcl1,HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons
+LTBP3,LTBP3,Ltbp3,PSNP4,"Non-peptidergic (NP2.1), DRG",Peripheral sensory non-peptidergic neurons
+SPRY2,SPRY2,Spry2,ENMFB,Enteric mesothelial fibroblasts,Enteric glia
+HTT,HTT,Htt,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+UBE2M,UBE2M,Ube2m,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+BAG5,BAG5,Bag5,PSNP4,"Non-peptidergic (NP2.1), DRG",Peripheral sensory non-peptidergic neurons
+CDH9,CDH9,Cdh9,ENT8,"Intrinsic sensory neurons, enteric",Enteric neurons
+LPIN3,LPIN3,Lpin3,HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons
+EPHB2,EPHB2,Ephb2,ENTG1,"Enteric glia, proliferating",Enteric glia
+HMGN4,HMGN4,NA,NA,NA,NA
+PPP6C,PPP6C,Ppp6c,HBSER5,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons
+NOX4,NOX4,Nox4,HBINH1,"Inhibitory neurons, hindbrain",Di- and mesencephalon inhibitory neurons
+PRR16,PRR16,Prr16,TEGLU19,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+EXT1,EXT1,Ext1,TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+MGAT4C,MGAT4C,Mgat4c,ENT8,"Intrinsic sensory neurons, enteric",Enteric neurons
+EYS,EYS,NA,NA,NA,NA
+STAU1,STAU1,Stau1,HBINH2,"Inhibitory neurons, hindbrain",Hindbrain neurons
+HARS2,HARS2,Hars2,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+BAD,BAD,Bad,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+ETFDH,ETFDH,Etfdh,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+FH,FH,Fh1,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+ANKS1B,ANKS1B,Anks1b,NFOL2,"Newly formed oligodendrocytes (NFOL), pons/medulla specific",Oligodendrocytes
+ITPR3,ITPR3,Itpr3,SATG2,Satellite glia,Satellite glia
+RABEPK,RABEPK,Rabepk,SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+RHOBTB1,RHOBTB1,Rhobtb1,PER2,"Pericytes, possibly mixed with VENC",Pericytes
+BSN,BSN,Bsn,TEGLU15,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+RAB3B,RAB3B,Rab3b,SYNOR3,"Noradrenergic neurons, sympathetic",Sympathetic noradrenergic neurons
+ZNF536,ZNF536,Zfp536,TEINH11,"R-LM border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons
+TOP1,TOP1,Top1,HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons
+CAMKK2,CAMKK2,Camkk2,TEGLU10,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons
+MANEA,MANEA,Manea,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ARHGEF25,ARHGEF25,Arhgef25,TEGLU23,"Excitatory neurons, hippocampus CA3",Telencephalon projecting excitatory neurons
+VPS41,VPS41,Vps41,PSNF3,"Neurofilament (NF2/3), DRG",Peripheral sensory neurofilament neurons
+ATP1A3,ATP1A3,Atp1a3,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+ASXL3,ASXL3,Asxl3,DEGLU4,"Excitatory neurons, thalamus",Di- and mesencephalon excitatory neurons
+ANKHD1,ANKHD1,Ankhd1,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+PCDHA7,PCDHA7,Pcdha7,DEGLU4,"Excitatory neurons, thalamus",Di- and mesencephalon excitatory neurons
+PTPRS,PTPRS,Ptprs,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+CCS,CCS,Ccs,PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons
+PHF2,PHF2,Phf2,ENT1,"Descending interneurons, enteric",Enteric neurons
+IK,IK,Ik,ENT8,"Intrinsic sensory neurons, enteric",Enteric neurons
+KYNU,KYNU,Kynu,HBGLU4,"Excitatory neurons, hindbrain",Hindbrain neurons
+PPID,PPID,Ppid,SYNOR3,"Noradrenergic neurons, sympathetic",Sympathetic noradrenergic neurons
+FAM120AOS,FAM120AOS,NA,NA,NA,NA
+ZMAT2,ZMAT2,Zmat2,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+SERPING1,SERPING1,Serping1,ENMFB,Enteric mesothelial fibroblasts,Enteric glia
+USP3,USP3,Usp3,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+CACNA2D1,CACNA2D1,Cacna2d1,HBSER2,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons
+ANKHD1-EIF4EBP3,ANKHD1-EIF4EBP3,Ankhd1,ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons
+GINM1,GINM1,Ginm1,SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons
+C1QTNF7,C1QTNF7,C1qtnf7,SYCHO2,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons
+MIER1,MIER1,Mier1,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons
+SLC4A9,SLC4A9,Slc4a9,HBGLU9,"Excitatory neurons, hindbrain",Hindbrain neurons
+PSEN2,PSEN2,Psen2,HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons

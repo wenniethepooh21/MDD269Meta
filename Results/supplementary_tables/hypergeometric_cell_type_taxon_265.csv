@@ -1,0 +1,266 @@
+cluster_id,cluster_description,Taxon,genome_cell_count,sample_cell_count,hypergeometric_p,corrected_hypergeometric_p
+DEGLU4,"Excitatory neurons, thalamus",Di- and mesencephalon excitatory neurons,25,3,0.00124,0.328
+TEINH12,"Non-border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,95,5,0.00136,0.361
+HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons,885,17,0.0017,0.452
+HBGLU8,"Excitatory neurons, hindbrain",Hindbrain neurons,1541,24,0.00348,0.923
+TEGLU14,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,174,6,0.00395,1
+HYPEP4,"Oxytocin-producing cells, hypothalamus",Peptidergic neurons,28,2,0.0238,1
+HBCHO2,"Cholinergic neurons, hindbrain",Hindbrain neurons,298,6,0.0438,1
+ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons,556,9,0.0508,1
+PSPEP1,"Peptidergicv (PEP2), DRG",Peripheral sensory peptidergic neurons,99,3,0.0533,1
+TEGLU13,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,48,2,0.0636,1
+HBINH1,"Inhibitory neurons, hindbrain",Di- and mesencephalon inhibitory neurons,52,2,0.0732,1
+DECHO1,"Cholinergic neurons, septal nucleus, Meissnert and diagonal band",Cholinergic and monoaminergic neurons,184,4,0.0739,1
+SCINH6,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,55,2,0.0806,1
+TEGLU5,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,57,2,0.0857,1
+TEINH11,"R-LM border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,57,2,0.0857,1
+MEINH1,"Inhibitory neurons, midbrain",Cerebellum neurons,11,1,0.0902,1
+OBDOP1,"Dopaminergic periglomerular interneuron, olfactory bulb",Olfactory inhibitory neurons,12,1,0.098,1
+HBINH3,"Inhibitory neurons, hindbrain",Hindbrain neurons,13,1,0.106,1
+HBCHO1,"Cholinergic neurons, hindbrain",Hindbrain neurons,379,6,0.108,1
+HYPEP8,"Peptidergic neurons, hypothalamus",Peptidergic neurons,135,3,0.11,1
+SYNOR3,"Noradrenergic neurons, sympathetic",Sympathetic noradrenergic neurons,138,3,0.115,1
+ENTG1,"Enteric glia, proliferating",Enteric glia,483,7,0.122,1
+TEGLU16,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,143,3,0.124,1
+MEINH12,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,16,1,0.128,1
+TEGLU20,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,73,2,0.129,1
+NFOL2,"Newly formed oligodendrocytes (NFOL), pons/medulla specific",Oligodendrocytes,156,3,0.15,1
+MEGLU11,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,19,1,0.151,1
+HBINH2,"Inhibitory neurons, hindbrain",Hindbrain neurons,337,5,0.164,1
+HBSER2,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,92,2,0.186,1
+TEGLU11,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,24,1,0.186,1
+TEINH21,"Sleep-active, long-range projection interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,24,1,0.186,1
+MEINH13,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,24,1,0.186,1
+MEINH10,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,25,1,0.193,1
+TEINH10,"R-LM border Cck interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,26,1,0.2,1
+OBINH5,"External plexiform layer interneuron, olfactory bulb",Olfactory inhibitory neurons,26,1,0.2,1
+TEGLU9,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,28,1,0.214,1
+HBGLU9,"Excitatory neurons, hindbrain",Hindbrain neurons,32,1,0.241,1
+HBCHO4,Afferent nuclei of cranial nerves III-V,Cholinergic and monoaminergic neurons,201,3,0.247,1
+MEINH6,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,38,1,0.279,1
+TEGLU19,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,40,1,0.291,1
+SATG1,"Satellite glia, proliferating",Satellite glia,130,2,0.306,1
+MEINH14,"Inhibitory neurons, midbrain",Peptidergic neurons,44,1,0.315,1
+ENTG2,Enteric glia,Enteric glia,45,1,0.321,1
+ENT1,"Descending interneurons, enteric",Enteric neurons,336,4,0.324,1
+PSNF3,"Neurofilament (NF2/3), DRG",Peripheral sensory neurofilament neurons,236,3,0.329,1
+SYNOR4,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons,985,10,0.336,1
+SYCHO1,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons,664,7,0.342,1
+SCGLU8,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,52,1,0.361,1
+ENTG6,Enteric glia,Enteric glia,53,1,0.366,1
+MEGLU6,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,53,1,0.366,1
+TEGLU15,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,55,1,0.377,1
+SATG2,Satellite glia,Satellite glia,55,1,0.377,1
+HBINH8,"Inhibitory neurons, hindbrain",Hindbrain neurons,154,2,0.38,1
+ENT4,"Excitatory neurons, enteric",Enteric neurons,58,1,0.393,1
+TEGLU10,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,58,1,0.393,1
+HBINH6,"Inhibitory neurons, hindbrain",Hindbrain neurons,58,1,0.393,1
+HBSER1,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,59,1,0.398,1
+MSN1,"D1 medium spiny neurons, striatum",Telencephalon projecting inhibitory neurons,60,1,0.403,1
+HBGLU4,"Excitatory neurons, hindbrain",Hindbrain neurons,498,5,0.423,1
+ENT8,"Intrinsic sensory neurons, enteric",Enteric neurons,395,4,0.438,1
+NFOL1,Newly formed oligodendrocytes (NFOL),Oligodendrocytes,69,1,0.448,1
+CBINH2,"Granular layer interneurons, cerebellum",Cerebellum neurons,69,1,0.448,1
+PSPEP2,"Peptidergic (PEP1.3), DRG",Peripheral sensory peptidergic neurons,69,1,0.448,1
+OBNBL1,"Neuroblasts, olfactory",Glutamatergic neuroblasts,70,1,0.452,1
+TECHO,"Cholinergic interneurons, telencephalon",Cholinergic and monoaminergic neurons,74,1,0.471,1
+EPEN,Ependymal cells,Ependymal cells,657,6,0.493,1
+ENMFB,Enteric mesothelial fibroblasts,Enteric glia,312,3,0.501,1
+ENT6,"Excitatory motor neurons, enteric",Enteric neurons,83,1,0.51,1
+PVM2,"Perivascular macrophages, activated",Perivascular macrophages,85,1,0.519,1
+HYPEP6,"Orexin-producing neurons, hypothalamus",Cholinergic and monoaminergic neurons,93,1,0.551,1
+SYCHO2,"Cholinergic neurons, sympathetic",Sympathetic cholinergic neurons,338,3,0.554,1
+ENT2,"Inhibitory motor neurons, enteric",Enteric neurons,217,2,0.556,1
+HBGLU1,"Excitatory neurons, hindbrain",Di- and mesencephalon excitatory neurons,229,2,0.585,1
+PSNP2,"Non-peptidergic (NP1.1), DRG",Peripheral sensory non-peptidergic neurons,230,2,0.587,1
+TEGLU23,"Excitatory neurons, hippocampus CA3",Telencephalon projecting excitatory neurons,108,1,0.605,1
+PSNP6,"Non-peptidergic (NP3), DRG",Peripheral sensory non-peptidergic neurons,983,8,0.607,1
+HBGLU5,"Excitatory neurons, hindbrain",Hindbrain neurons,111,1,0.615,1
+PER2,"Pericytes, possibly mixed with VENC",Pericytes,256,2,0.646,1
+PSNP4,"Non-peptidergic (NP2.1), DRG",Peripheral sensory non-peptidergic neurons,429,3,0.713,1
+EPSC,"Ependymal cells, spinal cord",Ependymal cells,157,1,0.742,1
+HYPEP7,"Pmch neurons, hypothalamus",Cholinergic and monoaminergic neurons,184,1,0.795,1
+CHOR,Chorid plexus epithelial cells,Choroid epithelial cells,190,1,0.806,1
+ABC,Vascular leptomeningeal cells,Vascular and leptomeningeal cells,203,1,0.826,1
+ENT7,"Intrinsic sensory neurons, enteric",Enteric neurons,212,1,0.839,1
+HBSER5,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,221,1,0.851,1
+DETPH,"Neuroblast-like, habenula",Non-glutamatergic neuroblasts,275,1,0.907,1
+PSNP3,"Non-peptidergic (NP1.2), DRG",Peripheral sensory non-peptidergic neurons,332,1,0.943,1
+ENT5,"Excitatory motor neurons, enteric",Enteric neurons,42,NA,NA,NA
+ENT3,"Inhibitory motor neurons, enteric",Enteric neurons,66,NA,NA,NA
+ENTG4,Enteric glia,Enteric glia,36,NA,NA,NA
+ENTG3,Enteric glia,Enteric glia,43,NA,NA,NA
+ENTG5,Enteric glia,Enteric glia,33,NA,NA,NA
+ENTG7,Enteric glia,Enteric glia,42,NA,NA,NA
+MOL3,"Mature oligodendrocytes, spinal cord enriched (high Klk6)",Oligodendrocytes,132,NA,NA,NA
+MOL2,"Mature oligodendrocytes, hindbrain",Oligodendrocytes,47,NA,NA,NA
+MFOL1,Myelin forming oligodendrocytes (MFOL),Oligodendrocytes,63,NA,NA,NA
+MOL1,Mature oligodendrocytes,Oligodendrocytes,24,NA,NA,NA
+MFOL2,Myelin forming oligodendrocytes (MFOL),Oligodendrocytes,112,NA,NA,NA
+COP2,"Committed oligodendrocytes cells (COP), pons/medulla specific",Oligodendrocytes,41,NA,NA,NA
+COP1,Committed oligodendrocytes cells (COP),Oligodendrocytes,36,NA,NA,NA
+HBSER3,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,33,NA,NA,NA
+HBSER4,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,97,NA,NA,NA
+TEGLU4,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,50,NA,NA,NA
+TEGLU22,"Excitatory neurons, amygdala",Telencephalon projecting excitatory neurons,35,NA,NA,NA
+TEGLU24,"Excitatory neurons, hippocampus CA1",Telencephalon projecting excitatory neurons,28,NA,NA,NA
+TEGLU17,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,22,NA,NA,NA
+TEGLU18,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,34,NA,NA,NA
+TEGLU2,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,40,NA,NA,NA
+TEGLU3,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,24,NA,NA,NA
+TEGLU21,"Excitatory neurons, hippocampus CA1",Telencephalon projecting excitatory neurons,69,NA,NA,NA
+TEGLU12,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,28,NA,NA,NA
+TEGLU8,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,34,NA,NA,NA
+TEGLU7,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,86,NA,NA,NA
+TEINH9,"Non-border Cck interneurons, hippocampus",Telencephalon inhibitory interneurons,17,NA,NA,NA
+TEINH5,"Interneuron-selective interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,9,NA,NA,NA
+TEINH6,"Interneuron-selective interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,12,NA,NA,NA
+TEINH7,"Interneuron-selective interneurons, hippocampus",Telencephalon inhibitory interneurons,25,NA,NA,NA
+TEINH8,"Interneuron-selective interneurons, hippocampus",Telencephalon inhibitory interneurons,21,NA,NA,NA
+TEINH4,"Interneuron-selective interneurons, cortex/hippocampus",Telencephalon inhibitory interneurons,9,NA,NA,NA
+TEINH20,"Inhibitory interneurons, hippocampus",Telencephalon inhibitory interneurons,53,NA,NA,NA
+TEINH13,"Trilaminar cells, hippocampus",Telencephalon inhibitory interneurons,27,NA,NA,NA
+TEINH14,"CGE-derived neurogliaform cells Cxcl14+, cortex/hippocampus",Telencephalon inhibitory interneurons,9,NA,NA,NA
+TEINH16,"Ivy and MGE-derived neurogliaform cells, cortex/hippocampus",Telencephalon inhibitory interneurons,21,NA,NA,NA
+TEINH15,"CGE-derived neurogliaform cells, cortex/hippocampus",Telencephalon inhibitory interneurons,12,NA,NA,NA
+TEINH19,"Hippocamposeptal projection, cortex/hippocampus",Telencephalon inhibitory interneurons,36,NA,NA,NA
+DEINH8,"Inhibitory neurons, hypothalamus",Peptidergic neurons,8,NA,NA,NA
+MBDOP1,"Dopaminergic neurons, periaqueductal grey",Cholinergic and monoaminergic neurons,31,NA,NA,NA
+MBDOP2,"Dopaminergic neurons, ventral midbrain (SNc, VTA)",Cholinergic and monoaminergic neurons,58,NA,NA,NA
+MEGLU14,Glutamatergic projection neurons of the raphe nucleus,Cholinergic and monoaminergic neurons,62,NA,NA,NA
+MEGLU10,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,12,NA,NA,NA
+MEGLU9,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,25,NA,NA,NA
+MEGLU8,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,15,NA,NA,NA
+MEGLU7,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,9,NA,NA,NA
+DEGLU5,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,14,NA,NA,NA
+MEGLU2,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,19,NA,NA,NA
+MEGLU3,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,17,NA,NA,NA
+MEGLU1,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,12,NA,NA,NA
+MEGLU5,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,19,NA,NA,NA
+MEGLU4,"Excitatory neurons, midbrain",Di- and mesencephalon excitatory neurons,17,NA,NA,NA
+DEGLU3,"Excitatory neurons, thalamus",Di- and mesencephalon excitatory neurons,25,NA,NA,NA
+MBCHO1,"Cholinergic neurons, midbrain red nucleus",Di- and mesencephalon excitatory neurons,55,NA,NA,NA
+SCGLU1,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,30,NA,NA,NA
+HBGLU10,"Excitatory neurons, hindbrain",Spinal cord excitatory neurons,18,NA,NA,NA
+SCGLU10,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,16,NA,NA,NA
+HBGLU2,"Excitatory neurons, hindbrain",Di- and mesencephalon excitatory neurons,34,NA,NA,NA
+HBGLU3,"Excitatory neurons, hindbrain",Di- and mesencephalon excitatory neurons,15,NA,NA,NA
+HBNOR,Noradrenergic neurons of the medulla,Cholinergic and monoaminergic neurons,69,NA,NA,NA
+DEGLU2,"Excitatory neurons, hypothalamus",Di- and mesencephalon excitatory neurons,73,NA,NA,NA
+DEGLU1,"Excitatory neurons, thalamus",Di- and mesencephalon excitatory neurons,67,NA,NA,NA
+MSN2,"D2 medium spiny neurons, striatum",Telencephalon projecting inhibitory neurons,21,NA,NA,NA
+MSN3,"D2 medium spiny neurons, striatum",Telencephalon projecting inhibitory neurons,10,NA,NA,NA
+MSN5,"Patch D1/D2 neurons, striatum",Telencephalon projecting inhibitory neurons,17,NA,NA,NA
+MSN4,"D1 medium spiny neurons, striatum",Telencephalon projecting inhibitory neurons,13,NA,NA,NA
+MSN6,"Matrix D1 neurons, striatum",Telencephalon projecting inhibitory neurons,7,NA,NA,NA
+OEC,Olfactory ensheathing cells,Olfactory ensheathing cells,75,NA,NA,NA
+RGDG,Dentate gyrus radial glia-like cells,Dentate gyrus radial glia-like cells,21,NA,NA,NA
+RGSZ,Subventricular zone radial glia-like cells,Subventricular zone radial glia-like cells,11,NA,NA,NA
+OPC,Oligodendrocytes precursor cells,Oligodendrocyte precursor cells,17,NA,NA,NA
+SZNBL,Neuronal intermidate progenitor cells,Non-glutamatergic neuroblasts,53,NA,NA,NA
+EPMB,"Ependymal cells, midbrain",Ependymal cells,32,NA,NA,NA
+HYPEN,"Hypendymal cell, subcommissural organ",Subcommissural organ hypendymal cells,81,NA,NA,NA
+OBDOP2,"Dopaminergic neurons, olfactory nulb",Olfactory inhibitory neurons,6,NA,NA,NA
+OBINH2,"Inner horizontal cell, olfactory bulb",Olfactory inhibitory neurons,7,NA,NA,NA
+OBINH3,"Inhibitory neurons, olfactory bulb",Olfactory inhibitory neurons,4,NA,NA,NA
+OBINH1,"Inhibitory neurons, olfactory bulb",Olfactory inhibitory neurons,3,NA,NA,NA
+OBINH4,"Inhibitory neurons, olfactory bulb",Olfactory inhibitory neurons,12,NA,NA,NA
+OBNBL2,"Neuroblasts, olfactory bulb",Glutamatergic neuroblasts,27,NA,NA,NA
+TEGLU6,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,6,NA,NA,NA
+TEGLU1,"Excitatory neurons, cerebral cortex",Telencephalon projecting excitatory neurons,14,NA,NA,NA
+DGGRC2,"Granule neurons, dentate gyrus",Dentate gyrus granule neurons,19,NA,NA,NA
+DGGRC1,"Granule neuroblasts, dentate gyrus",Dentate gyrus granule neurons,14,NA,NA,NA
+DGNBL1,"Granule neuroblasts, dentate gyrus",Non-glutamatergic neuroblasts,28,NA,NA,NA
+DGNBL2,"Granule neuroblasts, dentate gyrus",Non-glutamatergic neuroblasts,17,NA,NA,NA
+OBNBL3,"Neuroblasts, olfactory bulb",Non-glutamatergic neuroblasts,9,NA,NA,NA
+HYPEP3,"Peptidergic neurons, hypothalamus",Peptidergic neurons,19,NA,NA,NA
+HYPEP2,"Peptidergic neurons, hypothalamus",Peptidergic neurons,27,NA,NA,NA
+HYPEP1,"Peptidergic neurons, hypothalamus",Peptidergic neurons,18,NA,NA,NA
+CBNBL2,"Neuroblasts, cerebellum",Cerebellum neurons,8,NA,NA,NA
+CBGRC,"Granule neurons, cerebellum",Cerebellum neurons,10,NA,NA,NA
+CR,"Cajal-Retzius cells, hippocampus",Di- and mesencephalon excitatory neurons,10,NA,NA,NA
+CBNBL1,"Neuroblasts, cerebellum",Glutamatergic neuroblasts,20,NA,NA,NA
+SEPNBL,"Neuroblasts, septum",Glutamatergic neuroblasts,11,NA,NA,NA
+OBNBL5,"Inhibitory neurons, olfactory bulb",Olfactory inhibitory neurons,4,NA,NA,NA
+OBNBL4,"Inhibitory neurons, olfactory bulb",Olfactory inhibitory neurons,11,NA,NA,NA
+DECHO2,"Cholinergic neurons, habenula",Di- and mesencephalon excitatory neurons,38,NA,NA,NA
+HYPEP5,"Vasopressin-producing cells, hypothalamus",Peptidergic neurons,16,NA,NA,NA
+DEINH7,"Inhibitory neurons, hypothalamus",Peptidergic neurons,12,NA,NA,NA
+HBGLU6,"Excitatory neurons, hindbrain",Hindbrain neurons,34,NA,NA,NA
+HBGLU7,"Excitatory neurons, hindbrain",Hindbrain neurons,27,NA,NA,NA
+HBADR,Adrenergic cell groups of the medulla,Cholinergic and monoaminergic neurons,71,NA,NA,NA
+SCINH1,"Inhibitory neurons, spinal cord",Hindbrain neurons,76,NA,NA,NA
+HBINH7,"Inhibitory neurons, hindbrain",Hindbrain neurons,53,NA,NA,NA
+HBINH5,"Inhibitory neurons, hindbrain",Di- and mesencephalon inhibitory neurons,17,NA,NA,NA
+CBPC,Purkinje cells,Cerebellum neurons,98,NA,NA,NA
+CBINH1,"Molecular layer interneurons, cerebellum",Cerebellum neurons,9,NA,NA,NA
+TEINH17,"Axo-axonic, cortex/hippocampus",Telencephalon inhibitory interneurons,15,NA,NA,NA
+TEINH18,"Basket and bistratified cells, cortex/hippocampus",Telencephalon inhibitory interneurons,22,NA,NA,NA
+DEINH2,"Inhibitory neurons, thalamus",Telencephalon inhibitory interneurons,6,NA,NA,NA
+DEINH1,"Inhibitory neurons, thalamus",Telencephalon inhibitory interneurons,13,NA,NA,NA
+DEINH6,"Peptidergic neurons, hypothalamus",Peptidergic neurons,61,NA,NA,NA
+MEINH8,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,18,NA,NA,NA
+DEINH4,"Inhibitory neurons, thalamus",Peptidergic neurons,26,NA,NA,NA
+DEINH5,"Peptidergic neurons, hypothalamus",Peptidergic neurons,8,NA,NA,NA
+TEINH2,"Inhibitory neurons, septal nucleus",Peptidergic neurons,17,NA,NA,NA
+TEINH1,"Inhibitory neurons, pallidum",Di- and mesencephalon inhibitory neurons,20,NA,NA,NA
+HBINH4,"Inhibitory neurons, hindbrain",Hindbrain neurons,25,NA,NA,NA
+SCINH11,"Central canal neurons, spinal cord",Peptidergic neurons,54,NA,NA,NA
+MEINH3,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,10,NA,NA,NA
+MEINH4,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,12,NA,NA,NA
+DEINH3,"Inhibitory neurons, hypothalamus",Di- and mesencephalon inhibitory neurons,9,NA,NA,NA
+MEINH2,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,9,NA,NA,NA
+MEINH7,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,15,NA,NA,NA
+MEINH5,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,15,NA,NA,NA
+MEINH11,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,10,NA,NA,NA
+MEINH9,"Inhibitory neurons, midbrain",Di- and mesencephalon inhibitory neurons,9,NA,NA,NA
+SCGLU9,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,11,NA,NA,NA
+SCGLU7,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,15,NA,NA,NA
+SCGLU2,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,14,NA,NA,NA
+SCGLU3,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,29,NA,NA,NA
+SCGLU4,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,17,NA,NA,NA
+SCGLU6,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,12,NA,NA,NA
+SCGLU5,"Excitatory neurons, spinal cord",Spinal cord excitatory neurons,18,NA,NA,NA
+SCINH5,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,69,NA,NA,NA
+SCINH7,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,31,NA,NA,NA
+HBINH9,"Inhibitory neurons, hindbrain",Spinal cord inhibitory neurons,20,NA,NA,NA
+SCINH2,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,7,NA,NA,NA
+SCINH4,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,30,NA,NA,NA
+SCINH3,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,25,NA,NA,NA
+SCINH10,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,27,NA,NA,NA
+SCINH9,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,13,NA,NA,NA
+SCINH8,"Inhibitory neurons, spinal cord",Spinal cord inhibitory neurons,28,NA,NA,NA
+TEINH3,"Inhibitory neurons, telencephalon",Peptidergic neurons,21,NA,NA,NA
+VLMC2,Vascular leptomeningeal cells,Vascular and leptomeningeal cells,70,NA,NA,NA
+VLMC1,Vascular leptomeningeal cells,Vascular and leptomeningeal cells,26,NA,NA,NA
+VSMCA,"Vascular smooth muscle cells, arterial",Vascular smooth muscle cells,52,NA,NA,NA
+PER3,Pericytes,Vascular smooth muscle cells,31,NA,NA,NA
+VECA,"Vascular endothelial cells, arterial",Vascular smooth muscle cells,136,NA,NA,NA
+PER1,Pericytes,Pericytes,32,NA,NA,NA
+VECV,"Vascular endothelial cells, venous",Vascular endothelial cells,87,NA,NA,NA
+VECC,"Vascular endothelial cells, capillary",Vascular endothelial cells,47,NA,NA,NA
+MGL1,Microglia,Microglia,59,NA,NA,NA
+MGL2,"Microglia, activated",Microglia,29,NA,NA,NA
+MGL3,"Microglia, activated",Microglia,155,NA,NA,NA
+PVM1,Perivascular macrophages,Perivascular macrophages,100,NA,NA,NA
+SCHW,Schwann cells,Schwann cells,124,NA,NA,NA
+ACBG,Bergmann glia,Astrocytes,38,NA,NA,NA
+ACOB,Olfactory astrocytes,Astrocytes,38,NA,NA,NA
+ACTE1,"Telencephalon astrocytes, Gfap-high",Astrocytes,20,NA,NA,NA
+ACTE2,"Telencephalon astrocytes, Gfap-low",Astrocytes,35,NA,NA,NA
+ACNT1,"Non-telencephalon astrocytes, Gfap-low",Astrocytes,20,NA,NA,NA
+ACNT2,"Non-telencephalon astrocytes, Gfap-high",Astrocytes,11,NA,NA,NA
+ACMB,Dorsal midbrain Myoc-expressing astrocyte-like,Astrocytes,46,NA,NA,NA
+SYNOR2,"Noradrenergic neurons, sympathetic",Sympathetic noradrenergic neurons,114,NA,NA,NA
+SYNOR1,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons,67,NA,NA,NA
+SYNOR5,Noradrenergic erector muscle neurons,Sympathetic noradrenergic neurons,68,NA,NA,NA
+PSPEP3,"Peptidergic (PEP1..4), DRG",Peripheral sensory peptidergic neurons,57,NA,NA,NA
+PSPEP4,"Peptidergic (PEP1.1), DRG",Peripheral sensory peptidergic neurons,38,NA,NA,NA
+PSPEP5,"Peptidergic (PEP1.2), DRG",Peripheral sensory peptidergic neurons,42,NA,NA,NA
+PSPEP6,"Peptidergic (TrpM8), DRG",Peripheral sensory peptidergic neurons,22,NA,NA,NA
+PSPEP7,"Peptidergic (TrpM8), DRG",Peripheral sensory peptidergic neurons,28,NA,NA,NA
+PSPEP8,"Peptidergic (TrpM8), DRG",Peripheral sensory peptidergic neurons,85,NA,NA,NA
+PSNF2,"Neurofilament (NF4/5), DRG",Peripheral sensory neurofilament neurons,120,NA,NA,NA
+PSNF1,"Neurofilament (NF1), DRG",Peripheral sensory neurofilament neurons,157,NA,NA,NA
+PSNP1,"Non-peptidergic (TH), DRG",Peripheral sensory non-peptidergic neurons,182,NA,NA,NA
+PSNP5,"Non-peptidergic (NP2.2), DRG",Peripheral sensory non-peptidergic neurons,137,NA,NA,NA
