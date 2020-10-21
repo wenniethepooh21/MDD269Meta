@@ -74,3 +74,22 @@ tissue_expected_probs$corrected_hypergeometric_p <- signif(as.numeric(tissue_exp
 write_csv(tissue_expected_probs, path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
 write_csv(tissue_expected_probs %>% dplyr::select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
 
+## fix probe mappings to multiple protocadherin genes 
+howard_count_fix <- howard_brain %>% filter(gene_symbol != 'PCDHA4' & gene_symbol != 'PCDHA7') %>% group_by(brain_region) %>% summarise(sample_tissue_count = n()) %>% na.omit()
+full_count_fix <- structure_count %>% full_join(howard_count_fix, by = c('structure_name' = 'brain_region'))
+full_count_fix %<>% rowwise() %>% mutate(genome_tissue_count = if_else(is.na(genome_tissue_count) & !is.na(sample_tissue_count), 0, as.numeric(genome_tissue_count))) 
+tissue_expected_probs_corrected <- full_count_fix %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_tissue_count, genome_tissue_count, brain_pop, colSums(na.omit(howard_count_fix)[,2])))
+#
+#correct by number of possible brain structures to choose from
+tissue_expected_probs_corrected %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n = nrow(structure_count)))
+tissue_expected_probs_corrected %<>% arrange(hypergeometric_p,-sample_tissue_count)
+tissue_expected_probs_corrected %<>% left_join(brain_slim, by = c('structure_name'='BrainRegion')) %>% ungroup()
+tissue_expected_probs_corrected %<>% left_join(enclosing_regions, by = c('structure_name' = 'brain_region'))%>% ungroup()
+tissue_expected_probs_corrected %<>% mutate(location = if_else(is.na(location), region_location, location)) %>% dplyr::rename(enclosing_regions = location)
+
+tissue_expected_probs_corrected$hypergeometric_p <- signif(as.numeric(tissue_expected_probs_corrected$hypergeometric_p),digits=3)
+tissue_expected_probs_corrected$corrected_hypergeometric_p <- signif(as.numeric(tissue_expected_probs_corrected$corrected_hypergeometric_p),digits=3)
+
+write_csv(tissue_expected_probs_corrected, path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full_corr.csv'))
+write_csv(tissue_expected_probs_corrected %>% dplyr::select(-region_location) , path = here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_corr.csv'))
+

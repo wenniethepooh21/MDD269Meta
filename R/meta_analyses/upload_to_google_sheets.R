@@ -10,6 +10,9 @@ library(googlesheets4)
 tissue_expected_probs_full <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full.csv'))
 tissue_expected_probs_slim <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four.csv'))
 
+tissue_expected_probs_full_corr <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_full_corr.csv'))
+tissue_expected_probs_slim_corr <- read_csv(here('Results', 'supplementary_tables', 'hypergeometric_brain_regions_tissue_hyper_expected_four_corr.csv'))
+
 gs4_auth(token = drive_token())
 
 region <- drive_get("~/Thesis/Manuscript/gs_tables/Hypergeometric/tissue_hyper_expected_four_full_new")
@@ -17,8 +20,9 @@ if(nrow(region) != 0) {
   drive_rm(region)
 }
 #create the google worksheet
-region <- gs4_create("tissue_hyper_expected_four_full_new",sheets = c('hypergeometric_brain_regions'))
+region <- gs4_create("tissue_hyper_expected_four_full_new",sheets = c('hypergeometric_brain_regions', 'hypergeometric_brain_regions_updated'))
 sheet_write(tissue_expected_probs_full, region,  sheet = "hypergeometric_brain_regions")
+sheet_write(tissue_expected_probs_full_corr, region,  sheet = "hypergeometric_brain_regions_updated")
 
 drive_mv(file = "tissue_hyper_expected_four_full_new", path = "~/Thesis/Manuscript/gs_tables/Hypergeometric/")  # move Sheets file
 
@@ -28,8 +32,9 @@ if(nrow(region) != 0) {
   drive_rm(region)
 }
 #create the google worksheet
-region <- gs4_create("tissue_hyper_expected_four",sheets = c('hypergeometric_brain_regions'))
+region <- gs4_create("tissue_hyper_expected_four",sheets = c('hypergeometric_brain_regions', 'hypergeometric_brain_regions_updated'))
 sheet_write(tissue_expected_probs_slim, region,  sheet = "hypergeometric_brain_regions")
+sheet_write(tissue_expected_probs_slim_corr, region,  sheet = "hypergeometric_brain_regions_updated")
 
 drive_mv(file = "tissue_hyper_expected_four", path = "~/Thesis/Manuscript/gs_tables/Hypergeometric/") 
 
