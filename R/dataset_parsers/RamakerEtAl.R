@@ -141,35 +141,35 @@ cortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/CorticalRamakerT
 ########################################################
 ###### SUBCORTICAL ANALYSIS (FULL, FEMALE AND MALE) ######
 ########################################################
-#extract cortical data and re-run meta-analysis -- don't have to re-run model creation
+#extract subcortical data and re-run meta-analysis -- don't have to re-run model creation
 Ramaker_subcortical<- read_csv(here("Processed_Data/RamakerEtAl/CompleteRamakerTable.csv"))
-#Extract the cortical region data & run analysis
+#Extract the subcortical region data & run analysis
 Ramaker_subcortical %<>% filter(target_region == "nAcc")
 subcortical_regions <- Ramaker_subcortical %>% select(target_region) %>% distinct() %>% pull()
-#run the meta-analysis on only the cortical regions sampled
+#run the meta-analysis on only the subcortical regions sampled
 Ramaker_subcortical %<>% RamakerMetaAnalysis(subcortical_regions)
 
-#Extract the cortical region data & run analysis on female data
+#Extract the subcortical region data & run analysis on female data
 female_ramaker_subcortical <- read_csv(here("Processed_Data/RamakerEtAl/CompleteFemaleRamakerTable.csv"))
 female_ramaker_subcortical %<>% filter(target_region == "nAcc")
-#run the meta-analysis on only the cortical regions sampled in female data
+#run the meta-analysis on only the subcortical regions sampled in female data
 female_ramaker_subcortical %<>% RamakerMetaAnalysis(subcortical_regions)
 female_ramaker_subcortical %<>% rename(nAcc_Female_directions = nAcc_directions)
 female_ramaker_subcortical %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalFemaleRamakerTable.csv"))
 
-#Extract the cortical region data & run analysis on male data
+#Extract the subcortical region data & run analysis on male data
 male_ramaker_subcortical<- read_csv(here("Processed_Data/RamakerEtAl/CompleteMaleRamakerTable.csv"))
 male_ramaker_subcortical %<>% filter(target_region == "nAcc")
-#run the meta-analysis on only the cortical regions sampled in male data
+#run the meta-analysis on only the subcortical regions sampled in male data
 male_ramaker_subcortical %<>% RamakerMetaAnalysis(subcortical_regions)
 male_ramaker_subcortical %<>% rename(nAcc_Male_directions = nAcc_directions)
 male_ramaker_subcortical %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalMaleRamakerTable.csv"))
 
-#merge all directions from male and female data to visualize cortical directions across sexes
+#merge all directions from male and female data to visualize subcortical directions across sexes
 subcortical_summary <- left_join(female_ramaker_subcortical %>% select(gene_symbol,nAcc_Female_directions), male_ramaker_subcortical %>% select(gene_symbol,nAcc_Male_directions ))
 subcortical_summary %<>% unite("nAcc.F_nAcc.M", nAcc_Female_directions, nAcc_Male_directions, sep = "")
 subcortical_summary %<>% left_join(Ramaker_subcortical %>% select(-sex, -nAcc_directions) %>% distinct())
-#Save full cortical meta-analysis results 
+#Save full subcortical meta-analysis results 
 subcortical_summary %>% write_csv(here("Processed_Data/RamakerEtAl/SubcorticalRamakerTable.csv"))
 
 #############################################
