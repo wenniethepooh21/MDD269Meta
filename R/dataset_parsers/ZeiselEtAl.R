@@ -92,7 +92,8 @@ full_cell_count <- cell_count %>% left_join(howard_count, by=c('cell_type_taxon'
 # perform hypergeometric test - read in file for hyper_test function
 source(here("R/transcriptomic_meta/hyper_test.R"))
 #subtract one for the gene that wasn't assigned a cell type but was observed
-cell_expected_probs  <- full_cell_count %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_cell_count, genome_cell_count, cell_pop, colSums(na.omit(howard_count)[,2]) - 1))
+cell_expected_probs <- full_cell_count %>% rowwise() %>% mutate(expected_cell_count = genome_cell_count/cell_pop * (colSums(na.omit(howard_count)[,2])-1) )
+cell_expected_probs %<>% mutate(hypergeometric_p = hyper_test(sample_cell_count, genome_cell_count, cell_pop, (colSums(na.omit(howard_count)[,2])) - 1))
 #corrected by the number of possible cell types to choose from subtract one because of the 'gene not expressed option'
 cell_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n= (nrow(cell_count) - 1)))
 cell_expected_probs %<>% mutate(corrected_hypergeometric_p = ifelse(cell_type_taxon == "Gene detected; No expression measured", NA, corrected_hypergeometric_p))
@@ -116,7 +117,8 @@ cns_howard_count <- cns_howard_cell %>% group_by(cns_cell_type_taxon) %>% summar
 cns_full_count <- cns_cell_count %>% left_join(cns_howard_count, by=c('cns_cell_type_taxon' = 'cns_cell_type_taxon') )
 
 #subtract one for the gene that wasn't assigned a cell type but was observed
-cns_cell_expected_probs  <- cns_full_count %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_cell_count, genome_cell_count, cell_pop, colSums(na.omit(howard_count)[,2]) - 1))
+cns_cell_expected_probs <- cns_full_count %>% rowwise() %>% mutate(expected_cell_count = genome_cell_count/cell_pop * (colSums(na.omit(howard_count)[,2])-1) )
+cns_cell_expected_probs  %<>% mutate(hypergeometric_p = hyper_test(sample_cell_count, genome_cell_count, cell_pop, colSums(na.omit(howard_count)[,2]) - 1))
 #corrected by the number of possible cell types to choose from subtract one because of the 'gene not expressed option'
 cns_cell_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n = nrow(cell_count)-1))
 cns_cell_expected_probs %<>% mutate(corrected_hypergeometric_p = ifelse(cns_cell_type_taxon == "Gene detected; No expression measured", NA, corrected_hypergeometric_p))

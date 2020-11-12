@@ -1,0 +1,26 @@
+cluster_id,cluster_description,Taxon,genome_cell_count,sample_cell_count,hypergeometric_p,corrected_hypergeometric_p
+HBCHO3,Afferent nuclei of cranial nerves VI-XII,Cholinergic and monoaminergic neurons,885,17,0.0017,0.452
+ENT9,"Intrinsic sensory neurons, enteric",Enteric neurons,556,9,0.0508,1
+DECHO1,"Cholinergic neurons, septal nucleus, Meissnert and diagonal band",Cholinergic and monoaminergic neurons,184,4,0.0739,1
+HBSER2,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,92,2,0.186,1
+HBCHO4,Afferent nuclei of cranial nerves III-V,Cholinergic and monoaminergic neurons,201,3,0.247,1
+ENT1,"Descending interneurons, enteric",Enteric neurons,336,4,0.324,1
+ENT4,"Excitatory neurons, enteric",Enteric neurons,58,1,0.393,1
+HBSER1,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,59,1,0.398,1
+ENT8,"Intrinsic sensory neurons, enteric",Enteric neurons,395,4,0.438,1
+TECHO,"Cholinergic interneurons, telencephalon",Cholinergic and monoaminergic neurons,74,1,0.471,1
+ENT6,"Excitatory motor neurons, enteric",Enteric neurons,83,1,0.51,1
+HYPEP6,"Orexin-producing neurons, hypothalamus",Cholinergic and monoaminergic neurons,93,1,0.551,1
+ENT2,"Inhibitory motor neurons, enteric",Enteric neurons,217,2,0.556,1
+HYPEP7,"Pmch neurons, hypothalamus",Cholinergic and monoaminergic neurons,184,1,0.795,1
+ENT7,"Intrinsic sensory neurons, enteric",Enteric neurons,212,1,0.839,1
+HBSER5,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,221,1,0.851,1
+ENT5,"Excitatory motor neurons, enteric",Enteric neurons,42,NA,NA,NA
+ENT3,"Inhibitory motor neurons, enteric",Enteric neurons,66,NA,NA,NA
+HBSER3,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,33,NA,NA,NA
+HBSER4,"Serotonergic neurons, hindbrain",Cholinergic and monoaminergic neurons,97,NA,NA,NA
+MBDOP1,"Dopaminergic neurons, periaqueductal grey",Cholinergic and monoaminergic neurons,31,NA,NA,NA
+MBDOP2,"Dopaminergic neurons, ventral midbrain (SNc, VTA)",Cholinergic and monoaminergic neurons,58,NA,NA,NA
+MEGLU14,Glutamatergic projection neurons of the raphe nucleus,Cholinergic and monoaminergic neurons,62,NA,NA,NA
+HBNOR,Noradrenergic neurons of the medulla,Cholinergic and monoaminergic neurons,69,NA,NA,NA
+HBADR,Adrenergic cell groups of the medulla,Cholinergic and monoaminergic neurons,71,NA,NA,NA

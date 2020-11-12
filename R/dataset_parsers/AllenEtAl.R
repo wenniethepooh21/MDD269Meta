@@ -59,8 +59,9 @@ full_count <- structure_count %>% full_join(howard_count, by = c('structure_name
 full_count %<>% rowwise() %>% mutate(genome_tissue_count = if_else(is.na(genome_tissue_count) & !is.na(sample_tissue_count), 0, as.numeric(genome_tissue_count))) 
 # perform hypergeometric test - read in file for hyper_test function
 source(here("R/transcriptomic_meta/hyper_test.R"))
-tissue_expected_probs <- full_count %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_tissue_count, genome_tissue_count, brain_pop, colSums(na.omit(howard_count)[,2])))
-#
+tissue_expected_probs <- full_count %>% rowwise() %>% mutate(expected_tissue_count = genome_tissue_count/brain_pop * colSums(na.omit(howard_count)[,2]))
+tissue_expected_probs %<>% mutate(hypergeometric_p = hyper_test(sample_tissue_count, genome_tissue_count, brain_pop, colSums(na.omit(howard_count)[,2])))
+
 #correct by number of possible brain structures to choose from
 tissue_expected_probs %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n = nrow(structure_count)))
 tissue_expected_probs %<>% arrange(hypergeometric_p,-sample_tissue_count)
@@ -78,7 +79,8 @@ write_csv(tissue_expected_probs %>% dplyr::select(-region_location) , path = her
 howard_count_fix <- howard_brain %>% filter(gene_symbol != 'PCDHA4' & gene_symbol != 'PCDHA7') %>% group_by(brain_region) %>% summarise(sample_tissue_count = n()) %>% na.omit()
 full_count_fix <- structure_count %>% full_join(howard_count_fix, by = c('structure_name' = 'brain_region'))
 full_count_fix %<>% rowwise() %>% mutate(genome_tissue_count = if_else(is.na(genome_tissue_count) & !is.na(sample_tissue_count), 0, as.numeric(genome_tissue_count))) 
-tissue_expected_probs_corrected <- full_count_fix %>% rowwise() %>% mutate(hypergeometric_p = hyper_test(sample_tissue_count, genome_tissue_count, brain_pop, colSums(na.omit(howard_count_fix)[,2])))
+tissue_expected_probs_corrected <- full_count_fix %>% rowwise() %>% mutate(expected_tissue_count = genome_tissue_count/brain_pop * colSums(na.omit(howard_count)[,2]))
+tissue_expected_probs_corrected %<>% mutate(hypergeometric_p = hyper_test(sample_tissue_count, genome_tissue_count, brain_pop, colSums(na.omit(howard_count_fix)[,2])))
 #
 #correct by number of possible brain structures to choose from
 tissue_expected_probs_corrected %<>% mutate(corrected_hypergeometric_p = p.adjust(hypergeometric_p, method = "bonferroni", n = nrow(structure_count)))

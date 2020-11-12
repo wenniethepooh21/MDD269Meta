@@ -1,41 +1,41 @@
-cell_type_taxon,genome_cell_count,sample_cell_count,hypergeometric_p,corrected_hypergeometric_p
-Cholinergic and monoaminergic neurons,1791,37,5.78e-7,2.26e-5
-Enteric neurons,1919,32,2.29e-4,0.00893
-Non-glutamatergic neuroblasts,132,5,0.00565,0.22
-Spinal cord inhibitory neurons,230,5,0.0483,1
-Hindbrain neurons,1161,15,0.0748,1
-Telencephalon projecting excitatory neurons,761,10,0.12,1
-Sympathetic cholinergic neurons,2716,29,0.126,1
-Sympathetic noradrenergic neurons,1931,20,0.218,1
-Satellite glia,303,4,0.261,1
-Peptidergic neurons,139,2,0.334,1
-Dentate gyrus granule neurons,142,2,0.343,1
-Oligodendrocytes,572,6,0.365,1
-Cerebellum neurons,54,1,0.372,1
-Peripheral sensory neurofilament neurons,1249,12,0.382,1
-Telencephalon projecting inhibitory neurons,270,3,0.407,1
-Telencephalon inhibitory interneurons,280,3,0.43,1
-Oligodendrocyte precursor cells,281,3,0.432,1
-Di- and mesencephalon inhibitory neurons,183,2,0.465,1
-Choroid epithelial cells,605,5,0.593,1
-Spinal cord excitatory neurons,133,1,0.682,1
-Enteric glia,430,3,0.714,1
-Subcommissural organ hypendymal cells,301,2,0.731,1
-Vascular and leptomeningeal cells,312,2,0.749,1
-Olfactory ensheathing cells,178,1,0.784,1
-Vascular smooth muscle cells,179,1,0.786,1
-Perivascular macrophages,355,2,0.81,1
-Glutamatergic neuroblasts,193,1,0.811,1
-Schwann cells,384,2,0.843,1
-Peripheral sensory peptidergic neurons,386,2,0.845,1
-Ependymal cells,1537,10,0.852,1
-Vascular endothelial cells,338,1,0.946,1
-Microglia,355,1,0.954,1
-Peripheral sensory non-peptidergic neurons,2407,13,0.976,1
-Pericytes,466,1,0.982,1
-Gene detected; No expression measured,4565,1,1,NA
-Astrocytes,174,NA,NA,NA
-Dentate gyrus radial glia-like cells,105,NA,NA,NA
-Di- and mesencephalon excitatory neurons,288,NA,NA,NA
-Olfactory inhibitory neurons,66,NA,NA,NA
-Subventricular zone radial glia-like cells,62,NA,NA,NA
+cell_type_taxon,genome_cell_count,sample_cell_count,expected_cell_count,hypergeometric_p,corrected_hypergeometric_p
+Cholinergic and monoaminergic neurons,1791,37,15.324132746214154,5.78e-7,2.26e-5
+Enteric neurons,1919,32,16.419324812945263,2.29e-4,0.00893
+Non-glutamatergic neuroblasts,132,5,1.1294168188164537,0.00565,0.22
+Spinal cord inhibitory neurons,230,5,1.967923244907457,0.0483,1
+Hindbrain neurons,1161,15,9.933734292771991,0.0748,1
+Telencephalon projecting excitatory neurons,761,10,6.511259084237282,0.12,1
+Sympathetic cholinergic neurons,2716,29,23.238606665950666,0.126,1
+Sympathetic noradrenergic neurons,1931,20,16.521999069201303,0.218,1
+Satellite glia,303,4,2.5925249704650417,0.261,1
+Peptidergic neurons,139,2,1.189310134965811,0.334,1
+Dentate gyrus granule neurons,142,2,1.2149786990298215,0.343,1
+Oligodendrocytes,572,6,4.894139548204633,0.365,1
+Cerebellum neurons,54,1,0.4620341531521856,0.372,1
+Peripheral sensory neurofilament neurons,1249,12,10.686678838649625,0.382,1
+Telencephalon projecting inhibitory neurons,270,3,2.310170765760928,0.407,1
+Telencephalon inhibitory interneurons,280,3,2.3957326459742956,0.43,1
+Oligodendrocyte precursor cells,281,3,2.4042888339956323,0.432,1
+Di- and mesencephalon inhibitory neurons,183,2,1.565782407904629,0.465,1
+Choroid epithelial cells,605,5,5.176493752908747,0.593,1
+Spinal cord excitatory neurons,133,1,1.1379730068377905,0.682,1
+Enteric glia,430,3,3.6791608491748113,0.714,1
+Subcommissural organ hypendymal cells,301,2,2.575412594422368,0.731,1
+Vascular and leptomeningeal cells,312,2,2.6695306626570723,0.749,1
+Olfactory ensheathing cells,178,1,1.523001467797945,0.784,1
+Vascular smooth muscle cells,179,1,1.5315576558192818,0.786,1
+Perivascular macrophages,355,2,3.0374467475745535,0.81,1
+Glutamatergic neuroblasts,193,1,1.6513442881179965,0.811,1
+Schwann cells,384,2,3.2855762001933195,0.843,1
+Peripheral sensory peptidergic neurons,386,2,3.302688576235993,0.845,1
+Ependymal cells,1537,10,13.150860988794616,0.852,1
+Vascular endothelial cells,338,1,2.891991551211828,0.946,1
+Microglia,355,1,3.0374467475745535,0.954,1
+Peripheral sensory non-peptidergic neurons,2407,13,20.594744567357605,0.976,1
+Pericytes,466,1,3.9871836179429345,0.982,1
+Gene detected; No expression measured,4565,1,39.058998317402356,1,NA
+Astrocytes,174,NA,1.488776715712598,NA,NA
+Dentate gyrus radial glia-like cells,105,NA,0.8983997422403609,NA,NA
+Di- and mesencephalon excitatory neurons,288,NA,2.46418215014499,NA,NA
+Olfactory inhibitory neurons,66,NA,0.5647084094082269,NA,NA
+Subventricular zone radial glia-like cells,62,NA,0.5304836573228797,NA,NA
